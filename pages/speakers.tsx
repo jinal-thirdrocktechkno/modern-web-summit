@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 
 const IndexPage : NextPage = () => {
-    return <h1>Hello World from speakers</h1>
+    return <h1>speakers page</h1>
 }
 
 export default IndexPage;
