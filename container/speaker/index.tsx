@@ -1,10 +1,74 @@
 import React from 'react'
+import ProfileCard from '../../components/profileCard'
 
-const Speaker = () => <div>
-  <p>{"Innovation at its Finest"}</p>
-  <p>{"APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience."}</p>
-  <p>{"Sponsors of the Modern Web Summit are building interesting, sustainable, and forward-thinking ideas and services. In addition to providing financial support of the event, Sponsors have their own track for Expo sessions that dive deep into these ideas. From presentations and panels to breakout discussions & workshops, you can get up close with the companies, products, and tools that most interst you."}</p>
-  <button>{"See the sponsorship guide"}</button>
-</div>
-
+const Speaker = () => {
+  return (
+    <div>
+      <div>
+        <h2>SPEAKER</h2>
+      </div>
+      <div>
+        <p>{"5 days, 100+ sessions, workshops, & Discussions"}</p>
+        <p>{"Whether you’re interested in learning a new technology or advancing your skills in a familiar stack, there’s something for everyone at the Modern Web Summit."}</p>
+      </div>
+      <div>
+        <div>
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(item => {
+            return (
+              <ProfileCard
+                imageUrl="https://st2.depositphotos.com/1006318/5909/v/450/depositphotos_59094701-stock-illustration-businessman-profile-icon.jpg"
+                name="Soham Steward"
+                designation="Senior Developer Advocate"
+                companyName="Facebook"
+                location="San Francisco, California"
+              />
+            )
+          })}
+        </div>
+        <div>
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(item => {
+            return (
+              <ProfileCard
+                imageUrl="https://st2.depositphotos.com/1006318/5909/v/450/depositphotos_59094701-stock-illustration-businessman-profile-icon.jpg"
+                name="Soham Steward"
+                designation="Senior Developer Advocate"
+                companyName="Facebook"
+                location="San Francisco, California"
+              />
+            )
+          })}
+        </div>
+        <div>
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(item => {
+            return (
+              <ProfileCard
+                imageUrl="https://st2.depositphotos.com/1006318/5909/v/450/depositphotos_59094701-stock-illustration-businessman-profile-icon.jpg"
+                name="Soham Steward"
+                designation="Senior Developer Advocate"
+                companyName="Facebook"
+                location="San Francisco, California"
+              />
+            )
+          })}
+        </div>
+        <div>
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(item => {
+            return (
+              <ProfileCard
+                imageUrl="https://st2.depositphotos.com/1006318/5909/v/450/depositphotos_59094701-stock-illustration-businessman-profile-icon.jpg"
+                name="Soham Steward"
+                designation="Senior Developer Advocate"
+                companyName="Facebook"
+                location="San Francisco, California"
+              />
+            )
+          })}
+        </div>
+      </div>
+      <div>
+        <p>Interested in speaking?</p>
+        <button type="button" >Submit your talk here</button>
+      </div>
+    </div>)
+}
 export default Speaker

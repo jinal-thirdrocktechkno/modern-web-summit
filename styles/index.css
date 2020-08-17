@@ -1,3 +1,18 @@
+@import "/fonts/font.css";
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+body {
+    @apply bg-gray font-blender;
+}
+
+.custom-btn {
+    @apply text-white py-4 px-6 uppercase border-none rounded-md text-xl;
+    background: linear-gradient(355.25deg, #803a9a 2.77%, #bb6bd9 95.12%);
+}
+
+.landing-wrap {
+    @apply bg-white m-10;
+    height: calc(100vh);
+}
