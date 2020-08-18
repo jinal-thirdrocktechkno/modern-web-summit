@@ -5,7 +5,7 @@ const ProfileCard = (props: ProfileCardProps) => {
   const { imageUrl, name, designation, companyName, location } = props
   return (
     <div>
-      <img src={imageUrl} alt="image" />
+      <img className="mt-10 mb-10 h-32" src={imageUrl} alt="image" />
       <div>
         <p>{name}</p>
         <p>{designation}</p>
