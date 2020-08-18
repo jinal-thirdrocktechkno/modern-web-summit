@@ -11,7 +11,7 @@ const NotifyForm = () => {
                 <button onClick={() => {
                     setShowForm(!showForm)
                     setEmail('')
-                    }}>Submit</button>
+                }}>Submit</button>
             </div>}
     </div>)
 }
