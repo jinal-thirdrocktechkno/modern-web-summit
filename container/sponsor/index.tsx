@@ -2,7 +2,7 @@ import React from 'react'
 import Title from '../../components/title'
 import SponsorDescription from '../../components/sponsorDescription'
 import SponsorText from '../../components/sponsorText'
-import { silverSponsor, goldSponsor, platinumSponsor } from '../../utility/constants'
+import { sponsorList } from '../../utility/constants'
 
 const Sponsor = () => {
   return (
@@ -22,12 +22,10 @@ const Sponsor = () => {
         <Title title="Presenting sponsor" />
         <SponsorDescription
           descriptionClass="w-2/4 my-6"
-          isImage={true}
           title='flexport'
           description={
             'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. Sponsors of the Modern Web Summit are building interesting, sustainable, and forward-thinking products and services. In addition to providing financial support of the event, Sponsors have their own track.'}
           parentClass="description"
-          titleClass=" text-5xl "
           image="/images/flexport.svg"
         />
       </div>
@@ -36,84 +34,51 @@ const Sponsor = () => {
         <div className=" flex flex-row">
           <SponsorDescription
             descriptionClass="w-3/5 mt-5"
-            isImage={true}
             title='flexport'
             description={
               'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. '}
             parentClass=" description"
-            titleClass="text-5xl"
             image="/images/course-hero.svg"
           />
           <SponsorDescription
             descriptionClass="w-3/5 mt-8"
-            isImage={true}
             title='flexport'
             description={
               'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. '}
             parentClass="description"
-            titleClass="text-5xl"
             image="/images/facebook.svg"
           />
         </div>
       </div>
-      <div>
-        <Title title="Platinum sponsors" />
-        <div className="flex flex-row justify-center">
-          {platinumSponsor.map(item => {
-            return (
-              <SponsorText
-                isImage={item.isImage}
-                image={item.image}
-                title={item.title}
-                parentClass=""
-                textClass="m-5 text-5xl "
-              />
-            )
-          })}
-        </div>
-      </div>
-      <div>
-        <Title title="GOLD sponsors" />
-        <div className="flex flex-row justify-center">
-          {goldSponsor.map(item => {
-            return (
-              <SponsorText
-                isImage={item.isImage}
-                image={item.image}
-                title={item.title}
-                parentClass=""
-                textClass="m-5 text-4xl "
-              />
-            )
-          })}
-        </div>
-      </div>
-      <div>
-        <Title title="Silver sponsors" />
-        <div className="flex flex-row justify-center flex-wrap mx-40">
-          {silverSponsor.map(item => {
-            return (
-              <SponsorText
-                isImage={item.isImage}
-                image={item.image}
-                title={item.title}
-                parentClass=""
-                textClass="m-5 text-4xl"
-              />
-            )
-          })}
-        </div>
-      </div>
+      {sponsorList.map(({ list, parentClass, textClass, title }, index) => {
+        return (
+          <div key={index}>
+            <Title title={title} />
+            <div className={parentClass}>
+              {list.map(({ isImage, image, title }, index) => {
+                return (
+                  <SponsorText
+                    key={index}
+                    isImage={isImage}
+                    image={image}
+                    title={title}
+                    parentClass=""
+                    textClass={textClass}
+                  />
+                )
+              })}
+            </div>
+          </div>
+        )
+      })}
       <div>
         <Title title="Event organizer" />
         <SponsorDescription
           descriptionClass="w-2/4 my-8 mt-10"
-          isImage={true}
           title='Event Loop'
           description={
             'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. Sponsors of the Modern Web Summit are building interesting, sustainable, and forward-thinking products and services. In addition to providing financial support of the event, Sponsors have their own track.'}
           parentClass="description"
-          titleClass="text-5xl"
           image="/images/eventloop.svg"
         />
       </div>

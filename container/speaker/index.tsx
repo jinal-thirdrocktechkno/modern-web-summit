@@ -17,9 +17,10 @@ const Speaker = () => {
       </div>
       <div className="flex flex-row" >
         <div className="mt-2 mx-5">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(item => {
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item, index) => {
             return (
               <ProfileCard
+                key={index}
                 imageUrl="https://st2.depositphotos.com/1006318/5909/v/450/depositphotos_59094701-stock-illustration-businessman-profile-icon.jpg"
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
@@ -30,9 +31,10 @@ const Speaker = () => {
           })}
         </div>
         <div className="mt-5 mx-5">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(item => {
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item, index) => {
             return (
               <ProfileCard
+                key={index}
                 imageUrl="https://st2.depositphotos.com/1006318/5909/v/450/depositphotos_59094701-stock-illustration-businessman-profile-icon.jpg"
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
@@ -43,9 +45,10 @@ const Speaker = () => {
           })}
         </div>
         <div className="mt-10 mx-5">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(item => {
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item, index) => {
             return (
               <ProfileCard
+                key={index}
                 imageUrl="https://st2.depositphotos.com/1006318/5909/v/450/depositphotos_59094701-stock-illustration-businessman-profile-icon.jpg"
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
@@ -56,9 +59,10 @@ const Speaker = () => {
           })}
         </div>
         <div className="mt-20 mx-5">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(item => {
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item, index) => {
             return (
               <ProfileCard
+                key={index}
                 imageUrl="https://st2.depositphotos.com/1006318/5909/v/450/depositphotos_59094701-stock-illustration-businessman-profile-icon.jpg"
                 name="Soham Steward"
                 designation="Senior Developer Advocate"

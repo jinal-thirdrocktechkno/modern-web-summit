@@ -16,7 +16,7 @@ const ProfileCard = (props: ProfileCardProps) => {
       </div>
       <div>
         <i></i>
-        <p>{location}</p>
+        <p>{companyName}</p>
       </div>
     </div>
   )
