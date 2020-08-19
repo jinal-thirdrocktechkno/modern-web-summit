@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <div>
       <div className='flex items-center justify-between w-full absolute -mt-10 pt-1'>
-        <img className="inline p-2 ml-2 mt-1" src="/images/menu.png" alt="logo" />
+        <img className="inline p-2 ml-2 mt-1" src="/images/menu.svg" alt="logo" />
         <div className="flex items-center mr-10">
           <p className="uppercase font-extrabold text-typographyLight text-opacity-25 tracking-widest">share</p>
           <img className="inline p-2" src="/images/Twitter.svg" alt="logo" />
@@ -41,10 +41,10 @@ const Home = () => {
         <img className="inline self-end mr-8 relative top-1/2 transform -translate-y-48" src="/images/right.svg" alt="logo" />
       </div>
 
-      <div className='w-2/5 m-10 text-center'>
+      <div className='modern-wrap'>
         <Modern />
       </div>
-      <div ref={speakerRef} className='m-10 text-center'>
+      <div ref={speakerRef} className='m-10'>
         <Speaker />
       </div>
       <div ref={sponsorRef} className='m-10 text-center'>

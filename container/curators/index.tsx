@@ -6,9 +6,9 @@ import ProfileCard from '../../components/profileCard'
 const Curators = () => {
   return (
     <div className="bg-white mt-10 pb-10" >
-      <div className="flex flex-row flex-1">
-        <div className="bg-black h-32 relative w-1/3 bottom-0">
-          <h4 className=" text-4xl text-white absolute uppercase">Curators</h4>
+      <div className="flex">
+        <div className="bg-black w-23 flex items-end justify-center">
+          <h4 className=" text-5xl text-white leading-7">Curators</h4>
         </div>
         <div className="flex flex-col mt-5">
           <p className="text-2xl font-bold text-left pl-10 uppercase" >{"expert talk selection"}</p>

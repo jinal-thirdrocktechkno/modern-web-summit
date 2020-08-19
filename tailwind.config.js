@@ -12,15 +12,21 @@ module.exports = {
       letterSpacing: {
         widest: '6px'
       },
+      width: {
+        '23': '23.5rem'
+      },
       colors: {
         gray: '#E5E5E5',
         typography: '#4F4F4F',
         typographyDark: '#4F4F4F',
-        typographyLight: '#191919'
+        typographyLight: '#191919',
+        darkBg: 'rgba(0, 0, 0, 0.8)',
+        lightGreen: '#6FCF97'
       },
     },
     fontFamily: {
-      blender: 'Blender Pro'
+      blender: 'Blender Pro',
+      menlo: 'Menlo Regular'
     }
   },
   variants: {},

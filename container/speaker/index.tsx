@@ -3,20 +3,19 @@ import ProfileCard from '../../components/profileCard'
 
 const Speaker = () => {
   return (
-    <div className="bg-white mt-10 pb-10">
-      <div className="flex flex-row">
-        <div className="bg-black h-32 relative w-1/3 ">
-          <h4 className=" text-4xl text-white absolute">SPEAKER</h4>
+    <div className="bg-white">
+      <div className="flex">
+        <div className="bg-black w-23 flex items-end justify-center">
+          <h4 className="text-5xl text-white leading-7">SPEAKER</h4>
         </div>
-        <div className="flex flex-col mt-5">
-          <p className="text-2xl font-bold text-left pl-10 uppercase" >{"5 days, 100+ sessions, workshops, & Discussions"}</p>
-          <div className="text-justify mx-10">
-            <p>{"Whether you’re interested in learning a new technology or advancing your skills in a familiar stack, there’s something for everyone at the Modern Web Summit."}</p>
-          </div>
+        <div className="flex flex-col p-6">
+          <h5 className="text-2xl font-extrabold uppercase" >{"5 days, 100+ sessions, workshops, & Discussions"}</h5>
+          <p className="text-typography font-medium text-base">{"Whether you’re interested in learning a new technology or advancing your skills in a familiar stack, there’s something for everyone at the Modern Web Summit."}</p>
         </div>
       </div>
-      <div className="flex flex-row" >
-        <div className="mt-2 mx-1">
+
+      <div className="flex pl-48 p-10">
+        <div className="mr-2 w-1/5">
           {[1, 2, 3, 4,].map((item, index) => {
             return (
               <ProfileCard
@@ -31,7 +30,7 @@ const Speaker = () => {
             )
           })}
         </div>
-        <div className="mt-10 mx-1">
+        <div className="mr-2 w-1/5">
           {[1, 2, 3, 4,].map((item, index) => {
             return (
               <ProfileCard
@@ -46,7 +45,7 @@ const Speaker = () => {
             )
           })}
         </div>
-        <div className="mt-20 mx-1">
+        <div className="mr-2 w-1/5">
           {[1, 2, 3, 4,].map((item, index) => {
             return (
               <ProfileCard
@@ -61,7 +60,7 @@ const Speaker = () => {
             )
           })}
         </div>
-        <div className="mt-40 mx-1">
+        <div className="mr-2 w-1/5">
           {[1, 2, 3, 4,].map((item, index) => {
             return (
               <ProfileCard
@@ -76,10 +75,10 @@ const Speaker = () => {
             )
           })}
         </div>
-      </div>
-      <div className="flex flex-col items-end mr-16">
-        <p className="uppercase mr-5">Interested in speaking?</p>
-        <button type="button" className="border-black border-2 py-4 px-6 text-lg mt-1" >Submit your talk here</button>
+        <div className="self-end mb-2 w-1/5">
+          <p className="uppercase">Interested in speaking?</p>
+          <button type="button" className="border-black border-2 py-4 px-6 text-lg mt-1" >Submit your talk here</button>
+        </div>
       </div>
     </div >)
 }

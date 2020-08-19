@@ -8,8 +8,8 @@ const Sponsor = () => {
   return (
     <div className="bg-white mt-10" >
       <div className="flex flex-row flex-1">
-        <div className="bg-black h-32 relative w-full bottom-0">
-          <h4 className=" text-4xl text-white absolute">SPONSOR</h4>
+        <div className="bg-black h-32 flex  items-end w-full justify-center">
+          <h4 className=" text-5xl text-white leading-7">SPONSOR</h4>
         </div>
         <div className="flex flex-col mt-5">
           <p className="text-2xl font-bold text-left pl-10 uppercase" >{"Innovation at its Finest"}</p>
