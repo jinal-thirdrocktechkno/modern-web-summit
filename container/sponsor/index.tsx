@@ -8,7 +8,7 @@ const Sponsor = () => {
   return (
     <div className="bg-white mt-10" >
       <div className="flex flex-row flex-1">
-        <div className="bg-black w-3/4 h-32 relative w-full bottom-0">
+        <div className="bg-black h-32 relative w-full bottom-0">
           <h4 className=" text-4xl text-white absolute">SPONSOR</h4>
         </div>
         <div className="flex flex-col mt-5">
@@ -19,7 +19,7 @@ const Sponsor = () => {
         </div>
       </div>
       <div>
-        <Title title="Presenting sponsor" />
+        <Title title="Presenting sponsor" parentClass="m-10" />
         <SponsorDescription
           descriptionClass="w-2/4 my-6"
           title='flexport'
@@ -30,7 +30,7 @@ const Sponsor = () => {
         />
       </div>
       <div>
-        <Title title="Diamond sponsors" />
+        <Title title="Diamond sponsors" parentClass="m-10" />
         <div className=" flex flex-row">
           <SponsorDescription
             descriptionClass="w-3/5 mt-5"
@@ -53,7 +53,7 @@ const Sponsor = () => {
       {sponsorList.map(({ list, parentClass, textClass, title }, index) => {
         return (
           <div key={index}>
-            <Title title={title} />
+            <Title title={title} parentClass="m-10" />
             <div className={parentClass}>
               {list.map(({ isImage, image, title }, index) => {
                 return (
@@ -72,7 +72,7 @@ const Sponsor = () => {
         )
       })}
       <div>
-        <Title title="Event organizer" />
+        <Title title="Event organizer" parentClass="m-10" />
         <SponsorDescription
           descriptionClass="w-2/4 my-8 mt-10"
           title='Event Loop'

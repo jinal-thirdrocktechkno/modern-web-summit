@@ -22,6 +22,11 @@ body {
     left: 45%;
 }
 
+.last-card {
+    background-color: #AD60CA;
+    height: 120px;
+}
+
 .div-border {
     border-width: 1px;
 }
@@ -31,4 +36,52 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.image {
+    height: 220px !important;
+    width: 220px !important;
+}
+
+.font-24 {
+    font-size: 24px;
+}
+
+.font-16 {
+    font-size: 16px;
+}
+
+.line-20 {
+    line-height: 20px;
+}
+
+.font-12 {
+    font-size: 12px;
+}
+
+.line-14 {
+    line-height: 14px;
+}
+
+.color-purple {
+    color: #803A9A;
+}
+
+.footer-button {
+    width: 280px;
+    height: 44px;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 5px;
+}
+
+.link-text {
+    color: '#FFFFFF';
+    opacity: 0.5;
+}
+
+.copyright-text {
+    color: #BDBDBD;
+    font-size: 14px;
+    line-height: 17px;
 }

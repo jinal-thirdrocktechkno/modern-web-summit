@@ -1,11 +1,21 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Logo from '../../components/logo'
 import NotifyForm from '../../components/notify'
 import Modern from '../modern'
 import Speaker from '../speaker/index'
 import Sponsor from '../sponsor/index'
+import Curators from '../curators'
+import ShareSocial from '../../components/shareSocial'
+import Footer from '../footer/footer'
+
+const ScrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
 
 const Home = () => {
+
+  let speakerRef = useRef(null)
+  let sponsorRef = useRef(null)
+  let curatorsRef = useRef(null)
+
   return (
     <div>
       <div className='flex items-center justify-between w-full absolute -mt-10 pt-1'>
@@ -25,7 +35,7 @@ const Home = () => {
           <Logo />
           <p className='text-typography font-medium text-base mb-10'>
             {"Connecting the world’s top designers and developers to redefine the bounds of possibility through an exciting exploration of cutting-edge technologies, lessons, & patterns"}</p>
-          <NotifyForm />
+          <NotifyForm buttonClass="" />
           <p className='text-typography font-medium text-base mt-5'>{"Terms of Service • Privacy Policy • Code of Conduct"}</p>
         </div>
         <img className="inline self-end mr-8 relative top-1/2 transform -translate-y-48" src="/images/right.svg" alt="logo" />
@@ -34,12 +44,19 @@ const Home = () => {
       <div className='w-2/5 m-10 text-center'>
         <Modern />
       </div>
-      <div className='m-10 text-center'>
+      <div ref={speakerRef} className='m-10 text-center'>
         <Speaker />
       </div>
-      <div className='m-10 text-center'>
+      <div ref={sponsorRef} className='m-10 text-center'>
         <Sponsor />
       </div>
+      <div ref={curatorsRef} className="m-10 text-center">
+        <Curators />
+      </div>
+      <div className="m-10 text-center">
+        <ShareSocial />
+      </div>
+      <Footer />
     </div>
   )
 }
