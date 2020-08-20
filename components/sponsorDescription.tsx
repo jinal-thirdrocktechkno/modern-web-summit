@@ -21,7 +21,7 @@ const SponsorDescription = (props: SponsorDescriptionProps) => {
 }
 export default SponsorDescription
 
-export type SponsorDescriptionProps = {
+type SponsorDescriptionProps = {
   title: string,
   description: string,
   image: string,

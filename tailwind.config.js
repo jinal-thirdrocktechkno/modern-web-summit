@@ -34,5 +34,7 @@ module.exports = {
     }
   },
   variants: {},
-  plugins: [],
+  plugins: [
+    require('tailwindcss-blend-mode')(), // no options to configure
+  ],
 }

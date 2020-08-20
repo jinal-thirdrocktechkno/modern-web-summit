@@ -2,6 +2,7 @@ import React from 'react'
 import ProfileCard from '../../components/profileCard'
 
 const Speaker = () => {
+  const abc = [1, 2, 3, 4];
   return (
     <div className="bg-white">
       <div className="flex">
@@ -16,12 +17,13 @@ const Speaker = () => {
 
       <div className="flex pl-48 p-10">
         <div className="mr-2 w-1/5">
-          {[1, 2, 3, 4,].map((item, index) => {
+          {abc.map((item, index) => {
             return (
               <ProfileCard
+                imageClass="blend-luminosity hover:blend-normal"
                 isLast={false}
                 key={index}
-                imageUrl="https://st2.depositphotos.com/1006318/5909/v/450/depositphotos_59094701-stock-illustration-businessman-profile-icon.jpg"
+                imageUrl="/images/speaker.png"
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"
@@ -31,12 +33,13 @@ const Speaker = () => {
           })}
         </div>
         <div className="mr-2 w-1/5 mt-16">
-          {[1, 2, 3, 4,].map((item, index) => {
+          {abc.map((item, index) => {
             return (
               <ProfileCard
+                imageClass="opacity-50 hover:opacity-100"
                 isLast={false}
                 key={index}
-                imageUrl="https://st2.depositphotos.com/1006318/5909/v/450/depositphotos_59094701-stock-illustration-businessman-profile-icon.jpg"
+                imageUrl="/images/speaker.png"
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"
@@ -46,12 +49,13 @@ const Speaker = () => {
           })}
         </div>
         <div className="mr-2 w-1/5 mt-32">
-          {[1, 2, 3, 4,].map((item, index) => {
+          {abc.map((item, index) => {
             return (
               <ProfileCard
+                imageClass="opacity-50 hover:opacity-100"
                 isLast={false}
                 key={index}
-                imageUrl="https://st2.depositphotos.com/1006318/5909/v/450/depositphotos_59094701-stock-illustration-businessman-profile-icon.jpg"
+                imageUrl="/images/speaker.png"
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"
@@ -61,12 +65,13 @@ const Speaker = () => {
           })}
         </div>
         <div className="mr-2 w-1/5 mt-48">
-          {[1, 2, 3, 4,].map((item, index) => {
+          {abc.map((item, index) => {
             return (
               <ProfileCard
+                imageClass="opacity-50 hover:opacity-100"
                 isLast={index === 3}
                 key={index}
-                imageUrl="https://st2.depositphotos.com/1006318/5909/v/450/depositphotos_59094701-stock-illustration-businessman-profile-icon.jpg"
+                imageUrl="/images/speaker.png"
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"

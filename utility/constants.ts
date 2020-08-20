@@ -1,5 +1,5 @@
 
-export const silverSponsor = [
+export const SILVER_SPONSOR = [
   {
     isImage: false,
     image: '',
@@ -63,7 +63,7 @@ export const silverSponsor = [
 
 ]
 
-export const goldSponsor = [
+export const GOLD_SPONSOR = [
 
   {
     isImage: false,
@@ -98,7 +98,7 @@ export const goldSponsor = [
 
 ]
 
-export const platinumSponsor = [
+export const PLATINUM_SPONSOR = [
   {
     isImage: false,
     image: '',
@@ -124,19 +124,19 @@ export const platinumSponsor = [
 export const sponsorList = [
   {
     title: 'Platinum sponsors',
-    list: platinumSponsor,
+    list: PLATINUM_SPONSOR,
     parentClass: 'flex flex-row justify-center',
     textClass: 'm-5 text-5xl'
   },
   {
     title: 'GOLD sponsors',
-    list: goldSponsor,
+    list: GOLD_SPONSOR,
     parentClass: 'flex flex-row justify-center',
     textClass: 'm-5 text-4xl'
   },
   {
     title: 'Silver sponsors',
-    list: silverSponsor,
+    list: SILVER_SPONSOR,
     parentClass: 'flex flex-row justify-center flex-wrap mx-40',
     textClass: 'm-5 text-4xl'
   }

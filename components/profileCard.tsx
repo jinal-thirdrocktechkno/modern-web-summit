@@ -2,10 +2,10 @@ import React from 'react'
 
 const ProfileCard = (props: ProfileCardProps) => {
 
-  const { imageUrl, name, designation, companyName, location, isLast } = props
+  const { imageUrl, name, designation, companyName, location, isLast, imageClass } = props
   return (
     <div className="mb-2">
-      <img src={imageUrl} alt="image" />
+      <img src={imageUrl} alt="image" className={`w-full ${imageClass}`} />
       {isLast ?
         <div className="h-32 flex items-center justify-center bg-purple cursor-pointer">
           <p className="text-lg text-white font-bold tracking-wide uppercase">See all speakers {'>'}</p>
@@ -26,11 +26,12 @@ const ProfileCard = (props: ProfileCardProps) => {
 
 export default ProfileCard
 
-export type ProfileCardProps = {
+type ProfileCardProps = {
   imageUrl: string,
   name: string,
   designation: string,
   companyName: string,
   location: string,
-  isLast: boolean
+  isLast: boolean,
+  imageClass: string
 }

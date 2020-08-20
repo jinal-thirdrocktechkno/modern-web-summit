@@ -7,10 +7,12 @@ const FooterLink = () => {
       {links.map(item => {
         return (
           <div className="flex flex-col pt-1">
-            {item.link.map(i => {
+            {item.link.map(linkData => {
               return (
                 <div>
-                  <a className="capitalize text-white font-16 line-20 link-text cursor-pointer">{i.title}</a>
+                  <a className="capitalize text-white font-16 line-20 link-text cursor-pointer">
+                    {linkData.title}
+                  </a>
                 </div>
               )
             })}

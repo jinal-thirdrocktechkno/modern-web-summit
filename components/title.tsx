@@ -10,7 +10,7 @@ const Title = (props: TitleProps) => {
 }
 export default Title
 
-export type TitleProps = {
+type TitleProps = {
   title: string,
   parentClass: string
 }

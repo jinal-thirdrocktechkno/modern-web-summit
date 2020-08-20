@@ -9,6 +9,7 @@ import ShareSocial from '../../components/shareSocial'
 import Footer from '../footer/footer'
 import NavMenu from '../../components/navMenu'
 
+// used for navigate to div future use 
 const ScrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
 
 const Home = () => {

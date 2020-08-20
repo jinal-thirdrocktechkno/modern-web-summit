@@ -4,6 +4,9 @@ import ProfileCard from '../../components/profileCard'
 
 
 const Curators = () => {
+
+  const profileImage = 'https://st2.depositphotos.com/1006318/5909/v/450/depositphotos_59094701-stock-illustration-businessman-profile-icon.jpg'
+
   return (
     <div className="bg-white mt-10 pb-10" >
       <div className="flex">
@@ -24,9 +27,10 @@ const Curators = () => {
             <div className="flex flex-row">
               <div className="w-2/5">
                 <ProfileCard
+                  imageClass=""
                   isLast={false}
                   key={1}
-                  imageUrl="https://st2.depositphotos.com/1006318/5909/v/450/depositphotos_59094701-stock-illustration-businessman-profile-icon.jpg"
+                  imageUrl="/images/curator1.png"
                   name="Soham Steward"
                   designation="Senior Developer Advocate"
                   companyName="Facebook"
@@ -44,9 +48,10 @@ const Curators = () => {
             <div className="flex flex-row">
               <div className="w-2/5">
                 <ProfileCard
+                  imageClass=""
                   isLast={false}
                   key={1}
-                  imageUrl="https://st2.depositphotos.com/1006318/5909/v/450/depositphotos_59094701-stock-illustration-businessman-profile-icon.jpg"
+                  imageUrl={profileImage}
                   name="Soham Steward"
                   designation="Senior Developer Advocate"
                   companyName="Facebook"
@@ -66,9 +71,10 @@ const Curators = () => {
             <div className="flex flex-row">
               <div className="w-2/5">
                 <ProfileCard
+                  imageClass=""
                   isLast={false}
                   key={1}
-                  imageUrl="https://st2.depositphotos.com/1006318/5909/v/450/depositphotos_59094701-stock-illustration-businessman-profile-icon.jpg"
+                  imageUrl="/images/curator3.png"
                   name="Soham Steward"
                   designation="Senior Developer Advocate"
                   companyName="Facebook"
@@ -86,9 +92,10 @@ const Curators = () => {
             <div className="flex flex-row">
               <div className="w-2/5">
                 <ProfileCard
+                  imageClass=""
                   isLast={false}
                   key={1}
-                  imageUrl="https://st2.depositphotos.com/1006318/5909/v/450/depositphotos_59094701-stock-illustration-businessman-profile-icon.jpg"
+                  imageUrl="/images/curator4.png"
                   name="Soham Steward"
                   designation="Senior Developer Advocate"
                   companyName="Facebook"

@@ -12,7 +12,7 @@ const SponsorText = (props: SponsorTextProps) => {
 }
 export default SponsorText
 
-export type SponsorTextProps = {
+type SponsorTextProps = {
   title: string,
   parentClass: string,
   textClass: string,
