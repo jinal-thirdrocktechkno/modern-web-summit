@@ -15,8 +15,12 @@ module.exports = {
       width: {
         '23': '23.5rem'
       },
+      flex: {
+        '23': '0 0 23.5rem'
+      },
       colors: {
         gray: '#E5E5E5',
+        purple: '#AD60CA',
         typography: '#4F4F4F',
         typographyDark: '#4F4F4F',
         typographyLight: '#191919',

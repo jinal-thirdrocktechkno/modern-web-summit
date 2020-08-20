@@ -5,7 +5,7 @@ const Speaker = () => {
   return (
     <div className="bg-white">
       <div className="flex">
-        <div className="bg-black w-23 flex items-end justify-center">
+        <div className="bg-black w-23 flex-23 h-32 flex items-end self-start justify-center">
           <h4 className="text-5xl text-white leading-7">SPEAKER</h4>
         </div>
         <div className="flex flex-col p-6">
@@ -30,7 +30,7 @@ const Speaker = () => {
             )
           })}
         </div>
-        <div className="mr-2 w-1/5">
+        <div className="mr-2 w-1/5 mt-16">
           {[1, 2, 3, 4,].map((item, index) => {
             return (
               <ProfileCard
@@ -45,7 +45,7 @@ const Speaker = () => {
             )
           })}
         </div>
-        <div className="mr-2 w-1/5">
+        <div className="mr-2 w-1/5 mt-32">
           {[1, 2, 3, 4,].map((item, index) => {
             return (
               <ProfileCard
@@ -60,7 +60,7 @@ const Speaker = () => {
             )
           })}
         </div>
-        <div className="mr-2 w-1/5">
+        <div className="mr-2 w-1/5 mt-48">
           {[1, 2, 3, 4,].map((item, index) => {
             return (
               <ProfileCard
@@ -75,9 +75,11 @@ const Speaker = () => {
             )
           })}
         </div>
-        <div className="self-end mb-2 w-1/5">
-          <p className="uppercase">Interested in speaking?</p>
-          <button type="button" className="border-black border-2 py-4 px-6 text-lg mt-1" >Submit your talk here</button>
+        <div className="flex justify-end flex-col items-end self-end mb-2 w-1/5">
+          <div className="text-center">
+            <p className="uppercase text-xs text-typographyLight font-extrabold">Interested in speaking?</p>
+            <button type="button" className="uppercase border-typographyLight text-typographyLight font-black border-2 py-3 px-4 text-lg mt-1 focus:outline-none" >Submit your talk here</button>
+          </div>
         </div>
       </div>
     </div >)

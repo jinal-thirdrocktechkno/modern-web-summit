@@ -48,7 +48,7 @@ const Home = () => {
       <div ref={speakerRef} className='m-10'>
         <Speaker />
       </div>
-      <div ref={sponsorRef} className='m-10 text-center'>
+      <div ref={sponsorRef} className='m-10'>
         <Sponsor />
       </div>
       <div ref={curatorsRef} className="m-10 text-center">
