@@ -16,6 +16,11 @@ body {
     height: calc(100vh);
 }
 
+.nav-menu {
+    @apply bg-white;
+    height: calc(100vh);
+}
+
 .modern-wrap {
     @apply bg-darkBg m-10 text-center flex items-center justify-center;
     min-height: 700px;

@@ -7,6 +7,7 @@ import Sponsor from '../sponsor/index'
 import Curators from '../curators'
 import ShareSocial from '../../components/shareSocial'
 import Footer from '../footer/footer'
+import NavMenu from '../../components/navMenu'
 
 const ScrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
 
