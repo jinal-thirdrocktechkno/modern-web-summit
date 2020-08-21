@@ -1,63 +1,63 @@
 
 export const SILVER_SPONSOR = [
   {
-    isImage: false,
-    image: '',
+    isImage: true,
+    image: '/images/flexport.svg',
     title: 'flexport',
   },
   {
-    isImage: false,
-    image: '',
+    isImage: true,
+    image: '/images/flexport.svg',
     title: 'flexport',
   },
   {
-    isImage: false,
-    image: '',
+    isImage: true,
+    image: '/images/flexport.svg',
     title: 'flexport',
   },
   {
-    isImage: false,
-    image: '',
+    isImage: true,
+    image: '/images/flexport.svg',
     title: 'flexport',
   },
   {
-    isImage: false,
-    image: '',
+    isImage: true,
+    image: '/images/flexport.svg',
     title: 'flexport',
   },
   {
-    isImage: false,
-    image: '',
+    isImage: true,
+    image: '/images/flexport.svg',
     title: 'flexport',
   },
   {
-    isImage: false,
-    image: '',
+    isImage: true,
+    image: '/images/flexport.svg',
     title: 'flexport',
   },
   {
-    isImage: false,
-    image: '',
+    isImage: true,
+    image: '/images/flexport.svg',
     title: 'flexport',
   },
   {
-    isImage: false,
-    image: '',
+    isImage: true,
+    image: '/images/flexport.svg',
     title: 'flexport',
   },
   {
-    isImage: false,
-    image: '',
+    isImage: true,
+    image: '/images/flexport.svg',
     title: 'flexport',
   },
   {
-    isImage: false,
-    image: '',
+    isImage: true,
+    image: '/images/flexport.svg',
     title: 'flexport',
   },
   {
-    isImage: false,
-    image: '',
+    isImage: true,
+    image: '/images/flexport.svg',
     title: 'flexport',
   },
 
@@ -66,33 +66,33 @@ export const SILVER_SPONSOR = [
 export const GOLD_SPONSOR = [
 
   {
-    isImage: false,
-    image: '',
+    isImage: true,
+    image: '/images/flexport.svg',
     title: 'flexport',
   },
   {
-    isImage: false,
-    image: '',
+    isImage: true,
+    image: '/images/flexport.svg',
     title: 'flexport',
   },
   {
-    isImage: false,
-    image: '',
+    isImage: true,
+    image: '/images/flexport.svg',
     title: 'flexport',
   },
   {
-    isImage: false,
-    image: '',
+    isImage: true,
+    image: '/images/flexport.svg',
     title: 'flexport',
   },
   {
-    isImage: false,
-    image: '',
+    isImage: true,
+    image: '/images/flexport.svg',
     title: 'flexport',
   },
   {
-    isImage: false,
-    image: '',
+    isImage: true,
+    image: '/images/flexport.svg',
     title: 'flexport',
   }
 
@@ -100,23 +100,23 @@ export const GOLD_SPONSOR = [
 
 export const PLATINUM_SPONSOR = [
   {
-    isImage: false,
-    image: '',
+    isImage: true,
+    image: '/images/flexport.svg',
     title: 'flexport',
   },
   {
-    isImage: false,
-    image: '',
+    isImage: true,
+    image: '/images/flexport.svg',
     title: 'flexport',
   },
   {
-    isImage: false,
-    image: '',
+    isImage: true,
+    image: '/images/flexport.svg',
     title: 'flexport',
   },
   {
-    isImage: false,
-    image: '',
+    isImage: true,
+    image: '/images/flexport.svg',
     title: 'flexport',
   },
 ]
@@ -125,20 +125,20 @@ export const sponsorList = [
   {
     title: 'Platinum sponsors',
     list: PLATINUM_SPONSOR,
-    parentClass: 'flex flex-row justify-center',
-    textClass: 'm-5 text-5xl'
+    parentClass: 'flex flex-row justify-evenly mt-5 mb-16 mx-10',
+    imageClass: 'm-5 text-5xl'
   },
   {
     title: 'GOLD sponsors',
     list: GOLD_SPONSOR,
-    parentClass: 'flex flex-row justify-center',
-    textClass: 'm-5 text-4xl'
+    parentClass: 'flex flex-row justify-center mt-5 mb-16',
+    imageClass: 'h-8'
   },
   {
     title: 'Silver sponsors',
     list: SILVER_SPONSOR,
-    parentClass: 'flex flex-row justify-center flex-wrap mx-40',
-    textClass: 'm-5 text-4xl'
+    parentClass: 'flex flex-row justify-center flex-wrap mx-10 mt-5 mb-16',
+    imageClass: 'h-8'
   }
 ]
 
