@@ -10,7 +10,7 @@ const FooterLink = () => {
             {item.link.map(linkData => {
               return (
                 <div>
-                  <a href="https://www.google.com/" className="capitalize text-white text-opacity-50 text-base font-medium">
+                  <a href="https://www.google.com/" className="capitalize text-white hover:text-purple-200 text-opacity-50 text-base font-medium">
                     {linkData.title}
                   </a>
                 </div>

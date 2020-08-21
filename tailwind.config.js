@@ -9,6 +9,13 @@ module.exports = {
       inset: {
         '1/2': '50%',
       },
+      boxShadow: {
+        xs: '0 0 40px rgba(0, 0, 0, 0.1)'
+      },
+      minHeight: {
+        '778' : '778px'
+      },
+
       letterSpacing: {
         widest: '6px'
       },

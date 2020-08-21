@@ -4,8 +4,8 @@ const ProfileCard = (props: ProfileCardProps) => {
 
   const { imageUrl, name, designation, companyName, location, isLast, imageClass } = props
   return (
-    <div className="mb-2">
-      <img src={imageUrl} alt="image" className={`w-full ${imageClass}`} />
+    <div className="mb-2 profile-card cursor-pointer">
+      <img src={imageUrl} alt="image" className={`w-full blend-luminosity ${imageClass}`} />
       {isLast ?
         <div className="h-32 flex items-center justify-center bg-purple-100 cursor-pointer">
           <p className="text-lg text-white font-bold tracking-wide uppercase">See all speakers {'>'}</p>

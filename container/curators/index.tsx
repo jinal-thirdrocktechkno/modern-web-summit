@@ -8,7 +8,7 @@ const Curators = () => {
   const profileImage = 'https://st2.depositphotos.com/1006318/5909/v/450/depositphotos_59094701-stock-illustration-businessman-profile-icon.jpg'
 
   return (
-    <div className="bg-white" >
+    <div className="bg-white shadow-xs" >
       <div className="flex">
         <div className="bg-black w-23 flex-23 h-32 flex items-end self-start justify-center">
           <h4 className="text-5xl text-white leading-7">Curators</h4>
@@ -37,7 +37,7 @@ const Curators = () => {
             </div>
             <div className="flex justify-between flex-col w-2/3 pl-10">
               <p className="text-gray-300 text-base font-medium">{'Brian has been working in the Serverless space for over 7 years. He’s the cofounder and CTO of Begin.com, the fastest and easiest way to setup CI/CD gitops for serverless web apps on AWS. He is the creator and maintainer of OpenJS Architect, an open-source framework for generating and deploying AWS standard SAM/CloudFormation, coined the term FASTstack. He has been keeping a close eye on Deno since its earliest moments and is already using it in production today. You can catch him @brianleroux on Twitter where he talks about open source, JavaScript, serverless, faststack, Deno, and other developer-related stuff.'}</p>
-              <a href="https://www.google.co.in/" className="self-start text-lg font-bold underline text-purple-200">{'See all the Serverless Speakers >'}</a>
+              <a href="https://www.google.co.in/" className="self-start text-lg font-bold underline text-purple-200 hover:text-purple-100">{'See all the Serverless Speakers >'}</a>
             </div>
           </div>
         </div>
@@ -58,7 +58,7 @@ const Curators = () => {
             </div>
             <div className="flex justify-between flex-col w-2/3 pl-10">
               <p className="text-gray-300 text-base font-medium">{'Brian has been working in the Serverless space for over 7 years. He’s the cofounder and CTO of Begin.com, the fastest and easiest way to setup CI/CD gitops for serverless web apps on AWS. He is the creator and maintainer of OpenJS Architect, an open-source framework for generating and deploying AWS standard SAM/CloudFormation, coined the term FASTstack. He has been keeping a close eye on Deno since its earliest moments and is already using it in production today. You can catch him @brianleroux on Twitter where he talks about open source, JavaScript, serverless, faststack, Deno, and other developer-related stuff.'}</p>
-              <a href="https://www.google.co.in/" className="self-start text-lg font-bold underline text-purple-200">{'See all the React Speakers >'}</a>
+              <a href="https://www.google.co.in/" className="self-start text-lg font-bold underline text-purple-200 hover:text-purple-100">{'See all the React Speakers >'}</a>
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@ const Curators = () => {
             </div>
             <div className="flex justify-between flex-col w-2/3 pl-10">
               <p className="text-gray-300 text-base font-medium">{'Brian has been working in the Serverless space for over 7 years. He’s the cofounder and CTO of Begin.com, the fastest and easiest way to setup CI/CD gitops for serverless web apps on AWS. He is the creator and maintainer of OpenJS Architect, an open-source framework for generating and deploying AWS standard SAM/CloudFormation, coined the term FASTstack. He has been keeping a close eye on Deno since its earliest moments and is already using it in production today. You can catch him @brianleroux on Twitter where he talks about open source, JavaScript, serverless, faststack, Deno, and other developer-related stuff.'}</p>
-              <a href="https://www.google.co.in/" className="self-start text-lg font-bold underline text-purple-200">{'See all the Svelte Speakers >'}</a>
+              <a href="https://www.google.co.in/" className="self-start text-lg font-bold underline text-purple-200 hover:text-purple-100">{'See all the Svelte Speakers >'}</a>
             </div>
           </div>
         </div>
@@ -100,7 +100,7 @@ const Curators = () => {
             </div>
             <div className="flex justify-between flex-col w-2/3 pl-10">
               <p className="text-gray-300 text-base font-medium">{'Brian has been working in the Serverless space for over 7 years. He’s the cofounder and CTO of Begin.com, the fastest and easiest way to setup CI/CD gitops for serverless web apps on AWS. He is the creator and maintainer of OpenJS Architect, an open-source framework for generating and deploying AWS standard SAM/CloudFormation, coined the term FASTstack. He has been keeping a close eye on Deno since its earliest moments and is already using it in production today. You can catch him @brianleroux on Twitter where he talks about open source, JavaScript, serverless, faststack, Deno, and other developer-related stuff.'}</p>
-              <a href="https://www.google.co.in/" className="self-start text-lg font-bold underline text-purple-200">{'See all the CSS Speakers >'}</a>
+              <a href="https://www.google.co.in/" className="self-start text-lg font-bold underline text-purple-200 hover:text-purple-100">{'See all the CSS Speakers >'}</a>
             </div>
           </div>
         </div>

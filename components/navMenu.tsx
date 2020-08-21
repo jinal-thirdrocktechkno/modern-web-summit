@@ -3,30 +3,32 @@ import React from 'react'
 const NavMenu = () => {
 
   return (
-    <div className="nav-menu">
-      <img src="/images/close.svg" className="p-5" />
-      <div className="flex flex-row justify-evenly mt-5">
-        <div className="flex flex-col">
-          <a>Terms of Service</a>
-          <a>Privacy Policy</a>
-          <a>Selection Committee</a>
-          <a>Workshops</a>
-          <a>Jobs</a>
+    <div className="overlay-menu">
+      <div className="m-3">
+        <img src="/images/close.svg" className="cursor-pointer" />
+      </div>
+      <div className="flex w-3/5 mx-auto mt-10">
+        <div className="w-1/4">
+          <p><a className="text-xl text-gray-300 font-medium hover:text-purple-200" href="https://www.google.co.in/">Terms of Service</a></p>
+          <p><a className="text-xl text-gray-300 font-medium hover:text-purple-200" href="https://www.google.co.in/">Privacy Policy</a></p>
+          <p><a className="text-xl text-gray-300 font-medium hover:text-purple-200" href="https://www.google.co.in/">Selection Committee</a></p>
+          <p><a className="text-xl text-gray-300 font-medium hover:text-purple-200" href="https://www.google.co.in/">Workshops</a></p>
+          <p><a className="text-xl text-gray-300 font-medium hover:text-purple-200" href="https://www.google.co.in/">Jobs</a></p>
         </div>
-        <div className="flex flex-col">
-          <button className="border border-2 p-5 m-1 flex justify-center uppercase text-black hover:bg-black focus:outline-none hover:text-white" type="button" >Home </button>
-          <button className="border border-2 p-5 m-1 flex justify-center uppercase text-black hover:bg-black focus:outline-none hover:text-white" type="button" >speakers </button>
-          <button className="border border-2 p-5 m-1 flex justify-center uppercase text-black hover:bg-black focus:outline-none hover:text-white" type="button" >sponsors </button>
-          <button className="border border-2 p-5 m-1 flex justify-center uppercase text-black hover:bg-black focus:outline-none hover:text-white" type="button" >curators </button>
-          <button className="border border-2 p-5 m-1 flex justify-center uppercase text-black hover:bg-black focus:outline-none hover:text-white" type="button" >code of conduct </button>
-          <button className="border border-2 p-5 m-1 flex justify-center uppercase text-black hover:bg-black focus:outline-none hover:text-white" type="button" >schedule - coming soon </button>
+        <div className="w-2/5 flex flex-col mx-5">
+          <button className="border-2 mb-5 p-6 border-gray-400 text-xl font-extrabold uppercase text-gray-400 hover:bg-gray-400 focus:outline-none hover:text-white" type="button" >Home </button>
+          <button className="border-2 mb-5 p-6 border-gray-400 text-xl font-extrabold uppercase text-gray-400 hover:bg-gray-400 focus:outline-none hover:text-white" type="button" >speakers </button>
+          <button className="border-2 mb-5 p-6 border-gray-400 text-xl font-extrabold uppercase text-gray-400 hover:bg-gray-400 focus:outline-none hover:text-white" type="button" >sponsors </button>
+          <button className="border-2 mb-5 p-6 border-gray-400 text-xl font-extrabold uppercase text-gray-400 hover:bg-gray-400 focus:outline-none hover:text-white" type="button" >curators </button>
+          <button className="border-2 mb-5 p-6 border-gray-400 text-xl font-extrabold uppercase text-gray-400 hover:bg-gray-400 focus:outline-none hover:text-white" type="button" >code of conduct </button>
+          <button className="border-2 mb-5 p-6 border-gray-400 text-xl font-extrabold uppercase text-gray-400 hover:bg-gray-400 focus:outline-none hover:text-white" type="button" >schedule - coming soon </button>
         </div>
-        <div className="flex flex-col">
-          <a>Volunteer</a>
-          <a>Request for Sponsorship</a>
-          <a>Apply for Scholarship</a>
-          <a>Convince your boss</a>
-          <a>Submit a talk proposal</a>
+        <div className="w-1/4 ml-16">
+          <p><a className="text-xl text-gray-300 font-medium hover:text-purple-200" href="https://www.google.co.in/">Volunteer</a></p>
+          <p><a className="text-xl text-gray-300 font-medium hover:text-purple-200" href="https://www.google.co.in/">Request for Sponsorship</a></p>
+          <p><a className="text-xl text-gray-300 font-medium hover:text-purple-200" href="https://www.google.co.in/">Apply for Scholarship</a></p>
+          <p><a className="text-xl text-gray-300 font-medium hover:text-purple-200" href="https://www.google.co.in/">Convince your boss</a></p>
+          <p><a className="text-xl text-gray-300 font-medium hover:text-purple-200" href="https://www.google.co.in/">Submit a talk proposal</a></p>
         </div>
       </div>
     </div>

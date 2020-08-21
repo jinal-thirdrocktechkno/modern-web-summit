@@ -13,7 +13,9 @@ const SponsorDescription = (props: SponsorDescriptionProps) => {
   return (
     <div className={parentClass}>
       <div className={innerClass} >
-        <img className="inline mb-5" src={image} />
+        <a href="https://www.google.co.in/">
+          <img className="inline mb-5" src={image} />
+        </a>
         <p className={descriptionClass}>{description}</p>
       </div>
     </div>
