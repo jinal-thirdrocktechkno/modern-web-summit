@@ -19,11 +19,16 @@ module.exports = {
         '23': '0 0 23.5rem'
       },
       colors: {
-        gray: '#E5E5E5',
-        purple: '#AD60CA',
-        typography: '#4F4F4F',
-        typographyDark: '#4F4F4F',
-        typographyLight: '#191919',
+        gray: {
+          '100': '#E5E5E5',
+          '200': '#BDBDBD',
+          '300': '#4F4F4F',
+          '400': '#191919'
+        },
+        purple: {
+          '100': '#AD60CA',
+          '200': '#803A9A',
+        },
         darkBg: 'rgba(0, 0, 0, 0.8)',
         lightGreen: '#6FCF97'
       },

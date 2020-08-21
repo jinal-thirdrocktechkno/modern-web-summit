@@ -5,7 +5,7 @@ const SponsorText = (props: SponsorTextProps) => {
   return (
     <div className={parentClass}>
       {isImage ?
-        <img src={image} /> :
+        <img className="inline" src={image} /> :
         <p className={textClass}>{title}</p>}
     </div>
   )

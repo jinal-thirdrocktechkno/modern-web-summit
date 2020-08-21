@@ -6,12 +6,13 @@ const SponsorDescription = (props: SponsorDescriptionProps) => {
     description,
     image,
     parentClass,
-    descriptionClass
+    descriptionClass,
+    innerClass
   } = props
 
   return (
     <div className={parentClass}>
-      <div className="w-1/2 pt-10 pb-20" >
+      <div className={innerClass} >
         <img className="inline mb-5" src={image} />
         <p className={descriptionClass}>{description}</p>
       </div>
@@ -26,5 +27,6 @@ type SponsorDescriptionProps = {
   description: string,
   image: string,
   parentClass: string,
-  descriptionClass: string
+  descriptionClass: string,
+  innerClass: string
 }

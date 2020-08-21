@@ -3,14 +3,14 @@ import { links } from '../utility/constants'
 
 const FooterLink = () => {
   return (
-    <div className="p-4 flex flex-row justify-around">
+    <div className="flex">
       {links.map(item => {
         return (
-          <div className="flex flex-col pt-1">
+          <div className="w-1/4">
             {item.link.map(linkData => {
               return (
                 <div>
-                  <a className="capitalize text-white font-16 line-20 link-text cursor-pointer">
+                  <a href="https://www.google.com/" className="capitalize text-white text-opacity-50 text-base font-medium">
                     {linkData.title}
                   </a>
                 </div>

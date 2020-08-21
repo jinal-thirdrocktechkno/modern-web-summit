@@ -11,7 +11,7 @@ const Speaker = () => {
         </div>
         <div className="flex flex-col p-6">
           <h5 className="text-2xl font-extrabold uppercase" >{"5 days, 100+ sessions, workshops, & Discussions"}</h5>
-          <p className="text-typography font-medium text-base">{"Whether you’re interested in learning a new technology or advancing your skills in a familiar stack, there’s something for everyone at the Modern Web Summit."}</p>
+          <p className="text-gray-300 font-medium text-base">{"Whether you’re interested in learning a new technology or advancing your skills in a familiar stack, there’s something for everyone at the Modern Web Summit."}</p>
         </div>
       </div>
 
@@ -20,7 +20,7 @@ const Speaker = () => {
           {abc.map((item, index) => {
             return (
               <ProfileCard
-                imageClass="blend-luminosity hover:blend-normal"
+                imageClass=""
                 isLast={false}
                 key={index}
                 imageUrl="/images/speaker.png"
@@ -36,7 +36,7 @@ const Speaker = () => {
           {abc.map((item, index) => {
             return (
               <ProfileCard
-                imageClass="opacity-50 hover:opacity-100"
+                imageClass=""
                 isLast={false}
                 key={index}
                 imageUrl="/images/speaker.png"
@@ -52,7 +52,7 @@ const Speaker = () => {
           {abc.map((item, index) => {
             return (
               <ProfileCard
-                imageClass="opacity-50 hover:opacity-100"
+                imageClass=""
                 isLast={false}
                 key={index}
                 imageUrl="/images/speaker.png"
@@ -68,7 +68,7 @@ const Speaker = () => {
           {abc.map((item, index) => {
             return (
               <ProfileCard
-                imageClass="opacity-50 hover:opacity-100"
+                imageClass=""
                 isLast={index === 3}
                 key={index}
                 imageUrl="/images/speaker.png"
@@ -82,8 +82,8 @@ const Speaker = () => {
         </div>
         <div className="flex justify-end flex-col items-end self-end mb-2 w-1/5">
           <div className="text-center">
-            <p className="uppercase text-xs text-typographyLight font-extrabold">Interested in speaking?</p>
-            <button type="button" className="uppercase border-typographyLight text-typographyLight font-black border-2 py-3 px-4 text-lg mt-1 focus:outline-none" >Submit your talk here</button>
+            <p className="uppercase text-xs text-gray-400 font-extrabold">Interested in speaking?</p>
+            <button type="button" className="uppercase border-gray-400 text-gray-400 font-black border-2 py-3 px-4 text-lg mt-1 focus:outline-none" >Submit your talk here</button>
           </div>
         </div>
       </div>

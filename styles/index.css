@@ -2,8 +2,9 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
 body {
-    @apply bg-gray font-blender;
+    @apply bg-gray-100 font-blender;
 }
 
 .custom-btn {
@@ -13,20 +14,21 @@ body {
 
 .landing-wrap {
     @apply bg-white m-10;
-    height: calc(100vh);
+    height: calc(100vh - 5rem);
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
 }
 
-.nav-menu {
+/* .nav-menu {
     @apply bg-white;
     height: calc(100vh);
-}
+} */
 
 .modern-wrap {
     @apply bg-darkBg m-10 text-center flex items-center justify-center;
     min-height: 700px;
 }
 
-.title {
+/* .title {
     @apply bg-black text-white w-auto inline-block p-1 absolute;
     top: -15px;
     left: 45%;
@@ -89,4 +91,4 @@ body {
     color: #BDBDBD;
     font-size: 14px;
     line-height: 17px;
-}
+} */
