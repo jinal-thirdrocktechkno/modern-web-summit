@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import Logo from '../../components/logo'
 import NotifyForm from '../../components/notify'
 import Modern from '../modern'
@@ -14,6 +14,11 @@ import { useQuery, gql } from '@apollo/client';
 const ScrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
 
 const Home = () => {
+  const [showMenu, setShowMenu] = useState(false)
+
+  const menuOpen = () => {
+    setShowMenu(true)
+  }
 
   let speakerRef = useRef(null)
   let sponsorRef = useRef(null)
@@ -36,12 +41,21 @@ const Home = () => {
   return (
     <div>
       <div className='flex items-center justify-between w-full absolute -mt-10 pt-1'>
-        <img className="inline p-2 ml-2 mt-1" src="/images/menu.svg" alt="logo" />
+        <div onClick={() => menuOpen()}>
+          <img className="inline p-2 ml-2 mt-1 cursor-pointer" src="/images/menu.svg" alt="logo" />
+        </div>
+        {showMenu && <NavMenu />}
         <div className="flex items-center mr-10">
-          <p className="uppercase font-extrabold text-typographyLight text-opacity-25 tracking-widest">share</p>
-          <img className="inline p-2" src="/images/Twitter.svg" alt="logo" />
-          <img className="inline p-2" src="/images/LinkedIn.svg" alt="logo" />
-          <img className="inline p-2" src="/images/github.svg" alt="logo" />
+          <p className="uppercase font-extrabold text-gray-400 text-opacity-25 tracking-widest">share</p>
+          <a href="https://www.google.co.in/">
+            <img className="inline p-2" src="/images/Twitter.svg" alt="logo" />
+          </a>
+          <a href="https://www.google.co.in/">
+            <img className="inline p-2" src="/images/LinkedIn.svg" alt="logo" />
+          </a>
+          <a href="https://www.google.co.in/">
+            <img className="inline p-2" src="/images/github.svg" alt="logo" />
+          </a>
         </div>
       </div>
 
@@ -50,15 +64,19 @@ const Home = () => {
         <img className="inline self-start -mt-10 ml-8" src="/images/left.svg" alt="logo" />
         <div className='w-2/5 m-auto text-center -mt-10'>
           <Logo />
-          <p className='text-typography font-medium text-base mb-10'>
+          <p className='text-gray-300 font-medium text-base mb-10'>
             {"Connecting the world’s top designers and developers to redefine the bounds of possibility through an exciting exploration of cutting-edge technologies, lessons, & patterns"}</p>
           <NotifyForm buttonClass="" />
-          <p className='text-typography font-medium text-base mt-5'>{"Terms of Service • Privacy Policy • Code of Conduct"}</p>
+          <div className="mt-5">
+            <a className="text-gray-300 font-medium text-base" href="https://www.google.co.in/">Terms of Service • </a>
+            <a className="text-gray-300 font-medium text-base" href="https://www.google.co.in/">Privacy Policy • </a>
+            <a className="text-gray-300 font-medium text-base" href="https://www.google.co.in/">Code of Conduct</a>
+          </div>
         </div>
         <img className="inline self-end mr-8 relative top-1/2 transform -translate-y-48" src="/images/right.svg" alt="logo" />
       </div>
 
-      <div className='modern-wrap'>
+      <div className='bg-darkBg m-10 text-center flex items-center justify-center min-h-778'>
         <Modern />
       </div>
       <div ref={speakerRef} className='m-10'>
@@ -67,10 +85,10 @@ const Home = () => {
       <div ref={sponsorRef} className='m-10'>
         <Sponsor />
       </div>
-      <div ref={curatorsRef} className="m-10 text-center">
+      <div ref={curatorsRef} className="m-10">
         <Curators />
       </div>
-      <div className="m-10 text-center">
+      <div className="m-10">
         <ShareSocial />
       </div>
       <Footer />
