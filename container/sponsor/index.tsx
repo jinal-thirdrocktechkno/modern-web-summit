@@ -51,20 +51,19 @@ const Sponsor = () => {
           />
         </div>
 
-        {sponsorList.map(({ list, parentClass, textClass, title }, index) => {
+        {sponsorList.map(({ list, parentClass, imageClass, title }, index) => {
           return (
             <div key={index}>
               <Title title={title} parentClass="flex justify-center border-solid border" />
               <div className={parentClass}>
-                {list.map(({ isImage, image, title }, index) => {
+                {list.map(({ image, title }, index) => {
                   return (
                     <SponsorText
                       key={index}
-                      isImage={true}
-                      image={'/images/flexport.svg'}
+                      image={image}
                       title={title}
                       parentClass="w-1/4 mb-3 text-center"
-                      textClass={textClass}
+                      imageClass={imageClass}
                     />
                   )
                 })}

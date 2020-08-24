@@ -8,6 +8,7 @@ import Curators from '../curators'
 import ShareSocial from '../../components/shareSocial'
 import Footer from '../footer/footer'
 import NavMenu from '../../components/navMenu'
+import { useQuery, gql } from '@apollo/client';
 
 // used for navigate to div future use 
 const ScrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
@@ -23,6 +24,21 @@ const Home = () => {
   let sponsorRef = useRef(null)
   let curatorsRef = useRef(null)
 
+  const API_TEST = gql`
+  query ($id: Int) { 
+    Media (id: $id, type: ANIME) { 
+      id
+      title {
+        romaji
+        english
+        native
+      }
+    }
+  }`
+
+  const { loading, error, data } = useQuery(API_TEST, { variables: { id: 15125 } });
+
+  // console.log(data, "data", error, "error")
   return (
     <div>
       <div className='flex items-center justify-between w-full absolute -mt-10 pt-1'>
