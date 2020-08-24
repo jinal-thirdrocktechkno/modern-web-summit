@@ -4,12 +4,12 @@ import { links } from '../utility/constants'
 const FooterLink = () => {
   return (
     <div className="p-4 flex flex-row justify-around">
-      {links.map(item => {
+      {links.map((item, index) => {
         return (
-          <div className="flex flex-col pt-1">
-            {item.link.map(linkData => {
+          <div key={index} className="flex flex-col pt-1">
+            {item.link.map((linkData, index) => {
               return (
-                <div>
+                <div key={index}>
                   <a className="capitalize text-white font-16 line-20 link-text cursor-pointer">
                     {linkData.title}
                   </a>

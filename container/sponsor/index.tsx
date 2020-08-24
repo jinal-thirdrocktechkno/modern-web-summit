@@ -21,7 +21,6 @@ const Sponsor = () => {
         <Title title="Presenting sponsor" parentClass="flex justify-center border-solid border" />
         <SponsorDescription
           descriptionClass=""
-          title='flexport'
           description={
             'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. Sponsors of the Modern Web Summit are building interesting, sustainable, and forward-thinking products and services. In addition to providing financial support of the event, Sponsors have their own track.'}
           parentClass="flex justify-center text-center"
@@ -32,7 +31,6 @@ const Sponsor = () => {
         <div className=" flex flex-row">
           <SponsorDescription
             descriptionClass="w-3/5 mt-5"
-            title='flexport'
             description={
               'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. '}
             parentClass=" description"
@@ -40,7 +38,6 @@ const Sponsor = () => {
           />
           <SponsorDescription
             descriptionClass="w-3/5 mt-8"
-            title='flexport'
             description={
               'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. '}
             parentClass="description"
@@ -53,13 +50,11 @@ const Sponsor = () => {
             <div key={index}>
               <Title title={title} parentClass="flex justify-center border-solid border" />
               <div className={parentClass}>
-                {list.map(({ image, title }, index) => {
+                {list.map(({ image }, index) => {
                   return (
                     <SponsorText
                       key={index}
                       image={image}
-                      title={title}
-                      parentClass=""
                       imageClass={imageClass}
                     />
                   )
@@ -73,7 +68,6 @@ const Sponsor = () => {
           <Title title="Event organizer" parentClass="flex justify-center border-solid border" />
           <SponsorDescription
             descriptionClass="w-2/4 my-8 mt-10"
-            title='Event Loop'
             description={
               'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. Sponsors of the Modern Web Summit are building interesting, sustainable, and forward-thinking products and services. In addition to providing financial support of the event, Sponsors have their own track.'}
             parentClass="description"

@@ -1,64 +1,40 @@
 
 export const SILVER_SPONSOR = [
   {
-    isImage: true,
     image: '/images/flexport.svg',
-    title: 'flexport',
   },
   {
-    isImage: true,
     image: '/images/flexport.svg',
-    title: 'flexport',
   },
   {
-    isImage: true,
     image: '/images/flexport.svg',
-    title: 'flexport',
   },
   {
-    isImage: true,
     image: '/images/flexport.svg',
-    title: 'flexport',
   },
   {
-    isImage: true,
     image: '/images/flexport.svg',
-    title: 'flexport',
   },
   {
-    isImage: true,
     image: '/images/flexport.svg',
-    title: 'flexport',
   },
   {
-    isImage: true,
     image: '/images/flexport.svg',
-    title: 'flexport',
   },
   {
-    isImage: true,
     image: '/images/flexport.svg',
-    title: 'flexport',
   },
   {
-    isImage: true,
     image: '/images/flexport.svg',
-    title: 'flexport',
   },
   {
-    isImage: true,
     image: '/images/flexport.svg',
-    title: 'flexport',
   },
   {
-    isImage: true,
     image: '/images/flexport.svg',
-    title: 'flexport',
   },
   {
-    isImage: true,
     image: '/images/flexport.svg',
-    title: 'flexport',
   },
 
 ]
@@ -66,58 +42,38 @@ export const SILVER_SPONSOR = [
 export const GOLD_SPONSOR = [
 
   {
-    isImage: true,
     image: '/images/flexport.svg',
-    title: 'flexport',
   },
   {
-    isImage: true,
     image: '/images/flexport.svg',
-    title: 'flexport',
   },
   {
-    isImage: true,
     image: '/images/flexport.svg',
-    title: 'flexport',
   },
   {
-    isImage: true,
     image: '/images/flexport.svg',
-    title: 'flexport',
   },
   {
-    isImage: true,
     image: '/images/flexport.svg',
-    title: 'flexport',
   },
   {
-    isImage: true,
     image: '/images/flexport.svg',
-    title: 'flexport',
   }
 
 ]
 
 export const PLATINUM_SPONSOR = [
   {
-    isImage: true,
     image: '/images/flexport.svg',
-    title: 'flexport',
   },
   {
-    isImage: true,
     image: '/images/flexport.svg',
-    title: 'flexport',
   },
   {
-    isImage: true,
     image: '/images/flexport.svg',
-    title: 'flexport',
   },
   {
-    isImage: true,
     image: '/images/flexport.svg',
-    title: 'flexport',
   },
 ]
 
