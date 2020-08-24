@@ -4,7 +4,9 @@ const SponsorText = (props: SponsorTextProps) => {
   const { title, parentClass, image, imageClass } = props
   return (
     <div className={parentClass}>
-      <img src={image} className={`m-5 ${imageClass} `} />
+      <a href="https://www.google.co.in/">
+        <img src={image} className={`${imageClass} `} />
+      </a>
     </div>
   )
 }
