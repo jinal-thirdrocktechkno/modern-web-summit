@@ -2,7 +2,6 @@ import React from 'react'
 
 const SponsorDescription = (props: SponsorDescriptionProps) => {
   const {
-    title,
     description,
     image,
     parentClass,
@@ -25,7 +24,6 @@ const SponsorDescription = (props: SponsorDescriptionProps) => {
 export default SponsorDescription
 
 type SponsorDescriptionProps = {
-  title: string,
   description: string,
   image: string,
   parentClass: string,

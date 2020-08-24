@@ -38,7 +38,6 @@ const Home = () => {
 
   const { loading, error, data } = useQuery(API_TEST, { variables: { id: 15125 } });
 
-  // console.log(data, "data", error, "error")
   return (
     <div>
       <div className='flex items-center justify-between w-full absolute -mt-10 pt-1'>
