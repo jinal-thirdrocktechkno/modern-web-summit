@@ -7,8 +7,8 @@ import { sponsorList } from '../../utility/constants'
 const Sponsor = () => {
   return (
     <div className="bg-white shadow-xs">
-      <div className="flex">
-        <div className="bg-black w-23 flex-23 h-32 flex items-end self-start justify-center">
+      <div className="flex sm:flex-wrap md:flex-no-wrap">
+        <div className="bg-black md:w-23 sm:w-full sm:flex-none md:flex-23 h-32 flex items-end self-start justify-center">
           <h4 className="text-5xl text-white leading-7">SPONSOR</h4>
         </div>
         <div className="flex flex-col p-6">

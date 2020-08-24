@@ -9,8 +9,8 @@ const Curators = () => {
 
   return (
     <div className="bg-white shadow-xs" >
-      <div className="flex">
-        <div className="bg-black w-23 flex-23 h-32 flex items-end self-start justify-center">
+      <div className="flex sm:flex-wrap md:flex-no-wrap">
+        <div className="bg-black md:w-23 sm:w-full sm:flex-none md:flex-23 h-32 flex items-end self-start justify-center">
           <h4 className="text-5xl text-white leading-7">Curators</h4>
         </div>
         <div className="flex flex-col p-6">
@@ -20,7 +20,7 @@ const Curators = () => {
       </div>
 
       <div className="flex flex-wrap mt-6">
-        <div className="w-1/2 p-10">
+        <div className="md:w-1/2 sm:w-full p-10">
           <Title title="serverless" parentClass="flex justify-center border-solid border" />
           <div className="flex pt-10">
             <div className="w-1/3">
@@ -41,7 +41,7 @@ const Curators = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/2 p-10">
+        <div className="md:w-1/2 sm:w-full p-10">
           <Title title="React" parentClass="flex justify-center border-solid border" />
           <div className="flex pt-10">
             <div className="w-1/3">
@@ -62,7 +62,7 @@ const Curators = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/2 p-10">
+        <div className="md:w-1/2 sm:w-full p-10">
           <Title title="Svelte" parentClass="flex justify-center border-solid border" />
           <div className="flex pt-10">
             <div className="w-1/3">
@@ -83,7 +83,7 @@ const Curators = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/2 p-10">
+        <div className="md:w-1/2 sm:w-full p-10">
           <Title title="CSS" parentClass="flex justify-center border-solid border" />
           <div className="flex pt-10">
             <div className="w-1/3">

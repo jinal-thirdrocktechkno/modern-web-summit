@@ -40,12 +40,13 @@ const Home = () => {
 
   return (
     <div className='h-full'>
-      <div className='flex items-center justify-between w-full absolute -mt-10 pt-1'>
+      <div className='flex items-center justify-between w-full absolute md:-mt-10 pt-1'>
         <div onClick={() => menuOpen()}>
-          <img className="inline p-2 ml-2 mt-1 cursor-pointer" src="/images/menu.svg" alt="logo" />
+          <img className="sm:hidden md:inline p-2 ml-2 mt-1 cursor-pointer" src="/images/menu.svg" alt="logo" />
+          <img className="md:hidden sm:inline p-2 ml-2 mt-1 cursor-pointer" src="/images/menu-white.svg" alt="logo" />
         </div>
         {showMenu && <NavMenu menuOpen={menuOpen} />}
-        <div className="flex items-center mr-10">
+        <div className="items-center mr-10 sm:hidden md:flex">
           <p className="uppercase font-extrabold text-gray-400 text-opacity-25 tracking-widest">share</p>
           <a href="https://www.google.co.in/">
             <img className="inline p-2" src="/images/Twitter.svg" alt="logo" />
@@ -60,9 +61,9 @@ const Home = () => {
       </div>
 
 
-      <div className='landing-wrap flex'>
-        <img className="inline self-start -mt-10 ml-8" src="/images/left.svg" alt="logo" />
-        <div className='w-2/5 m-auto text-center -mt-10'>
+      <div className='landing-wrap sm:m-0 md:m-10'>
+        <img className="inline self-start sm:hidden md:inline -mt-10 ml-8" src="/images/left.svg" alt="logo" />
+        <div className='md:w-2/5 sm:w-full m-auto text-center -mt-10'>
           <Logo />
           <p className='text-gray-300 font-medium text-base mb-10'>
             {"Connecting the world’s top designers and developers to redefine the bounds of possibility through an exciting exploration of cutting-edge technologies, lessons, & patterns"}</p>
@@ -73,22 +74,22 @@ const Home = () => {
             <a className="text-gray-300 font-medium text-base" href="https://www.google.co.in/">Code of Conduct</a>
           </div>
         </div>
-        <img className="inline self-end mr-8 relative top-1/2 transform -translate-y-48" src="/images/right.svg" alt="logo" />
+        <img className="inline self-end sm:hidden md:inline mr-8 relative top-1/2 transform -translate-y-48" src="/images/right.svg" alt="logo" />
       </div>
 
-      <div className='bg-darkBg m-10 text-center flex items-center justify-center min-h-778'>
+      <div className='bg-darkBg m-10 text-center sm:hidden md:flex items-center justify-center min-h-778'>
         <Modern />
       </div>
-      <div ref={speakerRef} className='m-10'>
+      <div ref={speakerRef} className='sm:m-0 md:m-10'>
         <Speaker />
       </div>
-      <div ref={sponsorRef} className='m-10'>
+      <div ref={sponsorRef} className='sm:m-0 md:m-10'>
         <Sponsor />
       </div>
-      <div ref={curatorsRef} className="m-10">
+      <div ref={curatorsRef} className="sm:m-0 md:m-10">
         <Curators />
       </div>
-      <div className="m-10">
+      <div className="sm:m-0 md:m-10">
         <ShareSocial />
       </div>
       <Footer />
