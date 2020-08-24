@@ -2,6 +2,10 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+html, #__next {
+    height: 100%;
+}
+
 body {
     @apply bg-gray-100 font-blender h-full;
 }
