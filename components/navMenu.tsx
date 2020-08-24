@@ -9,15 +9,15 @@ const NavMenu = (props: NavMenuProps) => {
       <div className="m-3">
         <img src="/images/close.svg" className="cursor-pointer" onClick={menuOpen} />
       </div>
-      <div className="flex w-3/5 mx-auto my-10">
-        <div className="w-1/4">
+      <div className="flex md:w-3/5 sm:w-full mx-auto my-10">
+        <div className="w-1/4 sm:hidden md:block">
           <p><a className={linkClass} href="https://www.google.co.in/">Terms of Service</a></p>
           <p><a className={linkClass} href="https://www.google.co.in/">Privacy Policy</a></p>
           <p><a className={linkClass} href="https://www.google.co.in/">Selection Committee</a></p>
           <p><a className={linkClass} href="https://www.google.co.in/">Workshops</a></p>
           <p><a className={linkClass} href="https://www.google.co.in/">Jobs</a></p>
         </div>
-        <div className="w-2/5 flex flex-col mx-5">
+        <div className="md:w-2/5 sm:w-full flex flex-col mx-5">
           <button
             onClick={() => handleButtonClick('home')}
             className={buttonClass}
@@ -55,7 +55,7 @@ const NavMenu = (props: NavMenuProps) => {
             schedule - coming soon
             </button>
         </div>
-        <div className="w-1/4 ml-16">
+        <div className="w-1/4 ml-16 sm:hidden md:block">
           <p><a className={linkClass} href="https://www.google.co.in/">Volunteer</a></p>
           <p><a className={linkClass} href="https://www.google.co.in/">Request for Sponsorship</a></p>
           <p><a className={linkClass} href="https://www.google.co.in/">Apply for Scholarship</a></p>
