@@ -2,29 +2,31 @@ import React from 'react'
 
 const SponsorDescription = (props: SponsorDescriptionProps) => {
   const {
-    title,
     description,
     image,
     parentClass,
-    descriptionClass
+    descriptionClass,
+    innerClass
   } = props
 
   return (
     <div className={parentClass}>
-      <div className="flex flex-row" >
-        <img className="inline" src={image} />
+      <div className={innerClass} >
+        <a href="https://www.google.co.in/">
+          <img className="inline mb-5" src={image} />
+        </a>
+        <p className={descriptionClass}>{description}</p>
       </div>
-      <p className={descriptionClass}>{description}</p>
     </div>
   )
 
 }
 export default SponsorDescription
 
-export type SponsorDescriptionProps = {
-  title: string,
+type SponsorDescriptionProps = {
   description: string,
   image: string,
   parentClass: string,
-  descriptionClass: string
+  descriptionClass: string,
+  innerClass: string
 }

@@ -2,27 +2,21 @@ import React from 'react'
 
 const ProfileCard = (props: ProfileCardProps) => {
 
-  const { imageUrl, name, designation, companyName, location, isLast } = props
+  const { imageUrl, name, designation, companyName, location, isLast, imageClass } = props
   return (
-    <div className="border-black border-2 mb-2">
-      <img src={imageUrl} alt="image" />
+    <div className="mb-2 profile-card cursor-pointer">
+      <img src={imageUrl} alt="image" className={`w-full blend-luminosity ${imageClass}`} />
       {isLast ?
-        <div className="last-card flex justify-center">
-          <p className="leading-5 uppercase text-lg self-center " >See all speakers {'>'}</p>
+        <div className="h-32 flex items-center justify-center bg-purple-100 cursor-pointer">
+          <p className="text-lg text-white font-bold tracking-wide uppercase">See all speakers {'>'}</p>
         </div>
         :
         <>
-          <div className="bg-black pt-4 px-4">
-            <p className="text-white font-16 line-20 text-left">{name}</p>
-            <p className="text-white font-12 line-20 text-left">{designation}</p>
-          </div>
-          <div className="bg-black pt-3  px-1 px-4">
-            <i></i>
-            <p className="text-white font-12 line-14 text-left italic">{location}</p>
-          </div>
-          <div className="bg-black  px-1 pt-1 px-4 pb-4">
-            <i></i>
-            <p className="text-white font-12 line-14 text-left italic">{companyName}</p>
+          <div className="bg-gray-400 p-5">
+            <h5 className="text-white uppercase text-base">{name}</h5>
+            <p className="capitalize text-white text-opacity-75 text-xs">{designation}</p>
+            <p className="text-white text-opacity-75 text-xs italic mt-2"><img className="inline mr-1" src="/images/office.svg" alt="office" /> {companyName}</p>
+            <p className="text-white text-opacity-75 text-xs italic"><img className="inline mr-1" src="/images/map-pin.svg" alt="address" /> {location}</p>
           </div>
         </>
       }
@@ -32,11 +26,12 @@ const ProfileCard = (props: ProfileCardProps) => {
 
 export default ProfileCard
 
-export type ProfileCardProps = {
+type ProfileCardProps = {
   imageUrl: string,
   name: string,
   designation: string,
   companyName: string,
   location: string,
-  isLast: boolean
+  isLast: boolean,
+  imageClass: string
 }

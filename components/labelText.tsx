@@ -12,7 +12,7 @@ const LabelText = (props: LabelTextProps) => {
 
 export default LabelText
 
-export type LabelTextProps = {
+type LabelTextProps = {
   title: string,
   label: string
 }

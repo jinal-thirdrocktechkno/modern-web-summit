@@ -9,20 +9,49 @@ module.exports = {
       inset: {
         '1/2': '50%',
       },
+      boxShadow: {
+        xs: '0 0 40px rgba(0, 0, 0, 0.1)'
+      },
+      minHeight: {
+        '778': '778px'
+      },
+
       letterSpacing: {
         widest: '6px'
       },
       width: {
         '23': '23.5rem'
       },
+      flex: {
+        '23': '0 0 23.5rem'
+      },
       colors: {
-        gray: '#E5E5E5',
-        typography: '#4F4F4F',
-        typographyDark: '#4F4F4F',
-        typographyLight: '#191919',
+        gray: {
+          '100': '#E5E5E5',
+          '200': '#BDBDBD',
+          '300': '#4F4F4F',
+          '400': '#191919'
+        },
+        purple: {
+          '100': '#AD60CA',
+          '200': '#803A9A',
+        },
         darkBg: 'rgba(0, 0, 0, 0.8)',
         lightGreen: '#6FCF97'
       },
+    },
+    screens: {
+      'sm': '320px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
     },
     fontFamily: {
       blender: 'Blender Pro',
@@ -30,5 +59,7 @@ module.exports = {
     }
   },
   variants: {},
-  plugins: [],
+  plugins: [
+    require('tailwindcss-blend-mode')(), // no options to configure
+  ],
 }
