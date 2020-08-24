@@ -39,7 +39,7 @@ const Home = () => {
   const { loading, error, data } = useQuery(API_TEST, { variables: { id: 15125 } });
 
   return (
-    <div>
+    <div className='h-full'>
       <div className='flex items-center justify-between w-full absolute -mt-10 pt-1'>
         <div onClick={() => menuOpen()}>
           <img className="inline p-2 ml-2 mt-1 cursor-pointer" src="/images/menu.svg" alt="logo" />
