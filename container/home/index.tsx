@@ -17,7 +17,7 @@ const Home = () => {
   const [showMenu, setShowMenu] = useState(false)
 
   const menuOpen = () => {
-    setShowMenu(true)
+    setShowMenu(!showMenu)
   }
 
   let speakerRef = useRef(null)
@@ -44,7 +44,7 @@ const Home = () => {
         <div onClick={() => menuOpen()}>
           <img className="inline p-2 ml-2 mt-1 cursor-pointer" src="/images/menu.svg" alt="logo" />
         </div>
-        {showMenu && <NavMenu />}
+        {showMenu && <NavMenu menuOpen={menuOpen} />}
         <div className="flex items-center mr-10">
           <p className="uppercase font-extrabold text-gray-400 text-opacity-25 tracking-widest">share</p>
           <a href="https://www.google.co.in/">

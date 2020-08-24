@@ -2,11 +2,6 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
-html, #__next {
-    @apply h-full;
-}
-
 body {
     @apply bg-gray-100 font-blender h-full;
 }
@@ -27,6 +22,6 @@ body {
     height: calc(100% - 5rem);
 }
 
-.profile-card:hover >img {
+.profile-card:hover>img {
     mix-blend-mode: normal;
 }

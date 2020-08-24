@@ -1,11 +1,11 @@
 import React from 'react'
 
-const NavMenu = () => {
-
+const NavMenu = (props: NavMenuProps) => {
+  const { menuOpen } = props
   return (
     <div className="bg-white absolute top-0 inset-x-0 z-10 shadow-xs">
       <div className="m-3">
-        <img src="/images/close.svg" className="cursor-pointer" />
+        <img src="/images/close.svg" className="cursor-pointer" onClick={menuOpen} />
       </div>
       <div className="flex w-3/5 mx-auto my-10">
         <div className="w-1/4">
@@ -37,3 +37,6 @@ const NavMenu = () => {
 }
 
 export default NavMenu
+type NavMenuProps = {
+  menuOpen: any
+}
