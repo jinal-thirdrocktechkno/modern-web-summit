@@ -23,6 +23,7 @@ const Home = () => {
   let speakerRef = useRef(null)
   let sponsorRef = useRef(null)
   let curatorsRef = useRef(null)
+  let homeRef = useRef(null)
 
   const API_TEST = gql`
   query ($id: Int) { 
@@ -35,6 +36,27 @@ const Home = () => {
       }
     }
   }`
+  const handleButtonClick = (type) => {
+    switch (type) {
+      case 'speakers': {
+        ScrollToRef(speakerRef)
+      }
+        break;
+      case 'sponsors': {
+        ScrollToRef(sponsorRef)
+      }
+        break;
+      case 'curators': {
+        ScrollToRef(curatorsRef)
+      }
+        break;
+      default: {
+        ScrollToRef(homeRef)
+      }
+        break;
+    }
+    menuOpen()
+  }
 
   const { loading, error, data } = useQuery(API_TEST, { variables: { id: 15125 } });
 
@@ -45,7 +67,10 @@ const Home = () => {
           <img className="sm:hidden md:inline p-2 ml-2 mt-1 cursor-pointer" src="/images/menu.svg" alt="logo" />
           <img className="md:hidden sm:inline p-2 ml-2 mt-1 cursor-pointer" src="/images/menu-white.svg" alt="logo" />
         </div>
-        {showMenu && <NavMenu menuOpen={menuOpen} />}
+        {showMenu &&
+          <NavMenu
+            menuOpen={menuOpen}
+            handleButtonClick={handleButtonClick} />}
         <div className="items-center mr-10 sm:hidden md:flex">
           <p className="uppercase font-extrabold text-gray-400 text-opacity-25 tracking-widest">share</p>
           <a href="https://www.google.co.in/">
@@ -61,7 +86,7 @@ const Home = () => {
       </div>
 
 
-      <div className='landing-wrap sm:m-0 md:m-10'>
+      <div className='landing-wrap flex sm:m-0 md:m-10' ref={homeRef}>
         <img className="inline self-start sm:hidden md:inline -mt-10 ml-8" src="/images/left.svg" alt="logo" />
         <div className='md:w-2/5 sm:w-full m-auto text-center -mt-10'>
           <Logo />

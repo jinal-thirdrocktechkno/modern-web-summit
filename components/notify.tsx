@@ -19,15 +19,15 @@ const NotifyForm = (props: NotifyFormProps) => {
                     onClick={() => setShowForm(!showForm)}>
                     Notify me when tickets go on sale
                 </button>
-                || <div className="flex">
+                || <div className="flex sm:flex-wrap md:flex-no-wrap sm:p-4 md:p-0">
                     <input
-                        className="py-2 px-6 mr-2 flex-grow border-solid border-2 text-xl border-black focus:outline-none"
+                        className="py-2 px-6 md:mr-2 sm:mb-4 md:mb-0 flex-grow border-solid border-2 text-xl border-black focus:outline-none"
                         value={email}
                         placeholder="Your Email"
                         onChange={(e) => setEmail(e.target.value)}
                     />
                     <button
-                        className="bg-black text-white py-2 px-12 uppercase text-xl focus:outline-none"
+                        className="m-auto bg-black text-white py-2 px-12 uppercase text-xl focus:outline-none"
                         onClick={() => onClick()}>
                         Submit
                     </button>
