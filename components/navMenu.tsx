@@ -3,11 +3,11 @@ import React from 'react'
 const NavMenu = () => {
 
   return (
-    <div className="overlay-menu">
+    <div className="bg-white absolute top-0 inset-x-0 z-10 shadow-xs">
       <div className="m-3">
         <img src="/images/close.svg" className="cursor-pointer" />
       </div>
-      <div className="flex w-3/5 mx-auto mt-10">
+      <div className="flex w-3/5 mx-auto my-10">
         <div className="w-1/4">
           <p><a className="text-xl text-gray-300 font-medium hover:text-purple-200" href="https://www.google.co.in/">Terms of Service</a></p>
           <p><a className="text-xl text-gray-300 font-medium hover:text-purple-200" href="https://www.google.co.in/">Privacy Policy</a></p>

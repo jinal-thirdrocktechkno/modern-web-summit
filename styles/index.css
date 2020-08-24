@@ -3,8 +3,18 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+html, #__next {
+    @apply h-full;
+}
+
 body {
-    @apply bg-gray-100 font-blender;
+    @apply bg-gray-100 font-blender h-full;
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+    body {
+        zoom: 80%;
+    }
 }
 
 .custom-btn {
@@ -14,12 +24,7 @@ body {
 
 .landing-wrap {
     @apply bg-white m-10 shadow-xs;
-    height: calc(100vh - 5rem);
-}
-
-.overlay-menu {
-    @apply bg-white absolute top-0 inset-x-0 z-10 shadow-xs;
-    height: calc(100vh - 5rem);
+    height: calc(100% - 5rem);
 }
 
 .profile-card:hover >img {
