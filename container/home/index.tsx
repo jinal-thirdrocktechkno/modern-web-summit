@@ -11,7 +11,7 @@ import NavMenu from '../../components/navMenu'
 import { useQuery, gql } from '@apollo/client';
 
 // used for navigate to div future use 
-const ScrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
+const ScrollToRef = (ref) => ref.current.scrollIntoView()
 
 const Home = () => {
   const [showMenu, setShowMenu] = useState(false)
