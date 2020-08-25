@@ -114,7 +114,7 @@ const Home = () => {
       <div ref={curatorsRef} className="sm:m-0 md:m-10">
         <Curators />
       </div>
-      <div className="sm:m-0 md:m-10">
+      <div className="sm:m-0 md:m-10 sm:p-2 md:p-0">
         <ShareSocial />
       </div>
       <Footer />
