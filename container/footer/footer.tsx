@@ -14,7 +14,7 @@ const Footer = () => {
   }
 
   return (
-    <div className="bg-gray-400 p-10 flex relative">
+    <div className="bg-gray-400 md:p-10 sm:p-5 flex relative">
       {NotifyModal &&
         <div className="p-5 bg-white absolute md:w-2/5 sm:w-full top-0 left-1/2 shadow-xs transform md:-translate-y-40 sm:-translate-y-56 -translate-x-1/2">
           <div className="relative">

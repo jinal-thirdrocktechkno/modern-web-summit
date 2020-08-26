@@ -2,6 +2,7 @@ import '../styles/index.css'
 //adding global css.
 import { ApolloProvider } from '@apollo/react-hooks';
 import { createApolloClient } from '../api/client';
+import "animate.css/animate.min.css";
 
 export default function MyApp({ Component, pageProps }) {
   const client = createApolloClient();

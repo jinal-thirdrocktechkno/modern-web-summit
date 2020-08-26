@@ -23,7 +23,7 @@ const Curators = () => {
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
           <Title title="serverless" parentClass="flex justify-center border-solid border" />
           <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
-            <div className="md:w-1/3 sm:w-1/2">
+            <div className="md:w-1/3 sm:w-3/4">
               <ProfileCard
                 imageClass=""
                 isLast={false}
@@ -44,7 +44,7 @@ const Curators = () => {
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
           <Title title="React" parentClass="flex justify-center border-solid border" />
           <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
-            <div className="md:w-1/3 sm:w-1/2">
+            <div className="md:w-1/3 sm:w-3/4">
               <ProfileCard
                 imageClass=""
                 isLast={false}
@@ -65,7 +65,7 @@ const Curators = () => {
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
           <Title title="Svelte" parentClass="flex justify-center border-solid border" />
           <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
-            <div className="md:w-1/3 sm:w-1/2">
+            <div className="md:w-1/3 sm:w-3/4">
               <ProfileCard
                 imageClass=""
                 isLast={false}
@@ -86,7 +86,7 @@ const Curators = () => {
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
           <Title title="CSS" parentClass="flex justify-center border-solid border" />
           <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
-            <div className="md:w-1/3 sm:w-1/2">
+            <div className="md:w-1/3 sm:w-3/4">
               <ProfileCard
                 imageClass=""
                 isLast={false}
