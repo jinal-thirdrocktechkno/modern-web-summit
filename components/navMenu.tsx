@@ -6,10 +6,11 @@ const NavMenu = (props: NavMenuProps) => {
   const linkClass = "text-xl text-gray-300 font-medium hover:text-purple-200"
   return (
     <div className="bg-white absolute top-0 inset-x-0 z-10 shadow-xs">
-      <div className="m-3">
-        <img src="/images/close.svg" className="cursor-pointer" onClick={menuOpen} />
+      <div className="p-3 sm:bg-gray-400 md:bg-white">
+        <img src="/images/close.svg" className="sm:hidden md:inline cursor-pointer" onClick={menuOpen} />
+        <img src="/images/close-white.svg" className="md:hidden sm:inline cursor-pointer" onClick={menuOpen} />
       </div>
-      <div className="flex md:w-3/5 sm:w-full mx-auto my-10">
+      <div className="flex md:w-3/5 sm:w-full mx-auto md:my-10 sm:my-5">
         <div className="w-1/4 sm:hidden md:block">
           <p><a className={linkClass} href="https://www.google.co.in/">Terms of Service</a></p>
           <p><a className={linkClass} href="https://www.google.co.in/">Privacy Policy</a></p>

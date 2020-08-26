@@ -16,7 +16,7 @@ const Speaker = () => {
       </div>
 
       <div className="flex sm:flex-wrap md:flex-no-wrap md:pl-48 md:p-10 sm:p-0">
-        <div className="md:mr-2 sm:mr-0 md:w-1/5 sm:w-1/2 sm:p-4 md:p-0">
+        <div className="md:mr-2 sm:mr-0 md:w-1/5 sm:w-1/2 sm:pl-5 md:pl-0 sm:pr-2 md:pr-0">
           {abc.map((item, index) => {
             return (
               <ProfileCard
@@ -32,7 +32,7 @@ const Speaker = () => {
             )
           })}
         </div>
-        <div className="md:mr-2 sm:mr-0 md:w-1/5 sm:w-1/2 sm:p-4 md:p-0 mt-16">
+        <div className="md:mr-2 sm:mr-0 md:w-1/5 sm:w-1/2 mt-16 sm:pr-5 md:pr-0 sm:pl-2 md:pl-0">
           {abc.map((item, index) => {
             return (
               <ProfileCard
@@ -48,7 +48,7 @@ const Speaker = () => {
             )
           })}
         </div>
-        <div className="md:mr-2 sm:mr-0 md:w-1/5 sm:w-1/2 sm:p-4 md:p-0 mt-32">
+        <div className="md:mr-2 sm:mr-0 md:w-1/5 sm:w-1/2 mt-32 sm:pl-5 md:pl-0 sm:pr-2 md:pr-0 sm:hidden md:block">
           {abc.map((item, index) => {
             return (
               <ProfileCard
@@ -64,7 +64,7 @@ const Speaker = () => {
             )
           })}
         </div>
-        <div className="md:mr-2 sm:mr-0 md:w-1/5 sm:w-1/2 sm:p-4 md:p-0 mt-48">
+        <div className="md:mr-2 sm:mr-0 md:w-1/5 sm:w-1/2 mt-48 sm:pr-5 md:pr-0 sm:pl-2 md:pl-0 sm:hidden md:block">
           {abc.map((item, index) => {
             return (
               <ProfileCard

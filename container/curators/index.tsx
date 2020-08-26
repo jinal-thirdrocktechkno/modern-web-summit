@@ -19,11 +19,11 @@ const Curators = () => {
         </div>
       </div>
 
-      <div className="flex flex-wrap mt-6">
-        <div className="md:w-1/2 sm:w-full p-10">
+      <div className="flex flex-wrap md:mt-6">
+        <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
           <Title title="serverless" parentClass="flex justify-center border-solid border" />
           <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
-            <div className="md:w-1/3 ms:w-full">
+            <div className="md:w-1/3 sm:w-3/4">
               <ProfileCard
                 imageClass=""
                 isLast={false}
@@ -37,14 +37,14 @@ const Curators = () => {
             </div>
             <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
               <p className="text-gray-300 text-base font-medium">{'Brian has been working in the Serverless space for over 7 years. He’s the cofounder and CTO of Begin.com, the fastest and easiest way to setup CI/CD gitops for serverless web apps on AWS. He is the creator and maintainer of OpenJS Architect, an open-source framework for generating and deploying AWS standard SAM/CloudFormation, coined the term FASTstack. He has been keeping a close eye on Deno since its earliest moments and is already using it in production today. You can catch him @brianleroux on Twitter where he talks about open source, JavaScript, serverless, faststack, Deno, and other developer-related stuff.'}</p>
-              <a href="https://www.google.co.in/" className="md:self-start sm:self-center text-lg font-bold underline text-purple-200 hover:text-purple-100">{'See all the Serverless Speakers >'}</a>
+              <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold underline text-purple-200 hover:text-purple-100">{'See all the Serverless Speakers >'}</a>
             </div>
           </div>
         </div>
-        <div className="md:w-1/2 sm:w-full p-10">
+        <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
           <Title title="React" parentClass="flex justify-center border-solid border" />
-          <div className="flex pt-10">
-            <div className="w-1/3">
+          <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
+            <div className="md:w-1/3 sm:w-3/4">
               <ProfileCard
                 imageClass=""
                 isLast={false}
@@ -56,16 +56,16 @@ const Curators = () => {
                 location="San Francisco, California"
               />
             </div>
-            <div className="flex justify-between flex-col w-2/3 pl-10">
+            <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
               <p className="text-gray-300 text-base font-medium">{'Brian has been working in the Serverless space for over 7 years. He’s the cofounder and CTO of Begin.com, the fastest and easiest way to setup CI/CD gitops for serverless web apps on AWS. He is the creator and maintainer of OpenJS Architect, an open-source framework for generating and deploying AWS standard SAM/CloudFormation, coined the term FASTstack. He has been keeping a close eye on Deno since its earliest moments and is already using it in production today. You can catch him @brianleroux on Twitter where he talks about open source, JavaScript, serverless, faststack, Deno, and other developer-related stuff.'}</p>
-              <a href="https://www.google.co.in/" className="self-start text-lg font-bold underline text-purple-200 hover:text-purple-100">{'See all the React Speakers >'}</a>
+              <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold underline text-purple-200 hover:text-purple-100">{'See all the React Speakers >'}</a>
             </div>
           </div>
         </div>
-        <div className="md:w-1/2 sm:w-full p-10">
+        <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
           <Title title="Svelte" parentClass="flex justify-center border-solid border" />
-          <div className="flex pt-10">
-            <div className="w-1/3">
+          <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
+            <div className="md:w-1/3 sm:w-3/4">
               <ProfileCard
                 imageClass=""
                 isLast={false}
@@ -77,16 +77,16 @@ const Curators = () => {
                 location="San Francisco, California"
               />
             </div>
-            <div className="flex justify-between flex-col w-2/3 pl-10">
+            <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
               <p className="text-gray-300 text-base font-medium">{'Brian has been working in the Serverless space for over 7 years. He’s the cofounder and CTO of Begin.com, the fastest and easiest way to setup CI/CD gitops for serverless web apps on AWS. He is the creator and maintainer of OpenJS Architect, an open-source framework for generating and deploying AWS standard SAM/CloudFormation, coined the term FASTstack. He has been keeping a close eye on Deno since its earliest moments and is already using it in production today. You can catch him @brianleroux on Twitter where he talks about open source, JavaScript, serverless, faststack, Deno, and other developer-related stuff.'}</p>
-              <a href="https://www.google.co.in/" className="self-start text-lg font-bold underline text-purple-200 hover:text-purple-100">{'See all the Svelte Speakers >'}</a>
+              <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold underline text-purple-200 hover:text-purple-100">{'See all the Svelte Speakers >'}</a>
             </div>
           </div>
         </div>
-        <div className="md:w-1/2 sm:w-full p-10">
+        <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
           <Title title="CSS" parentClass="flex justify-center border-solid border" />
-          <div className="flex pt-10">
-            <div className="w-1/3">
+          <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
+            <div className="md:w-1/3 sm:w-3/4">
               <ProfileCard
                 imageClass=""
                 isLast={false}
@@ -98,9 +98,9 @@ const Curators = () => {
                 location="San Francisco, California"
               />
             </div>
-            <div className="flex justify-between flex-col w-2/3 pl-10">
+            <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
               <p className="text-gray-300 text-base font-medium">{'Brian has been working in the Serverless space for over 7 years. He’s the cofounder and CTO of Begin.com, the fastest and easiest way to setup CI/CD gitops for serverless web apps on AWS. He is the creator and maintainer of OpenJS Architect, an open-source framework for generating and deploying AWS standard SAM/CloudFormation, coined the term FASTstack. He has been keeping a close eye on Deno since its earliest moments and is already using it in production today. You can catch him @brianleroux on Twitter where he talks about open source, JavaScript, serverless, faststack, Deno, and other developer-related stuff.'}</p>
-              <a href="https://www.google.co.in/" className="self-start text-lg font-bold underline text-purple-200 hover:text-purple-100">{'See all the CSS Speakers >'}</a>
+              <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold underline text-purple-200 hover:text-purple-100">{'See all the CSS Speakers >'}</a>
             </div>
           </div>
         </div>
