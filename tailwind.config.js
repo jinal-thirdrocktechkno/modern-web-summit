@@ -15,7 +15,9 @@ module.exports = {
       minHeight: {
         '778': '778px'
       },
-
+      height: {
+        '100-5': 'calc(100% - 5rem)' 
+      },
       letterSpacing: {
         widest: '6px'
       },
