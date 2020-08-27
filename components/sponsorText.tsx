@@ -5,7 +5,7 @@ const SponsorText = (props: SponsorTextProps) => {
   return (
     <div className={parentClass}>
       <a href="https://www.google.co.in/">
-        <img src={image} className={`inline ${imageClass} `} />
+        <img src={image} className={`inline opacity-75 hover:opacity-100 ${imageClass} `} />
       </a>
     </div>
   )
