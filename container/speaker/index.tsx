@@ -20,7 +20,7 @@ const Speaker = () => {
           {abc.map((item, index) => {
             return (
               <ProfileCard
-                imageClass=""
+                imageClass="blend-luminosity"
                 isLast={false}
                 key={index}
                 imageUrl="/images/speaker.png"
@@ -36,7 +36,7 @@ const Speaker = () => {
           {abc.map((item, index) => {
             return (
               <ProfileCard
-                imageClass=""
+                imageClass="blend-luminosity"
                 isLast={false}
                 key={index}
                 imageUrl="/images/speaker.png"
@@ -52,7 +52,7 @@ const Speaker = () => {
           {abc.map((item, index) => {
             return (
               <ProfileCard
-                imageClass=""
+                imageClass="blend-luminosity"
                 isLast={false}
                 key={index}
                 imageUrl="/images/speaker.png"
@@ -68,7 +68,7 @@ const Speaker = () => {
           {abc.map((item, index) => {
             return (
               <ProfileCard
-                imageClass=""
+                imageClass="blend-luminosity"
                 isLast={index === 3}
                 key={index}
                 imageUrl="/images/speaker.png"
