@@ -10,6 +10,7 @@ const Modern = () => {
   const [anotherKey, setAnotherKey] = useState(new Date().getTime())
   const [visible, setVisible] = useState(false)
   const [webVisible, setWebVisible] = useState(false)
+  const [boundVisible, setBoundVisible] = useState(false)
 
   const handleScroll = () => {
     console.log(isScroll, "isscroll", key, "key")
@@ -45,103 +46,39 @@ const Modern = () => {
   const setOnclick = () => {
     setKey(new Date().getTime())
     setTimeout(() => {
-      setAnotherKey(new Date().getTime())
-    }, 800)
-    setTimeout(() => {
-      setVisible(true)
-    }, 1000)
-    setTimeout(() => {
       setWebVisible(true)
-    })
-  }
+      setVisible(true)
+    }, 300)
+    setTimeout(() =>
+      setAnotherKey(new Date().getTime())
+    }, 900)
+  setTimeout(() => {
+    setBoundVisible(true)
+  }, 1200)
+}
 
-  return (
-    <div className="" id="modern" ref={ref} >
-      <button onClick={() => setOnclick()}>Click</button>
-      <div className="flex justify-center mb-2">
-        <p className="text-white text-xl font-menlo mr-3">modern_web_summit$</p>
-        <Typist key={key} cursor={typistConfig}>
-          <Typist.Delay ms={200} />
-          <p className="text-white text-xl font-menlo">git pull</p>
-        </Typist>
-        {/* <ScrollAnimation delay={200}
-          animateIn="fadeIn">
-          <p className="text-white text-xl font-menlo">g</p>
-        </ScrollAnimation>
-        <ScrollAnimation delay={400}
-          animateIn="fadeIn">
-          <p className="text-white text-xl font-menlo">i</p>
-        </ScrollAnimation>
-        <ScrollAnimation delay={600}
-          animateIn="fadeIn">
-          <p className="text-white text-xl font-menlo">t</p>
-        </ScrollAnimation>
-        <ScrollAnimation delay={800}
-          animateIn="fadeIn">
-          <p className="text-white text-xl font-menlo ml-2">p</p>
-        </ScrollAnimation>
-        <ScrollAnimation delay={1000}
-          animateIn="fadeIn">
-          <p className="text-white text-xl font-menlo">u</p>
-        </ScrollAnimation>
-        <ScrollAnimation delay={1200}
-          animateIn="fadeIn">
-          <p className="text-white text-xl font-menlo">l</p>
-        </ScrollAnimation>
-        <ScrollAnimation delay={1400}
-          animateIn="fadeIn">
-          <p className="text-white text-xl font-menlo">l</p>
-        </ScrollAnimation> */}
-      </div>
-      <ScrollAnimation delay={700}
-        animateIn="fadeIn">
-        <h5 className="text-lightGreen text-4xl font-menlo">WEB COMMUNITIES TOGETHER</h5>
-        {/* <p className="text-white text-xl font-menlo">l</p> */}
-      </ScrollAnimation>
-      {webVisible}
-
-      <div className="flex justify-center mb-2 mt-10">
-        {visible && <p className="text-white text-xl font-menlo mr-3 visible">modern_web_summit$  </p>}
-        <Typist key={anotherKey} cursor={typistConfig}>
-          <Typist.Delay ms={700} />
-          <p className="text-white text-xl font-menlo">git push</p>
-        </Typist>
-        {/* <ScrollAnimation delay={200}
-          animateIn="fadeIn">
-          <p className="text-white text-xl font-menlo">g</p>
-        </ScrollAnimation>
-        <ScrollAnimation delay={400}
-          animateIn="fadeIn">
-          <p className="text-white text-xl font-menlo">i</p>
-        </ScrollAnimation>
-        <ScrollAnimation delay={600}
-          animateIn="fadeIn">
-          <p className="text-white text-xl font-menlo">t</p>
-        </ScrollAnimation>
-        <ScrollAnimation delay={800}
-          animateIn="fadeIn">
-          <p className="text-white text-xl font-menlo ml-2">p</p>
-        </ScrollAnimation>
-        <ScrollAnimation delay={1000}
-          animateIn="fadeIn">
-          <p className="text-white text-xl font-menlo">u</p>
-        </ScrollAnimation>
-        <ScrollAnimation delay={1200}
-          animateIn="fadeIn">
-          <p className="text-white text-xl font-menlo">s</p>
-        </ScrollAnimation>
-        <ScrollAnimation delay={1400}
-          animateIn="fadeIn">
-          <p className="text-white text-xl font-menlo">h</p>
-        </ScrollAnimation> */}
-      </div>
-      <ScrollAnimation delay={1000}
-        animateIn="fadeIn">
-        <h5 className="text-lightGreen text-4xl font-menlo">THE BOUNDS OF POSSIBILITY</h5>
-        {/* <p className="text-white text-xl font-menlo">l</p> */}
-      </ScrollAnimation>
+return (
+  <div className="" id="modern" ref={ref} >
+    <button onClick={() => setOnclick()}>Click</button>
+    <div className="flex justify-center mb-2">
+      <p className="text-white text-xl font-menlo mr-3">modern_web_summit$</p>
+      <Typist key={key} cursor={typistConfig}>
+        <Typist.Delay ms={200} />
+        <p className="text-white text-xl font-menlo">git pull</p>
+      </Typist>
     </div>
-  )
+    {webVisible && <h5 className="text-lightGreen text-4xl font-menlo visible">WEB COMMUNITIES TOGETHER</h5>}
+
+    <div className="flex justify-center mb-2 mt-10">
+      {visible && <p className="text-white text-xl font-menlo mr-3 visible">modern_web_summit$  </p>}
+      <Typist key={anotherKey} cursor={typistConfig}>
+        <Typist.Delay ms={700} />
+        <p className="text-white text-xl font-menlo">git push</p>
+      </Typist>
+    </div>
+    {boundVisible && < h5 className="text-lightGreen text-4xl font-menlo visible">THE BOUNDS OF POSSIBILITY</h5>}
+  </div >
+)
 }
 
 export default Modern

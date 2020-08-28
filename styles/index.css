@@ -35,5 +35,6 @@ body {
 }
 
 .visible {
-    transition: ease-in .5s;
+    transition: ease-in;
+    transition-duration: 500ms;
 }
