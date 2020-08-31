@@ -86,7 +86,7 @@ const Speaker = () => {
             <button type="button" className="uppercase border-gray-400 text-gray-400 hover:bg-gray-400 hover:text-white font-black border-2 py-3 px-4 text-lg mt-1 focus:outline-none">Submit your talk here</button>
           </div>
         </div>
-        <div className="sm:block md:hidden p-4">
+        <div className="sm:block md:hidden p-4 mb-16">
           <button type="button" className="w-full uppercase border-purple-100 rounded-md text-purple-100 font-black border-2 p-4 text-lg mt-1 focus:outline-none">see all speakers</button>
           <button type="button" className="w-full mt-5 custom-btn focus:outline-none">Submit your talk here</button>
         </div>

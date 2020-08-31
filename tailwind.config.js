@@ -37,6 +37,7 @@ module.exports = {
         purple: {
           '100': '#AD60CA',
           '200': '#803A9A',
+          '300': '#BB51E2',
         },
         darkBg: 'rgba(0, 0, 0, 0.8)',
         lightGreen: '#6FCF97'

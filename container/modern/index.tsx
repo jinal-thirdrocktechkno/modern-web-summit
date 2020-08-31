@@ -50,7 +50,7 @@ const Modern = () => {
     }, 700)
     setTimeout(() => {
       setVisible(true)
-    }, 700)
+    }, 300)
     setTimeout(() => {
       setAnotherKey(new Date().getTime())
     }, 700)
