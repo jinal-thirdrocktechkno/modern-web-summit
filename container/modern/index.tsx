@@ -47,38 +47,40 @@ const Modern = () => {
     setKey(new Date().getTime())
     setTimeout(() => {
       setWebVisible(true)
+    }, 700)
+    setTimeout(() => {
       setVisible(true)
-    }, 300)
-    setTimeout(() =>
+    }, 700)
+    setTimeout(() => {
       setAnotherKey(new Date().getTime())
-    }, 900)
-  setTimeout(() => {
-    setBoundVisible(true)
-  }, 1200)
-}
+    }, 700)
+    setTimeout(() => {
+      setBoundVisible(true)
+    }, 1600)
+  }
 
-return (
-  <div className="" id="modern" ref={ref} >
-    <button onClick={() => setOnclick()}>Click</button>
-    <div className="flex justify-center mb-2">
-      <p className="text-white text-xl font-menlo mr-3">modern_web_summit$</p>
-      <Typist key={key} cursor={typistConfig}>
-        <Typist.Delay ms={200} />
-        <p className="text-white text-xl font-menlo">git pull</p>
-      </Typist>
-    </div>
-    {webVisible && <h5 className="text-lightGreen text-4xl font-menlo visible">WEB COMMUNITIES TOGETHER</h5>}
+  return (
+    <div className="" id="modern" ref={ref} >
+      <button onClick={() => setOnclick()}>Click</button>
+      <div className="flex justify-center mb-2">
+        <p className="text-white text-xl font-menlo mr-3">modern_web_summit$</p>
+        <Typist key={key} cursor={typistConfig}>
+          <Typist.Delay ms={200} />
+          <p className="text-white text-xl font-menlo">git pull</p>
+        </Typist>
+      </div>
+      {webVisible && <h5 className="text-lightGreen text-4xl font-menlo visible">WEB COMMUNITIES TOGETHER</h5>}
 
-    <div className="flex justify-center mb-2 mt-10">
-      {visible && <p className="text-white text-xl font-menlo mr-3 visible">modern_web_summit$  </p>}
-      <Typist key={anotherKey} cursor={typistConfig}>
-        <Typist.Delay ms={700} />
-        <p className="text-white text-xl font-menlo">git push</p>
-      </Typist>
-    </div>
-    {boundVisible && < h5 className="text-lightGreen text-4xl font-menlo visible">THE BOUNDS OF POSSIBILITY</h5>}
-  </div >
-)
+      <div className="flex justify-center mb-2 mt-10">
+        {visible && <p className="text-white text-xl font-menlo mr-3 visible">modern_web_summit$  </p>}
+        <Typist key={anotherKey} cursor={typistConfig}>
+          <Typist.Delay ms={200} />
+          <p className="text-white text-xl font-menlo">git push</p>
+        </Typist>
+      </div>
+      {boundVisible && <h5 className="text-lightGreen text-4xl font-menlo visible">THE BOUNDS OF POSSIBILITY</h5>}
+    </div >
+  )
 }
 
 export default Modern
