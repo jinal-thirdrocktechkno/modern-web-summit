@@ -25,16 +25,3 @@ body {
 .profile-card:hover>img {
     mix-blend-mode: normal;
 }
-
-.profile-card>.all-speaker {
-    background-color: #AD60CA;
-}
-
-.profile-card:hover>.all-speaker {
-    background-color: #BB51E2;
-}
-
-.visible {
-    transition: ease-in;
-    transition-duration: 500ms;
-}
