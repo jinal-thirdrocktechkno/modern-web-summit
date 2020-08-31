@@ -3,14 +3,14 @@ import { links } from '../utility/constants'
 
 const FooterLink = () => {
   return (
-    <div className="flex">
+    <div className="flex flex-wrap">
       {links.map((item, index) => {
         return (
-          <div key={index} className="w-1/4">
+          <div key={index} className="md:w-1/4 sm:w-1/2 sm:mb-10 md:mb-0">
             {item.link.map((linkData, i) => {
               return (
                 <div key={i}>
-                  <a href="https://www.google.com/" className="capitalize text-white hover:text-purple-200 text-opacity-50 text-base font-medium">
+                  <a href="https://www.google.com/" className="capitalize text-white hover:text-purple-200 md:text-opacity-50 sm:text-opacity-1 text-base font-medium">
                     {linkData.title}
                   </a>
                 </div>
