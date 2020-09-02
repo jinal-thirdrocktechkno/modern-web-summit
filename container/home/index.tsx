@@ -9,6 +9,8 @@ import ShareSocial from '../../components/shareSocial'
 import Footer from '../footer/footer'
 import NavMenu from '../../components/navMenu'
 import { useQuery, gql } from '@apollo/client';
+import TrackVisibility from 'react-on-screen';
+
 
 // used for navigate to div future use 
 const ScrollToRef = (ref) => ref.current.scrollIntoView()
@@ -94,16 +96,18 @@ const Home = () => {
             {"Connecting the world’s top designers and developers to redefine the bounds of possibility through an exciting exploration of cutting-edge technologies, lessons, & patterns"}</p>
           <NotifyForm buttonClass="" />
           <div className="mt-5 sm:mb-10 md:mb-0">
-            <a className="text-gray-300 font-medium text-base" href="https://www.google.co.in/">Terms of Service • </a>
-            <a className="text-gray-300 font-medium text-base" href="https://www.google.co.in/">Privacy Policy • </a>
-            <a className="text-gray-300 font-medium text-base" href="https://www.google.co.in/">Code of Conduct</a>
+            <a className="text-gray-300 font-medium text-base hover:text-purple-100" href="https://www.google.co.in/">Terms of Service • </a>
+            <a className="text-gray-300 font-medium text-base hover:text-purple-100" href="https://www.google.co.in/">Privacy Policy • </a>
+            <a className="text-gray-300 font-medium text-base hover:text-purple-100" href="https://www.google.co.in/">Code of Conduct</a>
           </div>
         </div>
         <img className="inline self-end sm:hidden md:inline mr-8 relative top-1/2 transform -translate-y-48" src="/images/right.svg" alt="logo" />
       </div>
 
       <div className='bg-darkBg m-10 text-center sm:hidden md:flex items-center justify-center min-h-778'>
-        <Modern />
+        <TrackVisibility>
+          <Modern />
+        </TrackVisibility>
       </div>
       <div ref={speakerRef} className='sm:m-0 md:m-10'>
         <Speaker />
