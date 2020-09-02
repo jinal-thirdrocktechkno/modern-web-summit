@@ -9,6 +9,8 @@ import ShareSocial from '../../components/shareSocial'
 import Footer from '../footer/footer'
 import NavMenu from '../../components/navMenu'
 import { useQuery, gql } from '@apollo/client';
+import TrackVisibility from 'react-on-screen';
+
 
 // used for navigate to div future use 
 const ScrollToRef = (ref) => ref.current.scrollIntoView()
@@ -103,7 +105,9 @@ const Home = () => {
       </div>
 
       <div className='bg-darkBg m-10 text-center sm:hidden md:flex items-center justify-center min-h-778'>
-        <Modern />
+        <TrackVisibility>
+          <Modern />
+        </TrackVisibility>
       </div>
       <div ref={speakerRef} className='sm:m-0 md:m-10'>
         <Speaker />

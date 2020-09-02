@@ -38,9 +38,9 @@ const Footer = () => {
         <img className="md:h-20 sm:h-24" src="/images/mws-logo.svg" />
         <div className="mt-10 flex justify-center">
           {/* <button onClick={() => openNotifyModal()} className="custom-btn focus:outline-none" type="button">Notify me when tickets go on sale</button> */}
-          <NotifyForm buttonClass="" />
+          <NotifyForm buttonClass="sm:text-lg md:text-xl" />
         </div>
-        <div className="my-10 text-center sm:block md:hidden">
+        <div className="mb-10 mt-5 text-center sm:block md:hidden">
           <a className="text-white font-medium text-sm text-opacity-50" href="https://www.google.co.in/">Terms of Service • </a>
           <a className="text-white font-medium text-sm text-opacity-50" href="https://www.google.co.in/">Privacy Policy • </a>
           <a className="text-white font-medium text-sm text-opacity-50" href="https://www.google.co.in/">Code of Conduct</a>

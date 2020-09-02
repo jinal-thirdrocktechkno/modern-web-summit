@@ -11,7 +11,7 @@ const Speaker = () => {
         </div>
         <div className="flex flex-col p-6 sm:text-center md:text-left">
           <h5 className="text-2xl font-extrabold uppercase" >{"5 days, 100+ sessions, workshops, & Discussions"}</h5>
-          <p className="text-gray-300 font-medium text-base">{"Whether you’re interested in learning a new technology or advancing your skills in a familiar stack, there’s something for everyone at the Modern Web Summit."}</p>
+          <p className="text-gray-300 font-medium text-base md:w-5/6 sm:w-full ">{"Whether you’re interested in learning a new technology or advancing your skills in a familiar stack, there’s something for everyone at the Modern Web Summit."}</p>
         </div>
       </div>
 
@@ -20,7 +20,7 @@ const Speaker = () => {
           {abc.map((item, index) => {
             return (
               <ProfileCard
-                imageClass="blend-luminosity"
+                imageClass="md:blend-luminosity sm:blend-normal"
                 isLast={false}
                 key={index}
                 imageUrl="/images/speaker.png"
@@ -36,7 +36,7 @@ const Speaker = () => {
           {abc.map((item, index) => {
             return (
               <ProfileCard
-                imageClass="blend-luminosity"
+                imageClass="md:blend-luminosity sm:blend-normal"
                 isLast={false}
                 key={index}
                 imageUrl="/images/speaker.png"
@@ -52,7 +52,7 @@ const Speaker = () => {
           {abc.map((item, index) => {
             return (
               <ProfileCard
-                imageClass="blend-luminosity"
+                imageClass="md:blend-luminosity sm:blend-normal"
                 isLast={false}
                 key={index}
                 imageUrl="/images/speaker.png"
@@ -68,7 +68,7 @@ const Speaker = () => {
           {abc.map((item, index) => {
             return (
               <ProfileCard
-                imageClass="blend-luminosity"
+                imageClass="md:blend-luminosity sm:blend-normal"
                 isLast={index === 3}
                 key={index}
                 imageUrl="/images/speaker.png"
