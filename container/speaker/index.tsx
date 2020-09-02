@@ -7,11 +7,11 @@ const Speaker = () => {
     <div className="bg-white shadow-xs">
       <div className="flex sm:flex-wrap md:flex-no-wrap">
         <div className="bg-black md:w-23 sm:w-full sm:flex-none md:flex-23 h-32 flex items-end self-start justify-center">
-          <h4 className="text-5xl text-white leading-7">SPEAKER</h4>
+          <h4 className="text-5xl text-white leading-7 uppercase">SPEAKERS</h4>
         </div>
         <div className="flex flex-col p-6 sm:text-center md:text-left">
           <h5 className="text-2xl font-extrabold uppercase" >{"5 days, 100+ sessions, workshops, & Discussions"}</h5>
-          <p className="text-gray-300 font-medium text-base">{"Whether you’re interested in learning a new technology or advancing your skills in a familiar stack, there’s something for everyone at the Modern Web Summit."}</p>
+          <p className="text-gray-300 font-medium text-base md:w-5/6 sm:w-full ">{"Whether you’re interested in learning a new technology or advancing your skills in a familiar stack, there’s something for everyone at the Modern Web Summit."}</p>
         </div>
       </div>
 
@@ -20,7 +20,7 @@ const Speaker = () => {
           {abc.map((item, index) => {
             return (
               <ProfileCard
-                imageClass=""
+                imageClass="md:blend-luminosity sm:blend-normal"
                 isLast={false}
                 key={index}
                 imageUrl="/images/speaker.png"
@@ -36,7 +36,7 @@ const Speaker = () => {
           {abc.map((item, index) => {
             return (
               <ProfileCard
-                imageClass=""
+                imageClass="md:blend-luminosity sm:blend-normal"
                 isLast={false}
                 key={index}
                 imageUrl="/images/speaker.png"
@@ -52,7 +52,7 @@ const Speaker = () => {
           {abc.map((item, index) => {
             return (
               <ProfileCard
-                imageClass=""
+                imageClass="md:blend-luminosity sm:blend-normal"
                 isLast={false}
                 key={index}
                 imageUrl="/images/speaker.png"
@@ -68,7 +68,7 @@ const Speaker = () => {
           {abc.map((item, index) => {
             return (
               <ProfileCard
-                imageClass=""
+                imageClass="md:blend-luminosity sm:blend-normal"
                 isLast={index === 3}
                 key={index}
                 imageUrl="/images/speaker.png"
@@ -86,7 +86,7 @@ const Speaker = () => {
             <button type="button" className="uppercase border-gray-400 text-gray-400 hover:bg-gray-400 hover:text-white font-black border-2 py-3 px-4 text-lg mt-1 focus:outline-none">Submit your talk here</button>
           </div>
         </div>
-        <div className="sm:block md:hidden p-4">
+        <div className="sm:block md:hidden p-4 mb-16">
           <button type="button" className="w-full uppercase border-purple-100 rounded-md text-purple-100 font-black border-2 p-4 text-lg mt-1 focus:outline-none">see all speakers</button>
           <button type="button" className="w-full mt-5 custom-btn focus:outline-none">Submit your talk here</button>
         </div>
