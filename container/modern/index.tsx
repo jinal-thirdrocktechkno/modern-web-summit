@@ -1,7 +1,6 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import Typist from 'react-typist';
-import { typistConfig, typistConfigDelay } from '../../utility/config';
-
+import { typistConfig } from '../../utility/config';
 
 const Modern = (props) => {
 
@@ -10,6 +9,7 @@ const Modern = (props) => {
   const [secondKey, setSecondKey] = useState(new Date().getTime())
   const [dataVisible, setVisible] = useState(false)
   const [typistVisible, setTypistVisible] = useState(false)
+
   useEffect(() => {
     const { isVisible } = props
     if (isVisible && firstTime) {
@@ -27,7 +27,6 @@ const Modern = (props) => {
   return (
 
     <div className="" id="modern" >
-      {/* <button onClick={() => setOnclick()}>Click</button> */}
       <div className="flex justify-center mb-2">
         <p className="gsapDemo text-white text-xl font-menlo mr-3 ">modern_web_summit$</p>
         {typistVisible && <Typist key={key} cursor={typistConfig}>
