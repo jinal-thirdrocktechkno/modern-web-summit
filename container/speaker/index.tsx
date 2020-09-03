@@ -23,7 +23,7 @@ const Speaker = () => {
                 imageClass="md:blend-luminosity sm:blend-normal"
                 isLast={false}
                 key={index}
-                imageUrl="/images/speaker.png"
+                imageUrl="/images/speaker.svg"
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"
@@ -39,7 +39,7 @@ const Speaker = () => {
                 imageClass="md:blend-luminosity sm:blend-normal"
                 isLast={false}
                 key={index}
-                imageUrl="/images/speaker.png"
+                imageUrl="/images/speaker.svg"
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"
@@ -55,7 +55,7 @@ const Speaker = () => {
                 imageClass="md:blend-luminosity sm:blend-normal"
                 isLast={false}
                 key={index}
-                imageUrl="/images/speaker.png"
+                imageUrl="/images/speaker.svg"
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"
@@ -71,7 +71,7 @@ const Speaker = () => {
                 imageClass="md:blend-luminosity sm:blend-normal"
                 isLast={index === 3}
                 key={index}
-                imageUrl="/images/speaker.png"
+                imageUrl="/images/speaker.svg"
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"
