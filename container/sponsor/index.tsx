@@ -32,7 +32,7 @@ const Sponsor = () => {
         />
 
         <Title title="Diamond sponsors" parentClass="flex justify-center border-solid border" />
-        <div className="flex pt-10 pb-20 justify-around">
+        <div className="flex pt-10 pb-20 justify-evenly">
           <SponsorDescription
             descriptionClass=""
             innerClass="text-center"
