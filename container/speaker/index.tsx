@@ -10,7 +10,7 @@ const Speaker = () => {
           <h4 className="text-5xl text-white leading-7 uppercase">SPEAKERS</h4>
         </div>
         <div className="flex flex-col p-6 sm:text-center md:text-left">
-          <h5 className="text-2xl font-extrabold uppercase" >{"5 days, 100+ sessions, workshops, & Discussions"}</h5>
+          <h5 className="text-2xl font-extrabold uppercase" >{"5 days, 100+ sessions, workshops, & Discussions EXHIBITS"}</h5>
           <p className="text-gray-300 font-medium text-base md:w-5/6 sm:w-full ">{"Whether you’re interested in learning a new technology or advancing your skills in a familiar stack, there’s something for everyone at the Modern Web Summit."}</p>
         </div>
       </div>
@@ -27,7 +27,7 @@ const Speaker = () => {
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"
-                location="San Francisco, California"
+                location="San Francisco, California CA"
               />
             )
           })}
@@ -43,7 +43,7 @@ const Speaker = () => {
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"
-                location="San Francisco, California"
+                location="San Francisco, California CA"
               />
             )
           })}
@@ -59,7 +59,7 @@ const Speaker = () => {
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"
-                location="San Francisco, California"
+                location="San Francisco, California CA"
               />
             )
           })}
@@ -75,7 +75,7 @@ const Speaker = () => {
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"
-                location="San Francisco, California"
+                location="San Francisco, California CA"
               />
             )
           })}
