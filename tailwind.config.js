@@ -2,7 +2,12 @@ module.exports = {
   purge: [],
   // purge: {
   //   enabled: true,
-  //   content: ["./pages/**/*.tsx"]
+  //   content: [
+  //     "./pages/**/*.tsx",
+  //     "./pages/**/*.jsx",
+  //     "./container/**/*.tsx",
+  //     "./container/**/*.jsx",
+  //   ]
   // },
   theme: {
     extend: {
@@ -16,7 +21,7 @@ module.exports = {
         '778': '778px'
       },
       height: {
-        '100-5': 'calc(100% - 5rem)' 
+        '100-5': 'calc(100% - 5rem)'
       },
       letterSpacing: {
         widest: '6px'

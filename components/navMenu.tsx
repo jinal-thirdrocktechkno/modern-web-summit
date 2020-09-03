@@ -50,8 +50,9 @@ const NavMenu = (props: NavMenuProps) => {
             code of conduct
             </button>
           <button
+            disabled={true}
             onClick={() => handleButtonClick('home')}
-            className={buttonClass}
+            className={`${buttonClass} opacity-50`}
             type="button" >
             schedule - coming soon
             </button>

@@ -4,9 +4,6 @@ import ProfileCard from '../../components/profileCard'
 
 
 const Curators = () => {
-
-  const profileImage = 'https://st2.depositphotos.com/1006318/5909/v/450/depositphotos_59094701-stock-illustration-businessman-profile-icon.jpg'
-
   return (
     <div className="bg-white shadow-xs" >
       <div className="flex sm:flex-wrap md:flex-no-wrap">
@@ -28,11 +25,12 @@ const Curators = () => {
                 imageClass="border border-2"
                 isLast={false}
                 key={1}
-                imageUrl="/images/curator1.png"
+                imageUrl="/images/curator1.svg"
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"
-                location="San Francisco, California"
+                locationFull="San Francisco, California"
+                locationSort="San Francisco, CA"
               />
             </div>
             <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
@@ -49,11 +47,12 @@ const Curators = () => {
                 imageClass="border border-2"
                 isLast={false}
                 key={1}
-                imageUrl={profileImage}
+                imageUrl="/images/curator2.svg"
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"
-                location="San Francisco, California"
+                locationFull="San Francisco, California"
+                locationSort="San Francisco, CA"
               />
             </div>
             <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
@@ -70,11 +69,12 @@ const Curators = () => {
                 imageClass="border border-2"
                 isLast={false}
                 key={1}
-                imageUrl="/images/curator3.png"
+                imageUrl="/images/curator3.svg"
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"
-                location="San Francisco, California"
+                locationFull="San Francisco, California"
+                locationSort="San Francisco, CA"
               />
             </div>
             <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
@@ -91,11 +91,12 @@ const Curators = () => {
                 imageClass="border border-2"
                 isLast={false}
                 key={1}
-                imageUrl="/images/curator4.png"
+                imageUrl="/images/curator4.svg"
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"
-                location="San Francisco, California"
+                locationFull="San Francisco, California"
+                locationSort="San Francisco, CA"
               />
             </div>
             <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
