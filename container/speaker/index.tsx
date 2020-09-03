@@ -27,7 +27,8 @@ const Speaker = () => {
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"
-                location="San Francisco, California CA"
+                locationFull="San Francisco, California"
+                locationSort="San Francisco, CA"
               />
             )
           })}
@@ -43,7 +44,8 @@ const Speaker = () => {
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"
-                location="San Francisco, California CA"
+                locationFull="San Francisco, California"
+                locationSort="San Francisco, CA"
               />
             )
           })}
@@ -59,7 +61,8 @@ const Speaker = () => {
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"
-                location="San Francisco, California CA"
+                locationFull="San Francisco, California"
+                locationSort="San Francisco, CA"
               />
             )
           })}
@@ -75,7 +78,8 @@ const Speaker = () => {
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"
-                location="San Francisco, California CA"
+                locationFull="San Francisco, California"
+                locationSort="San Francisco, CA"
               />
             )
           })}

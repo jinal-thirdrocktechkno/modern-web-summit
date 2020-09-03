@@ -29,7 +29,8 @@ const Curators = () => {
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"
-                location="San Francisco, California"
+                locationFull="San Francisco, California"
+                locationSort="San Francisco, CA"
               />
             </div>
             <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
@@ -50,7 +51,8 @@ const Curators = () => {
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"
-                location="San Francisco, California"
+                locationFull="San Francisco, California"
+                locationSort="San Francisco, CA"
               />
             </div>
             <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
@@ -71,7 +73,8 @@ const Curators = () => {
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"
-                location="San Francisco, California"
+                locationFull="San Francisco, California"
+                locationSort="San Francisco, CA"
               />
             </div>
             <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
@@ -92,7 +95,8 @@ const Curators = () => {
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
                 companyName="Facebook"
-                location="San Francisco, California"
+                locationFull="San Francisco, California"
+                locationSort="San Francisco, CA"
               />
             </div>
             <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
