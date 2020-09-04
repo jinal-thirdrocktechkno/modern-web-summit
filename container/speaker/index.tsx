@@ -3,7 +3,7 @@ import TrackVisibility from 'react-on-screen';
 
 const Speaker = () => {
   return (
-    <TrackVisibility>
+    <TrackVisibility partialVisibility once throttleInterval={0}>
       {({ isVisible }) => (
         <SpeakerComponent isVisible={isVisible} />
       )}

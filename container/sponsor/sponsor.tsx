@@ -10,12 +10,12 @@ const Sponsor = (props: VisibleProps) => {
   const [className, setClass] = useState('')
   useEffect(() => {
     if (isVisible) {
-      setClass('animated fadeInUp')
+      setClass('animated fadeInUp opacity-1')
     }
   })
 
   return (
-    <div className={`bg-white shadow-xs ${className} `}>
+    <div className={`bg-white shadow-xs opacity-0 ${className} `}>
       <div className="flex sm:flex-wrap md:flex-no-wrap">
         <div className="bg-black md:w-23 sm:w-full sm:flex-none md:flex-23 h-32 flex items-end self-start justify-center">
           <h4 className="text-5xl text-white leading-7 uppercase">SPONSORS</h4>
@@ -28,10 +28,9 @@ const Sponsor = (props: VisibleProps) => {
         </div>
       </div>
 
-
       <div className="p-10 sm:hidden md:block">
         <Title title="Presenting sponsor" parentClass="flex justify-center border-solid border" />
-        <ScrollAnimation animateIn="fadeIn" animateOnce={true} duration={2} >
+        <ScrollAnimation animateIn="fadeIn" animateOnce={true} >
           <SponsorDescription
             descriptionClass=""
             innerClass="md:w-1/2 sm:w-full pt-10 pb-20"
@@ -43,16 +42,14 @@ const Sponsor = (props: VisibleProps) => {
         </ScrollAnimation>
         <Title title="Diamond sponsors" parentClass="flex justify-center border-solid border" />
         <div className="flex pt-10 pb-20 justify-evenly">
-          <ScrollAnimation animateIn="fadeIn" animateOnce={true} >
-            <SponsorDescription
-              descriptionClass=""
-              innerClass="text-center"
-              description={
-                'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. '}
-              parentClass="w-1/4"
-              image="/images/course-hero.svg"
-            />
-          </ScrollAnimation>
+          <SponsorDescription
+            descriptionClass=""
+            innerClass="text-center"
+            description={
+              'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. '}
+            parentClass="w-1/4"
+            image="/images/course-hero.svg"
+          />
           <SponsorDescription
             descriptionClass=""
             innerClass="text-center"
@@ -90,7 +87,7 @@ const Sponsor = (props: VisibleProps) => {
             innerClass="w-1/2 pt-10 pb-20"
             description={
               'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. Sponsors of the Modern Web Summit are building interesting, sustainable, and forward-thinking products and services. In addition to providing financial support of the event, Sponsors have their own track.'}
-            parentClass="flex justify-center text-center wow animated fadeInUp"
+            parentClass="flex justify-center text-center"
             image="/images/eventloop.svg"
           />
         </div>

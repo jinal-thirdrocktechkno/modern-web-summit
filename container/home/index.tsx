@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import Logo from '../../components/logo'
 import NotifyForm from '../../components/notify'
 import Modern from '../modern'
@@ -8,10 +8,14 @@ import Curators from '../curators'
 import ShareSocial from '../../components/shareSocial'
 import Footer from '../footer/footer'
 import NavMenu from '../../components/navMenu'
-import { useQuery, gql } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import TrackVisibility from 'react-on-screen';
+import { API_TEST } from '../../api/query'
+// const isServer = typeof window === 'undefined'
+// const WOW = !isServer ? React.lazy(()=>import) : null
 
 // used for navigate to div future use 
+
 const ScrollToRef = (ref) => ref.current.scrollIntoView()
 
 const Home = () => {
@@ -20,23 +24,14 @@ const Home = () => {
   const menuOpen = () => {
     setShowMenu(!showMenu)
   }
+  useEffect(() => {
+  }, [])
 
   let speakerRef = useRef(null)
   let sponsorRef = useRef(null)
   let curatorsRef = useRef(null)
   let homeRef = useRef(null)
 
-  const API_TEST = gql`
-  query ($id: Int) { 
-    Media (id: $id, type: ANIME) { 
-      id
-      title {
-        romaji
-        english
-        native
-      }
-    }
-  }`
   const handleButtonClick = (type) => {
     switch (type) {
       case 'speakers': {
