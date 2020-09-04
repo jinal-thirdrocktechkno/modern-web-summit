@@ -11,7 +11,6 @@ import NavMenu from '../../components/navMenu'
 import { useQuery, gql } from '@apollo/client';
 import TrackVisibility from 'react-on-screen';
 
-
 // used for navigate to div future use 
 const ScrollToRef = (ref) => ref.current.scrollIntoView()
 
