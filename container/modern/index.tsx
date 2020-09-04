@@ -36,7 +36,7 @@ const Modern = (props) => {
       </div>
       {dataVisible && <h5 className="text-lightGreen text-4xl font-menlo animated delay-75s fadeIn">WEB COMMUNITIES TOGETHER</h5>}
       <div className="flex justify-center mb-2 mt-10">
-        {dataVisible && <p className="text-white text-xl font-menlo mr-3 animated delay-75s fadeIn">modern_web_summit$  </p>}
+        {dataVisible && <p className="text-white text-xl font-menlo mr-3 animated delay-1s fadeIn">modern_web_summit$  </p>}
         {typistVisible && <Typist key={secondKey} cursor={typistConfig}>
           <Typist.Delay ms={1200} />
           <p className="text-white text-xl font-menlo">git push</p>
