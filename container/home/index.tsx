@@ -88,7 +88,11 @@ const Home = () => {
 
 
       <div className='bg-white flex shadow-xs md:h-100-5 sm:h-auto flex sm:m-0 md:m-10' ref={homeRef}>
-        <img className="inline self-start sm:hidden md:inline -mt-10 ml-8" src="/images/left.svg" alt="logo" />
+        <div className="sm:hidden md:flex -mt-10">
+          <img className="inline self-start ml-8 animated fadeInDownBig" src="/images/left-bar-1.svg" alt="logo" />
+          <img className="inline self-start -ml-5 animated fadeInDownBig slow" src="/images/left-bar-2.svg" alt="logo" />
+          <img className="inline self-start -ml-5 animated fadeInDownBig slower" src="/images/left-bar-3.svg" alt="logo" />
+        </div>
         <div className='md:w-2/5 sm:w-full m-auto text-center md:-mt-10 sm:mt-0'>
           <Logo />
           <p className='text-gray-300 font-medium text-base md:mb-10 sm:p-5 md:p-0'>
@@ -100,7 +104,11 @@ const Home = () => {
             <a className="text-gray-300 font-medium text-base hover:text-purple-100" href="https://www.google.co.in/">Code of Conduct</a>
           </div>
         </div>
-        <img className="inline self-end sm:hidden md:inline mr-8 relative top-1/2 transform -translate-y-48" src="/images/right.svg" alt="logo" />
+        <div className="sm:hidden md:flex mr-8 relative top-1/2 transform -translate-y-48">
+          <img className="inline self-end animated fadeInUpBig slower" src="/images/right-bar-1.svg" alt="logo" />
+          <img className="inline self-end animated fadeInUpBig slow -ml-5 mb-10" src="/images/right-bar-2.svg" alt="logo" />
+          <img className="inline self-end animated fadeInUpBig -ml-5 mb-20" src="/images/right-bar-3.svg" alt="logo" />
+        </div>
       </div>
 
       <div className='bg-darkBg m-10 text-center sm:hidden md:flex items-center justify-center min-h-778'>
