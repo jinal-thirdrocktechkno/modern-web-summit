@@ -28,9 +28,9 @@ const Sponsor = (props: VisibleProps) => {
         </div>
       </div>
 
-      <div className="p-10 sm:hidden md:block">
+      <div id={"root"} className="p-10 sm:hidden md:block">
         <Title title="Presenting sponsor" parentClass="flex justify-center border-solid border" />
-        <ScrollAnimation animateIn="fadeIn" animateOnce={true} >
+        <ScrollAnimation animateIn="animated fadeInUp" animateOnce={true} duration={3} animatePreScroll={false}   >
           <SponsorDescription
             descriptionClass=""
             innerClass="md:w-1/2 sm:w-full pt-10 pb-20"

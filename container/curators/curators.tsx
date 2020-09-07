@@ -12,7 +12,7 @@ const Curators = (props: VisibleProps) => {
     }
   })
   return (
-    <div className={`bg-white shadow-xs opacity-0  ${className} `}>
+    <div className={`bg-white shadow-xs opacity-0  ${className} md:pb-10 `}>
       <div className="flex sm:flex-wrap md:flex-no-wrap">
         <div className="bg-black md:w-23 sm:w-full sm:flex-none md:flex-23 h-32 flex items-end self-start justify-center">
           <h4 className="text-5xl text-white leading-7 uppercase">Curators</h4>
@@ -34,20 +34,20 @@ const Curators = (props: VisibleProps) => {
                 key={1}
                 imageUrl="/images/curator1.svg"
                 name="Soham Steward"
-                designation="Senior Developer Advocate"
-                companyName="Facebook"
-                locationFull="San Francisco, California"
-                locationSort="San Francisco, CA"
+                designation="Co-founder & CTO"
+                companyName="Begin"
+                locationFull="San Francisco / Vancouver"
+                locationSort="San Francisco / Vancouver"
               />
             </div>
             <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
               <p className="text-gray-300 text-base font-medium">{'Brian has been working in the Serverless space for over 7 years. He’s the cofounder and CTO of Begin.com, the fastest and easiest way to setup CI/CD gitops for serverless web apps on AWS. He is the creator and maintainer of OpenJS Architect, an open-source framework for generating and deploying AWS standard SAM/CloudFormation, coined the term FASTstack. He has been keeping a close eye on Deno since its earliest moments and is already using it in production today. You can catch him @brianleroux on Twitter where he talks about open source, JavaScript, serverless, faststack, Deno, and other developer-related stuff.'}</p>
-              <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold underline text-purple-200 hover:text-purple-100">{'See all the Serverless Speakers >'}</a>
+              <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen pl-2 uppercase">{'See all the Serverless Speakers >'}</a>
             </div>
           </div>
         </div>
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
-          <Title title="React" parentClass="flex justify-center border-solid border" />
+          <Title title="CSS" parentClass="flex justify-center border-solid border" />
           <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
             <div className="md:w-1/3 sm:w-3/4">
               <ProfileCard
@@ -55,16 +55,16 @@ const Curators = (props: VisibleProps) => {
                 isLast={false}
                 key={1}
                 imageUrl="/images/curator2.svg"
-                name="Soham Steward"
-                designation="Senior Developer Advocate"
+                name="Stephanie eckles"
+                designation="Lead design systems dev"
                 companyName="Facebook"
-                locationFull="San Francisco, California"
-                locationSort="San Francisco, CA"
+                locationFull="San Francisco"
+                locationSort="San Francisco"
               />
             </div>
             <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
               <p className="text-gray-300 text-base font-medium">{'Brian has been working in the Serverless space for over 7 years. He’s the cofounder and CTO of Begin.com, the fastest and easiest way to setup CI/CD gitops for serverless web apps on AWS. He is the creator and maintainer of OpenJS Architect, an open-source framework for generating and deploying AWS standard SAM/CloudFormation, coined the term FASTstack. He has been keeping a close eye on Deno since its earliest moments and is already using it in production today. You can catch him @brianleroux on Twitter where he talks about open source, JavaScript, serverless, faststack, Deno, and other developer-related stuff.'}</p>
-              <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold underline text-purple-200 hover:text-purple-100">{'See all the React Speakers >'}</a>
+              <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen pl-2 uppercase">{'See all the CSS Speakers >'}</a>
             </div>
           </div>
         </div>
@@ -79,19 +79,19 @@ const Curators = (props: VisibleProps) => {
                 imageUrl="/images/curator3.svg"
                 name="Soham Steward"
                 designation="Senior Developer Advocate"
-                companyName="Facebook"
+                companyName="AWS"
                 locationFull="San Francisco, California"
                 locationSort="San Francisco, CA"
               />
             </div>
             <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
               <p className="text-gray-300 text-base font-medium">{'Brian has been working in the Serverless space for over 7 years. He’s the cofounder and CTO of Begin.com, the fastest and easiest way to setup CI/CD gitops for serverless web apps on AWS. He is the creator and maintainer of OpenJS Architect, an open-source framework for generating and deploying AWS standard SAM/CloudFormation, coined the term FASTstack. He has been keeping a close eye on Deno since its earliest moments and is already using it in production today. You can catch him @brianleroux on Twitter where he talks about open source, JavaScript, serverless, faststack, Deno, and other developer-related stuff.'}</p>
-              <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold underline text-purple-200 hover:text-purple-100">{'See all the Svelte Speakers >'}</a>
+              <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen pl-2 uppercase">{'See all the Svelte Speakers >'}</a>
             </div>
           </div>
         </div>
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
-          <Title title="CSS" parentClass="flex justify-center border-solid border" />
+          <Title title="Open source" parentClass="flex justify-center border-solid border" />
           <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
             <div className="md:w-1/3 sm:w-3/4">
               <ProfileCard
@@ -99,16 +99,60 @@ const Curators = (props: VisibleProps) => {
                 isLast={false}
                 key={1}
                 imageUrl="/images/curator4.svg"
-                name="Soham Steward"
-                designation="Senior Developer Advocate"
-                companyName="Facebook"
-                locationFull="San Francisco, California"
+                name="Brian douglas"
+                designation="Developer Advocate"
+                companyName="GitHub"
+                locationFull="Oakland, CA"
+                locationSort="Oakland, CA"
+              />
+            </div>
+            <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
+              <p className="text-gray-300 text-base font-medium">{`Brian Douglas is a Developer Advocate at GitHub where he works on increasing use of the GitHub’s platform specific features (Ask him about GitHub Actions!) through technical content distributed on the internet. In addition to that, Brian has a passion open source and loves mentoring new contributors through Open Sauced community.`}</p>
+              <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen pl-2 uppercase">{'See all the CSS Speakers >'}</a>
+            </div>
+          </div>
+        </div>
+        <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
+          <Title title="Jamstack" parentClass="flex justify-center border-solid border" />
+          <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
+            <div className="md:w-1/3 sm:w-3/4">
+              <ProfileCard
+                imageClass="border border-2"
+                isLast={false}
+                key={1}
+                imageUrl="/images/curator5.svg"
+                name="Tessa Mero"
+                designation="Developer Advocate"
+                companyName="Cloudinary"
+                locationFull="Seattle, WA"
+                locationSort="Seattle, WA"
+              />
+            </div>
+            <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
+              <p className="text-gray-300 text-base font-medium">{`Tessa Mero is a Developer Advocate at Cloudinary. She regularly organizes meetups, such as APIs, Vue.js, JAMStack, and Developer Relations.  In the past, she has contributed to a leadership team for the open source Joomla! Project for 5 years, including the board of directors, leading the production team, as well as evangelizing Joomla as a public speaker. She organized a PHP conference and founded the API City Conference. She also is an avid career mentor and has helped countless developers become successful. In her free time, she enjoys cooking, camping, playing video games, fitness, and eating KBBQ.`}</p>
+              <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen pl-2 uppercase">{'See all the CSS Speakers >'}</a>
+            </div>
+          </div>
+        </div>
+        <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
+          <Title title="GraphQL" parentClass="flex justify-center border-solid border" />
+          <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
+            <div className="md:w-1/3 sm:w-3/4">
+              <ProfileCard
+                imageClass="border border-2"
+                isLast={false}
+                key={1}
+                imageUrl="/images/curator6.svg"
+                name="Jon Wong"
+                designation="Developer Experience Engineer"
+                companyName="Coursera"
+                locationFull="San Francisco, CA"
                 locationSort="San Francisco, CA"
               />
             </div>
             <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
-              <p className="text-gray-300 text-base font-medium">{`Stephanie Eckles is the author of ModernCSS.dev which provides modern solutions to old CSS problems as in-depth tutorials. She's also the creator of StyleStage.dev which encourages contributors to restyle the same HTML to practice their modern CSS and web design skills. Steph has over 13 years of webdev experience, and currently leads the design system development for a large fintech enterprise and is an egghead instructor. She's an advocate for accessibility, scalable CSS, site performance, and Eleventy. Offline, she's mom to two girls and a cowboy corgi, and enjoys baking.`}</p>
-              <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold underline text-purple-200 hover:text-purple-100">{'See all the CSS Speakers >'}</a>
+              <p className="text-gray-300 text-base font-medium">{`Brian has been working in the Serverless space for over 7 years. He’s the cofounder and CTO of Begin.com, the fastest and easiest way to setup CI/CD gitops for serverless web apps on AWS. He is the creator and maintainer of OpenJS Architect, an open-source framework for generating and deploying AWS standard SAM/CloudFormation, coined the term FASTstack. He has been keeping a close eye on Deno since its earliest moments and is already using it in production today. You can catch him @brianleroux on Twitter where he talks about open source, JavaScript, serverless, faststack, Deno, and other developer-related stuff.`}</p>
+              <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen pl-2 uppercase">{'See all the CSS Speakers >'}</a>
             </div>
           </div>
         </div>

@@ -12,8 +12,8 @@ body {
 }
 
 .custom-btn {
-    @apply text-white py-4 px-6 uppercase border-none rounded-md text-xl;
-    background: linear-gradient(355.25deg, #803A9A 2.77%, #BB6BD9 95.12%);
+    @apply text-black py-4 px-6 uppercase border-none rounded-md text-xl font-extrabold bg-lightGreen;
+    /* background: linear-gradient(355.25deg, #803A9A 2.77%, #BB6BD9 95.12%); */
 }
 
 .profile-card:hover>img {

@@ -48,7 +48,7 @@ module.exports = {
           '300': '#BB51E2',
         },
         darkBg: 'rgba(0, 0, 0, 0.8)',
-        lightGreen: '#6FCF97'
+        lightGreen: '#16FF11'
       },
     },
     screens: {

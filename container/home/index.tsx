@@ -5,12 +5,14 @@ import Modern from '../modern'
 import Speaker from '../speaker/index'
 import Sponsor from '../sponsor/index'
 import Curators from '../curators'
+import About from '../about'
 import ShareSocial from '../../components/shareSocial'
 import Footer from '../footer/footer'
 import NavMenu from '../../components/navMenu'
 import { useQuery } from '@apollo/client';
 import TrackVisibility from 'react-on-screen';
 import { API_TEST } from '../../api/query'
+import Finances from '../finances'
 // const isServer = typeof window === 'undefined'
 // const WOW = !isServer ? React.lazy(()=>import) : null
 
@@ -112,6 +114,9 @@ const Home = () => {
         </TrackVisibility>
       </div>
       <div ref={speakerRef} className='sm:m-0 md:m-10'>
+        <About />
+      </div>
+      <div ref={speakerRef} className='sm:m-0 md:m-10'>
         <Speaker />
       </div>
       <div ref={sponsorRef} className='sm:m-0 md:m-10'>
@@ -119,6 +124,9 @@ const Home = () => {
       </div>
       <div ref={curatorsRef} className="sm:m-0 md:m-10">
         <Curators />
+      </div>
+      <div ref={sponsorRef} className='sm:m-0 md:m-10'>
+        <Finances />
       </div>
       <div className="sm:m-0 md:m-10 sm:p-2 md:p-0">
         <ShareSocial />
