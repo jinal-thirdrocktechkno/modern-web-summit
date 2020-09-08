@@ -14,6 +14,9 @@ module.exports = {
       inset: {
         '1/2': '50%',
       },
+      spacing: {
+        '450': '450px'
+      },
       boxShadow: {
         xs: '0 0 40px rgba(0, 0, 0, 0.1)'
       },
@@ -44,8 +47,12 @@ module.exports = {
           '200': '#803A9A',
           '300': '#BB51E2',
         },
+        lightGreen: {
+          '100': '#4AFF47',
+          '200': '#16FF11',
+        },
         darkBg: 'rgba(0, 0, 0, 0.8)',
-        lightGreen: '#6FCF97'
+        lightGrey: '#242528'
       },
     },
     screens: {
