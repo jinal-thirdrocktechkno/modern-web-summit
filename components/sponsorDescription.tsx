@@ -1,4 +1,5 @@
 import React from 'react'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 const SponsorDescription = (props: SponsorDescriptionProps) => {
   const {
@@ -10,14 +11,14 @@ const SponsorDescription = (props: SponsorDescriptionProps) => {
   } = props
 
   return (
-    <div className={parentClass}>
+    <ScrollAnimation className={parentClass} animateIn='fadeIn' animateOut='fadeOut'>
       <div className={innerClass} >
         <a href="https://www.google.co.in/">
           <img className="inline mb-5 opacity-75 hover:opacity-100" src={image} />
         </a>
         <p className={descriptionClass}>{description}</p>
       </div>
-    </div>
+    </ScrollAnimation>
   )
 
 }
