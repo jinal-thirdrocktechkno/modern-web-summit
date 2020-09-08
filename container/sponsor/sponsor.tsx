@@ -30,16 +30,14 @@ const Sponsor = (props: VisibleProps) => {
 
       <div id={"root"} className="p-10 sm:hidden md:block">
         <Title title="Presenting sponsor" parentClass="flex justify-center border-solid border" />
-        {/* <ScrollAnimation animateIn="animated fadeInUp" animateOnce={true} duration={3} animatePreScroll={false}   > */}
         <SponsorDescription
           descriptionClass=""
           innerClass="md:w-1/2 sm:w-full pt-10 pb-20"
           description={
             'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. Sponsors of the Modern Web Summit are building interesting, sustainable, and forward-thinking products and services. In addition to providing financial support of the event, Sponsors have their own track.'}
-          parentClass="flex justify-center text-center wow animated fadeInUp"
+          parentClass="flex justify-center text-center"
           image="/images/flexport.svg"
         />
-        {/* </ScrollAnimation> */}
         <Title title="Diamond sponsors" parentClass="flex justify-center border-solid border" />
         <div className="flex pt-10 pb-20 justify-evenly">
           <SponsorDescription
