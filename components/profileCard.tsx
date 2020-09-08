@@ -7,7 +7,7 @@ const ProfileCard = (props: ProfileCardProps) => {
     <div className="md:mb-2 sm:mb-5 profile-card cursor-pointer">
       <img src={imageUrl} alt="image" className={`w-full ${imageClass}`} />
       {isLast ?
-        <div className="h-32 flex items-center justify-center cursor-pointer bg-lightGreen hover:bg-lightGreen">
+        <div className="h-32 flex items-center justify-center cursor-pointer bg-lightGreen-200 hover:bg-lightGreen-100">
           <p className="text-lg text-black font-bold tracking-wide uppercase">See all speakers {'>'}</p>
         </div>
         :
