@@ -52,6 +52,7 @@ module.exports = {
           '200': '#16FF11',
         },
         darkBg: 'rgba(0, 0, 0, 0.8)',
+        lightGrey: '#242528'
       },
     },
     screens: {
