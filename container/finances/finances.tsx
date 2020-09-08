@@ -29,7 +29,7 @@ const Finances = (props: VisibleProps) => {
           <FinanceDescription
             title="donation to freecodecamp"
             description="freeCodeCamp is a 501(c)(3) nonprofit and has done some amazing things for students of web development -- helping thousands around the world to get new jobs as web designers & developers. During this crisis in particular, their monthly active users (MAU) has grown to over 11 million -- but they have yet to receive any large donations from the big companies to help pay for their servers and staff. In other words, they're struggling! We hope to change that with both direct contributions from our tickets sales and encouragement of our attendees & sponsors to donate what they can."
-            linkText="Learn more about freecodecamp > "
+            linkText="Learn more about freecodecamp "
             url="https://www.google.co.in/"
             image="/images/20.svg"
             financeImage="/images/sponsor-freecodecamp.svg"
@@ -41,7 +41,7 @@ const Finances = (props: VisibleProps) => {
           <FinanceDescription
             title="Payment to speakers and curators"
             description="Putting together a talk is a lot of work! We believe that speakers should be paid for their time and expertise. That’s why we are dedicating a large slice of the event’s earning to paying speakers and curators! "
-            linkText="Meet our speakers > "
+            linkText="Meet our speakers "
             url="https://www.google.co.in/"
             image="/images/20.svg"
             financeImage=""
