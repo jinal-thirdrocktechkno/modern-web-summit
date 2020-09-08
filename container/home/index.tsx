@@ -113,19 +113,19 @@ const Home = () => {
           <Modern />
         </TrackVisibility>
       </div>
-      <div ref={speakerRef} className='sm:m-0 md:m-10'>
+      <div className='sm:m-0 md:m-10'>
         <About />
       </div>
       <div ref={speakerRef} className='sm:m-0 md:m-10'>
         <Speaker />
       </div>
-      <div ref={sponsorRef} className='sm:m-0 md:m-10'>
-        <Sponsor />
-      </div>
       <div ref={curatorsRef} className="sm:m-0 md:m-10">
         <Curators />
       </div>
       <div ref={sponsorRef} className='sm:m-0 md:m-10'>
+        <Sponsor />
+      </div>
+      <div className='sm:m-0 md:m-10'>
         <Finances />
       </div>
       <div className="sm:m-0 md:m-10 sm:p-2 md:p-0">
