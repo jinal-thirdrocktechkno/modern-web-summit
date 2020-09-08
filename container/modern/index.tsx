@@ -34,7 +34,7 @@ const Modern = (props) => {
           <p className="text-white text-xl font-menlo">git pull</p>
         </Typist>}
       </div>
-      {dataVisible && <h5 className="text-lightGreen text-4xl font-menlo animated delay-75s fadeIn">WEB COMMUNITIES TOGETHER</h5>}
+      {dataVisible && <h5 className="text-lightGreen-200 text-4xl font-menlo animated delay-75s fadeIn">WEB COMMUNITIES TOGETHER</h5>}
       <div className="flex justify-center mb-2 mt-10">
         {dataVisible && <p className="text-white text-xl font-menlo mr-3 animated delay-1s fadeIn">modern_web_summit$  </p>}
         {typistVisible && <Typist key={secondKey} cursor={typistConfig}>
@@ -42,7 +42,7 @@ const Modern = (props) => {
           <p className="text-white text-xl font-menlo">git push</p>
         </Typist>}
       </div>
-      {dataVisible && <h5 className="text-lightGreen text-4xl font-menlo animated delay-2s fadeIn">THE BOUNDS OF POSSIBILITY</h5>}
+      {dataVisible && <h5 className="text-lightGreen-200 text-4xl font-menlo animated delay-2s fadeIn">THE BOUNDS OF POSSIBILITY</h5>}
     </div >
   )
 }

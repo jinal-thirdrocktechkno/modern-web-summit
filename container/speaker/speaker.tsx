@@ -99,7 +99,7 @@ const Speaker = (props: VisibleProps) => {
         </div>
         <div className="sm:block md:hidden p-4 mb-16">
           <button type="button" className="w-full uppercase border-purple-100 rounded-md text-purple-100 font-black border-2 p-4 text-lg mt-1 focus:outline-none">see all speakers</button>
-          <button type="button" className="w-full mt-5 custom-btn focus:outline-none">Submit your talk here</button>
+          <button type="button" className="w-full mt-5 custom-btn hover:bg-lightGreen-100 focus:outline-none">Submit your talk here</button>
         </div>
       </div>
     </div >)

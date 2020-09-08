@@ -47,8 +47,11 @@ module.exports = {
           '200': '#803A9A',
           '300': '#BB51E2',
         },
+        lightGreen: {
+          '100': '#4AFF47',
+          '200': '#16FF11',
+        },
         darkBg: 'rgba(0, 0, 0, 0.8)',
-        lightGreen: '#16FF11'
       },
     },
     screens: {
