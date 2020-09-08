@@ -41,7 +41,7 @@ const About = (props: VisibleProps) => {
             secondDescription=""
             parentClass=""
             url="https://www.google.co.in/"
-            linkText="See all the keynotes > "
+            linkText="See all the keynotes "
           />
         </div>
         <div className="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
@@ -52,7 +52,7 @@ const About = (props: VisibleProps) => {
             secondDescription=""
             parentClass=""
             url="https://www.google.co.in/"
-            linkText="See all the tracks and speakers > "
+            linkText="See all the tracks and speakers "
           />
         </div>
         <div className="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
@@ -63,7 +63,7 @@ const About = (props: VisibleProps) => {
             secondDescription="With discussion sessions, you can participate in a number of ways: passively watch and listen, engage with the discussion group via the in-app chat room, or join the video discussion to get face-time with your fellow attendees and speakers!  "
             parentClass=""
             url="https://www.google.co.in/"
-            linkText="See all the SCHEDULED DISCUSSION BREAKOUTS > "
+            linkText="See all the SCHEDULED DISCUSSION BREAKOUTS "
           />
         </div>
         <div className="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
@@ -85,7 +85,7 @@ const About = (props: VisibleProps) => {
             secondDescription="Workshop tickets are sold separately from the conference. "
             parentClass=""
             url="https://www.google.co.in/"
-            linkText="See all the workshops available > "
+            linkText="See all the workshops available  "
           />
         </div>
         <div className="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
@@ -96,7 +96,7 @@ const About = (props: VisibleProps) => {
             secondDescription=""
             parentClass=""
             url="https://www.google.co.in/"
-            linkText="See all of our sponsors > "
+            linkText="See all of our sponsors "
           />
         </div>
         <div className="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
@@ -118,7 +118,7 @@ const About = (props: VisibleProps) => {
             secondDescription="Join us at the Modern Web Summit hiring mixer, where you’ll choose which companies you’re interested in sending your information, and companies will follow up via email or schedule a video meeting. "
             parentClass=""
             url="https://www.google.co.in/"
-            linkText="LEARN MORE ABOUT THE HIRING MIXER > "
+            linkText="LEARN MORE ABOUT THE HIRING MIXER "
           />
         </div>
       </div>
