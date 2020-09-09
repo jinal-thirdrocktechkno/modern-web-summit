@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ProfileCard from '../../components/profileCard'
+import { VisibleProps } from '../sponsor/sponsor'
 
 const Speaker = (props: VisibleProps) => {
   const { isVisible } = props
@@ -105,7 +106,3 @@ const Speaker = (props: VisibleProps) => {
     </div >)
 }
 export default Speaker
-
-type VisibleProps = {
-  isVisible: boolean
-}

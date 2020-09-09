@@ -128,4 +128,3 @@ const About = (props: VisibleProps) => {
 }
 
 export default About
-
