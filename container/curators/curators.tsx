@@ -3,7 +3,7 @@ import Title from '../../components/title'
 import ProfileCard from '../../components/profileCard'
 import ScrollAnimation from 'react-animate-on-scroll'
 import ScrollAnimationTiles from '../../components/scrollAnimationTiles'
-
+import { VisibleProps } from '../sponsor/sponsor'
 
 const Curators = (props: VisibleProps) => {
   const { isVisible } = props
@@ -176,8 +176,3 @@ const Curators = (props: VisibleProps) => {
 }
 
 export default Curators
-
-type VisibleProps = {
-  isVisible: boolean
-}
-

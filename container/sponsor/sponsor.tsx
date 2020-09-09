@@ -28,7 +28,7 @@ const Sponsor = (props: VisibleProps) => {
         </div>
       </div>
 
-      <div id={"root"} className="p-10 sm:hidden md:block">
+      <div className="p-10 sm:hidden md:block">
         <Title title="Presenting sponsor" parentClass="flex justify-center border-solid border" />
         <ScrollAnimationTiles parentClass="">
           <SponsorDescription
@@ -41,54 +41,47 @@ const Sponsor = (props: VisibleProps) => {
           />
         </ScrollAnimationTiles>
         <Title title="Diamond sponsors" parentClass="flex justify-center border-solid border" />
-        <div className="flex pt-10 pb-20 justify-evenly">
-          <ScrollAnimationTiles parentClass="">
-            <SponsorDescription
-              descriptionClass=""
-              innerClass="text-center"
-              description={
-                'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. '}
-              parentClass="w-1/4"
-              image="/images/course-hero.svg"
-            />
-          </ScrollAnimationTiles>
-          <ScrollAnimationTiles parentClass="">
-            <SponsorDescription
-              descriptionClass=""
-              innerClass="text-center"
-              description={
-                'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. '}
-              parentClass="w-1/4"
-              image="/images/facebook.svg"
-            />
-          </ScrollAnimationTiles>
-        </div>
+        <ScrollAnimationTiles parentClass="flex pt-10 pb-20 justify-evenly">
+          <SponsorDescription
+            descriptionClass=""
+            innerClass="text-center"
+            description={
+              'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. '}
+            parentClass="w-1/4"
+            image="/images/course-hero.svg"
+          />
+          <SponsorDescription
+            descriptionClass=""
+            innerClass="text-center"
+            description={
+              'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. '}
+            parentClass="w-1/4"
+            image="/images/facebook.svg"
+          />
+        </ScrollAnimationTiles>
 
         {sponsorList.map(({ list, parentClass, imageClass, title }, index) => {
           return (
             <div key={index}>
               <Title title={title} parentClass="flex justify-center border-solid border" />
-              <div className={parentClass}>
+              <ScrollAnimationTiles parentClass={parentClass}>
                 {list.map(({ image }, index) => {
                   return (
-                    <ScrollAnimationTiles parentClass={'flex '}>
-                      <SponsorText
-                        key={index}
-                        image={image}
-                        parentClass={`${title == 'Silver sponsors' ? 'w-1/6 mb-10 text-center' : 'w-1/4 mb-3 text-center'}`}
-                        imageClass={imageClass}
-                      />
-                    </ScrollAnimationTiles>
+                    <SponsorText
+                      key={index}
+                      image={image}
+                      parentClass={`${title == 'Silver sponsors' ? 'w-1/6 mb-10 text-center' : 'w-1/4 mb-3 text-center'}`}
+                      imageClass={imageClass}
+                    />
                   )
                 })}
-              </div>
+              </ScrollAnimationTiles>
             </div>
           )
         })}
-
         <div>
           <Title title="Event organizer" parentClass="flex justify-center border-solid border" />
-          <ScrollAnimationTiles parentClass="w-1/4 ">
+          <ScrollAnimationTiles parentClass="">
             <SponsorDescription
               descriptionClass=""
               innerClass="w-1/2 pt-10 pb-20"
@@ -105,6 +98,6 @@ const Sponsor = (props: VisibleProps) => {
 }
 export default Sponsor
 
-type VisibleProps = {
+export type VisibleProps = {
   isVisible: boolean
 }
