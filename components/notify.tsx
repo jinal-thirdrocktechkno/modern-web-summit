@@ -21,7 +21,7 @@ const NotifyForm = (props: NotifyFormProps) => {
                 </button>
                 || <div className="flex sm:flex-wrap md:flex-no-wrap sm:p-4 md:p-0">
                     <input
-                        className="py-2 px-6 md:mr-2 sm:mb-4 md:mb-0 flex-grow border-solid border-2 text-xl border-black focus:outline-none"
+                        className="py-2 px-6 md:mr-2 sm:w-full md:w-auto sm:mb-4 md:mb-0 flex-grow border-solid border-2 text-xl border-black focus:outline-none"
                         value={email}
                         placeholder="Your Email"
                         onChange={(e) => setEmail(e.target.value)}
