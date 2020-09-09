@@ -3,7 +3,7 @@ import Title from '../../components/title'
 import SponsorDescription from '../../components/sponsorDescription'
 import SponsorText from '../../components/sponsorText'
 import { sponsorList } from '../../utility/constants'
-import ScrollAnimation from 'react-animate-on-scroll'
+import ScrollAnimationTiles from '../../components/scrollAnimationTiles'
 
 const Sponsor = (props: VisibleProps) => {
   const { isVisible } = props
@@ -28,18 +28,20 @@ const Sponsor = (props: VisibleProps) => {
         </div>
       </div>
 
-      <div id={"root"} className="p-10 sm:hidden md:block">
+      <div className="p-10 sm:hidden md:block">
         <Title title="Presenting sponsor" parentClass="flex justify-center border-solid border" />
-        <SponsorDescription
-          descriptionClass=""
-          innerClass="md:w-1/2 sm:w-full pt-10 pb-20"
-          description={
-            'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. Sponsors of the Modern Web Summit are building interesting, sustainable, and forward-thinking products and services. In addition to providing financial support of the event, Sponsors have their own track.'}
-          parentClass="flex justify-center text-center"
-          image="/images/flexport.svg"
-        />
+        <ScrollAnimationTiles parentClass="">
+          <SponsorDescription
+            descriptionClass=""
+            innerClass="md:w-1/2 sm:w-full pt-10 pb-20"
+            description={
+              'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. Sponsors of the Modern Web Summit are building interesting, sustainable, and forward-thinking products and services. In addition to providing financial support of the event, Sponsors have their own track.'}
+            parentClass="flex justify-center text-center"
+            image="/images/flexport.svg"
+          />
+        </ScrollAnimationTiles>
         <Title title="Diamond sponsors" parentClass="flex justify-center border-solid border" />
-        <div className="flex pt-10 pb-20 justify-evenly">
+        <ScrollAnimationTiles parentClass="flex pt-10 pb-20 justify-evenly">
           <SponsorDescription
             descriptionClass=""
             innerClass="text-center"
@@ -53,16 +55,16 @@ const Sponsor = (props: VisibleProps) => {
             innerClass="text-center"
             description={
               'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. '}
-            parentClass="w-1/4 "
+            parentClass="w-1/4"
             image="/images/facebook.svg"
           />
-        </div>
+        </ScrollAnimationTiles>
 
         {sponsorList.map(({ list, parentClass, imageClass, title }, index) => {
           return (
             <div key={index}>
               <Title title={title} parentClass="flex justify-center border-solid border" />
-              <div className={parentClass}>
+              <ScrollAnimationTiles parentClass={parentClass}>
                 {list.map(({ image }, index) => {
                   return (
                     <SponsorText
@@ -73,21 +75,22 @@ const Sponsor = (props: VisibleProps) => {
                     />
                   )
                 })}
-              </div>
+              </ScrollAnimationTiles>
             </div>
           )
         })}
-
         <div>
           <Title title="Event organizer" parentClass="flex justify-center border-solid border" />
-          <SponsorDescription
-            descriptionClass=""
-            innerClass="w-1/2 pt-10 pb-20"
-            description={
-              'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. Sponsors of the Modern Web Summit are building interesting, sustainable, and forward-thinking products and services. In addition to providing financial support of the event, Sponsors have their own track.'}
-            parentClass="flex justify-center text-center"
-            image="/images/eventloop.svg"
-          />
+          <ScrollAnimationTiles parentClass="">
+            <SponsorDescription
+              descriptionClass=""
+              innerClass="w-1/2 pt-10 pb-20"
+              description={
+                'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. Sponsors of the Modern Web Summit are building interesting, sustainable, and forward-thinking products and services. In addition to providing financial support of the event, Sponsors have their own track.'}
+              parentClass="flex justify-center text-center"
+              image="/images/eventloop.svg"
+            />
+          </ScrollAnimationTiles>
         </div>
       </div>
     </div>
@@ -95,6 +98,6 @@ const Sponsor = (props: VisibleProps) => {
 }
 export default Sponsor
 
-type VisibleProps = {
+export type VisibleProps = {
   isVisible: boolean
 }

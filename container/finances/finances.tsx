@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Title from '../../components/title'
 import FinanceDescription from '../../components/financeDescription'
+import { VisibleProps } from '../sponsor/sponsor'
 
 const Finances = (props: VisibleProps) => {
   const { isVisible } = props
@@ -132,7 +133,3 @@ const Finances = (props: VisibleProps) => {
 }
 
 export default Finances
-
-type VisibleProps = {
-  isVisible: boolean
-}

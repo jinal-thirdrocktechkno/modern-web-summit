@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import AboutDescription from '../../components/aboutDescription'
+import { VisibleProps } from '../sponsor/sponsor'
 
 const About = (props: VisibleProps) => {
   const { isVisible } = props
@@ -127,7 +128,3 @@ const About = (props: VisibleProps) => {
 }
 
 export default About
-
-type VisibleProps = {
-  isVisible: boolean
-}
