@@ -60,7 +60,7 @@ const Home = () => {
 
   return (
     <div className='h-full'>
-      <div className='flex items-center justify-between w-full absolute md:-mt-10 pt-1'>
+      <div className='flex items-center justify-between w-full absolute md:-mt-10 pt-1 main-page'>
         <div onClick={() => menuOpen()}>
           <img className="sm:hidden md:inline p-2 ml-2 mt-1 cursor-pointer" src="/images/menu.svg" alt="logo" />
           <img className="md:hidden sm:inline p-2 ml-2 mt-1 cursor-pointer" src="/images/menu-white.svg" alt="logo" />
@@ -84,7 +84,7 @@ const Home = () => {
       </div>
 
 
-      <div className='bg-white flex shadow-xs md:h-100-5 sm:h-auto flex sm:m-0 md:m-10' ref={homeRef}>
+      <div className='bg-white flex shadow-xs md:h-100-5 sm:h-auto flex sm:m-0 md:m-10 main-page' ref={homeRef}>
         <div className="sm:hidden md:flex -mt-10">
           <img className="inline self-start ml-8 animated fadeInDownBig" src="/images/left-bar-1.svg" alt="logo" />
           <img className="inline self-start -ml-5 animated fadeInDownBig slow" src="/images/left-bar-2.svg" alt="logo" />
