@@ -31,7 +31,7 @@ $ npm run dev
 ### Folder Structure
 - Pages
     - `/` : Index page 
-    
+
 - Containers
     - `Home`
     - `Modern`
@@ -42,7 +42,7 @@ $ npm run dev
     - `Finance`
     - `Footer`
 
-- Component
+- Components
     - `AnimationWrapper` : used for FadeInUp animation on any section.
     - `ProfileCard` : Common component to show profile in speaker and curator.
     - ...
