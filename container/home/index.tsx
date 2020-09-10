@@ -84,7 +84,7 @@ const Home = () => {
       </div>
 
 
-      <div className='bg-white flex shadow-xs md:h-100-5 sm:h-auto flex sm:m-0 md:m-10 main-page' ref={homeRef}>
+      <div className='bg-white flex shadow-xs md:h-100-5 sm:h-auto sm:m-0 md:m-10 main-page' ref={homeRef}>
         <div className="sm:hidden md:flex -mt-10">
           <img className="inline self-start ml-8 animated fadeInDownBig" src="/images/left-bar-1.svg" alt="logo" />
           <img className="inline self-start -ml-5 animated fadeInDownBig slow" src="/images/left-bar-2.svg" alt="logo" />
