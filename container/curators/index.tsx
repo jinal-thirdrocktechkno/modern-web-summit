@@ -1,13 +1,17 @@
 import CuratorsComponent from './curators'
-import TrackVisibility from 'react-on-screen';
+import VisibilitySensor from 'react-visibility-sensor'
+import { useState } from 'react';
 
 const Curators = () => {
+  const [isVisible, setVisible] = useState(false)
   return (
-    <TrackVisibility partialVisibility once throttleInterval={0}>
-      {({ isVisible }) => (
-        <CuratorsComponent isVisible={isVisible} />
-      )}
-    </TrackVisibility>
+    <VisibilitySensor
+      partialVisibility
+      onChange={(visible) => setVisible(visible)}
+      active={!isVisible} >
+      <CuratorsComponent
+        isVisible={isVisible} />
+    </VisibilitySensor>
   )
 }
 export default Curators

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Title from '../../components/title'
 import FinanceDescription from '../../components/financeDescription'
 import { VisibleProps } from '../sponsor/sponsor'
+import AnimationWrapper from '../../components/animationWrapper'
 
 const Finances = (props: VisibleProps) => {
   const { isVisible } = props
@@ -26,7 +27,7 @@ const Finances = (props: VisibleProps) => {
         <Title title="Ticket sales" parentClass="flex justify-center border-solid border" />
       </div>
       <div className="flex flex-wrap md:mt-6 md:pl-24 md:pr-32">
-        <div className="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
+        <AnimationWrapper parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
           <FinanceDescription
             title="donation to freecodecamp"
             description="freeCodeCamp is a 501(c)(3) nonprofit and has done some amazing things for students of web development -- helping thousands around the world to get new jobs as web designers & developers. During this crisis in particular, their monthly active users (MAU) has grown to over 11 million -- but they have yet to receive any large donations from the big companies to help pay for their servers and staff. In other words, they're struggling! We hope to change that with both direct contributions from our tickets sales and encouragement of our attendees & sponsors to donate what they can."
@@ -37,8 +38,8 @@ const Finances = (props: VisibleProps) => {
             parentClass=""
             percentage="20%"
           />
-        </div>
-        <div className="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
+        </AnimationWrapper>
+        <AnimationWrapper parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
           <FinanceDescription
             title="Payment to speakers and curators"
             description="Putting together a talk is a lot of work! We believe that speakers should be paid for their time and expertise. That’s why we are dedicating a large slice of the event’s earning to paying speakers and curators! "
@@ -49,8 +50,8 @@ const Finances = (props: VisibleProps) => {
             parentClass=""
             percentage="20%"
           />
-        </div>
-        <div className="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
+        </AnimationWrapper>
+        <AnimationWrapper parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
           <FinanceDescription
             title="Organizing staff"
             description="Our organizing staff shares 20% of the ticket sales earnings"
@@ -61,8 +62,8 @@ const Finances = (props: VisibleProps) => {
             parentClass=""
             percentage="20%"
           />
-        </div>
-        <div className="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
+        </AnimationWrapper>
+        <AnimationWrapper parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
           <FinanceDescription
             title="Marketing & Production expenses"
             description="This helps to cover things like web design & development, DJ, artwork, music licensing, and advertising, among other expenses."
@@ -73,8 +74,8 @@ const Finances = (props: VisibleProps) => {
             parentClass=""
             percentage="20%"
           />
-        </div>
-        <div className="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
+        </AnimationWrapper>
+        <AnimationWrapper parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
           <FinanceDescription
             title="Finance charges"
             description="We allocate 10% for ticket sales and other processing fees"
@@ -85,8 +86,8 @@ const Finances = (props: VisibleProps) => {
             parentClass=""
             percentage="10%"
           />
-        </div>
-        <div className="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
+        </AnimationWrapper>
+        <AnimationWrapper parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
           <FinanceDescription
             title="Miscellaneous Expenses"
             description="We reserve 10% of the ticket sales income for miscellaneous and unanticipated expenses. "
@@ -97,13 +98,13 @@ const Finances = (props: VisibleProps) => {
             parentClass=""
             percentage="10%"
           />
-        </div>
+        </AnimationWrapper>
       </div>
       <div className="md:p-10 sm:p-5">
         <Title title="sponsor sales" parentClass="flex justify-center border-solid border" />
       </div>
       <div className="flex flex-wrap md:mt-6 md:pl-24 md:pr-32">
-        <div className="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
+        <AnimationWrapper parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
           <FinanceDescription
             title="A/V Production"
             description="Reserved for professional A/V production crew to take the sessions, sound, and graphics to the next level"
@@ -114,8 +115,8 @@ const Finances = (props: VisibleProps) => {
             parentClass=""
             percentage="20%"
           />
-        </div>
-        <div className="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
+        </AnimationWrapper>
+        <AnimationWrapper parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
           <FinanceDescription
             title="Event hosting & servers"
             description="Video costs a lot of money on the web! Especially livestreaming and many-to-many live discussions. These funds will help to offset these costs, and hopefully cover them in full! "
@@ -126,7 +127,7 @@ const Finances = (props: VisibleProps) => {
             parentClass=""
             percentage="80%"
           />
-        </div>
+        </AnimationWrapper>
       </div>
     </div>
   )

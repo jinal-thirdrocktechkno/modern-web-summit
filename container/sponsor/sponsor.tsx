@@ -3,7 +3,7 @@ import Title from '../../components/title'
 import SponsorDescription from '../../components/sponsorDescription'
 import SponsorText from '../../components/sponsorText'
 import { sponsorList } from '../../utility/constants'
-import ScrollAnimationTiles from '../../components/scrollAnimationTiles'
+import AnimationWrapper from '../../components/animationWrapper'
 
 const Sponsor = (props: VisibleProps) => {
   const { isVisible } = props
@@ -15,7 +15,7 @@ const Sponsor = (props: VisibleProps) => {
   })
 
   return (
-    <div className={`bg-white shadow-xs opacity-0 ${className} `}>
+    <div className={`bg-white shadow-xs opacity-0  ${className}`}>
       <div className="flex sm:flex-wrap md:flex-no-wrap">
         <div className="bg-black md:w-23 sm:w-full sm:flex-none md:flex-23 h-32 flex items-end self-start justify-center">
           <h4 className="text-5xl text-white leading-7 uppercase">SPONSORS</h4>
@@ -30,7 +30,7 @@ const Sponsor = (props: VisibleProps) => {
 
       <div className="p-10 sm:hidden md:block">
         <Title title="Presenting sponsor" parentClass="flex justify-center border-solid border" />
-        <ScrollAnimationTiles parentClass="">
+        <AnimationWrapper parentClass="">
           <SponsorDescription
             descriptionClass=""
             innerClass="md:w-1/2 sm:w-full pt-10 pb-20"
@@ -39,9 +39,9 @@ const Sponsor = (props: VisibleProps) => {
             parentClass="flex justify-center text-center"
             image="/images/flexport.svg"
           />
-        </ScrollAnimationTiles>
+        </AnimationWrapper>
         <Title title="Diamond sponsors" parentClass="flex justify-center border-solid border" />
-        <ScrollAnimationTiles parentClass="flex pt-10 pb-20 justify-evenly">
+        <AnimationWrapper parentClass="flex pt-10 pb-20 justify-evenly">
           <SponsorDescription
             descriptionClass=""
             innerClass="text-center"
@@ -58,13 +58,13 @@ const Sponsor = (props: VisibleProps) => {
             parentClass="w-1/4"
             image="/images/facebook.svg"
           />
-        </ScrollAnimationTiles>
+        </AnimationWrapper>
 
         {sponsorList.map(({ list, parentClass, imageClass, title }, index) => {
           return (
             <div key={index}>
               <Title title={title} parentClass="flex justify-center border-solid border" />
-              <ScrollAnimationTiles parentClass={parentClass}>
+              <AnimationWrapper parentClass={parentClass}>
                 {list.map(({ image }, index) => {
                   return (
                     <SponsorText
@@ -75,13 +75,13 @@ const Sponsor = (props: VisibleProps) => {
                     />
                   )
                 })}
-              </ScrollAnimationTiles>
+              </AnimationWrapper>
             </div>
           )
         })}
         <div>
           <Title title="Event organizer" parentClass="flex justify-center border-solid border" />
-          <ScrollAnimationTiles parentClass="">
+          <AnimationWrapper parentClass="">
             <SponsorDescription
               descriptionClass=""
               innerClass="w-1/2 pt-10 pb-20"
@@ -90,7 +90,7 @@ const Sponsor = (props: VisibleProps) => {
               parentClass="flex justify-center text-center"
               image="/images/eventloop.svg"
             />
-          </ScrollAnimationTiles>
+          </AnimationWrapper>
         </div>
       </div>
     </div>

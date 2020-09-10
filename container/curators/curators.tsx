@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Title from '../../components/title'
 import ProfileCard from '../../components/profileCard'
-import ScrollAnimation from 'react-animate-on-scroll'
-import ScrollAnimationTiles from '../../components/scrollAnimationTiles'
+import AnimationWrapper from '../../components/animationWrapper'
 import { VisibleProps } from '../sponsor/sponsor'
 
 const Curators = (props: VisibleProps) => {
@@ -27,12 +26,13 @@ const Curators = (props: VisibleProps) => {
 
       <div className="flex flex-wrap md:mt-6">
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
-          <ScrollAnimationTiles >
+          <AnimationWrapper parentClass="" >
             <Title title="serverless" parentClass="flex justify-center border-solid border" />
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
                 <ProfileCard
-                  imageClass="border border-2"
+                  isForDescription={true}
+                  imageClass="border border-2 filter-none"
                   isLast={false}
                   key={1}
                   imageUrl="/images/curator1.svg"
@@ -45,18 +45,19 @@ const Curators = (props: VisibleProps) => {
               </div>
               <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
                 <p className="text-gray-300 text-base font-medium">{'Brian has been working in the Serverless space for over 7 years. He’s the cofounder and CTO of Begin.com, the fastest and easiest way to setup CI/CD gitops for serverless web apps on AWS. He is the creator and maintainer of OpenJS Architect, an open-source framework for generating and deploying AWS standard SAM/CloudFormation, coined the term FASTstack. He has been keeping a close eye on Deno since its earliest moments and is already using it in production today. You can catch him @brianleroux on Twitter where he talks about open source, JavaScript, serverless, faststack, Deno, and other developer-related stuff.'}</p>
-                <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6 md:mt-5">{'See all the Serverless Speakers '}<span className="arrow">{' > '}</span> </a>
+                <a href="https://www.google.co.in/" className="mt-5 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6">{'See all the Serverless Speakers '}<span className="arrow">{' > '}</span> </a>
               </div>
             </div>
-          </ScrollAnimationTiles>
+          </AnimationWrapper>
         </div>
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
-          <ScrollAnimationTiles >
+          <AnimationWrapper parentClass="">
             <Title title="CSS" parentClass="flex justify-center border-solid border" />
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
                 <ProfileCard
-                  imageClass="border border-2"
+                  isForDescription={true}
+                  imageClass="border border-2 filter-none"
                   isLast={false}
                   key={1}
                   imageUrl="/images/curator2.svg"
@@ -72,15 +73,16 @@ const Curators = (props: VisibleProps) => {
                 <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6 md:mt-5">{'See all the CSS Speakers '}<span className="arrow">{' > '}</span> </a>
               </div>
             </div>
-          </ScrollAnimationTiles>
+          </AnimationWrapper>
         </div>
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
-          <ScrollAnimationTiles >
+          <AnimationWrapper parentClass="" >
             <Title title="Svelte" parentClass="flex justify-center border-solid border" />
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
                 <ProfileCard
-                  imageClass="border border-2"
+                  isForDescription={true}
+                  imageClass="border border-2 filter-none"
                   isLast={false}
                   key={1}
                   imageUrl="/images/curator3.svg"
@@ -96,15 +98,16 @@ const Curators = (props: VisibleProps) => {
                 <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6 md:mt-5">{'See all the Svelte Speakers '}<span className="arrow">{' > '}</span> </a>
               </div>
             </div>
-          </ScrollAnimationTiles>
+          </AnimationWrapper>
         </div>
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
-          <ScrollAnimationTiles >
+          <AnimationWrapper parentClass="" >
             <Title title="Open source" parentClass="flex justify-center border-solid border" />
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
                 <ProfileCard
-                  imageClass="border border-2"
+                  isForDescription={true}
+                  imageClass="border border-2 filter-none"
                   isLast={false}
                   key={1}
                   imageUrl="/images/curator4.svg"
@@ -120,15 +123,16 @@ const Curators = (props: VisibleProps) => {
                 <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6 md:mt-5">{'See all the open source Speakers '}<span className="arrow">{' > '}</span> </a>
               </div>
             </div>
-          </ScrollAnimationTiles>
+          </AnimationWrapper>
         </div>
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
-          <ScrollAnimationTiles >
+          <AnimationWrapper parentClass="">
             <Title title="Jamstack" parentClass="flex justify-center border-solid border" />
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
                 <ProfileCard
-                  imageClass="border border-2"
+                  isForDescription={true}
+                  imageClass="border border-2 filter-none"
                   isLast={false}
                   key={1}
                   imageUrl="/images/curator5.svg"
@@ -144,15 +148,16 @@ const Curators = (props: VisibleProps) => {
                 <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6 md:mt-5">{'See all the jamstack Speakers '}<span className="arrow">{' > '}</span> </a>
               </div>
             </div>
-          </ScrollAnimationTiles>
+          </AnimationWrapper>
         </div>
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
-          <ScrollAnimationTiles >
+          <AnimationWrapper parentClass="" >
             <Title title="GraphQL" parentClass="flex justify-center border-solid border" />
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
                 <ProfileCard
-                  imageClass="border border-2"
+                  isForDescription={true}
+                  imageClass="border border-2 filter-none"
                   isLast={false}
                   key={1}
                   imageUrl="/images/curator6.svg"
@@ -168,7 +173,7 @@ const Curators = (props: VisibleProps) => {
                 <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6 md:mt-5">{'See all the graphql Speakers '}<span className="arrow">{' > '}</span> </a>
               </div>
             </div>
-          </ScrollAnimationTiles>
+          </AnimationWrapper>
         </div>
       </div>
     </div>
