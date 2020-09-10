@@ -24,6 +24,10 @@ body {
     filter: grayscale(0%);
 }
 
+.filter-none {
+    filter: grayscale(0%) !important;
+}
+
 .delay-75s {
     animation-delay: .75s;
     -moz-animation-delay: .75s;
