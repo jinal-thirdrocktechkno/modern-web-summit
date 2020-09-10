@@ -2,21 +2,17 @@ import React, { useRef, useState, useEffect } from 'react'
 import Logo from '../../components/logo'
 import NotifyForm from '../../components/notify'
 import Modern from '../modern'
-import Speaker from '../speaker/index'
-import Sponsor from '../sponsor/index'
+import Speaker from '../speaker'
+import Sponsor from '../sponsor'
 import Curators from '../curators'
 import About from '../about'
 import ShareSocial from '../../components/shareSocial'
 import Footer from '../footer/footer'
 import NavMenu from '../../components/navMenu'
 import { useQuery } from '@apollo/client';
-import TrackVisibility from 'react-on-screen';
 import { API_TEST } from '../../api/query'
 import Finances from '../finances'
-// const isServer = typeof window === 'undefined'
-// const WOW = !isServer ? React.lazy(()=>import) : null
-
-// used for navigate to div future use 
+import SectionWrapper from '../../components/sectionWrapper'
 
 const ScrollToRef = (ref) => ref.current.scrollIntoView()
 
@@ -26,8 +22,6 @@ const Home = () => {
   const menuOpen = () => {
     setShowMenu(!showMenu)
   }
-  useEffect(() => {
-  }, [])
 
   let speakerRef = useRef(null)
   let sponsorRef = useRef(null)
@@ -84,7 +78,7 @@ const Home = () => {
       </div>
 
 
-      <div className='bg-white flex shadow-xs md:h-100-5 sm:h-auto flex sm:m-0 md:m-10 main-page' ref={homeRef}>
+      <div className='bg-white flex shadow-xs md:h-100-5 sm:h-auto sm:m-0 md:m-10 main-page' ref={homeRef}>
         <div className="sm:hidden md:flex -mt-10">
           <img className="inline self-start ml-8 animated fadeInDownBig" src="/images/left-bar-1.svg" alt="logo" />
           <img className="inline self-start -ml-5 animated fadeInDownBig slow" src="/images/left-bar-2.svg" alt="logo" />
@@ -109,24 +103,22 @@ const Home = () => {
       </div>
 
       <div className='bg-darkBg m-10 text-center sm:hidden md:flex items-center justify-center min-h-778'>
-        <TrackVisibility>
-          <Modern />
-        </TrackVisibility>
+        <SectionWrapper Component={Modern} />
       </div>
       <div className='sm:m-0 md:m-10'>
-        <About />
+        <SectionWrapper Component={About} />
       </div>
       <div ref={speakerRef} className='sm:m-0 md:m-10'>
-        <Speaker />
+        <SectionWrapper Component={Speaker} />
       </div>
       <div ref={curatorsRef} className="sm:m-0 md:m-10">
-        <Curators />
+        <SectionWrapper Component={Curators} />
       </div>
       <div ref={sponsorRef} className='sm:m-0 md:m-10'>
-        <Sponsor />
+        <SectionWrapper Component={Sponsor} />
       </div>
       <div className='sm:m-0 md:m-10'>
-        <Finances />
+        <SectionWrapper Component={Finances} />
       </div>
       <div className="sm:m-0 md:m-10 sm:p-2 md:p-0">
         <ShareSocial />
