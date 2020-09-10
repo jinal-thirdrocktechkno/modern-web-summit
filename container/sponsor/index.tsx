@@ -1,5 +1,4 @@
 import SponsorComponent from './sponsor'
-import TrackVisibility from 'react-on-screen';
 import VisibilitySensor from 'react-visibility-sensor'
 import { useState } from 'react';
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import ScrollAnimationTiles from './scrollAnimationTiles'
+import AnimationWrapper from './animationWrapper'
 
 const ProfileCard = (props: ProfileCardProps) => {
   const { imageUrl, name, designation, companyName, locationFull, locationSort, isLast, imageClass, isForDescription } = props
@@ -32,9 +32,9 @@ const ProfileCard = (props: ProfileCardProps) => {
   }
   else {
     return (
-      <ScrollAnimationTiles parentClass="md:mb-2 sm:mb-5 profile-card cursor-pointer">
+      <AnimationWrapper parentClass="md:mb-2 sm:mb-5 profile-card cursor-pointer">
         {content}
-      </ScrollAnimationTiles>
+      </AnimationWrapper>
     )
   }
 }

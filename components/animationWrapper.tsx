@@ -1,7 +1,7 @@
 import VisibilitySensor from 'react-visibility-sensor'
 import { useState } from 'react';
 
-const ScrollAnimationTiles = (props) => {
+const AnimationWrapper = (props) => {
   const [isVisible, setVisible] = useState(false)
   return (
     <VisibilitySensor
@@ -15,4 +15,4 @@ const ScrollAnimationTiles = (props) => {
     </VisibilitySensor>
   )
 }
-export default ScrollAnimationTiles
+export default AnimationWrapper

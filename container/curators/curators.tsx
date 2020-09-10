@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Title from '../../components/title'
 import ProfileCard from '../../components/profileCard'
-import ScrollAnimationTiles from '../../components/scrollAnimationTiles'
+import AnimationWrapper from '../../components/animationWrapper'
 import { VisibleProps } from '../sponsor/sponsor'
 
 const Curators = (props: VisibleProps) => {
@@ -26,7 +26,7 @@ const Curators = (props: VisibleProps) => {
 
       <div className="flex flex-wrap md:mt-6">
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
-          <ScrollAnimationTiles parentClass="" >
+          <AnimationWrapper parentClass="" >
             <Title title="serverless" parentClass="flex justify-center border-solid border" />
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
@@ -48,10 +48,10 @@ const Curators = (props: VisibleProps) => {
                 <a href="https://www.google.co.in/" className="mt-5 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6">{'See all the Serverless Speakers '}<span className="arrow">{' > '}</span> </a>
               </div>
             </div>
-          </ScrollAnimationTiles>
+          </AnimationWrapper>
         </div>
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
-          <ScrollAnimationTiles parentClass="">
+          <AnimationWrapper parentClass="">
             <Title title="CSS" parentClass="flex justify-center border-solid border" />
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
@@ -73,10 +73,10 @@ const Curators = (props: VisibleProps) => {
                 <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6 md:mt-5">{'See all the CSS Speakers '}<span className="arrow">{' > '}</span> </a>
               </div>
             </div>
-          </ScrollAnimationTiles>
+          </AnimationWrapper>
         </div>
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
-          <ScrollAnimationTiles parentClass="" >
+          <AnimationWrapper parentClass="" >
             <Title title="Svelte" parentClass="flex justify-center border-solid border" />
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
@@ -98,10 +98,10 @@ const Curators = (props: VisibleProps) => {
                 <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6 md:mt-5">{'See all the Svelte Speakers '}<span className="arrow">{' > '}</span> </a>
               </div>
             </div>
-          </ScrollAnimationTiles>
+          </AnimationWrapper>
         </div>
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
-          <ScrollAnimationTiles parentClass="" >
+          <AnimationWrapper parentClass="" >
             <Title title="Open source" parentClass="flex justify-center border-solid border" />
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
@@ -123,10 +123,10 @@ const Curators = (props: VisibleProps) => {
                 <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6 md:mt-5">{'See all the open source Speakers '}<span className="arrow">{' > '}</span> </a>
               </div>
             </div>
-          </ScrollAnimationTiles>
+          </AnimationWrapper>
         </div>
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
-          <ScrollAnimationTiles parentClass="">
+          <AnimationWrapper parentClass="">
             <Title title="Jamstack" parentClass="flex justify-center border-solid border" />
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
@@ -148,10 +148,10 @@ const Curators = (props: VisibleProps) => {
                 <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6 md:mt-5">{'See all the jamstack Speakers '}<span className="arrow">{' > '}</span> </a>
               </div>
             </div>
-          </ScrollAnimationTiles>
+          </AnimationWrapper>
         </div>
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
-          <ScrollAnimationTiles parentClass="" >
+          <AnimationWrapper parentClass="" >
             <Title title="GraphQL" parentClass="flex justify-center border-solid border" />
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
@@ -173,7 +173,7 @@ const Curators = (props: VisibleProps) => {
                 <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6 md:mt-5">{'See all the graphql Speakers '}<span className="arrow">{' > '}</span> </a>
               </div>
             </div>
-          </ScrollAnimationTiles>
+          </AnimationWrapper>
         </div>
       </div>
     </div>
