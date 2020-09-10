@@ -16,8 +16,12 @@ body {
     /* background: linear-gradient(355.25deg, #803A9A 2.77%, #BB6BD9 95.12%); */
 }
 
-.profile-card:hover>img {
-    mix-blend-mode: normal;
+.profile-card img {
+    filter: grayscale(100%);
+}
+
+.profile-card:hover img {
+    filter: grayscale(0%);
 }
 
 .delay-75s {

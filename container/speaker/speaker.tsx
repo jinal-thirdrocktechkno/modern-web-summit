@@ -29,7 +29,7 @@ const Speaker = (props: VisibleProps) => {
             return (
               <ProfileCard
                 isForDescription={false}
-                imageClass="md:blend-luminosity sm:blend-normal"
+                imageClass=""
                 isLast={false}
                 key={index}
                 imageUrl="/images/speaker.svg"
@@ -47,7 +47,7 @@ const Speaker = (props: VisibleProps) => {
             return (
               <ProfileCard
                 isForDescription={false}
-                imageClass="md:blend-luminosity sm:blend-normal"
+                imageClass=""
                 isLast={false}
                 key={index}
                 imageUrl="/images/speaker.svg"
@@ -65,7 +65,7 @@ const Speaker = (props: VisibleProps) => {
             return (
               <ProfileCard
                 isForDescription={false}
-                imageClass="md:blend-luminosity sm:blend-normal"
+                imageClass=""
                 isLast={false}
                 key={index}
                 imageUrl="/images/speaker.svg"
@@ -83,7 +83,7 @@ const Speaker = (props: VisibleProps) => {
             return (
               <ProfileCard
                 isForDescription={false}
-                imageClass="md:blend-luminosity sm:blend-normal"
+                imageClass=""
                 isLast={index === 3}
                 key={index}
                 imageUrl="/images/speaker.svg"
