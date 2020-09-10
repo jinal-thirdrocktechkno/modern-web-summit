@@ -6,7 +6,6 @@ Connecting the world’s top designers and developers to redefine the bounds of 
 - [Tailwind Css]
 - [React Js]
 - [GraphQL]
-- [Animated style]
 
 [NextJS]: <https://nextjs.org/>
 [Tailwind Css]: <https://tailwindcss.com/>
@@ -15,34 +14,43 @@ Connecting the world’s top designers and developers to redefine the bounds of 
 [Animated style]: <https://animate.style/>
 [React Visiblity Sensors]: <https://github.com/joshwnj/react-visibility-sensor>
 [React-Typist]: <https://github.com/jstejada/react-typist>
+
 ### Installation
-sh
+```sh
 $ cd modern-web-summit
 $ npm install
 $ npm run dev
+```
 
 ### Dependancies
-- [NextJS]
 - [Animated style]
-- [GraphQL]
 - [React Visiblity Sensors]
 - [React-Typist]
 
 
 ### Folder Structure
-- pages
+- Pages
     - `/` : Index page 
+    
 - Containers
+    - `Home`
+    - `Modern`
+    - `About`
+    - `Speaker`
+    - `Curators`
+    - `Sponsor`
+    - `Finance`
+    - `Footer`
+
 - Component
-    - `AnimationWrapper` : (FadeInUp animation)
-    - `ProfileCard` 
-    - `SponsorDescription` : (Description)
+    - `AnimationWrapper` : used for FadeInUp animation on any section.
+    - `ProfileCard` : Common component to show profile in speaker and curator.
     - ...
 
 ### Deployment
 - Current deployment link : https://doge-17u-staging.begin.app/
 - Create account on https://begin.com.
-- Create an app
-- Use existing repo
-- connect with github
+    - Create an app
+    - Use existing repo
+- Connect with github
 - Github default branch will be deployed.
