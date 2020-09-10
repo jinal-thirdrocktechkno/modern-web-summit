@@ -31,6 +31,7 @@ const Curators = (props: VisibleProps) => {
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
                 <ProfileCard
+                  isForDescription={true}
                   imageClass="border border-2"
                   isLast={false}
                   key={1}
@@ -55,6 +56,7 @@ const Curators = (props: VisibleProps) => {
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
                 <ProfileCard
+                  isForDescription={true}
                   imageClass="border border-2"
                   isLast={false}
                   key={1}
@@ -79,6 +81,7 @@ const Curators = (props: VisibleProps) => {
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
                 <ProfileCard
+                  isForDescription={true}
                   imageClass="border border-2"
                   isLast={false}
                   key={1}
@@ -103,6 +106,7 @@ const Curators = (props: VisibleProps) => {
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
                 <ProfileCard
+                  isForDescription={true}
                   imageClass="border border-2"
                   isLast={false}
                   key={1}
@@ -127,6 +131,7 @@ const Curators = (props: VisibleProps) => {
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
                 <ProfileCard
+                  isForDescription={true}
                   imageClass="border border-2"
                   isLast={false}
                   key={1}
@@ -151,6 +156,7 @@ const Curators = (props: VisibleProps) => {
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
                 <ProfileCard
+                  isForDescription={true}
                   imageClass="border border-2"
                   isLast={false}
                   key={1}

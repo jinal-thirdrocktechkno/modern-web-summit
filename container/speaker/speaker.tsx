@@ -28,6 +28,7 @@ const Speaker = (props: VisibleProps) => {
           {abc.map((item, index) => {
             return (
               <ProfileCard
+                isForDescription={false}
                 imageClass="md:blend-luminosity sm:blend-normal"
                 isLast={false}
                 key={index}
@@ -45,6 +46,7 @@ const Speaker = (props: VisibleProps) => {
           {abc.map((item, index) => {
             return (
               <ProfileCard
+                isForDescription={false}
                 imageClass="md:blend-luminosity sm:blend-normal"
                 isLast={false}
                 key={index}
@@ -62,6 +64,7 @@ const Speaker = (props: VisibleProps) => {
           {abc.map((item, index) => {
             return (
               <ProfileCard
+                isForDescription={false}
                 imageClass="md:blend-luminosity sm:blend-normal"
                 isLast={false}
                 key={index}
@@ -79,6 +82,7 @@ const Speaker = (props: VisibleProps) => {
           {abc.map((item, index) => {
             return (
               <ProfileCard
+                isForDescription={false}
                 imageClass="md:blend-luminosity sm:blend-normal"
                 isLast={index === 3}
                 key={index}
