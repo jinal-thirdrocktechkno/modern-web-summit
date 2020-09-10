@@ -22,6 +22,7 @@
     "react-dom": "^16.13.1",
     "react-on-screen": "^2.1.1",
     "react-typist": "^2.0.5",
+    "react-visibility-sensor": "^5.1.1",
     "wow.js": "^1.2.2",
     "wowjs": "^1.1.3"
   },

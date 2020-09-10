@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import AboutDescription from '../../components/aboutDescription'
 import { VisibleProps } from '../sponsor/sponsor'
+import ScrollAnimationTiles from '../../components/scrollAnimationTiles'
 
 const About = (props: VisibleProps) => {
   const { isVisible } = props
@@ -23,18 +24,18 @@ const About = (props: VisibleProps) => {
         </div>
       </div>
       <div className="flex flex-wrap md:mt-6 md:pl-24 md:pr-32">
-        <div className="md:w-3/5 sm:w-full md:p-10 sm:p-5">
+        <ScrollAnimationTiles parentClass="md:w-3/5 sm:w-full md:p-10 sm:p-5">
           <p className="text-2xl uppercase text-black font-extrabold">More than just a livestream</p>
           <p className="text-gray-300 font-medium text-base sm:w-full">{"Let’s face it: a livestream of talks is not a real conference. There is so much more to a conference than the presentations, and the online events we’ve seen in 2020 simply don’t achieve a true conference experience."}</p>
           <p className="text-gray-300 font-medium text-base sm:w-full pt-8">{"The Modern Web Summit is different. It takes place on a new, revolutionary events platform called EventLoop -- a web app that’s purpose-built for online meetups and conferences. It provides attendees, speakers, and sponsors alike with an all-encompassing experience that inspires and facilitates true connections between people.  "}</p>
-        </div>
-        <div className="md:w-2/5 sm:w-full sm:p-5">
+        </ScrollAnimationTiles>
+        <ScrollAnimationTiles parentClass="md:w-2/5 sm:w-full sm:p-5">
           <img src="/images/mws_plus_eventloop.svg" />
-        </div>
+        </ScrollAnimationTiles>
         <div className="md:p-10 w-full">
           <p className="text-2xl uppercase text-black font-extrabold sm:text-center md:text-left">What you’ll experience</p>
         </div>
-        <div className="md:w-1/2 sm:w-full md:p-10 md:pt-0 md:pt-5 sm:p-5">
+        <ScrollAnimationTiles parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 md:pt-5 sm:p-5">
           <AboutDescription
             image="/images/keynotes-icon.svg"
             title="General Session Keynotes"
@@ -44,8 +45,8 @@ const About = (props: VisibleProps) => {
             url="https://www.google.co.in/"
             linkText="See all the keynotes "
           />
-        </div>
-        <div className="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
+        </ScrollAnimationTiles>
+        <ScrollAnimationTiles parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
           <AboutDescription
             image="/images/tracks-icon.svg"
             title="multiple targeted tracks"
@@ -55,8 +56,8 @@ const About = (props: VisibleProps) => {
             url="https://www.google.co.in/"
             linkText="See all the tracks and speakers "
           />
-        </div>
-        <div className="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
+        </ScrollAnimationTiles>
+        <ScrollAnimationTiles parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
           <AboutDescription
             image="/images/breakouts-icon.svg"
             title="Discussion Breakouts & topic tables"
@@ -66,8 +67,8 @@ const About = (props: VisibleProps) => {
             url="https://www.google.co.in/"
             linkText="See all the SCHEDULED DISCUSSION BREAKOUTS "
           />
-        </div>
-        <div className="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
+        </ScrollAnimationTiles>
+        <ScrollAnimationTiles parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
           <AboutDescription
             image="/images/meetings-icon.svg"
             title="Meet and connect with other professionals"
@@ -77,8 +78,8 @@ const About = (props: VisibleProps) => {
             url=""
             linkText=""
           />
-        </div>
-        <div className="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
+        </ScrollAnimationTiles>
+        <ScrollAnimationTiles parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
           <AboutDescription
             image="/images/workshops-icon.svg"
             title="Workshops"
@@ -88,8 +89,8 @@ const About = (props: VisibleProps) => {
             url="https://www.google.co.in/"
             linkText="See all the workshops available  "
           />
-        </div>
-        <div className="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
+        </ScrollAnimationTiles>
+        <ScrollAnimationTiles parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
           <AboutDescription
             image="/images/sponsor-booths-icon.svg"
             title="Sponsorship booths"
@@ -99,8 +100,8 @@ const About = (props: VisibleProps) => {
             url="https://www.google.co.in/"
             linkText="See all of our sponsors "
           />
-        </div>
-        <div className="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
+        </ScrollAnimationTiles>
+        <ScrollAnimationTiles parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
           <AboutDescription
             image="/images/activities-icon.svg"
             title="Activities"
@@ -110,8 +111,8 @@ const About = (props: VisibleProps) => {
             url=""
             linkText=""
           />
-        </div>
-        <div className="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
+        </ScrollAnimationTiles>
+        <ScrollAnimationTiles parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
           <AboutDescription
             image="/images/jobs-icon.svg"
             title="Hiring Mixer"
@@ -121,7 +122,7 @@ const About = (props: VisibleProps) => {
             url="https://www.google.co.in/"
             linkText="LEARN MORE ABOUT THE HIRING MIXER "
           />
-        </div>
+        </ScrollAnimationTiles>
       </div>
     </div>
   )

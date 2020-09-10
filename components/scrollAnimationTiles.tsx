@@ -1,14 +1,18 @@
-import TrackVisibility from 'react-on-screen';
+import VisibilitySensor from 'react-visibility-sensor'
+import { useState } from 'react';
 
 const ScrollAnimationTiles = (props) => {
+  const [isVisible, setVisible] = useState(false)
   return (
-    <TrackVisibility partialVisibility once throttleInterval={0}>
-      {({ isVisible }) => (
-        <div className={`${props.parentClass} ${isVisible ? 'animated fadeInUp opacity-1' : 'opacity-0'}`} >
-          {props.children}
-        </div>
-      )}
-    </TrackVisibility>
+    <VisibilitySensor
+      partialVisibility
+      onChange={(visible) => setVisible(visible)}
+      active={!isVisible} >
+      <div
+        className={`${props.parentClass} ${isVisible ? 'animated fadeInUp opacity-1' : 'opacity-0'}`} >
+        {props.children}
+      </div>
+    </VisibilitySensor>
   )
 }
 export default ScrollAnimationTiles

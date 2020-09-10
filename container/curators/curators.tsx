@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Title from '../../components/title'
 import ProfileCard from '../../components/profileCard'
-import ScrollAnimation from 'react-animate-on-scroll'
 import ScrollAnimationTiles from '../../components/scrollAnimationTiles'
 import { VisibleProps } from '../sponsor/sponsor'
 
@@ -27,11 +26,12 @@ const Curators = (props: VisibleProps) => {
 
       <div className="flex flex-wrap md:mt-6">
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
-          <ScrollAnimationTiles >
+          <ScrollAnimationTiles parentClass="" >
             <Title title="serverless" parentClass="flex justify-center border-solid border" />
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
                 <ProfileCard
+                  isForDescription={true}
                   imageClass="border border-2"
                   isLast={false}
                   key={1}
@@ -51,11 +51,12 @@ const Curators = (props: VisibleProps) => {
           </ScrollAnimationTiles>
         </div>
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
-          <ScrollAnimationTiles >
+          <ScrollAnimationTiles parentClass="">
             <Title title="CSS" parentClass="flex justify-center border-solid border" />
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
                 <ProfileCard
+                  isForDescription={true}
                   imageClass="border border-2"
                   isLast={false}
                   key={1}
@@ -75,11 +76,12 @@ const Curators = (props: VisibleProps) => {
           </ScrollAnimationTiles>
         </div>
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
-          <ScrollAnimationTiles >
+          <ScrollAnimationTiles parentClass="" >
             <Title title="Svelte" parentClass="flex justify-center border-solid border" />
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
                 <ProfileCard
+                  isForDescription={true}
                   imageClass="border border-2"
                   isLast={false}
                   key={1}
@@ -99,11 +101,12 @@ const Curators = (props: VisibleProps) => {
           </ScrollAnimationTiles>
         </div>
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
-          <ScrollAnimationTiles >
+          <ScrollAnimationTiles parentClass="" >
             <Title title="Open source" parentClass="flex justify-center border-solid border" />
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
                 <ProfileCard
+                  isForDescription={true}
                   imageClass="border border-2"
                   isLast={false}
                   key={1}
@@ -123,11 +126,12 @@ const Curators = (props: VisibleProps) => {
           </ScrollAnimationTiles>
         </div>
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
-          <ScrollAnimationTiles >
+          <ScrollAnimationTiles parentClass="">
             <Title title="Jamstack" parentClass="flex justify-center border-solid border" />
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
                 <ProfileCard
+                  isForDescription={true}
                   imageClass="border border-2"
                   isLast={false}
                   key={1}
@@ -147,11 +151,12 @@ const Curators = (props: VisibleProps) => {
           </ScrollAnimationTiles>
         </div>
         <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
-          <ScrollAnimationTiles >
+          <ScrollAnimationTiles parentClass="" >
             <Title title="GraphQL" parentClass="flex justify-center border-solid border" />
             <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
               <div className="md:w-1/3 sm:w-3/4">
                 <ProfileCard
+                  isForDescription={true}
                   imageClass="border border-2"
                   isLast={false}
                   key={1}

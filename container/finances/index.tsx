@@ -1,13 +1,17 @@
 import FinancesComponent from './finances'
-import TrackVisibility from 'react-on-screen';
+import VisibilitySensor from 'react-visibility-sensor'
+import { useState } from 'react';
 
 const Finances = () => {
+  const [isVisible, setVisible] = useState(false)
   return (
-    <TrackVisibility partialVisibility once throttleInterval={0}>
-      {({ isVisible }) => (
-        <FinancesComponent isVisible={isVisible} />
-      )}
-    </TrackVisibility>
+    <VisibilitySensor
+      partialVisibility
+      onChange={(visible) => setVisible(visible)}
+      active={!isVisible} >
+      <FinancesComponent
+        isVisible={isVisible} />
+    </VisibilitySensor>
   )
 }
 export default Finances

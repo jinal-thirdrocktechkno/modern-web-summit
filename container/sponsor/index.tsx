@@ -1,13 +1,18 @@
 import SponsorComponent from './sponsor'
 import TrackVisibility from 'react-on-screen';
+import VisibilitySensor from 'react-visibility-sensor'
+import { useState } from 'react';
 
 const Sponsor = () => {
+  const [isVisible, setVisible] = useState(false)
   return (
-    <TrackVisibility partialVisibility once throttleInterval={0}>
-      {({ isVisible }) => (
-        <SponsorComponent isVisible={isVisible} />
-      )}
-    </TrackVisibility>
+    <VisibilitySensor
+      partialVisibility
+      onChange={(visible) => setVisible(visible)}
+      active={!isVisible} >
+      <SponsorComponent
+        isVisible={isVisible} />
+    </VisibilitySensor>
   )
 }
 export default Sponsor

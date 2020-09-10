@@ -15,7 +15,7 @@ const Sponsor = (props: VisibleProps) => {
   })
 
   return (
-    <div className={`bg-white shadow-xs opacity-0 ${className} `}>
+    <div className={`bg-white shadow-xs opacity-0  ${className}`}>
       <div className="flex sm:flex-wrap md:flex-no-wrap">
         <div className="bg-black md:w-23 sm:w-full sm:flex-none md:flex-23 h-32 flex items-end self-start justify-center">
           <h4 className="text-5xl text-white leading-7 uppercase">SPONSORS</h4>
