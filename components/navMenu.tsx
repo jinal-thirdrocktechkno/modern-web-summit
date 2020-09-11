@@ -2,7 +2,7 @@ import React from 'react'
 
 const NavMenu = (props: NavMenuProps) => {
   const { menuOpen, handleButtonClick } = props
-  const buttonClass = "border-2 mb-5 p-6 border-gray-400 text-xl font-extrabold uppercase text-gray-400 hover:bg-gray-400 focus:outline-none hover:text-white"
+  const buttonClass = "menu-btn border-2 mb-5 p-6 border-gray-400 text-xl font-extrabold uppercase text-gray-400 hover:bg-gray-400 focus:outline-none hover:text-white"
   const linkClass = "text-xl text-gray-300 font-medium hover:text-purple-200"
   return (
     <div className="bg-white absolute top-0 inset-x-0 z-10 shadow-xs">
@@ -52,7 +52,7 @@ const NavMenu = (props: NavMenuProps) => {
           <button
             disabled={true}
             onClick={() => handleButtonClick('home')}
-            className={`${buttonClass} opacity-50`}
+            className={`border-2 mb-5 p-6 border-gray-400 text-xl font-extrabold uppercase text-gray-400  focus:outline-none opacity-50`}
             type="button" >
             schedule - coming soon
             </button>

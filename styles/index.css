@@ -13,6 +13,7 @@ body {
 
 .custom-btn {
     @apply text-black py-4 px-6 uppercase border-none rounded-md text-xl font-extrabold bg-lightGreen-200;
+    width: 275px;
     /* background: linear-gradient(355.25deg, #803A9A 2.77%, #BB6BD9 95.12%); */
 }
 
@@ -29,9 +30,9 @@ body {
 }
 
 .delay-75s {
-    animation-delay: .75s;
-    -moz-animation-delay: .75s;
-    -webkit-animation-delay: .75s;
+    animation-delay: 0.75s;
+    -moz-animation-delay: 0.75s;
+    -webkit-animation-delay: 0.75s;
 }
 
 .delay-1s {
@@ -47,8 +48,23 @@ body {
 }
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
-    body {
-        zoom: 80%;
+    .logo img {
+        @apply w-300 mb-5;
+    }
+    .custom-btn {
+        @apply text-black py-2 px-4 uppercase border-none rounded-md text-xl font-extrabold bg-lightGreen-200;
+    }
+    .left-bar img, .right-bar img {
+        @apply w-16;
+    }
+    .left-bar {
+        @apply -mt-24;
+    }
+    .right-bar {
+        @apply -translate-y-12;
+    }
+    .menu-btn {
+        @apply p-4;
     }
 }
 
