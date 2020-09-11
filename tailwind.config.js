@@ -15,7 +15,8 @@ module.exports = {
         '1/2': '50%',
       },
       spacing: {
-        '450': '450px'
+        '450': '450px',
+        '300': '300px'
       },
       boxShadow: {
         xs: '0 0 40px rgba(0, 0, 0, 0.1)'

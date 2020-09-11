@@ -2,7 +2,8 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-html, #__next {
+html,
+#__next {
     height: 100%;
     scroll-behavior: smooth;
 }
@@ -29,9 +30,9 @@ body {
 }
 
 .delay-75s {
-    animation-delay: .75s;
-    -moz-animation-delay: .75s;
-    -webkit-animation-delay: .75s;
+    animation-delay: 0.75s;
+    -moz-animation-delay: 0.75s;
+    -webkit-animation-delay: 0.75s;
 }
 
 .delay-1s {
@@ -47,8 +48,24 @@ body {
 }
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
-    body {
-        zoom: 80%;
+    .logo img {
+        @apply w-300 mb-5;
+    }
+    .custom-btn {
+        @apply text-black py-2 px-4 uppercase border-none rounded-md text-xl font-extrabold bg-lightGreen-200;
+    }
+    .left-bar img,
+    .right-bar img {
+        @apply w-16;
+    }
+    .left-bar {
+        @apply -mt-24;
+    }
+    .right-bar {
+        @apply -translate-y-12;
+    }
+    .menu-btn {
+        @apply p-4;
     }
 }
 
