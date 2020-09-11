@@ -54,7 +54,7 @@ const Home = () => {
 
   return (
     <div className='h-full'>
-      <div className='flex items-center justify-between w-full absolute md:-mt-10 pt-1 main-page'>
+      <div className='flex items-center justify-between w-full absolute md:-mt-10 pt-1'>
         <div onClick={() => menuOpen()}>
           <img className="sm:hidden md:inline p-2 ml-2 mt-1 cursor-pointer" src="/images/menu.svg" alt="logo" />
           <img className="md:hidden sm:inline p-2 ml-2 mt-1 cursor-pointer" src="/images/menu-white.svg" alt="logo" />
@@ -78,24 +78,24 @@ const Home = () => {
       </div>
 
 
-      <div className='bg-white flex shadow-xs md:h-100-5 sm:h-auto sm:m-0 md:m-10 main-page' ref={homeRef}>
-        <div className="sm:hidden md:flex -mt-10">
+      <div className='bg-white flex shadow-xs md:h-100-5 sm:h-auto sm:m-0 md:m-10 main-wrap' ref={homeRef}>
+        <div className="sm:hidden md:flex -mt-10 left-bar">
           <img className="inline self-start ml-8 animated fadeInDownBig" src="/images/left-bar-1.svg" alt="logo" />
           <img className="inline self-start -ml-5 animated fadeInDownBig slow" src="/images/left-bar-2.svg" alt="logo" />
           <img className="inline self-start -ml-5 animated fadeInDownBig slower" src="/images/left-bar-3.svg" alt="logo" />
         </div>
         <div className='md:w-2/5 sm:w-full m-auto text-center md:-mt-10 sm:mt-0'>
           <Logo />
-          <p className='text-gray-300 font-medium text-base md:mb-10 sm:p-5 md:p-0'>
+          <p className='text-gray-300 font-medium text-base md:mb-5 sm:p-5 md:p-0'>
             {"Connecting the world’s top designers and developers to redefine the bounds of possibility through an exciting exploration of cutting-edge technologies, lessons, & patterns"}</p>
-          <NotifyForm buttonClass="" />
-          <div className="mt-5 sm:mb-10 md:mb-0">
+          <NotifyForm buttonClass="" textClass="text-black" />
+          <div className="mt-3 sm:mb-10 md:mb-0">
             <a className="text-gray-300 font-medium text-base hover:text-blue-100" href="https://www.google.co.in/">Terms of Service • </a>
             <a className="text-gray-300 font-medium text-base hover:text-blue-100" href="https://www.google.co.in/">Privacy Policy • </a>
             <a className="text-gray-300 font-medium text-base hover:text-blue-100" href="https://www.google.co.in/">Code of Conduct</a>
           </div>
         </div>
-        <div className="sm:hidden md:flex mr-8 relative top-1/2 transform -translate-y-48">
+        <div className="sm:hidden md:flex mr-8 relative top-1/2 transform -translate-y-48 right-bar">
           <img className="inline self-end animated fadeInUpBig slower" src="/images/right-bar-1.svg" alt="logo" />
           <img className="inline self-end animated fadeInUpBig slow -ml-5 mb-10" src="/images/right-bar-2.svg" alt="logo" />
           <img className="inline self-end animated fadeInUpBig -ml-5 mb-20" src="/images/right-bar-3.svg" alt="logo" />
