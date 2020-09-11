@@ -98,6 +98,63 @@ export const sponsorList = [
   }
 ]
 
+export const SpeakerFilters = [
+  {
+    id: 1,
+    title: 'All Tracks',
+    image: '/images/speakerFilter/all-tracks.svg',
+    selected: true
+  },
+  {
+    id: 2,
+    title: 'accessibility',
+    image: '/images/speakerFilter/track-accessibility-icon.svg',
+    selected: false
+  },
+  {
+    id: 3,
+    title: 'CSS',
+    image: '/images/speakerFilter/track-css-icon.svg',
+    selected: false
+  },
+  {
+    id: 4,
+    title: 'graphql',
+    image: '/images/speakerFilter/track-graphql-icon.svg',
+    selected: false
+  },
+  {
+    id: 5,
+    title: 'Indie Hackers / Entrepreneurs',
+    image: '/images/speakerFilter/track-indie-hackers-icon.svg',
+    selected: false
+  },
+  {
+    id: 6,
+    title: 'jamstack',
+    image: '/images/speakerFilter/track-jamstack-icon.svg',
+    selected: false
+  },
+  {
+    id: 7,
+    title: 'react',
+    image: '/images/speakerFilter/track-react-icon.svg',
+    selected: false
+  },
+  {
+    id: 8,
+    title: 'serverless',
+    image: '/images/speakerFilter/track-serverless-icon.svg',
+    selected: false
+  },
+  {
+    id: 9,
+    title: 'vue',
+    image: '/images/speakerFilter/track-vue-icon.svg',
+    selected: false
+  },
+]
+
 
 export const links = [
 

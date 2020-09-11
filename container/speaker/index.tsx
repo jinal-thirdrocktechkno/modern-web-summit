@@ -1,16 +1,48 @@
 import React, { useState, useEffect } from 'react'
 import ProfileCard from '../../components/profileCard'
+import SpeakerFilter from '../../components/speakerFilter'
 import { VisibleProps } from '../sponsor'
+import { SpeakerFilters } from '../../utility/constants'
 
 const Speaker = (props: VisibleProps) => {
   const { isVisible } = props
   const [className, setClass] = useState('')
+  const [filters, setFilters] = useState(SpeakerFilters)
   useEffect(() => {
     if (isVisible) {
       setClass('animated fadeInUp opacity-1')
     }
   })
   const abc = [1, 2, 3, 4];
+  const handleFilterClick = (id: number) => {
+    const newFilter = filters.slice(0)
+    // let filteredItem = newFilter.filter(item => item.id === id)[0]
+    // filteredItem.selected = !filteredItem.selected
+    // let remainFilters = newFilter.filter(item => item.id !== id)
+    // let finalFilter = [...remainFilters, filteredItem]
+    const allTrackId = filters.find(item => item.title === 'All Tracks').id
+    let finalFilter = []
+    if (id === allTrackId) {
+      let firstItemOfFilter = filters.filter(item => item.title === 'All Tracks')[0]
+      firstItemOfFilter.selected = true
+      let remainFilters = filters.filter(item => item.title !== 'All Tracks')
+      remainFilters.map(item => { return item.selected = false })
+      finalFilter = [...remainFilters, firstItemOfFilter]
+      console.log(finalFilter, "first case final")
+    }
+    else {
+      let firstItemOfFilter = filters.filter(item => item.id === allTrackId)[0]
+      firstItemOfFilter.selected = false
+      let filteredItem = newFilter.filter(item => item.id === id)[0]
+      filteredItem.selected = !filteredItem.selected
+      let remainFilters = newFilter.filter(item => item.id !== id)
+      let removeAllTrackItem = remainFilters.filter(i => i.id !== allTrackId)
+      finalFilter = [...removeAllTrackItem, filteredItem, firstItemOfFilter]
+      console.log(finalFilter, "finalFIlter")
+    }
+    setFilters(finalFilter.sort((a, b) => (a.id > b.id) ? 1 : -1))
+  }
+
   return (
     <div className={`bg-white shadow-xs opacity-0 ${className}`}>
       <div className="flex sm:flex-wrap md:flex-no-wrap">
@@ -23,7 +55,7 @@ const Speaker = (props: VisibleProps) => {
         </div>
       </div>
 
-      <div className="flex sm:flex-wrap md:flex-no-wrap md:pl-48 md:p-10 sm:p-0">
+      <div className="flex sm:flex-wrap md:flex-no-wrap md:pl-40 md:p-10 sm:p-0">
         <div className="md:mr-2 sm:mr-0 md:w-1/5 sm:w-1/2 sm:pl-5 md:pl-0 sm:pr-2 md:pr-0">
           {abc.map((item, index) => {
             return (
@@ -96,10 +128,17 @@ const Speaker = (props: VisibleProps) => {
             )
           })}
         </div>
-        <div className="md:flex sm:hidden justify-end flex-col items-end self-end mb-2 w-1/5">
-          <div className="text-center">
-            <p className="uppercase text-xs text-gray-400 font-extrabold">Interested in speaking?</p>
-            <button type="button" className="uppercase border-gray-400 text-gray-400 hover:bg-gray-400 hover:text-white font-black border-2 py-3 px-4 text-lg mt-1 focus:outline-none">Submit your talk here</button>
+        <div className="md:flex sm:hidden flex-col mb-2 w-1/5 mt-32">
+          <div className="sticky top-0 pt-5">
+            <p className="uppercase text-base text-center font-extrabold">refine by track</p>
+            <SpeakerFilter
+              onClick={handleFilterClick}
+              filterList={filters}
+            />
+            <div className="text-center ">
+              <p className="uppercase text-xs text-gray-400 font-extrabold">Interested in speaking?</p>
+              <button type="button" className="uppercase border-gray-400 text-gray-400 hover:bg-gray-400 hover:text-white font-black border-2 py-3 px-4 text-lg mt-1 focus:outline-none">Submit your talk here</button>
+            </div>
           </div>
         </div>
         <div className="sm:block md:hidden p-4 mb-16">

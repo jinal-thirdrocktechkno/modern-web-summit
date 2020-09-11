@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="md:w-2/5 sm:w-full justify-center text-center flex-col flex">
         <img className="md:h-20 sm:h-24" src="/images/mws-logo.svg" />
         <div className="mt-10 flex justify-center">
-          <NotifyForm buttonClass="sm:text-lg md:text-xl" />
+          <NotifyForm buttonClass="sm:text-lg md:text-xl" textClass={'text-white'} />
         </div>
         <div className="mb-10 mt-5 text-center sm:block md:hidden">
           <a className="text-white font-medium text-sm text-opacity-50" href="https://www.google.co.in/">Terms of Service • </a>

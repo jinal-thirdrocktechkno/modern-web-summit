@@ -52,7 +52,7 @@ const NavMenu = (props: NavMenuProps) => {
           <button
             disabled={true}
             onClick={() => handleButtonClick('home')}
-            className={`${buttonClass} opacity-50`}
+            className={`border-2 mb-5 p-6 border-gray-400 text-xl font-extrabold uppercase text-gray-400  focus:outline-none opacity-50`}
             type="button" >
             schedule - coming soon
             </button>
