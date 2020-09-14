@@ -26,10 +26,10 @@ const About = (props: VisibleProps) => {
       <div className="flex flex-wrap md:mt-6 md:pl-24 md:pr-32">
         <AnimationWrapper parentClass="md:w-3/5 sm:w-full md:p-10 sm:p-5">
           <p className="text-2xl uppercase text-black font-extrabold">More than just a livestream</p>
-          <p className="text-gray-300 font-medium text-base sm:w-full">{"Let’s face it: a livestream of talks is not a real conference. There is so much more to a conference than the presentations, and the online events we’ve seen in 2020 simply don’t achieve a true conference experience."}</p>
+          <p className="text-gray-300 font-medium text-base sm:w-full pt-4">{"Let’s face it: a livestream of talks is not a real conference. There is so much more to a conference than the presentations, and the online events we’ve seen in 2020 simply don’t achieve a true conference experience."}</p>
           <p className="text-gray-300 font-medium text-base sm:w-full pt-8">{"The Modern Web Summit is different. It takes place on a new, revolutionary events platform called EventLoop -- a web app that’s purpose-built for online meetups and conferences. It provides attendees, speakers, and sponsors alike with an all-encompassing experience that inspires and facilitates true connections between people.  "}</p>
         </AnimationWrapper>
-        <AnimationWrapper parentClass="md:w-2/5 sm:w-full sm:p-5">
+        <AnimationWrapper parentClass="md:w-2/5 sm:w-full sm:p-5 md:pt-24">
           <img src="/images/mws_plus_eventloop.svg" />
         </AnimationWrapper>
         <div className="md:p-10 w-full">

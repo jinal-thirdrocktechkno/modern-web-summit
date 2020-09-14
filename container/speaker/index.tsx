@@ -16,29 +16,34 @@ const Speaker = (props: VisibleProps) => {
   const abc = [1, 2, 3, 4];
   const handleFilterClick = (id: number) => {
     const newFilter = filters.slice(0)
-    // let filteredItem = newFilter.filter(item => item.id === id)[0]
-    // filteredItem.selected = !filteredItem.selected
-    // let remainFilters = newFilter.filter(item => item.id !== id)
-    // let finalFilter = [...remainFilters, filteredItem]
     const allTrackId = filters.find(item => item.title === 'All Tracks').id
     let finalFilter = []
     if (id === allTrackId) {
-      let firstItemOfFilter = filters.filter(item => item.title === 'All Tracks')[0]
-      firstItemOfFilter.selected = true
-      let remainFilters = filters.filter(item => item.title !== 'All Tracks')
-      remainFilters.map(item => { return item.selected = false })
-      finalFilter = [...remainFilters, firstItemOfFilter]
-      console.log(finalFilter, "first case final")
+      finalFilter = newFilter.map(item => {
+        if (item.id !== allTrackId) {
+          item.selected = false
+        }
+        else {
+          item.selected = true
+        }
+        return item
+      })
     }
     else {
-      let firstItemOfFilter = filters.filter(item => item.id === allTrackId)[0]
-      firstItemOfFilter.selected = false
-      let filteredItem = newFilter.filter(item => item.id === id)[0]
-      filteredItem.selected = !filteredItem.selected
-      let remainFilters = newFilter.filter(item => item.id !== id)
-      let removeAllTrackItem = remainFilters.filter(i => i.id !== allTrackId)
-      finalFilter = [...removeAllTrackItem, filteredItem, firstItemOfFilter]
-      console.log(finalFilter, "finalFIlter")
+      let selectedCount = 0
+      finalFilter = newFilter.map(item => {
+        if (item.id === id) {
+          item.selected = !item.selected
+        }
+        if (item.id === allTrackId) {
+          item.selected = false
+        }
+        item.selected && selectedCount++
+        return item
+      })
+      if (!selectedCount) {
+        finalFilter[0].selected = true
+      }
     }
     setFilters(finalFilter.sort((a, b) => (a.id > b.id) ? 1 : -1))
   }
@@ -137,13 +142,13 @@ const Speaker = (props: VisibleProps) => {
             />
             <div className="text-center ">
               <p className="uppercase text-xs text-gray-400 font-extrabold">Interested in speaking?</p>
-              <button type="button" className="uppercase border-gray-400 text-gray-400 hover:bg-gray-400 hover:text-white font-black border-2 py-3 px-4 text-lg mt-1 focus:outline-none">Submit your talk here</button>
+              <button type="button" className="uppercase border-gray-400 text-gray-400 hover:bg-gray-400 hover:text-white font-black border-2 py-3 px-5 text-lg mt-1 focus:outline-none ml-5">Submit your talk</button>
             </div>
           </div>
         </div>
         <div className="sm:block md:hidden p-4 mb-16">
           <button type="button" className="w-full uppercase border-purple-100 rounded-md text-purple-100 font-black border-2 p-4 text-lg mt-1 focus:outline-none">see all speakers</button>
-          <button type="button" className="w-full mt-5 custom-btn hover:bg-lightGreen-100 focus:outline-none">Submit your talk here</button>
+          <button type="button" className="w-full mt-5 custom-btn hover:bg-lightGreen-100 focus:outline-none">Submit your talk</button>
         </div>
       </div>
     </div >)

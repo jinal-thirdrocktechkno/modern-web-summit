@@ -36,11 +36,11 @@ const Curators = (props: VisibleProps) => {
                   isLast={false}
                   key={1}
                   imageUrl="/images/curator1.svg"
-                  name="Soham Steward"
-                  designation="Co-founder & CTO"
-                  companyName="Begin"
-                  locationFull="San Francisco / Vancouver"
-                  locationSort="San Francisco / Vancouver"
+                  name="Nader Dabit"
+                  designation="Developer Advocate"
+                  companyName="AWS Amplify"
+                  locationFull="Jackson, MS"
+                  locationSort="Jackson, MS"
                 />
               </div>
               <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
@@ -221,6 +221,31 @@ const Curators = (props: VisibleProps) => {
               <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
                 <p className="text-gray-300 text-base font-medium">{`Brian has been working in the Serverless space for over 7 years. He’s the cofounder and CTO of Begin.com, the fastest and easiest way to setup CI/CD gitops for serverless web apps on AWS. He is the creator and maintainer of OpenJS Architect, an open-source framework for generating and deploying AWS standard SAM/CloudFormation, coined the term FASTstack. He has been keeping a close eye on Deno since its earliest moments and is already using it in production today. You can catch him @brianleroux on Twitter where he talks about open source, JavaScript, serverless, faststack, Deno, and other developer-related stuff.`}</p>
                 <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6 md:mt-5 hover:text-blue-100">{'See all the graphql Speakers '}<span className="arrow">{' > '}</span> </a>
+              </div>
+            </div>
+          </AnimationWrapper>
+        </div>
+        <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
+          <AnimationWrapper parentClass="" >
+            <Title title="Indie Hackers" parentClass="flex justify-center border-solid border" />
+            <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
+              <div className="md:w-1/3 sm:w-3/4">
+                <ProfileCard
+                  isForDescription={true}
+                  imageClass="border border-2 filter-none"
+                  isLast={false}
+                  key={1}
+                  imageUrl="/images/curator9.svg"
+                  name="Chris on code"
+                  designation="Web Community Manager"
+                  companyName="DigitalOcean via Scotch.io"
+                  locationFull="Las Vegas, NV"
+                  locationSort="Las Vegas, NV"
+                />
+              </div>
+              <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
+                <p className="text-gray-300 text-base font-medium">{`Chris on Code is the founder of Scotch.io, a popular web development tutorial site that was recently acquired by DigitalOcean. Chris is obsessed with finding the most efficient and practical ways to code. He understands that what really matters is making a great experience for users. This is why he is in love with JAMstack. Easier coding! Great product for users!`}</p>
+                <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6 md:mt-5 hover:text-blue-100">{'See all the Indie Hacker Speakers '}<span className="arrow">{' > '}</span> </a>
               </div>
             </div>
           </AnimationWrapper>

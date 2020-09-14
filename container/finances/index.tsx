@@ -36,7 +36,7 @@ const Finances = (props: VisibleProps) => {
             image="/images/20.svg"
             financeImage="/images/sponsor-freecodecamp.svg"
             parentClass=""
-            percentage="20%"
+            percentage={20}
           />
         </AnimationWrapper>
         <AnimationWrapper parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
@@ -48,7 +48,7 @@ const Finances = (props: VisibleProps) => {
             image="/images/20.svg"
             financeImage=""
             parentClass=""
-            percentage="20%"
+            percentage={20}
           />
         </AnimationWrapper>
         <AnimationWrapper parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
@@ -60,7 +60,7 @@ const Finances = (props: VisibleProps) => {
             image="/images/20.svg"
             financeImage=""
             parentClass=""
-            percentage="20%"
+            percentage={20}
           />
         </AnimationWrapper>
         <AnimationWrapper parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
@@ -72,7 +72,7 @@ const Finances = (props: VisibleProps) => {
             image="/images/20.svg"
             financeImage=""
             parentClass=""
-            percentage="20%"
+            percentage={20}
           />
         </AnimationWrapper>
         <AnimationWrapper parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
@@ -84,7 +84,7 @@ const Finances = (props: VisibleProps) => {
             image="/images/10.svg"
             financeImage=""
             parentClass=""
-            percentage="10%"
+            percentage={10}
           />
         </AnimationWrapper>
         <AnimationWrapper parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
@@ -96,7 +96,7 @@ const Finances = (props: VisibleProps) => {
             image="/images/10.svg"
             financeImage=""
             parentClass=""
-            percentage="10%"
+            percentage={10}
           />
         </AnimationWrapper>
       </div>
@@ -113,7 +113,7 @@ const Finances = (props: VisibleProps) => {
             image="/images/20.svg"
             financeImage=""
             parentClass=""
-            percentage="20%"
+            percentage={20}
           />
         </AnimationWrapper>
         <AnimationWrapper parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
@@ -125,7 +125,7 @@ const Finances = (props: VisibleProps) => {
             image="/images/80.svg"
             financeImage=""
             parentClass=""
-            percentage="80%"
+            percentage={80}
           />
         </AnimationWrapper>
       </div>
