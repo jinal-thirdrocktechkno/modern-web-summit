@@ -56,7 +56,7 @@ const Speaker = (props: VisibleProps) => {
         </div>
         <div className="flex flex-col p-6 sm:text-center md:text-left">
           <h5 className="text-2xl font-extrabold uppercase" >{"5 days, 100+ sessions, workshops, & Discussions"}</h5>
-          <p className="text-gray-300 font-medium text-base md:w-5/6 sm:w-full ">{"Whether you’re interested in learning a new technology or advancing your skills in a familiar stack, there’s something for everyone at the Modern Web Summit."}</p>
+          <p className="text-gray-300 font-medium text-xl md:w-5/6 sm:w-full ">{"Whether you’re interested in learning a new technology or advancing your skills in a familiar stack, there’s something for everyone at the Modern Web Summit."}</p>
         </div>
       </div>
 
@@ -135,7 +135,7 @@ const Speaker = (props: VisibleProps) => {
         </div>
         <div className="md:flex sm:hidden flex-col mb-2 w-1/5 mt-32">
           <div className="sticky top-0 pt-5">
-            <p className="uppercase text-base text-center font-extrabold">refine by track</p>
+            <p className="uppercase text-xl text-center font-extrabold">refine by track</p>
             <SpeakerFilter
               onClick={handleFilterClick}
               filterList={filters}
