@@ -13,11 +13,15 @@ import { useQuery } from '@apollo/client';
 import { API_TEST } from '../../api/query'
 import Finances from '../finances'
 import SectionWrapper from '../../components/sectionWrapper'
+import ReactVisibilitySensor from 'react-visibility-sensor'
 
 const ScrollToRef = (ref) => ref.current.scrollIntoView()
 
 const Home = () => {
   const [showMenu, setShowMenu] = useState(false)
+  const [isVisible, setVisible] = useState(true)
+  const [isModernVisible, setModernVisible] = useState(false)
+  const [displayMenu, setDisplayMenu] = useState(true)
 
   const menuOpen = () => {
     setShowMenu(!showMenu);
@@ -27,6 +31,15 @@ const Home = () => {
       document.body.classList.remove('overflow-hidden');
     }
   }
+
+  useEffect(() => {
+    if (isVisible || isModernVisible) {
+      setDisplayMenu(false)
+    }
+    else {
+      setDisplayMenu(true)
+    }
+  }, [isVisible, isModernVisible])
 
   let speakerRef = useRef(null)
   let sponsorRef = useRef(null)
@@ -53,6 +66,10 @@ const Home = () => {
         break;
     }
     menuOpen()
+  }
+
+  const handleViewChange = (isVisible) => {
+    setModernVisible(isVisible)
   }
 
   const { loading, error, data } = useQuery(API_TEST, { variables: { id: 15125 } });
@@ -82,7 +99,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* <div className="flex items-center justify-between fixed top-0 bg-black w-full py-2 px-4 z-40">
+      {displayMenu && <div className="flex items-center justify-between fixed top-0 bg-black w-full py-2 px-4 z-40">
         <div onClick={() => menuOpen()}>
           <img className="inline cursor-pointer" src="/images/menu-white.svg" alt="logo" />
           <img className="inline cursor-pointer sm:h-8 md:h-10 sm:ml-5 md:ml-10" src="/images/mws-logo.svg" alt="logo" />
@@ -91,35 +108,44 @@ const Home = () => {
           className="text-black py-1 px-4 md:mr-10 uppercase border-none rounded-md text-base font-extrabold bg-lightGreen-200 hover:bg-lightGreen-100 focus:outline-none"
           type="button">
           get tickets
-                </button>
-      </div> */}
+        </button>
+      </div>}
 
-      <div className='bg-white flex shadow-xs md:h-100-5 sm:h-auto sm:m-0 md:m-10 main-wrap' ref={homeRef}>
-        <div className="sm:hidden md:flex -mt-10 left-bar">
-          <img className="inline self-start ml-8 animated fadeInDownBig" src="/images/left-bar-1.svg" alt="logo" />
-          <img className="inline self-start -ml-5 animated fadeInDownBig slow" src="/images/left-bar-2.svg" alt="logo" />
-          <img className="inline self-start -ml-5 animated fadeInDownBig slower" src="/images/left-bar-3.svg" alt="logo" />
-        </div>
-        <div className='md:w-2/5 sm:w-full m-auto text-center md:-mt-10 sm:mt-0'>
-          <Logo />
-          <p className='text-gray-300 font-medium text-xl md:mb-5 sm:p-5 md:p-0'>
-            {"Connecting the world’s top designers and developers to redefine the bounds of possibility through an exciting exploration of cutting-edge technologies, lessons, & patterns"}</p>
-          <NotifyForm buttonClass="" textClass="text-black" />
-          <div className="mt-3 sm:mb-10 md:mb-0">
-            <a className="text-gray-300 font-medium text-xl hover:text-blue-100" href="https://www.google.co.in/">Terms of Service • </a>
-            <a className="text-gray-300 font-medium text-xl hover:text-blue-100" href="https://www.google.co.in/">Privacy Policy • </a>
-            <a className="text-gray-300 font-medium text-xl hover:text-blue-100" href="https://www.google.co.in/">Code of Conduct</a>
+      <ReactVisibilitySensor
+        onChange={(visible) => setVisible(visible)}
+      >
+        <div className='bg-white flex shadow-xs md:h-100-5 sm:h-auto sm:m-0 md:m-10 main-wrap' ref={homeRef}>
+          <div className="sm:hidden md:flex -mt-10 left-bar">
+            <img className="inline self-start ml-8 animated fadeInDownBig" src="/images/left-bar-1.svg" alt="logo" />
+            <img className="inline self-start -ml-5 animated fadeInDownBig slow" src="/images/left-bar-2.svg" alt="logo" />
+            <img className="inline self-start -ml-5 animated fadeInDownBig slower" src="/images/left-bar-3.svg" alt="logo" />
+          </div>
+          <div className='md:w-2/5 sm:w-full m-auto text-center md:-mt-10 sm:mt-0'>
+            <Logo />
+            <p className='text-gray-300 font-medium text-xl md:mb-5 sm:p-5 md:p-0'>
+              {"Connecting the world’s top designers and developers to redefine the bounds of possibility through an exciting exploration of cutting-edge technologies, lessons, & patterns"}</p>
+            <NotifyForm buttonClass="" textClass="text-black" />
+            <div className="mt-1 sm:mb-10 md:mb-0">
+              <a className="text-gray-300 font-medium text-xl hover:text-blue-100" href="https://www.google.co.in/">Terms of Service • </a>
+              <a className="text-gray-300 font-medium text-xl hover:text-blue-100" href="https://www.google.co.in/">Privacy Policy • </a>
+              <a className="text-gray-300 font-medium text-xl hover:text-blue-100" href="https://www.google.co.in/">Code of Conduct</a>
+            </div>
+          </div>
+          <div className="sm:hidden md:flex mr-8 relative top-1/2 transform -translate-y-48 right-bar">
+            <img className="inline self-end animated fadeInUpBig slower" src="/images/right-bar-1.svg" alt="logo" />
+            <img className="inline self-end animated fadeInUpBig slow -ml-5 mb-10" src="/images/right-bar-2.svg" alt="logo" />
+            <img className="inline self-end animated fadeInUpBig -ml-5 mb-20" src="/images/right-bar-3.svg" alt="logo" />
           </div>
         </div>
-        <div className="sm:hidden md:flex mr-8 relative top-1/2 transform -translate-y-48 right-bar">
-          <img className="inline self-end animated fadeInUpBig slower" src="/images/right-bar-1.svg" alt="logo" />
-          <img className="inline self-end animated fadeInUpBig slow -ml-5 mb-10" src="/images/right-bar-2.svg" alt="logo" />
-          <img className="inline self-end animated fadeInUpBig -ml-5 mb-20" src="/images/right-bar-3.svg" alt="logo" />
-        </div>
-      </div>
+      </ReactVisibilitySensor>
 
       <div className='bg-darkBg md:m-10 text-center flex items-center justify-center min-h-778'>
-        <SectionWrapper Component={Modern} />
+        <ReactVisibilitySensor
+          partialVisibility
+        // onChange={(visible) => setVisible(visible)}
+        >
+          {({ isVisible }) => <Modern isVisible={isVisible} onChangeViewDisplay={handleViewChange} />}
+        </ReactVisibilitySensor>
       </div>
       <div className='sm:m-0 md:m-10'>
         <SectionWrapper Component={About} />
