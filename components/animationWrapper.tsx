@@ -1,7 +1,8 @@
+import React from 'react'
 import VisibilitySensor from 'react-visibility-sensor'
 import { useState } from 'react';
 
-const AnimationWrapper = (props) => {
+const AnimationWrapper: React.FC<AnimationWrapperProps> = (props: AnimationWrapperProps) => {
   const [isVisible, setVisible] = useState(false)
   return (
     <VisibilitySensor
@@ -16,3 +17,8 @@ const AnimationWrapper = (props) => {
   )
 }
 export default AnimationWrapper
+
+type AnimationWrapperProps = {
+  parentClass: string,
+  children: React.ReactNode
+}

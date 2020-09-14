@@ -4,7 +4,7 @@ import ProfileCard from '../../components/profileCard'
 import AnimationWrapper from '../../components/animationWrapper'
 import { VisibleProps } from '../sponsor'
 
-const Curators = (props: VisibleProps) => {
+const Curators: React.FC<VisibleProps> = (props: VisibleProps) => {
   const { isVisible } = props
   const [className, setClass] = useState('')
   useEffect(() => {

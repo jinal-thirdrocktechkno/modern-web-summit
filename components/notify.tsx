@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const NotifyForm = (props: NotifyFormProps) => {
+const NotifyForm: React.FC<NotifyFormProps> = (props: NotifyFormProps) => {
     const { buttonClass, textClass } = props
     const [email, setEmail] = useState('')
     const [showForm, setShowForm] = useState(false)

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SponsorDescription = (props: SponsorDescriptionProps) => {
+const SponsorDescription: React.FC<SponsorDescriptionProps> = (props: SponsorDescriptionProps) => {
   const {
     description,
     image,

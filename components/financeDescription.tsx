@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor'
 
-const FinanceDescription = (props: FinanceDescriptionProps) => {
+const FinanceDescription: React.FC<FinanceDescriptionProps> = (props: FinanceDescriptionProps) => {
   const {
     image,
     parentClass,

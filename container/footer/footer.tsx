@@ -2,7 +2,7 @@ import React from 'react'
 import NotifyForm from '../../components/notify'
 import FooterLink from '../../components/footerLinks'
 
-const Footer = () => {
+const Footer: React.FC = () => {
 
   return (
     <div className="bg-gray-400 md:p-10 sm:p-5 flex relative flex-wrap">

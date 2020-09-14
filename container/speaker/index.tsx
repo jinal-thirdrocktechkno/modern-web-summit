@@ -4,7 +4,7 @@ import SpeakerFilter from '../../components/speakerFilter'
 import { VisibleProps } from '../sponsor'
 import { SpeakerFilters } from '../../utility/constants'
 
-const Speaker = (props: VisibleProps) => {
+const Speaker: React.FC<VisibleProps> = (props: VisibleProps) => {
   const { isVisible } = props
   const [className, setClass] = useState('')
   const [filters, setFilters] = useState(SpeakerFilters)

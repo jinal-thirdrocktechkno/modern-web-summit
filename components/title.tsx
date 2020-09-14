@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Title = (props: TitleProps) => {
+const Title: React.FC<TitleProps> = (props: TitleProps) => {
   const { title, parentClass } = props
   return (
     <div className={`relative my-3 ${parentClass}`}>

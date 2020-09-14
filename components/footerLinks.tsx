@@ -1,7 +1,7 @@
 import React from 'react'
 import { links } from '../utility/constants'
 
-const FooterLink = () => {
+const FooterLink: React.FC = () => {
   return (
     <div className="flex flex-wrap">
       {links.map((item, index) => {

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SponsorText = (props: SponsorTextProps) => {
+const SponsorText: React.FC<SponsorTextProps> = (props: SponsorTextProps) => {
   const { image, imageClass, parentClass } = props
   return (
     <div className={parentClass}>

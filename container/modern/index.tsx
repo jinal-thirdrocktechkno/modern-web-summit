@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Typist from 'react-typist';
 import { typistConfig } from '../../utility/config';
+import { VisibleProps } from '../sponsor';
 
-const Modern = (props) => {
+const Modern: React.FC<VisibleProps> = (props: VisibleProps) => {
 
   const [key, setKey] = useState(new Date().getTime())
   const [firstTime, setFirstTime] = useState(true)

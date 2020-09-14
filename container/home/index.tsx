@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useState } from 'react'
 import Logo from '../../components/logo'
 import NotifyForm from '../../components/notify'
 import Modern from '../modern'
@@ -16,17 +16,17 @@ import SectionWrapper from '../../components/sectionWrapper'
 
 const ScrollToRef = (ref) => ref.current.scrollIntoView()
 
-const Home = () => {
+const Home: React.FC = () => {
   const [showMenu, setShowMenu] = useState(false)
 
   const menuOpen = () => {
     setShowMenu(!showMenu)
   }
 
-  let speakerRef = useRef(null)
-  let sponsorRef = useRef(null)
-  let curatorsRef = useRef(null)
-  let homeRef = useRef(null)
+  const speakerRef = useRef(null)
+  const sponsorRef = useRef(null)
+  const curatorsRef = useRef(null)
+  const homeRef = useRef(null)
 
   const handleButtonClick = (type) => {
     switch (type) {
@@ -50,7 +50,7 @@ const Home = () => {
     menuOpen()
   }
 
-  const { loading, error, data } = useQuery(API_TEST, { variables: { id: 15125 } });
+  useQuery(API_TEST, { variables: { id: 15125 } });
 
   return (
     <div className='h-full'>

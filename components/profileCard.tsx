@@ -1,7 +1,7 @@
 import React from 'react'
 import AnimationWrapper from './animationWrapper'
 
-const ProfileCard = (props: ProfileCardProps) => {
+const ProfileCard: React.FC<ProfileCardProps> = (props: ProfileCardProps) => {
   const { imageUrl, name, designation, companyName, locationFull, locationSort, isLast, imageClass, isForDescription } = props
   const content = isLast ?
     <>

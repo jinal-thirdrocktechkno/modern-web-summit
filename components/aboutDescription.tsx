@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AboutDescription = (props: AboutDescriptionProps) => {
+const AboutDescription: React.FC<AboutDescriptionProps> = (props: AboutDescriptionProps) => {
   const {
     image,
     parentClass,

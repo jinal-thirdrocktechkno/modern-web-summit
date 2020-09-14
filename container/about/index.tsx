@@ -3,7 +3,7 @@ import AboutDescription from '../../components/aboutDescription'
 import { VisibleProps } from '../sponsor'
 import AnimationWrapper from '../../components/animationWrapper'
 
-const About = (props: VisibleProps) => {
+const About: React.FC<VisibleProps> = (props: VisibleProps) => {
   const { isVisible } = props
   const [className, setClass] = useState('')
   useEffect(() => {

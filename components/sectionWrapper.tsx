@@ -1,7 +1,9 @@
+import React from 'react'
 import VisibilitySensor from 'react-visibility-sensor'
 import { useState } from 'react';
+import { VisibleProps } from '../container/sponsor';
 
-const SectionWrapper = (props) => {
+const SectionWrapper: React.FC<SectionWrapperProps> = (props: SectionWrapperProps) => {
   const [isVisible, setVisible] = useState(false)
   const { Component } = props
   return (
@@ -14,3 +16,7 @@ const SectionWrapper = (props) => {
   )
 }
 export default SectionWrapper
+
+type SectionWrapperProps = {
+  Component: React.FC<VisibleProps>
+}

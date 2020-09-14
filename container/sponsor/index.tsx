@@ -5,7 +5,7 @@ import SponsorText from '../../components/sponsorText'
 import { sponsorList } from '../../utility/constants'
 import AnimationWrapper from '../../components/animationWrapper'
 
-const Sponsor = (props: VisibleProps) => {
+const Sponsor: React.FC<VisibleProps> = (props: VisibleProps) => {
   const { isVisible } = props
   const [className, setClass] = useState('')
   useEffect(() => {

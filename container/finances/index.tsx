@@ -4,7 +4,7 @@ import FinanceDescription from '../../components/financeDescription'
 import { VisibleProps } from '../sponsor'
 import AnimationWrapper from '../../components/animationWrapper'
 
-const Finances = (props: VisibleProps) => {
+const Finances: React.FC<VisibleProps> = (props: VisibleProps) => {
   const { isVisible } = props
   const [className, setClass] = useState('')
   useEffect(() => {

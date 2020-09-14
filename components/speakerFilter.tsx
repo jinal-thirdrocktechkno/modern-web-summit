@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SpeakerFilter = (props: SpeakerFilterProps) => {
+const SpeakerFilter: React.FC<SpeakerFilterProps> = (props: SpeakerFilterProps) => {
   const { filterList, onClick } = props
   return (
     <div >
@@ -20,7 +20,7 @@ const SpeakerFilter = (props: SpeakerFilterProps) => {
   )
 }
 
-const FilterItem = (props: FilterItemProps) => {
+const FilterItem: React.FC<FilterItemProps> = (props: FilterItemProps) => {
   const { image, title, selected, onClick } = props
   return (
     <div

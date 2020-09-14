@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ShareSocial = () => {
+const ShareSocial: React.FC = () => {
   return (
     <div className="flex items-center sm:justify-evenly md:justify-center">
       <a href="https://www.google.co.in/">
