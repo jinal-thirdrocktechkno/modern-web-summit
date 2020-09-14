@@ -20,7 +20,12 @@ const Home = () => {
   const [showMenu, setShowMenu] = useState(false)
 
   const menuOpen = () => {
-    setShowMenu(!showMenu)
+    setShowMenu(!showMenu);
+    if (!showMenu) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
   }
 
   let speakerRef = useRef(null)
@@ -77,6 +82,17 @@ const Home = () => {
         </div>
       </div>
 
+      {/* <div className="flex items-center justify-between fixed top-0 bg-black w-full py-2 px-4 z-40">
+        <div onClick={() => menuOpen()}>
+          <img className="inline cursor-pointer" src="/images/menu-white.svg" alt="logo" />
+          <img className="inline cursor-pointer sm:h-8 md:h-10 sm:ml-5 md:ml-10" src="/images/mws-logo.svg" alt="logo" />
+        </div>
+        <button
+          className="text-black py-1 px-4 md:mr-10 uppercase border-none rounded-md text-base font-extrabold bg-lightGreen-200 hover:bg-lightGreen-100 focus:outline-none"
+          type="button">
+          get tickets
+                </button>
+      </div> */}
 
       <div className='bg-white flex shadow-xs md:h-100-5 sm:h-auto sm:m-0 md:m-10 main-wrap' ref={homeRef}>
         <div className="sm:hidden md:flex -mt-10 left-bar">
@@ -86,13 +102,13 @@ const Home = () => {
         </div>
         <div className='md:w-2/5 sm:w-full m-auto text-center md:-mt-10 sm:mt-0'>
           <Logo />
-          <p className='text-gray-300 font-medium text-base md:mb-5 sm:p-5 md:p-0'>
+          <p className='text-gray-300 font-medium text-xl md:mb-5 sm:p-5 md:p-0'>
             {"Connecting the world’s top designers and developers to redefine the bounds of possibility through an exciting exploration of cutting-edge technologies, lessons, & patterns"}</p>
           <NotifyForm buttonClass="" textClass="text-black" />
           <div className="mt-3 sm:mb-10 md:mb-0">
-            <a className="text-gray-300 font-medium text-base hover:text-blue-100" href="https://www.google.co.in/">Terms of Service • </a>
-            <a className="text-gray-300 font-medium text-base hover:text-blue-100" href="https://www.google.co.in/">Privacy Policy • </a>
-            <a className="text-gray-300 font-medium text-base hover:text-blue-100" href="https://www.google.co.in/">Code of Conduct</a>
+            <a className="text-gray-300 font-medium text-xl hover:text-blue-100" href="https://www.google.co.in/">Terms of Service • </a>
+            <a className="text-gray-300 font-medium text-xl hover:text-blue-100" href="https://www.google.co.in/">Privacy Policy • </a>
+            <a className="text-gray-300 font-medium text-xl hover:text-blue-100" href="https://www.google.co.in/">Code of Conduct</a>
           </div>
         </div>
         <div className="sm:hidden md:flex mr-8 relative top-1/2 transform -translate-y-48 right-bar">
@@ -102,7 +118,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className='bg-darkBg m-10 text-center sm:hidden md:flex items-center justify-center min-h-778'>
+      <div className='bg-darkBg md:m-10 text-center flex items-center justify-center min-h-778'>
         <SectionWrapper Component={Modern} />
       </div>
       <div className='sm:m-0 md:m-10'>
