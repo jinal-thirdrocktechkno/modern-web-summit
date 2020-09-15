@@ -6,11 +6,13 @@ import AnimationWrapper from '../../components/animationWrapper'
 const About = (props: VisibleProps) => {
   const { isVisible } = props
   const [className, setClass] = useState('')
+
   useEffect(() => {
     if (isVisible) {
       setClass('animated fadeInUp opacity-1')
     }
   })
+
   return (
     <div className={`bg-white shadow-xs opacity-0  ${className} sm:pb-16 `}>
       <div className="flex sm:flex-wrap md:flex-no-wrap">
@@ -19,8 +21,8 @@ const About = (props: VisibleProps) => {
         </div>
         <div className="flex flex-col p-6 sm:text-center md:text-left">
           <h5 className="text-2xl font-extrabold uppercase" >{"the modern web is constantly evolving"}</h5>
-          <p className="text-gray-300 font-medium text-xl md:w-full sm:w-full">{"Each one of us have contributed to the modern web in our own way. We discover technologies that solve our problems (and perhaps inspire us), join a community, and get to work. We share our experience with our coworkers, colleagues, and online network. But there is much more to the web community than our own little islands."}</p>
-          <p className="text-gray-300 font-medium text-xl md:w-full sm:w-full pt-8">{"The Modern Web Summit not only to provides you with in-depth knowledge about the technologies you’re currently working with, but also exposes you to new ways of thinking and approaches from adjacent communities. You’ll learn from thought-leaders in your community and beyond, and connect with like-minded individuals with unique, thought-provoking perspectives. "}</p>
+          <p className="text-gray-300 font-medium text-base md:w-full sm:w-full">{"Each one of us have contributed to the modern web in our own way. We discover technologies that solve our problems (and perhaps inspire us), join a community, and get to work. We share our experience with our coworkers, colleagues, and online network. But there is much more to the web community than our own little islands."}</p>
+          <p className="text-gray-300 font-medium text-base md:w-full sm:w-full pt-8">{"The Modern Web Summit not only to provides you with in-depth knowledge about the technologies you’re currently working with, but also exposes you to new ways of thinking and approaches from adjacent communities. You’ll learn from thought-leaders in your community and beyond, and connect with like-minded individuals with unique, thought-provoking perspectives. "}</p>
         </div>
       </div>
       <div className="flex flex-wrap md:mt-6 md:pl-24 md:pr-32">
