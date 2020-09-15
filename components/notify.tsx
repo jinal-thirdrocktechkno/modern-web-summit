@@ -32,7 +32,7 @@ const NotifyForm = (props: NotifyFormProps) => {
                         Submit
                     </button>
                 </div>}
-            <p className={`text-xl pt-3 ${textClass}`}>Free - $199</p>
+            <p className={`text-base pt-3 ${textClass}`}>Free - $199</p>
         </div>
     )
 }

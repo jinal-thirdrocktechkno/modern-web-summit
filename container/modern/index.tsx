@@ -35,20 +35,20 @@ const Modern = (props) => {
         >
           <>
             <div className="flex justify-center mb-2">
-              <p className="text-white sm:text-xl md:text-xl font-menlo mr-3  ">modern_web_summit$</p>
+              <p className="text-white sm:text-base md:text-xl font-menlo mr-3  ">modern_web_summit$</p>
               {typistVisible && <Typist key={key} cursor={typistConfig}>
                 <Typist.Delay ms={200} />
-                <p className="text-white sm:text-xl md:text-xl font-menlo w-32">git pull</p>
+                <p className="text-white sm:text-base md:text-xl font-menlo w-97">git pull</p>
               </Typist>}
             </div>
             {dataVisible && <h5 className="text-lightGreen-200 sm:text-xl md:text-4xl font-menlo animated delay-75s fadeIn">WEB COMMUNITIES TOGETHER</h5>}
           </>
         </ReactVisibilitySensor>
         <div className="flex justify-center mb-2 mt-10">
-          {dataVisible && <p className="text-white sm:text-xl md:text-xl font-menlo mr-3 animated delay-1s fadeIn ">modern_web_summit$  </p>}
+          {dataVisible && <p className="text-white sm:text-base md:text-xl font-menlo mr-3 animated delay-1s fadeIn ">modern_web_summit$  </p>}
           {typistVisible && <Typist key={secondKey} cursor={typistConfig}>
             <Typist.Delay ms={1200} />
-            <p className="text-white sm:text-xl md:text-xl font-menlo w-32">git push</p>
+            <p className="text-white sm:text-base md:text-xl font-menlo w-97">git push</p>
           </Typist>}
         </div>
         {dataVisible && <h5 className="text-lightGreen-200 sm:text-xl md:text-4xl font-menlo animated delay-2s fadeIn">THE BOUNDS OF POSSIBILITY</h5>}
