@@ -28,7 +28,7 @@ const FilterItem = (props: FilterItemProps) => {
       onClick={onClick}
     >
       <img src={image} className="pl-2  " />
-      <p className="pl-3 pr-2 text-xl text-white uppercase font-extrabold leading-5 ">{title}</p>
+      <p className="pl-3 pr-2 text-base text-white uppercase font-extrabold leading-5 ">{title}</p>
     </div>
   )
 }
