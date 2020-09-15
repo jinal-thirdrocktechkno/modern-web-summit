@@ -25,6 +25,14 @@ body {
     filter: grayscale(0%);
 }
 
+.sponsor-img {
+    filter: grayscale(100%);
+}
+
+.sponsor-img:hover {
+    filter: grayscale(0%);
+}
+
 .filter-none {
     filter: grayscale(0%) !important;
 }

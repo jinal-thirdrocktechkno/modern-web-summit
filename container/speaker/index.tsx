@@ -16,29 +16,34 @@ const Speaker = (props: VisibleProps) => {
   const abc = [1, 2, 3, 4];
   const handleFilterClick = (id: number) => {
     const newFilter = filters.slice(0)
-    // let filteredItem = newFilter.filter(item => item.id === id)[0]
-    // filteredItem.selected = !filteredItem.selected
-    // let remainFilters = newFilter.filter(item => item.id !== id)
-    // let finalFilter = [...remainFilters, filteredItem]
     const allTrackId = filters.find(item => item.title === 'All Tracks').id
     let finalFilter = []
     if (id === allTrackId) {
-      let firstItemOfFilter = filters.filter(item => item.title === 'All Tracks')[0]
-      firstItemOfFilter.selected = true
-      let remainFilters = filters.filter(item => item.title !== 'All Tracks')
-      remainFilters.map(item => { return item.selected = false })
-      finalFilter = [...remainFilters, firstItemOfFilter]
-      console.log(finalFilter, "first case final")
+      finalFilter = newFilter.map(item => {
+        if (item.id !== allTrackId) {
+          item.selected = false
+        }
+        else {
+          item.selected = true
+        }
+        return item
+      })
     }
     else {
-      let firstItemOfFilter = filters.filter(item => item.id === allTrackId)[0]
-      firstItemOfFilter.selected = false
-      let filteredItem = newFilter.filter(item => item.id === id)[0]
-      filteredItem.selected = !filteredItem.selected
-      let remainFilters = newFilter.filter(item => item.id !== id)
-      let removeAllTrackItem = remainFilters.filter(i => i.id !== allTrackId)
-      finalFilter = [...removeAllTrackItem, filteredItem, firstItemOfFilter]
-      console.log(finalFilter, "finalFIlter")
+      let selectedCount = 0
+      finalFilter = newFilter.map(item => {
+        if (item.id === id) {
+          item.selected = !item.selected
+        }
+        if (item.id === allTrackId) {
+          item.selected = false
+        }
+        item.selected && selectedCount++
+        return item
+      })
+      if (!selectedCount) {
+        finalFilter[0].selected = true
+      }
     }
     setFilters(finalFilter.sort((a, b) => (a.id > b.id) ? 1 : -1))
   }
@@ -51,7 +56,7 @@ const Speaker = (props: VisibleProps) => {
         </div>
         <div className="flex flex-col p-6 sm:text-center md:text-left">
           <h5 className="text-2xl font-extrabold uppercase" >{"5 days, 100+ sessions, workshops, & Discussions"}</h5>
-          <p className="text-gray-300 font-medium text-base md:w-5/6 sm:w-full ">{"Whether you’re interested in learning a new technology or advancing your skills in a familiar stack, there’s something for everyone at the Modern Web Summit."}</p>
+          <p className="text-gray-300 font-medium text-xl md:w-5/6 sm:w-full ">{"Whether you’re interested in learning a new technology or advancing your skills in a familiar stack, there’s something for everyone at the Modern Web Summit."}</p>
         </div>
       </div>
 
@@ -130,20 +135,20 @@ const Speaker = (props: VisibleProps) => {
         </div>
         <div className="md:flex sm:hidden flex-col mb-2 w-1/5 mt-32">
           <div className="sticky top-0 pt-5">
-            <p className="uppercase text-base text-center font-extrabold">refine by track</p>
+            <p className="uppercase text-xl text-center font-extrabold">refine by track</p>
             <SpeakerFilter
               onClick={handleFilterClick}
               filterList={filters}
             />
             <div className="text-center ">
               <p className="uppercase text-xs text-gray-400 font-extrabold">Interested in speaking?</p>
-              <button type="button" className="uppercase border-gray-400 text-gray-400 hover:bg-gray-400 hover:text-white font-black border-2 py-3 px-4 text-lg mt-1 focus:outline-none">Submit your talk here</button>
+              <button type="button" className="uppercase border-gray-400 text-gray-400 hover:bg-gray-400 hover:text-white font-black border-2 py-3 px-5 text-lg mt-1 focus:outline-none ml-5">Submit your talk</button>
             </div>
           </div>
         </div>
         <div className="sm:block md:hidden p-4 mb-16">
           <button type="button" className="w-full uppercase border-purple-100 rounded-md text-purple-100 font-black border-2 p-4 text-lg mt-1 focus:outline-none">see all speakers</button>
-          <button type="button" className="w-full mt-5 custom-btn hover:bg-lightGreen-100 focus:outline-none">Submit your talk here</button>
+          <button type="button" className="w-full mt-5 custom-btn hover:bg-lightGreen-100 focus:outline-none">Submit your talk</button>
         </div>
       </div>
     </div >)

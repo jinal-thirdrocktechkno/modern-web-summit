@@ -6,14 +6,15 @@ const SponsorDescription = (props: SponsorDescriptionProps) => {
     image,
     parentClass,
     descriptionClass,
-    innerClass
+    innerClass,
+    imageClass
   } = props
 
   return (
     <div className={parentClass}>
       <div className={innerClass} >
         <a href="https://www.google.co.in/">
-          <img className="inline mb-5 opacity-75 hover:opacity-100" src={image} />
+          <img className={`inline mb-5 opacity-75 hover:opacity-100 ${imageClass}`} src={image} />
         </a>
         <p className={descriptionClass}>{description}</p>
       </div>
@@ -28,5 +29,6 @@ type SponsorDescriptionProps = {
   image: string,
   parentClass: string,
   descriptionClass: string,
-  innerClass: string
+  innerClass: string,
+  imageClass: string,
 }
