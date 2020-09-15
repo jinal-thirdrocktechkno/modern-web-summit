@@ -7,11 +7,13 @@ import { VisibleProps } from '../sponsor'
 const Curators = (props: VisibleProps) => {
   const { isVisible } = props
   const [className, setClass] = useState('')
+
   useEffect(() => {
     if (isVisible) {
       setClass('animated fadeInUp opacity-1')
     }
   })
+  
   return (
     <div className={`bg-white shadow-xs opacity-0  ${className} md:pb-10 `}>
       <div className="flex sm:flex-wrap md:flex-no-wrap">
