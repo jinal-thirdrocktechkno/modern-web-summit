@@ -11,7 +11,7 @@ const Modern = (props) => {
   const [dataVisible, setVisible] = useState(false)
   const [typistVisible, setTypistVisible] = useState(false)
 
-  const { isVisible, onChangeViewDisplay } = props
+  const { isVisible } = props
 
   useEffect(() => {
     if (isVisible && firstTime) {
@@ -27,13 +27,7 @@ const Modern = (props) => {
     setVisible(true)
   }
   return (
-    <>
       <div className="" id="modern" >
-        <ReactVisibilitySensor
-          partialVisibility
-          onChange={(visible) => onChangeViewDisplay(visible)}
-        >
-          <>
             <div className="flex justify-center mb-2">
               <p className="text-white sm:text-base md:text-xl font-menlo mr-3  ">modern_web_summit$</p>
               {typistVisible && <Typist key={key} cursor={typistConfig}>
@@ -42,8 +36,6 @@ const Modern = (props) => {
               </Typist>}
             </div>
             {dataVisible && <h5 className="text-lightGreen-200 sm:text-xl md:text-4xl font-menlo animated delay-75s fadeIn">WEB COMMUNITIES TOGETHER</h5>}
-          </>
-        </ReactVisibilitySensor>
         <div className="flex justify-center mb-2 mt-10">
           {dataVisible && <p className="text-white sm:text-base md:text-xl font-menlo mr-3 animated delay-1s fadeIn ">modern_web_summit$  </p>}
           {typistVisible && <Typist key={secondKey} cursor={typistConfig}>
@@ -53,7 +45,6 @@ const Modern = (props) => {
         </div>
         {dataVisible && <h5 className="text-lightGreen-200 sm:text-xl md:text-4xl font-menlo animated delay-2s fadeIn">THE BOUNDS OF POSSIBILITY</h5>}
       </div >
-    </>
   )
 }
 export default Modern

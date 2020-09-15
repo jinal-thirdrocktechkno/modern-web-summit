@@ -33,14 +33,16 @@ const Home = () => {
   }
 
   useEffect(() => {
-    console.log(isVisible, isModernVisible)
-    if (!isVisible && !isModernVisible) {
-      setDisplayMenu(true)
-    }
-    else {
-      setDisplayMenu(false)
-    }
-  }, [isVisible, isModernVisible])
+    window.addEventListener('scroll', () => {
+      const homePage = document.getElementById('HomePage')
+      if(homePage.offsetTop + (homePage.offsetHeight/2) < window.scrollY) {
+        setDisplayMenu(true)
+      } else {
+        setDisplayMenu(false)
+      }
+    })
+    return () => window.removeEventListener('scroll', () => {})
+  }, [])
 
   let speakerRef = useRef(null)
   let sponsorRef = useRef(null)
@@ -67,10 +69,6 @@ const Home = () => {
         break;
     }
     menuOpen()
-  }
-
-  const handleViewChange = (isVisible) => {
-    setModernVisible(isVisible)
   }
 
   const { loading, error, data } = useQuery(API_TEST, { variables: { id: 15125 } });
@@ -112,16 +110,14 @@ const Home = () => {
         </button>
       </div>}
 
-      <ReactVisibilitySensor
-        onChange={(visible) => setVisible(visible)}
-      >
-        <div className='bg-white flex shadow-xs md:h-100-5 sm:h-auto sm:m-0 md:m-10 main-wrap' ref={homeRef}>
+      
+        <div id='HomePage' className='bg-white flex shadow-xs md:h-100-5 sm:h-auto sm:m-0 md:m-10 main-wrap' ref={homeRef}>
           <div className="sm:hidden md:flex -mt-10 left-bar">
             <img className="inline self-start ml-8 animated fadeInDownBig" src="/images/left-bar-1.svg" alt="logo" />
             <img className="inline self-start -ml-5 animated fadeInDownBig slow" src="/images/left-bar-2.svg" alt="logo" />
             <img className="inline self-start -ml-5 animated fadeInDownBig slower" src="/images/left-bar-3.svg" alt="logo" />
           </div>
-          <div className='md:w-2/5 sm:w-full m-auto text-center md:-mt-10 sm:mt-0'>
+          <div className='md:w-2/4 sm:w-full m-auto text-center md:-mt-10 sm:mt-0'>
             <Logo />
             <p className='text-gray-300 font-medium text-base md:mb-5 sm:p-5 md:p-0'>
               {"Connecting the world’s top designers and developers to redefine the bounds of possibility through an exciting exploration of cutting-edge technologies, lessons, & patterns"}</p>
@@ -138,14 +134,12 @@ const Home = () => {
             <img className="inline self-end animated fadeInUpBig -ml-5 mb-20" src="/images/right-bar-3.svg" alt="logo" />
           </div>
         </div>
-      </ReactVisibilitySensor>
 
       <div className='bg-darkBg md:m-10 text-center flex items-center justify-center min-h-778'>
         <ReactVisibilitySensor
           partialVisibility
-        // onChange={(visible) => setVisible(visible)}
         >
-          {({ isVisible }) => <Modern isVisible={isVisible} onChangeViewDisplay={handleViewChange} />}
+          {({ isVisible }) => <Modern isVisible={isVisible} />}
         </ReactVisibilitySensor>
       </div>
       <div className='sm:m-0 md:m-10'>
