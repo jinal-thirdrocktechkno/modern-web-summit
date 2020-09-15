@@ -21,7 +21,7 @@ const Home = () => {
   const [showMenu, setShowMenu] = useState(false)
   const [isVisible, setVisible] = useState(true)
   const [isModernVisible, setModernVisible] = useState(false)
-  const [displayMenu, setDisplayMenu] = useState(true)
+  const [displayMenu, setDisplayMenu] = useState(false)
 
   const menuOpen = () => {
     setShowMenu(!showMenu);
@@ -33,11 +33,12 @@ const Home = () => {
   }
 
   useEffect(() => {
-    if (isVisible || isModernVisible) {
-      setDisplayMenu(false)
+    console.log(isVisible, isModernVisible)
+    if (!isVisible && !isModernVisible) {
+      setDisplayMenu(true)
     }
     else {
-      setDisplayMenu(true)
+      setDisplayMenu(false)
     }
   }, [isVisible, isModernVisible])
 

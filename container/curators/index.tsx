@@ -225,31 +225,6 @@ const Curators = (props: VisibleProps) => {
             </div>
           </AnimationWrapper>
         </div>
-        <div className="md:w-1/2 sm:w-full md:p-10 sm:p-5">
-          <AnimationWrapper parentClass="" >
-            <Title title="Indie Hackers" parentClass="flex justify-center border-solid border" />
-            <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
-              <div className="md:w-1/3 sm:w-3/4">
-                <ProfileCard
-                  isForDescription={true}
-                  imageClass="border border-2 filter-none"
-                  isLast={false}
-                  key={1}
-                  imageUrl="/images/curator9.svg"
-                  name="Chris on code"
-                  designation="Web Community Manager"
-                  companyName="DigitalOcean via Scotch.io"
-                  locationFull="Las Vegas, NV"
-                  locationSort="Las Vegas, NV"
-                />
-              </div>
-              <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
-                <p className="text-gray-300 text-xl font-medium">{`Chris on Code is the founder of Scotch.io, a popular web development tutorial site that was recently acquired by DigitalOcean. Chris is obsessed with finding the most efficient and practical ways to code. He understands that what really matters is making a great experience for users. This is why he is in love with JAMstack. Easier coding! Great product for users!`}</p>
-                <a href="https://www.google.co.in/" className="sm:mt-5 md:mt-0 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6 md:mt-5 hover:text-blue-100">{'See all the Indie Hacker Speakers '}<span className="arrow">{' > '}</span> </a>
-              </div>
-            </div>
-          </AnimationWrapper>
-        </div>
       </div>
     </div>
   )
