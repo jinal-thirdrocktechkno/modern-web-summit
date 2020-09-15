@@ -3,7 +3,7 @@ import React from 'react'
 const NavMenu = (props: NavMenuProps) => {
   const { menuOpen, handleButtonClick } = props
   const buttonClass = "menu-btn border-2 mb-5 p-6 border-gray-400 text-xl font-extrabold uppercase text-gray-400 hover:bg-gray-400 focus:outline-none hover:text-white"
-  const linkClass = "text-xl text-gray-300 font-medium hover:text-purple-200"
+  const linkClass = "text-base text-gray-300 font-medium hover:text-purple-200"
   return (
     <div className="bg-white fixed top-0 inset-x-0 z-50 shadow-xs h-screen">
       <div className="p-3 sm:bg-gray-400 md:bg-white">
