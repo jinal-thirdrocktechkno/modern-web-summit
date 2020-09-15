@@ -22,7 +22,7 @@ const Sponsor = (props: VisibleProps) => {
         </div>
         <div className="flex flex-col p-6 sm:text-center md:text-left">
           <h5 className="text-2xl font-extrabold uppercase" >{"Innovation at its Finest"}</h5>
-          <p className="text-gray-300 font-medium text-base md:w-3/4 sm:w-full">{"APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. Sponsors of the Modern Web Summit are building interesting, sustainable, and forward-thinking ideas and services. In addition to providing financial support of the event, Sponsors have their own track for Expo sessions that dive deep into these ideas. From presentations and panels to breakout discussions & workshops, you can get up close with the companies, products, and tools that most interest you."}</p>
+          <p className="text-gray-300 font-medium text-xl md:w-3/4 sm:w-full">{"APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. Sponsors of the Modern Web Summit are building interesting, sustainable, and forward-thinking ideas and services. In addition to providing financial support of the event, Sponsors have their own track for Expo sessions that dive deep into these ideas. From presentations and panels to breakout discussions & workshops, you can get up close with the companies, products, and tools that most interest you."}</p>
           <button className="custom-btn hover:bg-lightGreen-100 focus:outline-none mt-10 w-full sm:inline md:hidden" type="button">See the sponsorship guide</button>
           <img className="mt-20 mb-5 sm:inline md:hidden" src="/images/org-eventloop.svg" alt="" />
         </div>
@@ -32,6 +32,7 @@ const Sponsor = (props: VisibleProps) => {
         <Title title="Presenting sponsor" parentClass="flex justify-center border-solid border" />
         <AnimationWrapper parentClass="">
           <SponsorDescription
+            imageClass="opacity-75 hover:opacity-100"
             descriptionClass=""
             innerClass="md:w-1/2 sm:w-full pt-10 pb-20"
             description={
@@ -43,6 +44,7 @@ const Sponsor = (props: VisibleProps) => {
         <Title title="Diamond sponsors" parentClass="flex justify-center border-solid border" />
         <AnimationWrapper parentClass="flex pt-10 pb-20 justify-evenly">
           <SponsorDescription
+            imageClass="sponsor-img"
             descriptionClass=""
             innerClass="text-center"
             description={
@@ -51,6 +53,7 @@ const Sponsor = (props: VisibleProps) => {
             image="/images/course-hero.svg"
           />
           <SponsorDescription
+            imageClass="sponsor-img"
             descriptionClass=""
             innerClass="text-center"
             description={
@@ -83,6 +86,7 @@ const Sponsor = (props: VisibleProps) => {
           <Title title="Event organizer" parentClass="flex justify-center border-solid border" />
           <AnimationWrapper parentClass="">
             <SponsorDescription
+              imageClass="sponsor-img"
               descriptionClass=""
               innerClass="w-1/2 pt-10 pb-20"
               description={
