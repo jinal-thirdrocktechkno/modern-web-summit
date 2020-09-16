@@ -15,17 +15,17 @@ const About = (props: VisibleProps) => {
 
   return (
     <div className={`bg-white shadow-xs opacity-0  ${className} sm:pb-16 `}>
-      <div className="flex sm:flex-wrap md:flex-no-wrap">
-        <div className="bg-black md:w-23 sm:w-full sm:flex-none md:flex-23 h-32 flex items-end self-start justify-center">
+      <div className="flex sm:flex-wrap lg:flex-no-wrap">
+        <div className="bg-black lg:w-23 sm:w-full sm:flex-none lg:flex-23 h-32 flex items-end self-start justify-center">
           <h4 className="text-5xl text-white leading-7 uppercase">About</h4>
         </div>
-        <div className="flex flex-col p-6 sm:text-center md:text-left">
+        <div className="flex flex-col p-6 sm:text-center lg:text-left">
           <h5 className="text-2xl font-extrabold uppercase" >{"the modern web is constantly evolving"}</h5>
           <p className="text-gray-300 font-medium text-base md:w-full sm:w-full">{"Each one of us have contributed to the modern web in our own way. We discover technologies that solve our problems (and perhaps inspire us), join a community, and get to work. We share our experience with our coworkers, colleagues, and online network. But there is much more to the web community than our own little islands."}</p>
           <p className="text-gray-300 font-medium text-base md:w-full sm:w-full pt-8">{"The Modern Web Summit not only to provides you with in-depth knowledge about the technologies you’re currently working with, but also exposes you to new ways of thinking and approaches from adjacent communities. You’ll learn from thought-leaders in your community and beyond, and connect with like-minded individuals with unique, thought-provoking perspectives. "}</p>
         </div>
       </div>
-      <div className="flex flex-wrap md:mt-6 md:pl-24 md:pr-32">
+      <div className="flex flex-wrap lg:mt-6 lg:px-24">
         <AnimationWrapper parentClass="md:w-3/5 sm:w-full md:p-10 sm:p-5">
           <p className="text-2xl uppercase text-black font-extrabold">More than just a livestream</p>
           <p className="text-gray-300 font-medium text-base sm:w-full pt-4">{"Let’s face it: a livestream of talks is not a real conference. There is so much more to a conference than the presentations, and the online events we’ve seen in 2020 simply don’t achieve a true conference experience."}</p>
