@@ -9,7 +9,7 @@ const AnimationWrapper = (props) => {
       onChange={(visible) => setVisible(visible)}
       active={!isVisible} >
       <div
-        className={`${props.parentClass} ${isVisible ? 'animated fadeInUp opacity-1' : 'opacity-0'}`} >
+        className={`${props.parentClass} ${isVisible ? `animated ${props.effect ? 'fadeIn delay-1s animation-duration-500': 'fadeInUp'} opacity-1` : 'opacity-0'}`} >
         {props.children}
       </div>
     </VisibilitySensor>

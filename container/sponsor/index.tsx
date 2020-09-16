@@ -16,25 +16,23 @@ const Sponsor = (props: VisibleProps) => {
 
   return (
     <div className={`bg-white shadow-xs opacity-0  ${className}`}>
-      <div className="flex sm:flex-wrap md:flex-no-wrap">
-        <div className="bg-black md:w-23 sm:w-full sm:flex-none md:flex-23 h-32 flex items-end self-start justify-center">
+      <div className="flex sm:flex-wrap lg:flex-no-wrap">
+        <div className="bg-black lg:w-23 sm:w-full sm:flex-none lg:flex-23 h-32 flex items-end self-start justify-center">
           <h4 className="text-5xl text-white leading-7 uppercase">SPONSORS</h4>
         </div>
-        <div className="flex flex-col p-6 sm:text-center md:text-left">
+        <div className="flex flex-col p-6 sm:text-center lg:text-left">
           <h5 className="text-2xl font-extrabold uppercase" >{"Innovation at its Finest"}</h5>
-          <p className="text-gray-300 font-medium text-base md:w-3/4 sm:w-full">{"APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. Sponsors of the Modern Web Summit are building interesting, sustainable, and forward-thinking ideas and services. In addition to providing financial support of the event, Sponsors have their own track for Expo sessions that dive deep into these ideas. From presentations and panels to breakout discussions & workshops, you can get up close with the companies, products, and tools that most interest you."}</p>
-          <button className="custom-btn hover:bg-lightGreen-100 focus:outline-none mt-10 w-full sm:inline md:hidden" type="button">See the sponsorship guide</button>
-          <img className="mt-20 mb-5 sm:inline md:hidden" src="/images/org-eventloop.svg" alt="" />
+          <p className="text-gray-300 font-medium text-base lg:w-3/4 sm:w-full">{"APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. Sponsors of the Modern Web Summit are building interesting, sustainable, and forward-thinking ideas and services. In addition to providing financial support of the event, Sponsors have their own track for Expo sessions that dive deep into these ideas. From presentations and panels to breakout discussions & workshops, you can get up close with the companies, products, and tools that most interest you."}</p>
         </div>
       </div>
 
-      <div className="p-10 sm:hidden md:block">
+      <div className="p-10">
         <Title title="Presenting sponsor" parentClass="flex justify-center border-solid border" />
         <AnimationWrapper parentClass="">
           <SponsorDescription
             imageClass="opacity-75 hover:opacity-100"
             descriptionClass=""
-            innerClass="md:w-1/2 sm:w-full pt-10 pb-20"
+            innerClass="lg:w-1/2 sm:w-full pt-10 pb-20"
             description={
               'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. Sponsors of the Modern Web Summit are building interesting, sustainable, and forward-thinking products and services. In addition to providing financial support of the event, Sponsors have their own track.'}
             parentClass="flex justify-center text-center"
@@ -42,14 +40,14 @@ const Sponsor = (props: VisibleProps) => {
           />
         </AnimationWrapper>
         <Title title="Diamond sponsors" parentClass="flex justify-center border-solid border" />
-        <AnimationWrapper parentClass="flex pt-10 pb-20 justify-evenly">
+        <AnimationWrapper parentClass="flex pt-10 pb-20 justify-evenly sm:flex-wrap md:flex-no-wrap">
           <SponsorDescription
             imageClass="sponsor-img"
             descriptionClass=""
             innerClass="text-center"
             description={
               'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. '}
-            parentClass="w-1/4"
+            parentClass="sm:w-full md:w-1/2 lg:w-1/4 sm:mb-10 md:mb-0 md:p-5 lg:p-0"
             image="/images/course-hero.svg"
           />
           <SponsorDescription
@@ -58,7 +56,7 @@ const Sponsor = (props: VisibleProps) => {
             innerClass="text-center"
             description={
               'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. '}
-            parentClass="w-1/4"
+            parentClass="sm:w-full md:w-1/2 lg:w-1/4 sm:mb-10 md:mb-0 md:p-5 lg:p-0"
             image="/images/facebook.svg"
           />
         </AnimationWrapper>
@@ -73,7 +71,7 @@ const Sponsor = (props: VisibleProps) => {
                     <SponsorText
                       key={index}
                       image={image}
-                      parentClass={`${title == 'Silver sponsors' ? 'w-1/6 mb-10 text-center' : 'w-1/4 mb-3 text-center'}`}
+                      parentClass={`${title == 'Silver sponsors' ? 'sm:w-1/2 lg:w-1/6 mb-10 text-center' : 'sm:w-1/2 lg:w-1/4 mb-3 text-center'}`}
                       imageClass={imageClass}
                     />
                   )
@@ -88,12 +86,16 @@ const Sponsor = (props: VisibleProps) => {
             <SponsorDescription
               imageClass="sponsor-img"
               descriptionClass=""
-              innerClass="w-1/2 pt-10 pb-20"
+              innerClass="sm:w-full lg:w-1/2 py-10"
               description={
-                'APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. Sponsors of the Modern Web Summit are building interesting, sustainable, and forward-thinking products and services. In addition to providing financial support of the event, Sponsors have their own track.'}
+                'EventLoop is a platform for online-first meetups and conferences. We provide event organizers, speakers, sponsors, and attendees with an unrivaled online event experience. We can’t wait to show you what we’re about at the Modern Web Summit!'}
               parentClass="flex justify-center text-center"
               image="/images/eventloop.svg"
             />
+            <div className="text-center">
+              <p className="uppercase text-gray-300 mb-5 tracking-widest-43 font-extrabold">sponsor the web event of the year</p>
+              <button className="text-black py-4 px-6 uppercase border-2 rounded-md text-xl font-extrabold bg-transparent focus:outline-none" type="button">See the sponsorship guide</button>
+            </div>
           </AnimationWrapper>
         </div>
       </div>

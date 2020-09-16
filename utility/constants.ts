@@ -81,13 +81,13 @@ export const sponsorList = [
   {
     title: 'Platinum sponsors',
     list: PLATINUM_SPONSOR,
-    parentClass: 'flex justify-center pt-10 pb-20',
-    imageClass: 'm-5 text-5xl'
+    parentClass: 'flex justify-center pt-10 pb-20 sm:flex-wrap lg:flex-no-wrap',
+    imageClass: 'md:m-5 sm:px-5 md:px-0 text-5xl'
   },
   {
     title: 'GOLD sponsors',
     list: GOLD_SPONSOR,
-    parentClass: 'flex justify-center pt-10 pb-20',
+    parentClass: 'flex justify-center pt-10 pb-20 sm:flex-wrap lg:flex-no-wrap',
     imageClass: 'h-8'
   },
   {

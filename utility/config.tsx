@@ -1,9 +1,9 @@
 
 export const typistConfig = {
-  show: false,
+  show: true,
   blink: true,
   element: '|',
-  hideWhenDone: true,
+  hideWhenDone: false,
   hideWhenDoneDelay: 1000,
 };
 

@@ -17,7 +17,7 @@ module.exports = {
       spacing: {
         '450': '450px',
         '300': '300px',
-        '97' : '97px'
+        '110' : '110px'
       },
       fontSize: {
         'base': '1.2rem',
@@ -32,7 +32,8 @@ module.exports = {
         '100-5': 'calc(100% - 5rem)'
       },
       letterSpacing: {
-        widest: '6px'
+        widest: '6px',
+        'widest-43': '0.43em'
       },
       width: {
         '23': '23.5rem'
