@@ -37,7 +37,7 @@ const About = (props: VisibleProps) => {
         <div className="md:p-10 w-full">
           <p className="text-2xl uppercase text-black font-extrabold sm:text-center md:text-left">What you’ll experience</p>
         </div>
-        <AnimationWrapper parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 md:pt-5 sm:p-5">
+        <AnimationWrapper parentClass="md:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
           <AboutDescription
             image="/images/keynotes-icon.svg"
             title="General Session Keynotes"
