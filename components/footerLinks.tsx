@@ -6,7 +6,7 @@ const FooterLink = () => {
     <div className="flex flex-wrap">
       {links.map((item, index) => {
         return (
-          <div key={index} className="md:w-1/4 sm:w-1/2 sm:mb-10 md:mb-0">
+          <div key={index} className="lg:w-1/4 sm:w-1/2 sm:mb-10 md:mb-0">
             {item.link.map((linkData, i) => {
               return (
                 <div key={i}>
