@@ -46,7 +46,7 @@ const Modern = (props) => {
           git push
         </Typist>}
       </div>
-      {dataVisible && <h5 className="text-lightGreen-200 sm:text-xl md:text-4xl font-menlo animated delay-2s fadeIn">THE BOUNDS OF POSSIBILITY</h5>}
+      {dataVisible && <h5 className="text-lightGreen-200 sm:text-xl md:text-4xl font-menlo animated delay-3s fadeIn">THE BOUNDS OF POSSIBILITY</h5>}
     </div >
   )
 }
