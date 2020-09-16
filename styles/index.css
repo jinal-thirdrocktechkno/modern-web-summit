@@ -13,7 +13,7 @@ body {
 
 .custom-btn {
     @apply text-black py-4 px-6 uppercase border-none rounded-md text-xl font-extrabold bg-lightGreen-200;
-    width: 275px;
+    min-width: 275px;
     /* background: linear-gradient(355.25deg, #803A9A 2.77%, #BB6BD9 95.12%); */
 }
 
@@ -55,7 +55,7 @@ body {
     -webkit-animation-delay: 2s;
 }
 
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+@media screen and (min-device-width: 1200px) and (max-device-width: 1880px) and (-webkit-min-device-pixel-ratio: 1) {
     .logo img {
         @apply w-300 mb-5;
     }
