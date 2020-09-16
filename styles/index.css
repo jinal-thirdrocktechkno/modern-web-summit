@@ -84,3 +84,7 @@ body {
 .arrow-link:hover span {
     transform: translateX(50%);
 }
+
+.animation-duration-500 {
+    animation-duration: 500ms;
+}

@@ -3,7 +3,7 @@ import ProfileCard from '../../components/profileCard'
 import SpeakerFilter from '../../components/speakerFilter'
 import { VisibleProps } from '../sponsor'
 import { SpeakerFilters } from '../../utility/constants'
-
+import speakerList from '../../utility/speakerList.json'
 const Speaker = (props: VisibleProps) => {
   const { isVisible } = props
   const [className, setClass] = useState('')
@@ -13,39 +13,45 @@ const Speaker = (props: VisibleProps) => {
       setClass('animated fadeInUp opacity-1')
     }
   })
-  const abc = [1, 2, 3, 4];
-  const handleFilterClick = (id: number) => {
+  const selectedFilters = filters.filter(i => i.selected).map(i => i.title)
+  let speakerFilteredList = speakerList.filter(a => selectedFilters.includes(a.track))
+
+  if (selectedFilters.includes('All Tracks'))
+    speakerFilteredList = speakerList
+
+  const finalSplitedArray = [[], [], [], []]
+  speakerFilteredList.forEach((speaker, i) => {
+    finalSplitedArray[i % 4].push(speaker)
+  });
+
+  const formatFilters = (filters: { id: number; title: string; image: string; selected: boolean }[], id: number) => {
     const newFilter = filters.slice(0)
     const allTrackId = filters.find(item => item.title === 'All Tracks').id
     let finalFilter = []
     if (id === allTrackId) {
       finalFilter = newFilter.map(item => {
-        if (item.id !== allTrackId) {
-          item.selected = false
-        }
-        else {
-          item.selected = true
-        }
+        if (item.id !== allTrackId) { item.selected = false }
+        else { item.selected = true }
         return item
       })
     }
     else {
       let selectedCount = 0
       finalFilter = newFilter.map(item => {
-        if (item.id === id) {
-          item.selected = !item.selected
-        }
-        if (item.id === allTrackId) {
-          item.selected = false
-        }
+        if (item.id === id) { item.selected = !item.selected }
+        if (item.id === allTrackId) { item.selected = false }
         item.selected && selectedCount++
         return item
       })
-      if (!selectedCount) {
-        finalFilter[0].selected = true
-      }
+      if (!selectedCount) { finalFilter[0].selected = true }
     }
+    return finalFilter
+  }
+
+  const handleFilterClick = (id: number) => {
+    let finalFilter = formatFilters(filters, id)
     setFilters(finalFilter.sort((a, b) => (a.id > b.id) ? 1 : -1))
+
   }
 
   return (
@@ -62,72 +68,76 @@ const Speaker = (props: VisibleProps) => {
 
       <div className="flex sm:flex-wrap lg:flex-no-wrap lg:pl-40 sm:p-10">
         <div className="lg:mr-2 sm:mr-0 lg:w-1/5 sm:w-1/2 sm:pl-5 lg:pl-0 sm:pr-2 lg:pr-0">
-          {abc.map((item, index) => {
+          {finalSplitedArray[0].map((item, index) => {
+            const { image, name, title, company, location } = item;
             return (
               <ProfileCard
                 isForDescription={false}
                 imageClass=""
                 isLast={false}
                 key={index}
-                imageUrl="/images/speaker.svg"
-                name="Soham Steward"
-                designation="Senior Developer Advocate"
-                companyName="Facebook"
-                locationFull="San Francisco, California"
+                imageUrl={image}
+                name={name}
+                designation={title}
+                companyName={company}
+                locationFull={location}
                 locationSort="San Francisco, CA"
               />
             )
           })}
         </div>
         <div className="lg:mr-2 sm:mr-0 lg:w-1/5 sm:w-1/2 mt-16 sm:pr-5 lg:pr-0 sm:pl-2 lg:pl-0">
-          {abc.map((item, index) => {
+          {finalSplitedArray[1].map((item, index) => {
+            const { image, name, title, company, location } = item;
             return (
               <ProfileCard
                 isForDescription={false}
                 imageClass=""
                 isLast={false}
                 key={index}
-                imageUrl="/images/speaker.svg"
-                name="Soham Steward"
-                designation="Senior Developer Advocate"
-                companyName="Facebook"
-                locationFull="San Francisco, California"
+                imageUrl={image}
+                name={name}
+                designation={title}
+                companyName={company}
+                locationFull={location}
                 locationSort="San Francisco, CA"
               />
             )
           })}
         </div>
         <div className="lg:mr-2 sm:mr-0 lg:w-1/5 sm:w-1/2 mt-32 sm:pl-5 lg:pl-0 sm:pr-2 lg:pr-0 sm:hidden lg:block">
-          {abc.map((item, index) => {
+          {finalSplitedArray[2].map((item, index) => {
+            const { image, name, title, company, location } = item;
             return (
               <ProfileCard
                 isForDescription={false}
                 imageClass=""
                 isLast={false}
                 key={index}
-                imageUrl="/images/speaker.svg"
-                name="Soham Steward"
-                designation="Senior Developer Advocate"
-                companyName="Facebook"
-                locationFull="San Francisco, California"
+                imageUrl={image}
+                name={name}
+                designation={title}
+                companyName={company}
+                locationFull={location}
                 locationSort="San Francisco, CA"
               />
             )
           })}
         </div>
         <div className="lg:mr-2 sm:mr-0 lg:w-1/5 sm:w-1/2 mt-48 sm:pr-5 lg:pr-0 sm:pl-2 lg:pl-0 sm:hidden lg:block">
-          {abc.map((item, index) => {
+          {finalSplitedArray[3].map((item, index) => {
+            const { image, name, title, company, location } = item;
             return (
               <ProfileCard
                 isForDescription={false}
                 imageClass=""
-                isLast={index === 3}
+                isLast={false}
                 key={index}
-                imageUrl="/images/speaker.svg"
-                name="Soham Steward"
-                designation="Senior Developer Advocate"
-                companyName="Facebook"
-                locationFull="San Francisco, California"
+                imageUrl={image}
+                name={name}
+                designation={title}
+                companyName={company}
+                locationFull={location}
                 locationSort="San Francisco, CA"
               />
             )
