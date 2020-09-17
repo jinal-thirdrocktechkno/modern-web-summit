@@ -1,4 +1,5 @@
 import React from 'react'
+import AnimationWrapper from './animationWrapper'
 
 const SponsorDescription = (props: SponsorDescriptionProps) => {
   const {
@@ -16,7 +17,9 @@ const SponsorDescription = (props: SponsorDescriptionProps) => {
         <a href="https://www.google.co.in/">
           <img className={`inline mb-5 opacity-75 hover:opacity-100 ${imageClass}`} src={image} />
         </a>
+        <AnimationWrapper parentClass="" effect={"fadeIn"}>
         <p className={descriptionClass}>{description}</p>
+        </AnimationWrapper>
       </div>
     </div>
   )

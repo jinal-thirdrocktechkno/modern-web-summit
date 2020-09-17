@@ -2,7 +2,9 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-html, #__next {
+
+html,
+#__next {
     height: 100%;
     scroll-behavior: smooth;
 }
@@ -59,18 +61,24 @@ body {
     .logo img {
         @apply w-300 mb-5;
     }
+
     .custom-btn {
         @apply text-black py-2 px-4 uppercase border-none rounded-md text-xl font-extrabold bg-lightGreen-200;
     }
-    .left-bar img, .right-bar img {
+
+    .left-bar img,
+    .right-bar img {
         @apply w-16;
     }
+
     .left-bar {
         @apply -mt-24;
     }
+
     .right-bar {
         @apply -translate-y-12;
     }
+
     .menu-btn {
         @apply p-4;
     }
@@ -83,4 +91,31 @@ body {
 
 .arrow-link:hover span {
     transform: translateX(50%);
+}
+
+.animation-duration-500 {
+    animation-duration: 500ms;
+}
+
+.Typist .Cursor {
+    display: inline-block;
+}
+
+.Typist .Cursor--blinking {
+    opacity: 1;
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

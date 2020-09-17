@@ -24,6 +24,30 @@ const Speaker = (props: VisibleProps) => {
     finalSplitedArray[i % 4].push(speaker)
   });
 
+  const formatFilters = (filters: { id: number; title: string; image: string; selected: boolean }[], id: number) => {
+    const newFilter = filters.slice(0)
+    const allTrackId = filters.find(item => item.title === 'All Tracks').id
+    let finalFilter = []
+    if (id === allTrackId) {
+      finalFilter = newFilter.map(item => {
+        if (item.id !== allTrackId) { item.selected = false }
+        else { item.selected = true }
+        return item
+      })
+    }
+    else {
+      let selectedCount = 0
+      finalFilter = newFilter.map(item => {
+        if (item.id === id) { item.selected = !item.selected }
+        if (item.id === allTrackId) { item.selected = false }
+        item.selected && selectedCount++
+        return item
+      })
+      if (!selectedCount) { finalFilter[0].selected = true }
+    }
+    return finalFilter
+  }
+
   const handleFilterClick = (id: number) => {
     let finalFilter = formatFilters(filters, id)
     setFilters(finalFilter.sort((a, b) => (a.id > b.id) ? 1 : -1))
@@ -107,7 +131,7 @@ const Speaker = (props: VisibleProps) => {
               <ProfileCard
                 isForDescription={false}
                 imageClass=""
-                isLast={false}
+                isLast={index+1 === (finalSplitedArray[3].length)}
                 key={index}
                 imageUrl={image}
                 name={name}
@@ -140,37 +164,3 @@ const Speaker = (props: VisibleProps) => {
     </div >)
 }
 export default Speaker
-function formatFilters(filters: { id: number; title: string; image: string; selected: boolean }[], id: number) {
-  const newFilter = filters.slice(0)
-  const allTrackId = filters.find(item => item.title === 'All Tracks').id
-  let finalFilter = []
-  if (id === allTrackId) {
-    finalFilter = newFilter.map(item => {
-      if (item.id !== allTrackId) {
-        item.selected = false
-      }
-      else {
-        item.selected = true
-      }
-      return item
-    })
-  }
-  else {
-    let selectedCount = 0
-    finalFilter = newFilter.map(item => {
-      if (item.id === id) {
-        item.selected = !item.selected
-      }
-      if (item.id === allTrackId) {
-        item.selected = false
-      }
-      item.selected && selectedCount++
-      return item
-    })
-    if (!selectedCount) {
-      finalFilter[0].selected = true
-    }
-  }
-  return finalFilter
-}
-
