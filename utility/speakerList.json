@@ -39,7 +39,7 @@
     "location": "San Francisco, California",
     "bio": "",
     "image": "/images/speaker.svg",
-    "track": "Indie Hackers / Entrepreneurs",
+    "track": "accessibility",
     "isFeatured": "",
     "twitterURL": ""
   },
@@ -83,7 +83,7 @@
     "location": "San Francisco, California",
     "bio": "",
     "image": "/images/speaker.svg",
-    "track": "Indie Hackers / Entrepreneurs",
+    "track": "accessibility",
     "isFeatured": "",
     "twitterURL": ""
   },
@@ -253,24 +253,13 @@
     "twitterURL": ""
   },
   {
-    "name": "Courtney Miles",
-    "title": "Senior Developer Advocate",
-    "company": "General Electric",
-    "location": "San Francisco, California",
+    "name": "",
+    "title": "",
+    "company": "",
+    "location": "",
     "bio": "",
-    "image": "/images/speaker.svg",
-    "track": "vue",
-    "isFeatured": "",
-    "twitterURL": ""
-  },
-  {
-    "name": "Johnny Cooper",
-    "title": "Senior Developer Advocate",
-    "company": "Bank of America",
-    "location": "San Francisco, California",
-    "bio": "",
-    "image": "/images/speaker.svg",
-    "track": "accessibility",
+    "image": "",
+    "track": "",
     "isFeatured": "",
     "twitterURL": ""
   }

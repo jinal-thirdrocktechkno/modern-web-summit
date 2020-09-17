@@ -66,7 +66,7 @@ const Speaker = (props: VisibleProps) => {
         </div>
       </div>
 
-      <div className="flex sm:flex-wrap lg:flex-no-wrap lg:pl-40 sm:p-10">
+      <div className="flex sm:flex-wrap lg:flex-no-wrap lg:pl-40 md:p-10 sm:p-0">
         <div className="lg:mr-2 sm:mr-0 lg:w-1/5 sm:w-1/2 sm:pl-5 lg:pl-0 sm:pr-2 lg:pr-0">
           {finalSplitedArray[0].map((item, index) => {
             const { image, name, title, company, location } = item;
@@ -131,7 +131,7 @@ const Speaker = (props: VisibleProps) => {
               <ProfileCard
                 isForDescription={false}
                 imageClass=""
-                isLast={false}
+                isLast={index+1 === (finalSplitedArray[3].length)}
                 key={index}
                 imageUrl={image}
                 name={name}
