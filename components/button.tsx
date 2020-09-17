@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Button = (props) => {
-    const buttonClass = "menu-btn border-2 mb-5 p-6 border-gray-400 text-xl font-extrabold uppercase text-gray-400 hover:bg-gray-400 focus:outline-none hover:text-white"
+    const buttonClass = "border-2 w-full uppercase text-lg font-bold border-gray-400 text-gray-400 py-3 px-2 mb-5 hover:bg-gray-400 hover:text-white"
     return <button
     onClick={() => props.handleButtonClick()}
     className={buttonClass}
