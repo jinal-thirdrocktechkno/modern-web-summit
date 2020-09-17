@@ -10,6 +10,7 @@ import ShareSocial from '../../components/shareSocial'
 import Footer from '../footer/footer'
 import NavMenu from '../../components/navMenu'
 import Finances from '../finances'
+import GetInvolved from '../getInvolved'
 import SectionWrapper from '../../components/sectionWrapper'
 import ReactVisibilitySensor from 'react-visibility-sensor'
 
@@ -148,6 +149,9 @@ const Home = () => {
       </div>
       <div className='sm:m-0 md:m-10'>
         <SectionWrapper Component={Finances} />
+      </div>
+      <div className='sm:m-0 md:m-10'>
+        <SectionWrapper Component={GetInvolved} />
       </div>
       <div className="sm:m-0 md:m-10 sm:p-2 md:p-0">
         <ShareSocial />

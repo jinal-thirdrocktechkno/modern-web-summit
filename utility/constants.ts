@@ -125,30 +125,24 @@ export const SpeakerFilters = [
   },
   {
     id: 5,
-    title: 'Indie Hackers / Entrepreneurs',
-    image: '/images/speakerFilter/track-indie-hackers-icon.svg',
-    selected: false
-  },
-  {
-    id: 6,
     title: 'jamstack',
     image: '/images/speakerFilter/track-jamstack-icon.svg',
     selected: false
   },
   {
-    id: 7,
+    id: 6,
     title: 'react',
     image: '/images/speakerFilter/track-react-icon.svg',
     selected: false
   },
   {
-    id: 8,
+    id: 7,
     title: 'serverless',
     image: '/images/speakerFilter/track-serverless-icon.svg',
     selected: false
   },
   {
-    id: 9,
+    id: 8,
     title: 'vue',
     image: '/images/speakerFilter/track-vue-icon.svg',
     selected: false
