@@ -3,6 +3,7 @@ import Title from '../../components/title'
 import ProfileCard from '../../components/profileCard'
 import AnimationWrapper from '../../components/animationWrapper'
 import { VisibleProps } from '../sponsor'
+import CuratorsList from '../../utility/curatorList.json'
 
 const Curators = (props: VisibleProps) => {
   const { isVisible } = props
@@ -13,7 +14,7 @@ const Curators = (props: VisibleProps) => {
       setClass('animated fadeInUp opacity-1')
     }
   })
-  
+
   return (
     <div className={`bg-white shadow-xs opacity-0  ${className} lg:pb-10 `}>
       <div className="flex sm:flex-wrap lg:flex-no-wrap">
@@ -27,6 +28,37 @@ const Curators = (props: VisibleProps) => {
       </div>
 
       <div className="flex flex-wrap md:mt-6">
+        {CuratorsList.map((curator, i) => {
+          const { track, name, image, title, company, location, bio, allLink } = curator;
+          return (<div key={i} className="lg:w-1/2 sm:w-full md:p-10 sm:p-5">
+            <AnimationWrapper parentClass="" >
+              <Title title={track} parentClass="flex justify-center border-solid border" />
+              <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
+                <div className="md:w-1/3 sm:w-3/4">
+                  <ProfileCard
+                    isForDescription={true}
+                    imageClass="border border-2 filter-none"
+                    isLast={false}
+                    key={1}
+                    imageUrl={image}
+                    name={name}
+                    designation={title}
+                    companyName={company}
+                    locationFull={location}
+                    locationSort={location}
+                  />
+                </div>
+                <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
+                <p className="text-gray-300 text-base font-medium">{bio}</p>
+                <a href="https://www.google.co.in/" className="mt-5 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6 hover:text-blue-100">
+                  {allLink}
+                  <span className="arrow">{' > '}</span> </a>
+                </div>
+              </div>
+            </AnimationWrapper>
+          </div>)
+        }
+        )}
         <div className="lg:w-1/2 sm:w-full md:p-10 sm:p-5">
           <AnimationWrapper parentClass="" >
             <Title title="serverless" parentClass="flex justify-center border-solid border" />
@@ -223,6 +255,31 @@ const Curators = (props: VisibleProps) => {
               <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
                 <p className="text-gray-300 text-base font-medium">{`Brian has been working in the Serverless space for over 7 years. He’s the cofounder and CTO of Begin.com, the fastest and easiest way to setup CI/CD gitops for serverless web apps on AWS. He is the creator and maintainer of OpenJS Architect, an open-source framework for generating and deploying AWS standard SAM/CloudFormation, coined the term FASTstack. He has been keeping a close eye on Deno since its earliest moments and is already using it in production today. You can catch him @brianleroux on Twitter where he talks about open source, JavaScript, serverless, faststack, Deno, and other developer-related stuff.`}</p>
                 <a href="https://www.google.co.in/" className="md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6 mt-5 hover:text-blue-100">{'See all the graphql Speakers '}<span className="arrow">{' > '}</span> </a>
+              </div>
+            </div>
+          </AnimationWrapper>
+        </div>
+        <div className="lg:w-1/2 sm:w-full md:p-10 sm:p-5">
+          <AnimationWrapper parentClass="" >
+            <Title title="React" parentClass="flex justify-center border-solid border" />
+            <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
+              <div className="md:w-1/3 sm:w-3/4">
+                <ProfileCard
+                  isForDescription={true}
+                  imageClass="border border-2 filter-none"
+                  isLast={true}
+                  key={1}
+                  imageUrl="/images/silhouette.svg"
+                  name="Secret Curator"
+                  designation="Senior Hooks Operation"
+                  companyName="Amazon Book Soft"
+                  locationFull="San Francisco, CA"
+                  locationSort="San Francisco, CA"
+                />
+              </div>
+              <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
+                <p className="text-gray-300 text-base font-medium">{`Can you guess who our curator for React is? Send us your best guesses on twitter!`}</p>
+                <a href="https://www.google.co.in/" className="md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6 mt-5 hover:text-blue-100">{'See all the react Speakers '}<span className="arrow">{' > '}</span> </a>
               </div>
             </div>
           </AnimationWrapper>

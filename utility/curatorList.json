@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Nader Dabit",
+    "title": "Developer Advocate",
+    "company": "AWS Amplify",
+    "location": "Jackson, MS",
+    "bio": "Brian has been working in the Serverless space for over 7 years. He’s the cofounder and CTO of Begin.com, the fastest and easiest way to setup CI/CD gitops for serverless web apps on AWS. He is the creator and maintainer of OpenJS Architect, an open-source framework for generating and deploying AWS standard SAM/CloudFormation, coined the term FASTstack. He has been keeping a close eye on Deno since its earliest moments and is already using it in production today. You can catch him @brianleroux on Twitter where he talks about open source, JavaScript, serverless, faststack, Deno, and other developer-related stuff.",
+    "image": "/images/curator1.svg",
+    "track": "serverless",
+    "allLink": "See all the Serverless Speakers ",
+    "isFeatured": "",
+    "twitterURL": ""
+  }
+]

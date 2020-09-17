@@ -33,16 +33,22 @@ const Modern = (props) => {
     <div className="" id="modern" >
       <div className="flex justify-center mb-2">
         <p className="text-white sm:text-base md:text-xl font-menlo mr-3  ">modern_web_summit$</p>
-        {typistVisible && <Typist key={key} cursor={typistConfig} className="text-white sm:text-base md:text-xl font-menlo w-110 text-left">
-          <Typist.Delay ms={200} />
+        {typistVisible && <Typist
+          startDelay={200}
+          key={key}
+          cursor={typistConfig}
+          className="text-white sm:text-base md:text-xl font-menlo w-110 text-left">
           git pull
         </Typist>}
       </div>
       {dataVisible && <h5 className="text-lightGreen-200 sm:text-xl md:text-4xl font-menlo animated delay-75s fadeIn">WEB COMMUNITIES TOGETHER</h5>}
       <div className="flex justify-center mb-2 mt-10">
         {dataVisible && <p className="text-white sm:text-base md:text-xl font-menlo mr-3 animated delay-1s fadeIn ">modern_web_summit$  </p>}
-        {typistVisible2 && <Typist key={secondKey} cursor={typistConfig} className="text-white sm:text-base md:text-xl font-menlo w-110 text-left">
-          <Typist.Delay ms={1200} />
+        {typistVisible2 && <Typist
+          key={secondKey}
+          startDelay={1200}
+          cursor={typistConfig}
+          className="text-white sm:text-base md:text-xl font-menlo w-110 text-left">
           git push
         </Typist>}
       </div>
