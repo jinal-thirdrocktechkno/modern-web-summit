@@ -10,13 +10,13 @@ const PrivacyPolicy = () => <>
     <div className={`bg-white shadow-xs`}>
       <div className="flex sm:flex-wrap lg:flex-no-wrap">
         <div className="bg-black lg:w-23 sm:w-full sm:flex-none pt-20 lg:flex-23 h-32 flex items-end self-start justify-center">
-          <h4 className="text-5xl text-white leading-7 uppercase">Privacy Policy</h4>
+          <h4 className="text-2-8 text-white leading-7 uppercase">Privacy Policy</h4>
         </div>
-        <div className="flex flex-col p-6 sm:text-center lg:text-left pt-20">
-          <h5 className="text-2xl font-extrabold uppercase" >{"Privacy Policy PlaceHolder"}</h5>
+        <div className="flex flex-col p-6 lg:pt-24">
+          <h5 className="text-2xl font-extrabold uppercase lg:w-3/4" >{"Privacy Policy PlaceHolder"}</h5>
           {privacyPolicyList.map((p, i) =>
             <React.Fragment key={i}>
-              <p className={'text-gray-300 font-medium text-base lg:w-3/4 sm:w-full'}>{p}</p>
+              <p className={'text-gray-300 font-medium text-base lg:w-3/4'}>{p}</p>
               <br />
             </React.Fragment>
           )}

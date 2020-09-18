@@ -100,9 +100,10 @@
     "title": "Senior Hooks Operation",
     "company": "Amazon Book Soft",
     "location": "San Francisco, CA",
-    "bio": "Can you guess who our curator for React is? ",
+    "bio": "Can you guess who our curator for React is?",
     "image": "/images/silhouette.svg",
     "track": "React",
+    "allLink": "Send us your best guesses on twitter!",
     "isFeatured": "",
     "twitterURL": "twitter.com"
   }
