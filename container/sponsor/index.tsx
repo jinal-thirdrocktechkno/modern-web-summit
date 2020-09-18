@@ -94,7 +94,9 @@ const Sponsor = (props: VisibleProps) => {
             />
             <div className="text-center">
               <p className="uppercase text-gray-300 mb-5 tracking-widest-43 font-extrabold">sponsor the web event of the year</p>
-              <button className="text-black py-4 px-6 uppercase border-2 rounded-md text-xl font-extrabold bg-transparent focus:outline-none" type="button">See the sponsorship guide</button>
+              <div className="inline-block bg-lightGreen-200 transition-all duration-200 transform -rotate-1 hover:rotate-0">
+                <button className="transition-all duration-200 transform rotate-1 hover:rotate-0 bg-white hover:bg-gray-400 text-gray-400 hover:text-lightGreen-200 py-4 px-6 uppercase border-2 border-gray-400 text-xl font-extrabold focus:outline-none" type="button">See the sponsorship guide</button>
+              </div>
             </div>
           </AnimationWrapper>
         </div>
