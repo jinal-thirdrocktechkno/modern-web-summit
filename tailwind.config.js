@@ -25,6 +25,7 @@ module.exports = {
       },
       fontSize: {
         'base': '1.2rem',
+        '2-8': '2.8rem'
       },
       boxShadow: {
         xs: '0 0 40px rgba(0, 0, 0, 0.1)'

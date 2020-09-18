@@ -20,7 +20,7 @@ const Finances = (props: VisibleProps) => {
         <div className="bg-black lg:w-23 sm:w-full sm:flex-none lg:flex-23 h-32 flex items-end self-start justify-center">
           <h4 className="text-5xl text-white leading-7 uppercase">Finances</h4>
         </div>
-        <div className="flex flex-col p-6 sm:text-center lg:text-left">
+        <div className="flex flex-col p-6 sm:text-center lg:text-left lg:pt-24">
           <h5 className="text-2xl font-extrabold uppercase" >{"where does the money for this event go? "}</h5>
           <p className="text-gray-300 font-medium text-base lg:w-4/6 sm:w-full">{"The pricing of this event is intended to be extremely affordable in order to maximize our reach and accessibility. But there are still many expenses and other plans for the income from the event, and we have chosen to be completely upfront about where that money is going! "}</p>
         </div>

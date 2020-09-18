@@ -21,7 +21,7 @@ const Curators = (props: VisibleProps) => {
         <div className="bg-black lg:w-23 sm:w-full sm:flex-none lg:flex-23 h-32 flex items-end self-start justify-center">
           <h4 className="text-5xl text-white leading-7 uppercase">Curators</h4>
         </div>
-        <div className="flex flex-col p-6 sm:text-center lg:text-left">
+        <div className="flex flex-col p-6 sm:text-center lg:text-left lg:pt-24">
           <h5 className="text-2xl font-extrabold uppercase" >{"expert talk selection"}</h5>
           <p className="text-gray-300 font-medium text-base lg:w-4/6 sm:w-full">{"We’ve assembled a team of experts well-known for their knowledge in and contributions to their industry & specialization. Track curators also work together to select the general session keynotes!"}</p>
         </div>
@@ -29,7 +29,7 @@ const Curators = (props: VisibleProps) => {
 
       <div className="flex flex-wrap md:mt-6">
         {CuratorsList.map((curator, i) => {
-          const { track, name, image, title, company, location, bio, allLink } = curator;
+          const { track, name, image, title, company, location, bio, allLink, twitterURL } = curator;
           return (<div key={i} className="lg:w-1/2 sm:w-full md:p-10 sm:p-5">
             <AnimationWrapper parentClass="" >
               <Title title={track} parentClass="flex justify-center border-solid border" />
@@ -48,11 +48,17 @@ const Curators = (props: VisibleProps) => {
                     locationSort={location}
                   />
                 </div>
-                <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
-                <p className="text-gray-300 text-base font-medium">{bio}</p>
-                {allLink && <a href="https://www.google.co.in/" className="mt-5 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6 hover:text-blue-100">
-                  {allLink}
-                  <span className="arrow">{' > '}</span> </a>}
+                <div className="flex flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
+                  <p className="text-gray-300 text-base font-medium">{bio}</p>
+                  {twitterURL !== '' && <a 
+                  className="text-blue-100 text-base font-medium cursor-pointer">
+                    {"Send us your best guesses on twitter!"}
+                    </a>}
+                  {allLink && 
+                  <a href="https://www.google.co.in/" 
+                  className="mt-5 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6 hover:text-blue-100">
+                    {allLink}
+                    <span className="arrow">{' > '}</span> </a>}
                 </div>
               </div>
             </AnimationWrapper>
