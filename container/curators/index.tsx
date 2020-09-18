@@ -32,7 +32,7 @@ const Curators = (props: VisibleProps) => {
           const { track, name, image, title, company, location, bio, allLink, twitterURL } = curator;
           return (<div key={i} className="lg:w-1/2 sm:w-full md:p-10 sm:p-5">
             <AnimationWrapper parentClass="" >
-              <Title title={track} parentClass="flex justify-center border-solid border" />
+              <Title title={track} parentClass="flex justify-center border-solid border border-gray-200" />
               <div className="flex pt-10 sm:flex-wrap md:flex-no-wrap justify-center">
                 <div className="md:w-1/3 sm:w-3/4">
                   <ProfileCard

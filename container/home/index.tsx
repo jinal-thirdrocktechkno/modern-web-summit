@@ -32,7 +32,7 @@ const Home = () => {
   useEffect(() => {
     window.addEventListener('scroll', () => {
       const homePage = document.getElementById('HomePage')
-      if (homePage.offsetTop + (homePage.offsetHeight / 2) < window.scrollY) {
+      if (homePage && (homePage.offsetTop + (homePage.offsetHeight / 2) < window.scrollY)) {
         setDisplayMenu(true)
       } else {
         setDisplayMenu(false)
@@ -81,7 +81,6 @@ const Home = () => {
             menuOpen={menuOpen}
             handleButtonClick={handleButtonClick} />}
         <div className="items-center mr-10 sm:hidden md:flex">
-          <p className="uppercase font-extrabold text-gray-400 text-opacity-25 tracking-widest">share</p>
           <a href="https://www.google.co.in/">
             <img className="inline p-2" src="/images/Twitter.svg" alt="logo" />
           </a>

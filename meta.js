@@ -3,10 +3,10 @@ const meta = [
   <meta content='Modern Web Summit' name='og:title' />,
   <meta
     content={
-      'March 21 - 27, 2021. 5 days, 10 tracks, 100+ sessions.' +
-      'An online conference that\'s more than just a livestream.' +
+      'March 21 - 27, 2021. 5 days, 10 tracks, 100+ sessions. ' +
+      'An online conference that\'s more than just a livestream. ' +
       'Learn & connect with other web designers & developers in an ' +
-      'exciting exploration of cutting-edge technologies, lessons, & patterns.'
+      'exciting exploration of cutting-edge technologies, lessons, & patterns. '
     }
     name='og:description'
   />,
@@ -22,10 +22,10 @@ const meta = [
   <meta content='Modern Web Summit' name='twitter:title' />,
   <meta
     content={
-      'March 21 - 27, 2021. 5 days, 10 tracks, 100+ sessions.' +
-      'An online conference that\'s more than just a livestream.' +
+      'March 21 - 27, 2021. 5 days, 10 tracks, 100+ sessions. ' +
+      'An online conference that\'s more than just a livestream. ' +
       'Learn & connect with other web designers & developers in an ' +
-      'exciting exploration of cutting-edge technologies, lessons, & patterns.'
+      'exciting exploration of cutting-edge technologies, lessons, & patterns. '
     }
     name='twitter:description'
   />,

@@ -26,7 +26,7 @@ const Finances = (props: VisibleProps) => {
         </div>
       </div>
       <div className="md:p-10 sm:p-5">
-        <Title title="Ticket sales" parentClass="flex justify-center border-solid border" />
+        <Title title="Ticket sales" parentClass="flex justify-center border-solid border border-gray-200" />
       </div>
       <div className="flex flex-wrap lg:mt-6 lg:px-24">
         <AnimationWrapper parentClass="lg:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
@@ -103,7 +103,7 @@ const Finances = (props: VisibleProps) => {
         </AnimationWrapper>
       </div>
       <div className="md:p-10 sm:p-5">
-        <Title title="sponsor sales" parentClass="flex justify-center border-solid border" />
+        <Title title="sponsor sales" parentClass="flex justify-center border-solid border border-gray-200" />
       </div>
       <div className="flex flex-wrap lg:mt-6 lg:px-24">
         <AnimationWrapper parentClass="lg:w-1/2 sm:w-full md:p-10 md:pt-0 sm:p-5">
