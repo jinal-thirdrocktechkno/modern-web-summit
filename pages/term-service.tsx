@@ -1,10 +1,10 @@
 import { NextPage } from 'next';
 import React from 'react'
-import PrivacyPolicy from '../container/privacyPolicy/privacyPolicy'
+import TermService from '../container/termService/termService'
 
 const IndexPage: NextPage = () => {
   return <>
-    <PrivacyPolicy />
+    <TermService />
   </>
 }
 
