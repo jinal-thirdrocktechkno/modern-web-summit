@@ -116,8 +116,10 @@ const Home = () => {
             {"Connecting the world’s top designers and developers to redefine the bounds of possibility through an exciting exploration of cutting-edge technologies, lessons, & patterns"}</p>
           <NotifyForm buttonClass="" textClass="text-black" />
           <div className="mt-1 sm:mb-10 md:mb-0">
-            <a className="text-gray-300 font-medium text-base hover:text-blue-100" href="https://www.google.co.in/">Terms of Service • </a>
-            <a className="text-gray-300 font-medium text-base hover:text-blue-100" href="https://www.google.co.in/">Privacy Policy • </a>
+            <a className="text-gray-300 font-medium text-base hover:text-blue-100" href="https://www.google.co.in/">Terms of Service</a>
+            <span className="px-1 text-base">•</span>
+            <a className="text-gray-300 font-medium text-base hover:text-blue-100" href="https://www.google.co.in/">Privacy Policy</a>
+            <span className="px-1 text-base">•</span>
             <a className="text-gray-300 font-medium text-base hover:text-blue-100" href="https://www.google.co.in/">Code of Conduct</a>
           </div>
         </div>
