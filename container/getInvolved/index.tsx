@@ -54,7 +54,7 @@ const GetInvolved = (props: VisibleProps) => {
       <div className="p-10 flex sm:flex-wrap lg:flex-no-wrap">
         {involvmentList.map((i,index) => <div key={index} className="sm:w-full lg:w-1/5 text-center p-5">
           <Button text={i.buttonText} handleButtonClick={() => { }} />
-          <p className="text-gray-300 font-medium text-lg">
+          <p className="text-gray-300 font-medium text-lg mt-5">
             {i.description}</p>
         </div>)}
       </div>
