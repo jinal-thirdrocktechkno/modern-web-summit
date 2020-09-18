@@ -13,7 +13,7 @@ const NavMenu = (props: NavMenuProps) => {
       <div className="flex md:w-3/5 sm:w-full mx-auto md:my-10 sm:my-5">
         <div className="w-1/4 sm:hidden md:block">
           <p><a className={linkClass} href="https://www.google.co.in/">Terms of Service</a></p>
-          <p><a className={linkClass} href="https://www.google.co.in/">Privacy Policy</a></p>
+          <p><a className={linkClass} href="/privacy-policy">Privacy Policy</a></p>
           <p><a className={linkClass} href="https://www.google.co.in/">Selection Committee</a></p>
           <p><a className={linkClass} href="https://www.google.co.in/">Workshops</a></p>
           <p><a className={linkClass} href="https://www.google.co.in/">Jobs</a></p>
