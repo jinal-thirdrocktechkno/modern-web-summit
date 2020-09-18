@@ -18,6 +18,7 @@ const SponsorDescription = (props: SponsorDescriptionProps) => {
           <img className={`inline mb-5 opacity-75 hover:opacity-100 ${imageClass}`} src={image} />
         </a>
         <AnimationWrapper parentClass="" effect={"fadeIn"}>
+          {image === '/images/eventloop.svg' && <img className={`inline mb-5 opacity-100 hover:opacity-100}`} src={"/images/eventloopText.svg"} />}
         <p className={descriptionClass}>{description}</p>
         </AnimationWrapper>
       </div>

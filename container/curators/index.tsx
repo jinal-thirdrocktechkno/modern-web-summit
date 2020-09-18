@@ -29,7 +29,7 @@ const Curators = (props: VisibleProps) => {
 
       <div className="flex flex-wrap md:mt-6">
         {CuratorsList.map((curator, i) => {
-          const { track, name, image, title, company, location, bio, allLink } = curator;
+          const { track, name, image, title, company, location, bio, allLink, twitterURL } = curator;
           return (<div key={i} className="lg:w-1/2 sm:w-full md:p-10 sm:p-5">
             <AnimationWrapper parentClass="" >
               <Title title={track} parentClass="flex justify-center border-solid border" />
@@ -49,10 +49,16 @@ const Curators = (props: VisibleProps) => {
                   />
                 </div>
                 <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
-                <p className="text-gray-300 text-base font-medium">{bio}</p>
-                {allLink && <a href="https://www.google.co.in/" className="mt-5 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6 hover:text-blue-100">
-                  {allLink}
-                  <span className="arrow">{' > '}</span> </a>}
+                  <p className="text-gray-300 text-base font-medium">{bio}</p>
+                  {twitterURL !== '' && <a 
+                  className="text-blue-100 text-base font-medium cursor-pointer">
+                    {"Send us your best guesses on twitter!"}
+                    </a>}
+                  {allLink && 
+                  <a href="https://www.google.co.in/" 
+                  className="mt-5 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6 hover:text-blue-100">
+                    {allLink}
+                    <span className="arrow">{' > '}</span> </a>}
                 </div>
               </div>
             </AnimationWrapper>

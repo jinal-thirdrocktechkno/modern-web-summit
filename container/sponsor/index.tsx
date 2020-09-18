@@ -20,14 +20,14 @@ const Sponsor = (props: VisibleProps) => {
         <div className="bg-black lg:w-23 sm:w-full sm:flex-none lg:flex-23 h-32 flex items-end self-start justify-center">
           <h4 className="text-5xl text-white leading-7 uppercase">SPONSORS</h4>
         </div>
-        <div className="flex flex-col p-6 sm:text-center lg:text-left">
+        <div className="flex flex-col p-6 pt-24 sm:text-center lg:text-left">
           <h5 className="text-2xl font-extrabold uppercase" >{"Innovation at its Finest"}</h5>
           <p className="text-gray-300 font-medium text-base lg:w-3/4 sm:w-full">{"APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. Sponsors of the Modern Web Summit are building interesting, sustainable, and forward-thinking ideas and services. In addition to providing financial support of the event, Sponsors have their own track for Expo sessions that dive deep into these ideas. From presentations and panels to breakout discussions & workshops, you can get up close with the companies, products, and tools that most interest you."}</p>
         </div>
       </div>
 
       <div className="p-10">
-        <Title title="Presenting sponsor" parentClass="flex justify-center border-solid border" />
+        {/* <Title title="Presenting sponsor" parentClass="flex justify-center border-solid border" />
         <AnimationWrapper parentClass="">
           <SponsorDescription
             imageClass="opacity-75 hover:opacity-100"
@@ -79,7 +79,23 @@ const Sponsor = (props: VisibleProps) => {
               </AnimationWrapper>
             </div>
           )
-        })}
+        })} */}
+        <div className="text-center pb-10">
+        <AnimationWrapper parentClass="">
+          <p
+            className="uppercase text-gray-300 mb-5 tracking-widest-43 font-extrabold">
+            sponsor the web event of the year</p>
+            </AnimationWrapper>
+            <AnimationWrapper parentClass="" effect={'fadeIn'}>
+          <div className="inline-block bg-lightGreen-200 transition-all duration-200 transform -rotate-1 hover:rotate-0">
+            <button
+              className="transition-all duration-200 transform rotate-1 hover:rotate-0 bg-white hover:bg-gray-400 text-gray-400 hover:text-lightGreen-200 py-4 px-6 uppercase border-2 border-gray-400 text-xl font-extrabold focus:outline-none"
+              type="button">
+              Register Interest
+                  </button>
+          </div>
+          </AnimationWrapper>
+        </div>
         <div>
           <Title title="Event organizer" parentClass="flex justify-center border-solid border" />
           <AnimationWrapper parentClass="">
@@ -92,12 +108,7 @@ const Sponsor = (props: VisibleProps) => {
               parentClass="flex justify-center text-center"
               image="/images/eventloop.svg"
             />
-            <div className="text-center">
-              <p className="uppercase text-gray-300 mb-5 tracking-widest-43 font-extrabold">sponsor the web event of the year</p>
-              <div className="inline-block bg-lightGreen-200 transition-all duration-200 transform -rotate-1 hover:rotate-0">
-                <button className="transition-all duration-200 transform rotate-1 hover:rotate-0 bg-white hover:bg-gray-400 text-gray-400 hover:text-lightGreen-200 py-4 px-6 uppercase border-2 border-gray-400 text-xl font-extrabold focus:outline-none" type="button">See the sponsorship guide</button>
-              </div>
-            </div>
+            
           </AnimationWrapper>
         </div>
       </div>

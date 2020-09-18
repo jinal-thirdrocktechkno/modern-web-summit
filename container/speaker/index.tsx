@@ -131,7 +131,7 @@ const Speaker = (props: VisibleProps) => {
               <ProfileCard
                 isForDescription={false}
                 imageClass=""
-                isLast={index + 1 === (finalSplitedArray[3].length)}
+                isLast={false}
                 key={index}
                 imageUrl={image}
                 name={name}
