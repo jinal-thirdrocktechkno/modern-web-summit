@@ -60,7 +60,7 @@ const Speaker = (props: VisibleProps) => {
         <div className="bg-black lg:w-23 sm:w-full sm:flex-none lg:flex-23 h-32 flex items-end self-start justify-center">
           <h4 className="text-5xl text-white leading-7 uppercase">SPEAKERS</h4>
         </div>
-        <div className="flex flex-col p-6 sm:text-center lg:text-left">
+        <div className="flex flex-col p-6 sm:text-center lg:text-left lg:pt-24">
           <h5 className="text-2xl font-extrabold uppercase" >{"5 days, 100+ sessions, workshops, & Discussions"}</h5>
           <p className="text-gray-300 font-medium text-base lg:w-5/6 sm:w-full ">{"Whether you’re interested in learning a new technology or advancing your skills in a familiar stack, there’s something for everyone at the Modern Web Summit."}</p>
         </div>
@@ -131,7 +131,7 @@ const Speaker = (props: VisibleProps) => {
               <ProfileCard
                 isForDescription={false}
                 imageClass=""
-                isLast={index + 1 === (finalSplitedArray[3].length)}
+                isLast={false}
                 key={index}
                 imageUrl={image}
                 name={name}

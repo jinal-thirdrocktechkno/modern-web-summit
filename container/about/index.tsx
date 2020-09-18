@@ -19,7 +19,7 @@ const About = (props: VisibleProps) => {
         <div className="bg-black lg:w-23 sm:w-full sm:flex-none lg:flex-23 h-32 flex items-end self-start justify-center">
           <h4 className="text-5xl text-white leading-7 uppercase">About</h4>
         </div>
-        <div className="flex flex-col p-6 sm:text-center lg:text-left">
+        <div className="flex flex-col p-6 sm:text-center lg:text-left lg:pt-24">
           <h5 className="text-2xl font-extrabold uppercase" >{"the modern web is constantly evolving"}</h5>
           <p className="text-gray-300 font-medium text-base md:w-full sm:w-full">{"Each one of us have contributed to the modern web in our own way. We discover technologies that solve our problems (and perhaps inspire us), join a community, and get to work. We share our experience with our coworkers, colleagues, and online network. But there is much more to the web community than our own little islands."}</p>
           <p className="text-gray-300 font-medium text-base md:w-full sm:w-full pt-8">{"The Modern Web Summit not only to provides you with in-depth knowledge about the technologies you’re currently working with, but also exposes you to new ways of thinking and approaches from adjacent communities. You’ll learn from thought-leaders in your community and beyond, and connect with like-minded individuals with unique, thought-provoking perspectives. "}</p>
@@ -86,7 +86,7 @@ const About = (props: VisibleProps) => {
             image="/images/workshops-icon.svg"
             title="Workshops"
             firstDescription="From beginner to advanced, taking place over a few hours to two days, we have the workshop for you. Featuring instructors renowned for their contributions and educating abilities, across all tracks, you can choose the workshop that is most interesting and valuable to you."
-            secondDescription="Workshop tickets are sold separately from the conference. "
+            secondDescription="The Full Access ticket includes access to the daily Mini Workshops. Full Day & 2-day Workshops are sold separately from the conference."
             parentClass=""
             url="https://www.google.co.in/"
             linkText="See all the workshops available  "
