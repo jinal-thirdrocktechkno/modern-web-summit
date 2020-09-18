@@ -57,17 +57,6 @@ body {
     -webkit-animation-delay: 2s;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min--moz-device-pixel-ratio: 2),
-    only screen and (-o-min-device-pixel-ratio: 2/1),
-    only screen and (min-device-pixel-ratio: 2),
-    only screen and (min-resolution: 227dpi),
-    only screen and (min-resolution: 2dppx) {
-    .logo img {
-        @apply w-450 mb-10;
-    }
-}
-
 @media screen and (min-device-width: 1200px) and (max-device-width: 1880px) and (-webkit-min-device-pixel-ratio: 1) {
     .logo img {
         @apply w-300 mb-5;
@@ -92,6 +81,37 @@ body {
 
     .menu-btn {
         @apply p-4;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 227dpi),
+    only screen and (min-resolution: 2dppx) {
+    .logo img {
+        @apply w-450 mb-10;
+    }
+    .custom-btn {
+        @apply text-black py-4 px-6 uppercase border-none rounded-md text-xl font-extrabold bg-lightGreen-200;
+    }
+
+    .left-bar img,
+    .right-bar img {
+        @apply w-auto;
+    }
+
+    .left-bar {
+        @apply -mt-10;
+    }
+
+    .right-bar {
+        @apply -translate-y-48;
+    }
+
+    .menu-btn {
+        @apply p-6;
     }
 }
 
