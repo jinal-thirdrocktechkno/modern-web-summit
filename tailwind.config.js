@@ -14,10 +14,14 @@ module.exports = {
       inset: {
         '1/2': '50%',
       },
+      rotate: {
+        '1': '1deg',
+        '-1': '-1deg'
+      },
       spacing: {
         '450': '450px',
         '300': '300px',
-        '110' : '110px'
+        '110': '110px'
       },
       fontSize: {
         'base': '1.2rem',
