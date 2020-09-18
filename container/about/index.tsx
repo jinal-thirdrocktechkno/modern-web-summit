@@ -86,7 +86,7 @@ const About = (props: VisibleProps) => {
             image="/images/workshops-icon.svg"
             title="Workshops"
             firstDescription="From beginner to advanced, taking place over a few hours to two days, we have the workshop for you. Featuring instructors renowned for their contributions and educating abilities, across all tracks, you can choose the workshop that is most interesting and valuable to you."
-            secondDescription="Workshop tickets are sold separately from the conference. "
+            secondDescription="The Full Access ticket includes access to the daily Mini Workshops. Full Day & 2-day Workshops are sold separately from the conference."
             parentClass=""
             url="https://www.google.co.in/"
             linkText="See all the workshops available  "
