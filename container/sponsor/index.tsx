@@ -28,7 +28,7 @@ const Sponsor = (props: VisibleProps) => {
       </div>
 
       <div className="p-10">
-        {/* <Title title="Presenting sponsor" parentClass="flex justify-center border-solid border" />
+        {/* <Title title="Presenting sponsor" parentClass="flex justify-center border-solid border border-gray-200" />
         <AnimationWrapper parentClass="">
           <SponsorDescription
             imageClass="opacity-75 hover:opacity-100"
@@ -40,7 +40,7 @@ const Sponsor = (props: VisibleProps) => {
             image="/images/flexport.svg"
           />
         </AnimationWrapper>
-        <Title title="Diamond sponsors" parentClass="flex justify-center border-solid border" />
+        <Title title="Diamond sponsors" parentClass="flex justify-center border-solid border border-gray-200" />
         <AnimationWrapper parentClass="flex pt-10 pb-20 justify-evenly sm:flex-wrap md:flex-no-wrap">
           <SponsorDescription
             imageClass="sponsor-img"
@@ -65,7 +65,7 @@ const Sponsor = (props: VisibleProps) => {
         {sponsorList.map(({ list, parentClass, imageClass, title }, index) => {
           return (
             <div key={index}>
-              <Title title={title} parentClass="flex justify-center border-solid border" />
+              <Title title={title} parentClass="flex justify-center border-solid border border-gray-200" />
               <AnimationWrapper parentClass={parentClass}>
                 {list.map(({ image }, index) => {
                   return (
@@ -98,7 +98,7 @@ const Sponsor = (props: VisibleProps) => {
           </AnimationWrapper>
         </div>
         <div>
-          <Title title="Event organizer" parentClass="flex justify-center border-solid border" />
+          <Title title="Event organizer" parentClass="flex justify-center border-solid border border-gray-200" />
           <AnimationWrapper parentClass="">
             <SponsorDescription
               imageClass="sponsor-img"
