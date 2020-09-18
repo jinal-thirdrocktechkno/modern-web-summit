@@ -1,10 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const NavMenu = (props: NavMenuProps) => {
   const { menuOpen, handleButtonClick } = props
   const buttonClass = "menu-btn border-2 mb-5 p-6 border-gray-400 text-xl font-extrabold uppercase text-gray-400 hover:bg-gray-400 focus:outline-none hover:text-white"
-  const linkClass = "text-base text-gray-300 font-medium hover:text-purple-200"
+  const linkClass = "text-base text-gray-300 font-medium hover:text-blue-100"
   return (
     <div className="bg-white fixed top-0 inset-x-0 z-50 shadow-xs h-screen">
       <div className="p-3 sm:bg-gray-400 md:bg-white">
@@ -14,7 +15,7 @@ const NavMenu = (props: NavMenuProps) => {
       <div className="flex md:w-3/5 sm:w-full mx-auto md:my-10 sm:my-5">
         <div className="w-1/4 sm:hidden md:block">
           <p><Link href="/term-service"><a className={linkClass} >Terms of Service</a></Link> </p>
-          <p><a className={linkClass} href="/privacy-policy">Privacy Policy</a></p>
+          <p><Link href="/privacy-policy"><a className={linkClass} >Privacy Policy</a></Link></p>
           <p><a className={linkClass} href="https://www.google.co.in/">Selection Committee</a></p>
           <p><a className={linkClass} href="https://www.google.co.in/">Workshops</a></p>
           <p><a className={linkClass} href="https://www.google.co.in/">Jobs</a></p>
@@ -44,12 +45,14 @@ const NavMenu = (props: NavMenuProps) => {
             type="button" >
             curators
             </button>
-          <button
-            onClick={() => handleButtonClick('home')}
-            className={buttonClass}
-            type="button" >
-            code of conduct
+          <Link href="/code-of-conduct">
+            <button
+              className={buttonClass}
+              type="button" >
+              code of conduct
             </button>
+          </Link>
+
           <button
             disabled={true}
             onClick={() => handleButtonClick('home')}

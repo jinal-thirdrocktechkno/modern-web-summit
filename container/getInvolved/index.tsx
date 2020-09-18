@@ -8,7 +8,7 @@ const involvmentList = [
     buttonClick: ''
   },
   {
-    buttonText: 'submit a talk proposal',
+    buttonText: 'submit a talk',
     description: 'Fancy giving a talk, participating in a panel, or leading a discussion group? Apply here!',
     buttonClick: ''
   },
