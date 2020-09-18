@@ -48,7 +48,7 @@ const Curators = (props: VisibleProps) => {
                     locationSort={location}
                   />
                 </div>
-                <div className="flex justify-between flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
+                <div className="flex flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
                   <p className="text-gray-300 text-base font-medium">{bio}</p>
                   {twitterURL !== '' && <a 
                   className="text-blue-100 text-base font-medium cursor-pointer">
