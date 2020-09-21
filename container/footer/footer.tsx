@@ -18,7 +18,12 @@ const Footer = () => <div className="bg-gray-400 md:p-10 sm:p-5 flex relative fl
     <FooterLink />
     <div className="md:items-end sm:items-center flex flex-col mt-10 md:mr-12">
       <img className="h-10" src="/images/event-loop-footer.svg" />
-      <p className="mt-5 text-gray-200 text-sm">Copyright 2020 Event Loop, Inc.</p>
+      <p className="mt-5 text-gray-200 text-base">Copyright 2020 Event Loop, Inc.</p>
+      <p className="mt-5 text-gray-200 text-base flex">Deployed with
+        <a href="https://begin.com" className="p-2">
+          <img src="/images/begin.svg"/>
+        </a>
+      </p>
     </div>
   </div>
 </div>

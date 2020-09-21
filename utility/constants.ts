@@ -147,6 +147,12 @@ export const SpeakerFilters = [
     image: '/images/speakerFilter/track-vue-icon.svg',
     selected: false
   },
+  {
+    id: 9,
+    title: 'svalte',
+    image: '/images/speakerFilter/track-svelte.svg',
+    selected: false
+  },
 ]
 
 
@@ -234,5 +240,24 @@ export const links = [
         url: ''
       },
     ]
+  }
+]
+
+export const buttonList = [
+  {
+    label: 'Home',
+    pageName :'home'
+  },
+  {
+    label: 'speakers',
+    pageName :'speakers'
+  },
+  {
+    label: 'sponsors',
+    pageName :'sponsors'
+  },
+  {
+    label: 'curators',
+    pageName :'curators'
   }
 ]

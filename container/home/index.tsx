@@ -14,6 +14,8 @@ import GetInvolved from '../getInvolved'
 import SectionWrapper from '../../components/sectionWrapper'
 import ReactVisibilitySensor from 'react-visibility-sensor'
 import StickyHeader from '../../components/stickyHeader'
+import Link from 'next/link'
+
 const ScrollToRef = (ref) => ref.current.scrollIntoView()
 
 const Home = () => {
@@ -22,23 +24,26 @@ const Home = () => {
 
   const menuOpen = () => {
     setShowMenu(!showMenu);
-    if (!showMenu) {
-      document.body.classList.add('overflow-hidden');
-    } else {
-      document.body.classList.remove('overflow-hidden');
-    }
+    // if (!showMenu) {
+    //   document.body.classList.add('overflow-hidden');
+    // } else {
+    //   document.body.classList.remove('overflow-hidden');
+    // }
   }
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      const homePage = document.getElementById('HomePage')
+      const homePage = document.getElementById('home')
       if (homePage && (homePage.offsetTop + (homePage.offsetHeight / 2) < window.scrollY)) {
         setDisplayMenu(true)
       } else {
         setDisplayMenu(false)
       }
     })
-    return () => window.removeEventListener('scroll', () => { })
+    return () => {
+      window.removeEventListener('scroll', () => { })
+      // document.body.classList.remove('overflow-hidden');
+    }
   }, [])
 
   let speakerRef = useRef(null)
@@ -95,7 +100,7 @@ const Home = () => {
       {displayMenu && 
         <StickyHeader menuOpen={()=> menuOpen()}/>
       }
-      <div id='HomePage' className='bg-white flex shadow-xs md:h-100-5 sm:h-auto sm:m-0 md:m-10 main-wrap' ref={homeRef}>
+      <div id='home' className='bg-white flex shadow-xs md:h-100-5 sm:h-auto sm:m-0 md:m-10 main-wrap' ref={homeRef}>
         <div className="sm:hidden md:flex -mt-10 left-bar">
           <img className="inline self-start ml-8 animated fadeInDownBig" src="/images/left-bar-1.svg" alt="logo" />
           <img className="inline self-start -ml-5 animated fadeInDownBig slow" src="/images/left-bar-2.svg" alt="logo" />
@@ -107,11 +112,11 @@ const Home = () => {
             {"Connecting the world’s top designers and developers to redefine the bounds of possibility through an exciting exploration of cutting-edge technologies, lessons, & patterns"}</p>
           <NotifyForm buttonClass="" textClass="text-black" />
           <div className="mt-1 sm:mb-10 md:mb-0">
-            <a className="text-gray-300 font-medium text-base hover:text-blue-100" href="https://www.google.co.in/">Terms of Service</a>
+          <Link href="/term-service"><a className="text-gray-300 font-medium text-base hover:text-blue-100">Terms of Service</a></Link>
             <span className="px-1 text-base">•</span>
-            <a className="text-gray-300 font-medium text-base hover:text-blue-100" href="https://www.google.co.in/">Privacy Policy</a>
+            <Link href="/privacy-policy"><a className="text-gray-300 font-medium text-base hover:text-blue-100">Privacy Policy</a></Link>
             <span className="px-1 text-base">•</span>
-            <a className="text-gray-300 font-medium text-base hover:text-blue-100" href="https://www.google.co.in/">Code of Conduct</a>
+            <Link href="/code-of-conduct"><a className="text-gray-300 font-medium text-base hover:text-blue-100" >Code of Conduct</a></Link>
           </div>
         </div>
         <div className="sm:hidden md:flex mr-8 relative top-1/2 transform -translate-y-48 right-bar">
@@ -131,13 +136,13 @@ const Home = () => {
       <div className='sm:m-0 md:m-10'>
         <SectionWrapper Component={About} />
       </div>
-      <div ref={speakerRef} className='sm:m-0 md:m-10'>
+      <div id="speakers" ref={speakerRef} className='sm:m-0 md:m-10'>
         <SectionWrapper Component={Speaker} />
       </div>
-      <div ref={curatorsRef} className="sm:m-0 md:m-10">
+      <div id="curators" ref={curatorsRef} className="sm:m-0 md:m-10">
         <SectionWrapper Component={Curators} />
       </div>
-      <div ref={sponsorRef} className='sm:m-0 md:m-10'>
+      <div id="sponsors" ref={sponsorRef} className='sm:m-0 md:m-10'>
         <SectionWrapper Component={Sponsor} />
       </div>
       <div className='sm:m-0 md:m-10'>
