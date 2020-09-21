@@ -106,12 +106,12 @@ const Home = () => {
           <img className="inline self-start -ml-5 animated fadeInDownBig slow" src="/images/left-bar-2.svg" alt="logo" />
           <img className="inline self-start -ml-5 animated fadeInDownBig slower" src="/images/left-bar-3.svg" alt="logo" />
         </div>
-        <div className='md:w-2/4 sm:w-full m-auto text-center md:-mt-10 sm:mt-0'>
+        <div className='md:w-2/4 sm:w-full mx-auto text-center md:-mt-10 sm:mt-0 flex flex-col'>
           <Logo />
           <p className='text-gray-300 font-medium text-base md:mb-5 sm:p-5 md:p-0'>
             {"Connecting the world’s top designers and developers to redefine the bounds of possibility through an exciting exploration of cutting-edge technologies, lessons, & patterns"}</p>
           <NotifyForm buttonClass="" textClass="text-black" />
-          <div className="mt-1 sm:mb-10 md:mb-0">
+          <div className="my-3 flex justify-center flex-grow items-end">
           <Link href="/term-service"><a className="text-gray-300 font-medium text-base hover:text-blue-100">Terms of Service</a></Link>
             <span className="px-1 text-base">•</span>
             <Link href="/privacy-policy"><a className="text-gray-300 font-medium text-base hover:text-blue-100">Privacy Policy</a></Link>

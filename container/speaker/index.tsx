@@ -152,12 +152,7 @@ const Speaker = (props: VisibleProps) => {
             />
             <div className="text-center ">
               <p className="ml-5 uppercase text-xs text-gray-400 font-extrabold">Interested in speaking?</p>
-              <div className="ml-5 mt-1 inline-block bg-lightGreen-200 transition-all duration-200 transform -rotate-1 hover:rotate-0">
-                <button type="button" 
-                className="transition-all duration-200 transform rotate-1 hover:rotate-0 uppercase border-gray-400 text-gray-400 bg-white hover:bg-gray-400 hover:text-lightGreen-200 font-black border-2 py-3 px-5 text-lg focus:outline-none">
-                  Submit your talk
-                  </button>
-              </div>
+                <button type="button" className="animate-btn ml-5 mt-1">Submit your talk</button>
             </div>
           </div>
         </div>

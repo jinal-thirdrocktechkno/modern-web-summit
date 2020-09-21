@@ -14,9 +14,40 @@ body {
 }
 
 .custom-btn {
-    @apply text-black py-4 px-6 uppercase border-none rounded-md text-xl font-extrabold bg-lightGreen-200;
-    min-width: 275px;
-    /* background: linear-gradient(355.25deg, #803A9A 2.77%, #BB6BD9 95.12%); */
+    @apply text-black py-4 px-6 uppercase border-none rounded-md text-xl font-extrabold bg-lightGreen-200 min-w-275;
+}
+
+.animate-btn {
+    @apply text-gray-400 py-4 px-6 uppercase border-2 border-gray-400 text-xl font-extrabold transition-all duration-300 relative;
+    background: linear-gradient(to right, black 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+.animate-btn:focus {
+    @apply outline-none;
+}
+
+.animate-btn:hover {
+    @apply text-white;
+    background-position: left bottom;
+}
+
+.animate-btn:hover::after {
+    display: none;
+}
+
+.animate-btn::after {
+    content: "";
+    position: absolute;
+    background-color: #16FF11;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform: rotate(-3deg);
+    transform-origin: bottom center;
 }
 
 .profile-card img {
