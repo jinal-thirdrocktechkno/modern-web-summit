@@ -18,6 +18,9 @@ module.exports = {
         '1': '1deg',
         '-1': '-1deg'
       },
+      minWidth: {
+        '275': '275px'
+      },
       spacing: {
         '450': '450px',
         '300': '300px',

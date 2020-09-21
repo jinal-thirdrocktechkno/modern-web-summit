@@ -14,7 +14,7 @@ const NotifyForm = (props: NotifyFormProps) => {
         <div>
             {!showForm &&
                 <button
-                    className={`custom-btn hover:bg-lightGreen-100 md:px-6 sm:px-4 focus:outline-none ${buttonClass}`}
+                    className={`custom-btn hover:bg-gray-400 hover:text-lightGreen-200 md:px-6 sm:px-4 focus:outline-none ${buttonClass}`}
                     type="button"
                     onClick={() => setShowForm(!showForm)}>
                     get tickets
