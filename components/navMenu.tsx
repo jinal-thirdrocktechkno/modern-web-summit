@@ -1,11 +1,31 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import {buttonList} from '../utility/constants'
 
-const NavMenu = (props: NavMenuProps) => {
+const NavMenu = (props: any) => {
   const { menuOpen, handleButtonClick } = props
   const buttonClass = "menu-btn border-2 mb-5 p-6 border-gray-400 text-xl font-extrabold uppercase text-gray-400 hover:bg-gray-400 focus:outline-none hover:text-white"
   const linkClass = "text-base text-gray-300 font-medium hover:text-blue-100"
+
+  useEffect(() => {
+    document.body.classList.add('overflow-hidden');
+    return () => {
+      document.body.classList.remove('overflow-hidden');
+    }
+  }, [])
+
+  const onButtonClick = (pageName: string) => {
+    if (handleButtonClick) {
+      handleButtonClick(pageName)
+    } else {
+      setTimeout(() => {
+        const pageRef = document.getElementById(pageName)
+        pageRef.scrollIntoView()
+      }, 500)
+    }
+  }
+  
+
   return (
     <div className="bg-white fixed top-0 inset-x-0 z-50 shadow-xs h-screen">
       <div className="p-3 sm:bg-gray-400 md:bg-white">
@@ -21,30 +41,21 @@ const NavMenu = (props: NavMenuProps) => {
           <p><a className={linkClass} href="https://www.google.co.in/">Jobs</a></p>
         </div>
         <div className="md:w-2/5 sm:w-full flex flex-col mx-5">
-          <button
-            onClick={() => handleButtonClick('home')}
+          {buttonList.map(b => <>
+            {!handleButtonClick && <Link href="/">
+            <button
+              onClick={() => onButtonClick(b.pageName)}
+              className={buttonClass}
+              type="button" >
+              {b.label}
+            </button>
+          </Link> || <button
+            onClick={() => onButtonClick(b.pageName)}
             className={buttonClass}
             type="button" >
-            Home
-            </button>
-          <button
-            onClick={() => handleButtonClick('speakers')}
-            className={buttonClass}
-            type="button" >
-            speakers
-            </button>
-          <button
-            onClick={() => handleButtonClick('sponsors')}
-            className={buttonClass}
-            type="button" >
-            sponsors
-            </button>
-          <button
-            onClick={() => handleButtonClick('curators')}
-            className={buttonClass}
-            type="button" >
-            curators
-            </button>
+              {b.label}
+            </button>}
+          </>)}
           <Link href="/code-of-conduct">
             <button
               className={buttonClass}
@@ -52,7 +63,6 @@ const NavMenu = (props: NavMenuProps) => {
               code of conduct
             </button>
           </Link>
-
           <button
             disabled={true}
             onClick={() => handleButtonClick('home')}
@@ -73,9 +83,4 @@ const NavMenu = (props: NavMenuProps) => {
   )
 
 }
-
 export default NavMenu
-type NavMenuProps = {
-  menuOpen: any,
-  handleButtonClick: any
-}

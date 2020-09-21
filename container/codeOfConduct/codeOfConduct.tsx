@@ -1,16 +1,16 @@
 import React from 'react'
 import Footer from '../footer/footer'
-import StickyHeader from '../../components/stickyHeader'
+import HeaderWrapper from '../../components/headerWrapper'
 import GetInvolved from '../getInvolved'
 import CodeOfConductList from '../../utility/codeOfConduct.json'
 
 const CodeOfConduct = () => <>
-  <StickyHeader menuOpen={() => {}}/>
+  <HeaderWrapper>
   <div className='sm:m-0 md:m-10 md:mt-20'>
     <div className={`bg-white shadow-xs`}>
       <div className="flex sm:flex-wrap lg:flex-no-wrap">
         <div className="bg-black lg:w-23 sm:w-full sm:flex-none lg:flex-23 h-32 flex items-end self-start justify-center">
-          <h4 className="text-2-8 text-white leading-7 uppercase">Code Of Conduct</h4>
+          <h4 className="text-5xl text-white leading-7 uppercase">Code Of Conduct</h4>
         </div>
         <div className="flex flex-col p-6 lg:pt-20">
           <h5 className="text-2xl font-extrabold uppercase lg:w-3/4" >{"We take conduct at the Modern web summit very seriously. please take the time to read it!"}</h5>
@@ -30,6 +30,7 @@ const CodeOfConduct = () => <>
     <GetInvolved isVisible={true} />
   </div>
   <Footer />
+  </HeaderWrapper>
 </>
 
 export default CodeOfConduct
