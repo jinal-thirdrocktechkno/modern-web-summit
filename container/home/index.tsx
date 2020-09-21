@@ -154,7 +154,7 @@ const Home = () => {
       <div className="sm:m-0 md:m-10 sm:p-2 md:p-0">
         <ShareSocial />
       </div>
-      <Footer />
+      <Footer isHomePage/>
     </div>
   )
 }

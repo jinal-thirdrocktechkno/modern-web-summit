@@ -163,19 +163,23 @@ export const links = [
     link: [
       {
         title: 'home',
-        url: ''
+        pageName: 'home',
+        url:'/'
       },
       {
         title: 'Speakers',
-        url: ''
+        pageName: 'speakers',
+        url:'/'
       },
       {
         title: 'Sponsors',
-        url: ''
+        pageName: 'sponsors',
+        url:'/'
       },
       {
         title: 'curators',
-        url: ''
+        pageName: 'curators',
+        url:'/'
       },
     ]
   },
@@ -184,19 +188,23 @@ export const links = [
     link: [
       {
         title: 'Terms of Service',
-        url: ''
+        url: '/term-service',
+        pageName: '',
       },
       {
         title: 'Privacy Policy',
-        url: ''
+        url: '/privacy-policy',
+        pageName: '',
       },
       {
         title: 'Code of Conduct',
-        url: ''
+        url: '/code-of-conduct',
+        pageName: '',
       },
       {
         title: 'Selection Committee',
-        url: ''
+        url: 'https://www.google.com/',
+        pageName: '',
       },
     ]
   },
@@ -204,19 +212,23 @@ export const links = [
     link: [
       {
         title: 'WorkShops',
-        url: ''
+        url: 'https://www.google.com/',
+        pageName: '',
       },
       {
         title: 'Jobs',
-        url: ''
+        url: 'https://www.google.com/',
+        pageName: '',
       },
       {
         title: 'Volunteer',
-        url: ''
+        url: 'https://www.google.com/',
+        pageName: '',
       },
       {
         title: 'Schedule - coming soon',
-        url: ''
+        url: 'https://www.google.com/',
+        pageName: '',
       },
     ]
   },
@@ -225,19 +237,23 @@ export const links = [
     link: [
       {
         title: 'Request for SponsorShip',
-        url: ''
+        url: '',
+        pageName: '',
       },
       {
         title: 'Apply for Scholarship',
-        url: ''
+        url: '',
+        pageName: '',
       },
       {
         title: 'Convince your boss',
-        url: ''
+        url: '',
+        pageName: '',
       },
       {
         title: 'Submit a talk proposal',
-        url: ''
+        url: '',
+        pageName: '',
       },
     ]
   }
