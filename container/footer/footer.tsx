@@ -2,7 +2,7 @@ import React from 'react'
 import NotifyForm from '../../components/notify'
 import FooterLink from '../../components/footerLinks'
 
-const Footer = () => <div className="bg-gray-400 md:p-10 sm:p-5 flex relative flex-wrap">
+const Footer = (props) => <div className="bg-gray-400 md:p-10 sm:p-5 flex relative flex-wrap">
   <div className="lg:w-2/5 md:w-1/2 sm:w-full justify-center text-center flex-col flex">
     <img className="md:h-20 sm:h-24" src="/images/mws-logo.svg" />
     <div className="mt-10 sm:mb-5 md:mb-0 flex justify-center">
@@ -15,10 +15,15 @@ const Footer = () => <div className="bg-gray-400 md:p-10 sm:p-5 flex relative fl
     </div> */}
   </div>
   <div className="lg:w-3/5 md:w-1/2 sm:w-full flex-col flex">
-    <FooterLink />
+    <FooterLink isHomePage={props.isHomePage}/>
     <div className="md:items-end sm:items-center flex flex-col mt-10 md:mr-12">
       <img className="h-10" src="/images/event-loop-footer.svg" />
-      <p className="mt-5 text-gray-200 text-sm">Copyright 2020 Event Loop, Inc.</p>
+      <p className="mt-5 text-gray-200 text-base">Copyright 2020 Event Loop, Inc.</p>
+      <p className="mt-5 text-gray-200 text-base flex">Deployed with
+        <a href="https://begin.com" className="p-2">
+          <img src="/images/begin.svg"/>
+        </a>
+      </p>
     </div>
   </div>
 </div>

@@ -82,26 +82,20 @@ const Sponsor = (props: VisibleProps) => {
           )
         })} */}
         <div className="text-center pb-10">
-        <AnimationWrapper parentClass="">
-          <p
-            className="uppercase text-gray-300 mb-5 tracking-widest-43 font-extrabold">
-            sponsor the web event of the year</p>
-            </AnimationWrapper>
-            <AnimationWrapper parentClass="" effect={'fadeIn'}>
-          <div className="inline-block bg-lightGreen-200 transition-all duration-200 transform -rotate-1 hover:rotate-0">
-            <button
-              className="transition-all duration-200 transform rotate-1 hover:rotate-0 bg-white hover:bg-gray-400 text-gray-400 hover:text-lightGreen-200 py-4 px-6 uppercase border-2 border-gray-400 text-xl font-extrabold focus:outline-none"
-              type="button">
-              Register Interest
-                  </button>
-          </div>
+          <AnimationWrapper parentClass="">
+            <p
+              className="uppercase text-gray-300 mb-5 tracking-widest-43 font-extrabold">
+              sponsor the web event of the year</p>
+          </AnimationWrapper>
+          <AnimationWrapper parentClass="" effect={'fadeIn'}>
+            <button className="animate-btn" type="button">Register Interest</button>
           </AnimationWrapper>
         </div>
         <div>
           <Title title="Event organizer" parentClass="flex justify-center border-solid border border-gray-200" />
           <AnimationWrapper parentClass="">
             <SponsorDescription
-              imageClass="sponsor-img"
+              imageClass="sponsor-img h-40"
               descriptionClass=""
               innerClass="sm:w-full lg:w-1/2 py-10"
               description={
@@ -109,7 +103,7 @@ const Sponsor = (props: VisibleProps) => {
               parentClass="flex justify-center text-center"
               image="/images/eventloop.svg"
             />
-            
+
           </AnimationWrapper>
         </div>
       </div>
