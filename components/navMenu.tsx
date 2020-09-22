@@ -40,7 +40,7 @@ const NavMenu = (props: any) => {
           <p><a className={linkClass} href="https://www.google.co.in/">Workshops</a></p>
           <p><a className={linkClass} href="https://www.google.co.in/">Jobs</a></p>
         </div>
-        <div className="md:w-2/5 sm:w-full flex flex-col mx-5 sm:order-first md:order-none">
+        <div className="md:w-1/2 sm:w-full flex flex-col mx-5 sm:order-first md:order-none">
           {buttonList.map(b => <>
             {!handleButtonClick && <Link href="/">
             <button
@@ -66,7 +66,7 @@ const NavMenu = (props: any) => {
           <button
             disabled={true}
             onClick={() => handleButtonClick('home')}
-            className={`border-2 mb-5 p-6 border-gray-400 text-xl font-extrabold uppercase text-gray-400  focus:outline-none opacity-50`}
+            className={`menu-btn cursor-not-allowed border-2 mb-5 p-6 border-gray-400 text-xl font-extrabold uppercase text-gray-400  focus:outline-none opacity-50`}
             type="button" >
             schedule - coming soon
             </button>

@@ -138,7 +138,7 @@
     "location": "Amsterdam, Netherlands/NYC",
     "bio": "",
     "image": "/images/speaker-uri-goldshtein",
-    "track": "Open Source",
+    "track": "GraphQL",
     "isFeatured": "",
     "twitterHandle": ""
   },
@@ -322,7 +322,7 @@
     "name": "Natalia Tepluhina",
     "title": "Staff Frontend Engineer",
     "company": "Gitlab",
-    "location": "Ukraine, Kyiv",
+    "location": "Amsterdam, Netherlands",
     "bio": "",
     "image": "/images/speaker-natalia-tepluhina",
     "track": "Vue",
