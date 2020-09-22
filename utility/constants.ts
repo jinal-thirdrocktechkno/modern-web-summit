@@ -107,7 +107,7 @@ export const SpeakerFilters = [
   },
   {
     id: 2,
-    title: 'accessibility',
+    title: 'Accessibility',
     image: '/images/speakerFilter/track-accessibility-icon.svg',
     selected: false
   },
@@ -119,13 +119,13 @@ export const SpeakerFilters = [
   },
   {
     id: 4,
-    title: 'graphql',
+    title: 'GraphQL',
     image: '/images/speakerFilter/track-graphql-icon.svg',
     selected: false
   },
   {
     id: 5,
-    title: 'jamstack',
+    title: 'Jamstack',
     image: '/images/speakerFilter/track-jamstack-icon.svg',
     selected: false
   },
@@ -137,22 +137,23 @@ export const SpeakerFilters = [
   },
   {
     id: 7,
-    title: 'serverless',
+    title: 'Serverless',
     image: '/images/speakerFilter/track-serverless-icon.svg',
     selected: false
   },
+  ,
   {
     id: 8,
-    title: 'vue',
-    image: '/images/speakerFilter/track-vue-icon.svg',
+    title: 'Svelte',
+    image: '/images/speakerFilter/track-svelte.svg',
     selected: false
   },
   {
     id: 9,
-    title: 'svalte',
-    image: '/images/speakerFilter/track-svelte.svg',
+    title: 'Vue',
+    image: '/images/speakerFilter/track-vue-icon.svg',
     selected: false
-  },
+  }
 ]
 
 

@@ -23,6 +23,7 @@ module.exports = {
       },
       spacing: {
         '450': '450px',
+        '400': '400px',
         '300': '300px',
         '110': '110px'
       },
@@ -35,6 +36,9 @@ module.exports = {
       },
       minHeight: {
         '778': '778px'
+      },
+      maxHeight: {
+        'full-100': 'calc(100% - 100px)'
       },
       height: {
         '100-5': 'calc(100% - 5rem)'

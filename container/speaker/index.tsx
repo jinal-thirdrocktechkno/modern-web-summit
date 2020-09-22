@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import {shuffle} from 'lodash'
 import ProfileCard from '../../components/profileCard'
 import SpeakerFilter from '../../components/speakerFilter'
 import { VisibleProps } from '../sponsor'
@@ -13,14 +14,24 @@ const Speaker = (props: VisibleProps) => {
       setClass('animated fadeInUp opacity-1')
     }
   })
+
   const selectedFilters = filters.filter(i => i.selected).map(i => i.title)
-  let speakerFilteredList = speakerList.filter(a => selectedFilters.includes(a.track))
+  let speakerFilteredList = speakerList.filter(({ track }) => {
+    let selected = false;
+    track.split(',').forEach(t => {
+      if (selectedFilters.includes(t)) {
+        selected = true
+      }
+    })
+    return selected
+  })
 
   if (selectedFilters.includes('All Tracks'))
     speakerFilteredList = speakerList
 
+  
   const finalSplitedArray = [[], [], [], []]
-  speakerFilteredList.forEach((speaker, i) => {
+  shuffle(speakerFilteredList).forEach((speaker, i) => {
     finalSplitedArray[i % 4].push(speaker)
   });
 
@@ -76,7 +87,7 @@ const Speaker = (props: VisibleProps) => {
                 imageClass=""
                 isLast={false}
                 key={index}
-                imageUrl={image}
+                imageUrl={image + '.jpg'}
                 name={name}
                 designation={title}
                 companyName={company}
@@ -95,7 +106,7 @@ const Speaker = (props: VisibleProps) => {
                 imageClass=""
                 isLast={false}
                 key={index}
-                imageUrl={image}
+                imageUrl={image + '.jpg'}
                 name={name}
                 designation={title}
                 companyName={company}
@@ -114,7 +125,7 @@ const Speaker = (props: VisibleProps) => {
                 imageClass=""
                 isLast={false}
                 key={index}
-                imageUrl={image}
+                imageUrl={image + '.jpg'}
                 name={name}
                 designation={title}
                 companyName={company}
@@ -133,7 +144,7 @@ const Speaker = (props: VisibleProps) => {
                 imageClass=""
                 isLast={false}
                 key={index}
-                imageUrl={image}
+                imageUrl={image + '.jpg'}
                 name={name}
                 designation={title}
                 companyName={company}
@@ -152,13 +163,13 @@ const Speaker = (props: VisibleProps) => {
             />
             <div className="text-center ">
               <p className="ml-5 uppercase text-xs text-gray-400 font-extrabold">Interested in speaking?</p>
-                <button type="button" className="animate-btn ml-5 mt-1">Submit your talk</button>
+              <button type="button" className="animate-btn ml-5 mt-1">Submit your talk</button>
             </div>
           </div>
         </div>
         <div className="sm:block lg:hidden p-4 mb-16 w-full">
-          <button type="button" className="w-full uppercase border-purple-100 rounded-md text-purple-100 font-black border-2 p-4 text-lg mt-1 focus:outline-none">see all speakers</button>
-          <button type="button" className="w-full mt-5 custom-btn hover:bg-lightGreen-100 focus:outline-none">Submit your talk</button>
+          {/* <button type="button" className="w-full uppercase border-purple-100 rounded-md text-purple-100 font-black border-2 p-4 text-lg mt-1 focus:outline-none">see all speakers</button> */}
+          <button type="button" className="animate-btn w-full mt-5">Submit your talk</button>
         </div>
       </div>
     </div >)

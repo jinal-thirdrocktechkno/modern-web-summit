@@ -23,7 +23,7 @@ const Modern = (props) => {
   const handleOnPageVisible = () => {
     setTimeout(() => {
       setTypistVisible2(true)
-    }, 1200);
+    }, 1000);
     setKey(new Date().getTime())
     setSecondKey(new Date().getTime())
     setVisible(true)
@@ -46,7 +46,7 @@ const Modern = (props) => {
         {dataVisible && <p className="text-white sm:text-base md:text-xl font-menlo mr-3 animated delay-1s fadeIn ">modern_web_summit$  </p>}
         {typistVisible2 && <Typist
           key={secondKey}
-          startDelay={1200}
+          startDelay={1000}
           cursor={typistConfig}
           className="text-white sm:text-base md:text-xl font-menlo w-110 text-left">
           git push
