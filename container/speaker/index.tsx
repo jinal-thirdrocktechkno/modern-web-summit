@@ -77,7 +77,8 @@ const Speaker = (props: VisibleProps) => {
         </div>
       </div>
 
-      <div className="flex sm:flex-wrap lg:flex-no-wrap lg:pl-40 md:p-10 sm:p-0">
+      <div className="relative flex sm:flex-wrap lg:flex-no-wrap lg:pl-40 md:p-10 sm:p-0">
+        <p className="uppercase absolute bottom-0 mb-10 text-xl text-gray-400 font-semibold sm:hidden md:block">More speakers to be announced soon</p>
         <div className="lg:mr-2 sm:mr-0 lg:w-1/5 sm:w-1/2 sm:pl-5 lg:pl-0 sm:pr-2 lg:pr-0">
           {finalSplitedArray[0].map((item, index) => {
             const { image, name, title, company, location } = item;
