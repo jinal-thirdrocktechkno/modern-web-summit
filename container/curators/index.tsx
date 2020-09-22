@@ -56,7 +56,7 @@ const Curators = (props: VisibleProps) => {
                     </a>}
                   {allLink && 
                   <a href="https://www.google.co.in/" 
-                  className="mt-5 md:self-start sm:self-center text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase arrow-link leading-6 hover:text-blue-100">
+                  className="md:self-start sm:self-center arrow-link">
                     {allLink}
                     <span className="arrow">{' > '}</span> </a>}
                 </div>
