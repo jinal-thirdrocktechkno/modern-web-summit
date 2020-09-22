@@ -90,7 +90,7 @@ body {
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1880px) and (-webkit-min-device-pixel-ratio: 1) {
     .logo img {
-        @apply w-300 mb-5 -mt-8;
+        @apply w-260 mb-5 -mt-8;
     }
 
     .custom-btn {
