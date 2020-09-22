@@ -8,22 +8,18 @@ const Footer = (props) => <div className="bg-gray-400 md:p-10 sm:p-5 flex relati
     <div className="mt-10 sm:mb-5 md:mb-0 flex justify-center">
       <NotifyForm buttonClass="sm:text-lg md:text-xl" textClass={'text-white'} />
     </div>
-    {/* <div className="mb-10 mt-5 text-center sm:block md:hidden">
-      <a className="text-white font-medium text-sm text-opacity-50" href="https://www.google.co.in/">Terms of Service • </a>
-      <a className="text-white font-medium text-sm text-opacity-50" href="https://www.google.co.in/">Privacy Policy • </a>
-      <a className="text-white font-medium text-sm text-opacity-50" href="https://www.google.co.in/">Code of Conduct</a>
-    </div> */}
   </div>
   <div className="lg:w-3/5 md:w-1/2 sm:w-full flex-col flex">
-    <FooterLink isHomePage={props.isHomePage}/>
+    <FooterLink isHomePage={props.isHomePage} />
     <div className="md:items-end sm:items-center flex flex-col mt-10 md:mr-12">
       <img className="h-10" src="/images/event-loop-footer.svg" />
       <p className="mt-5 text-gray-200 text-base">Copyright 2020 Event Loop, Inc.</p>
-      <p className="mt-5 text-gray-200 text-base flex">Deployed with
-        <a href="https://begin.com" className="p-2">
-          <img src="/images/begin.svg"/>
+      <div className="flex items-center mt-2">
+        <p className="text-gray-200 text-base mr-2">Deployed with</p>
+        <a href="https://begin.com">
+          <img className="h-6" src="/images/begin.svg" />
         </a>
-      </p>
+      </div>
     </div>
   </div>
 </div>

@@ -29,7 +29,7 @@ body {
 }
 
 .animate-btn:hover {
-    @apply text-white;
+    @apply text-lightGreen-200;
     background-position: left bottom;
 }
 
@@ -40,7 +40,7 @@ body {
 .animate-btn::after {
     content: "";
     position: absolute;
-    background-color: #16FF11;
+    background-color: #16ff11;
     height: 100%;
     width: 100%;
     z-index: -1;
@@ -90,7 +90,7 @@ body {
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1880px) and (-webkit-min-device-pixel-ratio: 1) {
     .logo img {
-        @apply w-300 mb-5;
+        @apply w-300 mb-5 -mt-8;
     }
 
     .custom-btn {
@@ -122,7 +122,7 @@ body {
     only screen and (min-resolution: 227dpi),
     only screen and (min-resolution: 2dppx) {
     .logo img {
-        @apply w-450 mb-10;
+        @apply w-400 mb-10 -mt-12;
     }
     .custom-btn {
         @apply text-black py-4 px-6 uppercase border-none rounded-md text-xl font-extrabold bg-lightGreen-200;
@@ -146,13 +146,22 @@ body {
     }
 }
 
+.arrow-link {
+    @apply mt-5 text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase leading-6;
+    transition: transform 0.3s cubic-bezier(1, .06, .16, 1.03);
+}
+
+.arrow-link:hover {
+    @apply text-blue-100 bg-lightGreen-200;
+}
+
 .arrow-link span {
     display: inline-block;
     transition: 0.3s ease-in;
 }
 
 .arrow-link:hover span {
-    transform: translateX(50%);
+    padding: 0 10px;
 }
 
 .animation-duration-500 {

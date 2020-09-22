@@ -112,11 +112,11 @@ const Home = () => {
             {"Connecting the world’s top designers and developers to redefine the bounds of possibility through an exciting exploration of cutting-edge technologies, lessons, & patterns"}</p>
           <NotifyForm buttonClass="" textClass="text-black" />
           <div className="my-3 flex justify-center flex-grow items-end">
-          <Link href="/term-service"><a className="text-gray-300 font-medium text-base hover:text-blue-100">Terms of Service</a></Link>
-            <span className="px-1 text-base">•</span>
-            <Link href="/privacy-policy"><a className="text-gray-300 font-medium text-base hover:text-blue-100">Privacy Policy</a></Link>
-            <span className="px-1 text-base">•</span>
-            <Link href="/code-of-conduct"><a className="text-gray-300 font-medium text-base hover:text-blue-100" >Code of Conduct</a></Link>
+          <Link href="/term-service"><a className="text-gray-300 font-medium sm:text-sm lg:text-base hover:text-blue-100">Terms of Service</a></Link>
+            <span className="px-1 sm:text-sm lg:text-base">•</span>
+            <Link href="/privacy-policy"><a className="text-gray-300 font-medium sm:text-sm lg:text-base hover:text-blue-100">Privacy Policy</a></Link>
+            <span className="px-1 sm:text-sm lg:text-base">•</span>
+            <Link href="/code-of-conduct"><a className="text-gray-300 font-medium sm:text-sm lg:text-base hover:text-blue-100" >Code of Conduct</a></Link>
           </div>
         </div>
         <div className="sm:hidden md:flex mr-8 relative top-1/2 transform -translate-y-48 right-bar">

@@ -32,15 +32,15 @@ const NavMenu = (props: any) => {
         <img src="/images/close.svg" className="sm:hidden md:inline cursor-pointer" onClick={menuOpen} />
         <img src="/images/close-white.svg" className="md:hidden sm:inline cursor-pointer" onClick={menuOpen} />
       </div>
-      <div className="flex md:w-3/5 sm:w-full mx-auto md:my-10 sm:my-5">
-        <div className="w-1/4 sm:hidden md:block">
+      <div className="flex sm:flex-wrap md:flex-no-wrap md:w-3/5 sm:w-full mx-auto md:my-10 sm:my-5 overflow-auto max-h-full-100">
+        <div className="md:w-2/5 sm:w-full sm:mx-5 md:mx-0">
           <p><Link href="/term-service"><a className={linkClass} >Terms of Service</a></Link> </p>
           <p><Link href="/privacy-policy"><a className={linkClass} >Privacy Policy</a></Link></p>
           <p><a className={linkClass} href="https://www.google.co.in/">Selection Committee</a></p>
           <p><a className={linkClass} href="https://www.google.co.in/">Workshops</a></p>
           <p><a className={linkClass} href="https://www.google.co.in/">Jobs</a></p>
         </div>
-        <div className="md:w-2/5 sm:w-full flex flex-col mx-5">
+        <div className="md:w-2/5 sm:w-full flex flex-col mx-5 sm:order-first md:order-none">
           {buttonList.map(b => <>
             {!handleButtonClick && <Link href="/">
             <button
@@ -71,7 +71,7 @@ const NavMenu = (props: any) => {
             schedule - coming soon
             </button>
         </div>
-        <div className="w-1/4 ml-16 sm:hidden md:block">
+        <div className="md:w-2/5 sm:w-full sm:mx-5 md:ml-16">
           <p><a className={linkClass} href="https://www.google.co.in/">Volunteer</a></p>
           <p><a className={linkClass} href="https://www.google.co.in/">Request for Sponsorship</a></p>
           <p><a className={linkClass} href="https://www.google.co.in/">Apply for Scholarship</a></p>
