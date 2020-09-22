@@ -131,25 +131,31 @@ export const SpeakerFilters = [
   },
   {
     id: 6,
+    title: 'Open Source',
+    image: '/images/speakerFilter/track-open-source-icon.svg',
+    selected: false
+  },
+  {
+    id: 7,
     title: 'react',
     image: '/images/speakerFilter/track-react-icon.svg',
     selected: false
   },
   {
-    id: 7,
+    id: 8,
     title: 'Serverless',
     image: '/images/speakerFilter/track-serverless-icon.svg',
     selected: false
   },
   ,
   {
-    id: 8,
+    id: 9,
     title: 'Svelte',
     image: '/images/speakerFilter/track-svelte.svg',
     selected: false
   },
   {
-    id: 9,
+    id: 10,
     title: 'Vue',
     image: '/images/speakerFilter/track-vue-icon.svg',
     selected: false
@@ -165,22 +171,22 @@ export const links = [
       {
         title: 'home',
         pageName: 'home',
-        url:'/'
+        url: '/'
       },
       {
         title: 'Speakers',
         pageName: 'speakers',
-        url:'/'
+        url: '/'
       },
       {
         title: 'Sponsors',
         pageName: 'sponsors',
-        url:'/'
+        url: '/'
       },
       {
         title: 'curators',
         pageName: 'curators',
-        url:'/'
+        url: '/'
       },
     ]
   },
@@ -263,18 +269,18 @@ export const links = [
 export const buttonList = [
   {
     label: 'Home',
-    pageName :'home'
+    pageName: 'home'
   },
   {
     label: 'speakers',
-    pageName :'speakers'
+    pageName: 'speakers'
   },
   {
     label: 'sponsors',
-    pageName :'sponsors'
+    pageName: 'sponsors'
   },
   {
     label: 'curators',
-    pageName :'curators'
+    pageName: 'curators'
   }
 ]

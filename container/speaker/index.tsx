@@ -136,7 +136,7 @@ const Speaker = (props: VisibleProps) => {
             )
           })}
         </div>
-        <div className="lg:mr-2 sm:mr-0 lg:w-1/5 sm:w-1/2 mt-48 sm:pr-5 lg:pr-0 sm:pl-2 lg:pl-0 sm:hidden lg:block">
+        <div className="lg:mr-2 sm:mr-0 lg:w-1/5 sm:w-1/2 mt-48 sm:pr-5 lg:pr-0 sm:pl-2 lg:pl-0 lg:block">
           {finalSplitedArray[3].map((item, index) => {
             const { image, name, title, company, location } = item;
             return (
