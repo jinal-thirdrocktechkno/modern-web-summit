@@ -248,7 +248,7 @@
     "location": "Cleveland, OH",
     "bio": "",
     "image": "/images/speaker-eric-meyer",
-    "track": "Serverless",
+    "track": "CSS",
     "isFeatured": "",
     "twitterHandle": "meyerweb"
   },
@@ -394,5 +394,49 @@
     "track": "Accessibility",
     "isFeatured": "",
     "twitterHandle": "xirclebox"
+  },
+  {
+    "name": "Myles Borins",
+    "title": "Staff Product Manager, Open Source",
+    "company": "GitHub",
+    "location": "New York NY",
+    "bio": "",
+    "image": "/images/speaker-myles-borins",
+    "track": "",
+    "isFeatured": "",
+    "twitterHandle": "MylesBorins"
+  },
+  {
+    "name": "Christian Nwamba",
+    "title": "Software Engineer",
+    "company": "Microsoft",
+    "location": "Lagos, Nigeria",
+    "bio": "Christian Nwamba is a developer advocate at Microsoft. He's keen about the next billion users and emerging tech markets. He's constantly seeking for more ways to make technology accessible to beginners, developing countries, underrepresented groups, etc.",
+    "image": "/images/speaker-christian-nwamba",
+    "track": "Serverless",
+    "isFeatured": "",
+    "twitterHandle": "codebeast"
+  },
+  {
+    "name": "Chris DeMars",
+    "title": "Developer Advocate",
+    "company": "Quicken Loans",
+    "location": "Detroit, MI",
+    "bio": "",
+    "image": "/images/speaker-chris-demars",
+    "track": "Accessibility",
+    "isFeatured": "",
+    "twitterHandle": "saltnburnem"
+  },
+  {
+    "name": "John Samuel",
+    "title": "Chief Innovation Architect",
+    "company": "LCI Tech",
+    "location": "Durham, NC",
+    "bio": "",
+    "image": "/images/speaker-john-samuel",
+    "track": "Accessibility",
+    "isFeatured": "",
+    "twitterHandle": ""
   }
 ]
