@@ -13,7 +13,7 @@ const ProfileCard = (props: ProfileCardProps) => {
       </div> : <div className="bg-gray-400 p-5">
           <h5 className="text-white uppercase text-base">{name}</h5>
           <p className="capitalize text-white text-opacity-75 text-sm">{designation}</p>
-          <p className="text-white text-opacity-75 text-sm italic mt-2 flex items-center"><img className="inline mr-2" src="/images/office.svg" alt="office" /> <span>{companyName}</span></p>
+          {companyName && <p className="text-white text-opacity-75 text-sm italic mt-2 flex items-center"><img className="inline mr-2" src="/images/office.svg" alt="office" /> <span>{companyName}</span></p>}
           <p className="text-white text-opacity-75 text-sm italic md:flex sm:hidden items-center"><img className="inline mr-2" src="/images/map-pin.svg" alt="address" /> <span>{locationFull}</span></p>
           <p className="text-white text-opacity-75 text-sm italic md:hidden sm:flex items-center"><img className="inline mr-2" src="/images/map-pin.svg" alt="address" /> <span>{locationSort}</span></p>
         </div>}
@@ -24,7 +24,7 @@ const ProfileCard = (props: ProfileCardProps) => {
       <div className="bg-gray-400 p-5">
         <h5 className="text-white uppercase text-base">{name}</h5>
         <p className="capitalize text-white text-opacity-75 text-sm">{designation}</p>
-        <p className="text-white text-opacity-75 text-sm italic mt-2 flex items-center"><img className="inline mr-2" src="/images/office.svg" alt="office" /> <span>{companyName}</span></p>
+        {companyName && <p className="text-white text-opacity-75 text-sm italic mt-2 flex items-center"><img className="inline mr-2" src="/images/office.svg" alt="office" /> <span>{companyName}</span></p>}
         <p className="text-white text-opacity-75 text-sm italic md:flex sm:hidden items-center"><img className="inline mr-2" src="/images/map-pin.svg" alt="address" /> <span>{locationFull}</span></p>
         <p className="text-white text-opacity-75 text-sm italic md:hidden sm:flex items-center"><img className="inline mr-2" src="/images/map-pin.svg" alt="address" /> <span>{locationSort}</span></p>
       </div>
