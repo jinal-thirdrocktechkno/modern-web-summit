@@ -51,7 +51,7 @@ const Curators = (props: any) => {
                 </div>
                 <div className="flex flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
                   <p className="text-gray-300 text-1-2 font-medium">{bio}</p>
-                  {twitterURL !== '' && <a 
+                  {twitterURL !== '' && <a href={'https://twitter.com/mwSummit'}
                   className="text-blue-100 text-1-2 font-medium cursor-pointer">
                     {"Send us your best guesses on twitter!"}
                     </a>}
