@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import {shuffle} from 'lodash'
+import React, { useState, useEffect, Fragment } from 'react'
+// import {shuffle} from 'lodash'
 import ProfileCard from '../../components/profileCard'
 import SpeakerFilter from '../../components/speakerFilter'
 import { SpeakerFilters } from '../../utility/constants'
 import speakerList from '../../utility/speakerList.json'
+
+
 const Speaker = (props: any) => {
   const { isVisible, selectedSpeaker } = props
   const [className, setClass] = useState('')
@@ -15,13 +17,13 @@ const Speaker = (props: any) => {
   })
 
   useEffect(() => {
-    if(selectedSpeaker && selectedSpeaker !== ''){
+    if (selectedSpeaker && selectedSpeaker !== '') {
       let id = filters.filter(s => s.title === selectedSpeaker)[0].id
       let finalFilter = formatFilters(filters, id, true)
       setFilters(finalFilter.sort((a, b) => (a.id > b.id) ? 1 : -1))
 
     }
-  },[selectedSpeaker])
+  }, [selectedSpeaker])
 
   const selectedFilters = filters.filter(i => i.selected).map(i => i.title)
   let speakerFilteredList = speakerList.filter(({ track }) => {
@@ -37,13 +39,14 @@ const Speaker = (props: any) => {
   if (selectedFilters.includes('All Tracks'))
     speakerFilteredList = speakerList
 
-  
+
   const finalSplitedArray = [[], [], [], []]
-  shuffle(speakerFilteredList).forEach((speaker, i) => {
+  // shuffle(speakerFilteredList).forEach((speaker, i) => {
+  speakerFilteredList.forEach((speaker, i) => {
     finalSplitedArray[i % 4].push(speaker)
   });
 
-  const formatFilters = (filters: { id: number; title: string; image: string; selected: boolean }[], id: number, fromCurator : boolean = false) => {
+  const formatFilters = (filters: { id: number; title: string; image: string; selected: boolean }[], id: number, fromCurator: boolean = false) => {
     const newFilter = filters.slice(0)
     const allTrackId = filters.find(item => item.title === 'All Tracks').id
     let finalFilter = []
@@ -57,9 +60,9 @@ const Speaker = (props: any) => {
     else {
       let selectedCount = 0
       finalFilter = newFilter.map(item => {
-        if (item.id === id) { item.selected = !item.selected } 
+        if (item.id === id) { item.selected = !item.selected }
         else {
-          if(fromCurator) {
+          if (fromCurator) {
             item.selected = false
           }
         }
@@ -96,18 +99,19 @@ const Speaker = (props: any) => {
           {finalSplitedArray[0].map((item, index) => {
             const { image, name, title, company, location } = item;
             return (
-              <ProfileCard
-                isForDescription={false}
-                imageClass=""
-                isLast={false}
-                key={index}
-                imageUrl={image + '.jpg'}
-                name={name}
-                designation={title}
-                companyName={company}
-                locationFull={location}
-                locationSort={location}
-              />
+              <React.Fragment key={`0-${index}`}>
+                <ProfileCard
+                  isForDescription={false}
+                  imageClass=""
+                  isLast={false}
+                  key={`0-${index}`}
+                  imageUrl={image + '.jpg'}
+                  name={name}
+                  designation={title}
+                  companyName={company}
+                  locationFull={location}
+                />
+              </React.Fragment>
             )
           })}
         </div>
@@ -115,18 +119,18 @@ const Speaker = (props: any) => {
           {finalSplitedArray[1].map((item, index) => {
             const { image, name, title, company, location } = item;
             return (
+              <React.Fragment key={`1-${index}`}>
               <ProfileCard
                 isForDescription={false}
                 imageClass=""
                 isLast={false}
-                key={index}
+                key={`1-${index}`}
                 imageUrl={image + '.jpg'}
                 name={name}
                 designation={title}
                 companyName={company}
                 locationFull={location}
-                locationSort={location}
-              />
+              /></React.Fragment>
             )
           })}
         </div>
@@ -134,18 +138,18 @@ const Speaker = (props: any) => {
           {finalSplitedArray[2].map((item, index) => {
             const { image, name, title, company, location } = item;
             return (
+              <React.Fragment key={`2-${index}`}>
               <ProfileCard
                 isForDescription={false}
                 imageClass=""
                 isLast={false}
-                key={index}
+                key={`2-${index}`}
                 imageUrl={image + '.jpg'}
                 name={name}
                 designation={title}
                 companyName={company}
                 locationFull={location}
-                locationSort={location}
-              />
+              /></React.Fragment>
             )
           })}
         </div>
@@ -153,18 +157,18 @@ const Speaker = (props: any) => {
           {finalSplitedArray[3].map((item, index) => {
             const { image, name, title, company, location } = item;
             return (
+              <React.Fragment key={`3-${index}`}>
               <ProfileCard
                 isForDescription={false}
                 imageClass=""
                 isLast={false}
-                key={index}
+                key={`3-${index}`}
                 imageUrl={image + '.jpg'}
                 name={name}
                 designation={title}
                 companyName={company}
                 locationFull={location}
-                locationSort={location}
-              />
+              /></React.Fragment>
             )
           })}
         </div>
