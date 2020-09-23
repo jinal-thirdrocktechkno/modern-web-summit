@@ -16,9 +16,9 @@ const CodeOfConduct = () => <>
           <h5 className="text-2xl font-extrabold uppercase lg:w-3/4" >{"We take conduct at the Modern web summit very seriously. please take the time to read it!"}</h5>
           {CodeOfConductList.map((p,i) =>
             <React.Fragment key={i}>
-              {p.point && <p className={'text-gray-300 font-extrabold text-base lg:w-3/4'}>{p.point}</p>}
-              {p.dot && <p className={'text-gray-300 text-base lg:w-3/4'}>•{p.dot}</p>}
-              {p.text && <p className={'text-gray-300 font-medium text-base lg:w-3/4'}>{p.text}</p>}
+              {p.point && <p className={'text-gray-300 font-extrabold text-1-2 lg:w-3/4'}>{p.point}</p>}
+              {p.dot && <p className={'text-gray-300 text-1-2 lg:w-3/4'}>•{p.dot}</p>}
+              {p.text && <p className={'text-gray-300 font-medium text-1-2 lg:w-3/4'}>{p.text}</p>}
               <br />
             </React.Fragment>
           )}

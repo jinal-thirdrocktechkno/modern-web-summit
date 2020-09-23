@@ -8,7 +8,7 @@ const StickyHeader = (props) => {
       <Link href="/"><img className="inline cursor-pointer sm:h-8 md:h-10 sm:ml-5 md:ml-10" src="/images/mws-logo.svg" alt="logo" /></Link>
     </div>
     <button
-      className="text-black py-1 px-4 md:mr-10 transition-all duration-200 uppercase border-2 border-lightGreen-200 rounded-md text-base font-extrabold bg-lightGreen-200 hover:text-lightGreen-200 hover:bg-black focus:outline-none"
+      className="text-black py-1 px-4 md:mr-10 transition-all duration-200 uppercase border-2 border-lightGreen-200 rounded-md text-1-2 font-extrabold bg-lightGreen-200 hover:text-lightGreen-200 hover:bg-black focus:outline-none"
       type="button">
       get tickets
     </button>

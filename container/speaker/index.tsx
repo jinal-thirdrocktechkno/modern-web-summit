@@ -73,7 +73,7 @@ const Speaker = (props: VisibleProps) => {
         </div>
         <div className="flex flex-col p-6 sm:text-center lg:text-left lg:pt-24">
           <h5 className="text-2xl font-extrabold uppercase" >{"5 days, 100+ sessions, workshops, & Discussions"}</h5>
-          <p className="text-gray-300 font-medium text-base lg:w-5/6 sm:w-full ">{"Whether you’re interested in learning a new technology or advancing your skills in a familiar stack, there’s something for everyone at the Modern Web Summit."}</p>
+          <p className="text-gray-300 font-medium text-1-2 lg:w-5/6 sm:w-full ">{"Whether you’re interested in learning a new technology or advancing your skills in a familiar stack, there’s something for everyone at the Modern Web Summit."}</p>
         </div>
       </div>
 
@@ -117,7 +117,7 @@ const Speaker = (props: VisibleProps) => {
             )
           })}
         </div>
-        <div className="lg:mr-2 sm:mr-0 lg:w-1/5 sm:w-1/2 mt-32 sm:pl-5 lg:pl-0 sm:pr-2 lg:pr-0 sm:hidden lg:block">
+        <div className="lg:mr-2 sm:mr-0 lg:w-1/5 sm:w-1/2 sm:-mt-16 lg:mt-32 sm:pl-5 lg:pl-0 sm:pr-2 lg:pr-0">
           {finalSplitedArray[2].map((item, index) => {
             const { image, name, title, company, location } = item;
             return (
@@ -136,7 +136,7 @@ const Speaker = (props: VisibleProps) => {
             )
           })}
         </div>
-        <div className="lg:mr-2 sm:mr-0 lg:w-1/5 sm:w-1/2 mt-48 sm:pr-5 lg:pr-0 sm:pl-2 sm:hidden lg:pl-0 lg:block">
+        <div className="lg:mr-2 sm:mr-0 lg:w-1/5 sm:w-1/2 lg:mt-48 sm:pr-5 lg:pr-0 sm:pl-2 lg:pl-0">
           {finalSplitedArray[3].map((item, index) => {
             const { image, name, title, company, location } = item;
             return (
@@ -157,7 +157,7 @@ const Speaker = (props: VisibleProps) => {
         </div>
         <div className="lg:flex sm:hidden flex-col mb-2 w-1/5 mt-32">
           <div className="sticky top-0 pt-5">
-            <p className="uppercase text-base text-center font-extrabold">refine by track</p>
+            <p className="uppercase text-1-2 text-center font-extrabold">refine by track</p>
             <SpeakerFilter
               onClick={handleFilterClick}
               filterList={filters}

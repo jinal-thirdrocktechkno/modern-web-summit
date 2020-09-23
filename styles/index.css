@@ -14,7 +14,7 @@ body {
 }
 
 .custom-btn {
-    @apply text-black py-4 px-6 uppercase border-none rounded-md text-xl font-extrabold bg-lightGreen-200 min-w-275;
+    @apply text-black py-4 px-6 uppercase rounded-md text-xl font-extrabold bg-lightGreen-200 min-w-275;
 }
 
 .animate-btn {
@@ -52,10 +52,20 @@ body {
 
 .profile-card img {
     filter: grayscale(100%);
+    transition: 0.3s ease-in-out;
 }
 
 .profile-card:hover img {
     filter: grayscale(0%);
+    transition: 0.3s ease-in-out;
+}
+
+.profile-card:hover h5 {
+    @apply text-lightGreen-200;
+}
+
+.profile-card:hover p {
+    @apply opacity-100;
 }
 
 .sponsor-img {
@@ -147,12 +157,14 @@ body {
 }
 
 .arrow-link {
-    @apply mt-5 text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase leading-6;
-    transition: transform 0.3s cubic-bezier(1, .06, .16, 1.03);
+    @apply mt-5 text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase leading-6 text-black transition-all duration-300;
+    background: linear-gradient(to right, #16FF11 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
 }
 
 .arrow-link:hover {
-    @apply text-blue-100 bg-lightGreen-200;
+    background-position: left bottom;
 }
 
 .arrow-link span {
@@ -161,7 +173,7 @@ body {
 }
 
 .arrow-link:hover span {
-    padding: 0 10px;
+    transform: translateX(15px);
 }
 
 .animation-duration-500 {

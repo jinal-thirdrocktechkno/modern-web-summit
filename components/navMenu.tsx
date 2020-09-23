@@ -5,7 +5,7 @@ import { buttonList } from '../utility/constants'
 const NavMenu = (props: any) => {
   const { menuOpen, handleButtonClick } = props
   const buttonClass = "menu-btn border-2 mb-5 p-6 border-gray-400 text-xl font-extrabold uppercase text-gray-400 hover:bg-gray-400 focus:outline-none hover:text-white"
-  const linkClass = "text-base text-gray-300 font-medium hover:text-blue-100"
+  const linkClass = "text-1-2 text-gray-300 font-medium hover:text-blue-100"
 
   useEffect(() => {
     document.body.classList.add('overflow-hidden');
@@ -32,10 +32,10 @@ const NavMenu = (props: any) => {
         <img src="/images/close.svg" className="sm:hidden md:inline cursor-pointer" onClick={menuOpen} />
         <img src="/images/close-white.svg" className="md:hidden sm:inline cursor-pointer" onClick={menuOpen} />
       </div>
-      <div className="flex sm:flex-wrap md:flex-no-wrap md:w-3/5 sm:w-full mx-auto md:my-10 sm:my-5 overflow-auto max-h-full-100">
+      <div className="flex sm:flex-wrap md:flex-no-wrap md:w-3/5 sm:w-full mx-auto md:my-10 sm:my-5 sm:pb-40 md:pb-0 overflow-auto max-h-full-100">
         <div className="md:w-2/5 sm:w-full sm:mx-5 md:mx-0">
-          <p><Link href="/term-service"><a className={linkClass} >Terms of Service</a></Link> </p>
-          <p><Link href="/privacy-policy"><a className={linkClass} >Privacy Policy</a></Link></p>
+          {/* <p><Link href="/term-service"><a className={linkClass} >Terms of Service</a></Link> </p>
+          <p><Link href="/privacy-policy"><a className={linkClass} >Privacy Policy</a></Link></p> */}
           <p><a className={linkClass} href="https://www.google.co.in/">Selection Committee</a></p>
           <p><a className={linkClass} href="https://www.google.co.in/">Workshops</a></p>
           <p><a className={linkClass} href="https://www.google.co.in/">Jobs</a></p>
