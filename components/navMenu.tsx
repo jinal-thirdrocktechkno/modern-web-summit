@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Link from 'next/link'
-import {buttonList} from '../utility/constants'
+import { buttonList } from '../utility/constants'
 
 const NavMenu = (props: any) => {
   const { menuOpen, handleButtonClick } = props
@@ -24,7 +24,7 @@ const NavMenu = (props: any) => {
       }, 500)
     }
   }
-  
+
 
   return (
     <div className="bg-white fixed top-0 inset-x-0 z-50 shadow-xs h-screen">
@@ -42,19 +42,14 @@ const NavMenu = (props: any) => {
         </div>
         <div className="md:w-1/2 sm:w-full flex flex-col mx-5 sm:order-first md:order-none">
           {buttonList.map(b => <>
-            {!handleButtonClick && <Link href="/">
-            <button
-              onClick={() => onButtonClick(b.pageName)}
-              className={buttonClass}
-              type="button" >
-              {b.label}
-            </button>
-          </Link> || <button
-            onClick={() => onButtonClick(b.pageName)}
-            className={buttonClass}
-            type="button" >
-              {b.label}
-            </button>}
+            <Link href={`/#${b.pageName}`}>
+              <button
+                onClick={() => onButtonClick(b.pageName)}
+                className={buttonClass}
+                type="button" >
+                {b.label}
+              </button>
+            </Link>
           </>)}
           <Link href="/code-of-conduct">
             <button
@@ -72,7 +67,11 @@ const NavMenu = (props: any) => {
             </button>
         </div>
         <div className="md:w-2/5 sm:w-full sm:mx-5 md:ml-16">
-          <p><a className={linkClass} href="https://www.google.co.in/">Volunteer</a></p>
+          <p>
+            <a className={linkClass} href="https://docs.google.com/forms/d/e/1FAIpQLScxt_u_khXb3AAn7zp8clvpktpWHSmx01pN1N0xtTDvQB5aaA/viewform">
+              Volunteer
+            </a>
+          </p>
           <p><a className={linkClass} href="https://www.google.co.in/">Request for Sponsorship</a></p>
           <p><a className={linkClass} href="https://www.google.co.in/">Apply for Scholarship</a></p>
           <p><a className={linkClass} href="https://www.google.co.in/">Convince your boss</a></p>

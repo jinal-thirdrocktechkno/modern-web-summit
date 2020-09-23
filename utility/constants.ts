@@ -169,24 +169,20 @@ export const links = [
 
     link: [
       {
-        title: 'home',
-        pageName: 'home',
+        title: 'Home',
         url: '/'
       },
       {
         title: 'Speakers',
-        pageName: 'speakers',
-        url: '/'
+        url: '/#speakers'
       },
       {
         title: 'Sponsors',
-        pageName: 'sponsors',
-        url: '/'
+        url: '/#sponsors'
       },
       {
-        title: 'curators',
-        pageName: 'curators',
-        url: '/'
+        title: 'Curators',
+        url: '/#curators'
       },
     ]
   },
@@ -196,72 +192,76 @@ export const links = [
       // {
       //   title: 'Terms of Service',
       //   url: '/term-service',
-      //   pageName: '',
       // },
       // {
       //   title: 'Privacy Policy',
       //   url: '/privacy-policy',
-      //   pageName: '',
       // },
       {
         title: 'Code of Conduct',
         url: '/code-of-conduct',
-        pageName: '',
       },
       {
-        title: 'Selection Committee',
-        url: 'https://www.google.com/',
-        pageName: '',
-      },
-    ]
-  },
-  {
-    link: [
-      {
-        title: 'WorkShops',
-        url: 'https://www.google.com/',
-        pageName: '',
+        title: 'Workshops - coming soon',
+        url: '',
       },
       {
-        title: 'Jobs',
-        url: 'https://www.google.com/',
-        pageName: '',
-      },
-      {
-        title: 'Volunteer',
-        url: 'https://www.google.com/',
-        pageName: '',
+        title: 'Jobs - coming soon',
+        url: '',
       },
       {
         title: 'Schedule - coming soon',
-        url: 'https://www.google.com/',
-        pageName: '',
+        url: '',
       },
+      // {
+      //   title: 'Selection Committee',
+      //   url: 'https://www.google.com/',
+      // }
     ]
   },
+  // {
+  //   link: [
+  //     {
+  //       title: 'Workshops',
+  //       url: 'https://www.google.com/',
+  //     },
+  //     {
+  //       title: 'Jobs',
+  //       url: 'https://www.google.com/',
+  //     },
+  //     {
+  //       title: 'Volunteer',
+  //       url: 'https://docs.google.com/forms/d/e/1FAIpQLScxt_u_khXb3AAn7zp8clvpktpWHSmx01pN1N0xtTDvQB5aaA/viewform',
+  //     },
+  //     {
+  //       title: 'Schedule - coming soon',
+  //       url: 'https://www.google.com/',
+  //     },
+  //   ]
+  // },
 
   {
     link: [
       {
-        title: 'Request for SponsorShip',
+        title: 'Request for Sponsorship',
         url: '',
-        pageName: '',
       },
-      {
-        title: 'Apply for Scholarship',
-        url: '',
-        pageName: '',
-      },
-      {
-        title: 'Convince your boss',
-        url: '',
-        pageName: '',
-      },
+      // {
+      //   title: 'Apply for Scholarship',
+      //   url: '',
+      // },
+      // {
+      //   title: 'Convince your boss',
+      //   url: '',
+      // },
       {
         title: 'Submit a talk proposal',
         url: '',
-        pageName: '',
       },
+      {
+        title: 'Volunteers',
+        url: 'https://docs.google.com/forms/d/e/1FAIpQLScxt_u_khXb3AAn7zp8clvpktpWHSmx01pN1N0xtTDvQB5aaA/viewform',
+      }
     ]
   }
 ]

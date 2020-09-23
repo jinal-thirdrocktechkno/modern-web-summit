@@ -1,7 +1,7 @@
 import React from 'react'
 import AnimationWrapper from './animationWrapper'
 
-const AboutDescription = (props: AboutDescriptionProps) => {
+const AboutDescription = (props: any) => {
   const {
     image,
     parentClass,
@@ -27,13 +27,3 @@ const AboutDescription = (props: AboutDescriptionProps) => {
 
 }
 export default AboutDescription
-
-type AboutDescriptionProps = {
-  title: string
-  image: string,
-  parentClass: string,
-  firstDescription: string,
-  secondDescription: string,
-  linkText: string,
-  url: string
-}

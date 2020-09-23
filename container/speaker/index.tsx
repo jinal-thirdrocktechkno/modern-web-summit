@@ -93,7 +93,7 @@ const Speaker = (props: VisibleProps) => {
                 designation={title}
                 companyName={company}
                 locationFull={location}
-                locationSort="San Francisco, CA"
+                locationSort={location}
               />
             )
           })}
@@ -112,7 +112,7 @@ const Speaker = (props: VisibleProps) => {
                 designation={title}
                 companyName={company}
                 locationFull={location}
-                locationSort="San Francisco, CA"
+                locationSort={location}
               />
             )
           })}
@@ -131,7 +131,7 @@ const Speaker = (props: VisibleProps) => {
                 designation={title}
                 companyName={company}
                 locationFull={location}
-                locationSort="San Francisco, CA"
+                locationSort={location}
               />
             )
           })}
@@ -150,7 +150,7 @@ const Speaker = (props: VisibleProps) => {
                 designation={title}
                 companyName={company}
                 locationFull={location}
-                locationSort="San Francisco, CA"
+                locationSort={location}
               />
             )
           })}
