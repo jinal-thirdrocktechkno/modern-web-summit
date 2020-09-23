@@ -46,7 +46,6 @@ const Curators = (props: any) => {
                     designation={title}
                     companyName={company}
                     locationFull={location}
-                    locationSort={location}
                   />
                 </div>
                 <div className="flex flex-col md:w-2/3 sm:w-full md:pl-10 sm:pl-0 md:text-left sm:text-center">
