@@ -13,7 +13,7 @@ const ProfileCard = (props: ProfileCardProps) => {
       </div> : <div className="bg-gray-400 p-5">
           <h5 className="text-white uppercase text-1-2">{name}</h5>
           <p className="capitalize text-white opacity-75 text-sm">{designation}</p>
-          <p className="text-white opacity-75 text-sm mt-2 flex items-baseline"><img className="inline mr-2 h-3" src="/images/office.svg" alt="office" /> <span>{companyName}</span></p>
+          {companyName && <p className="text-white opacity-75 text-sm mt-2 flex items-baseline"><img className="inline mr-2 h-3" src="/images/office.svg" alt="office" /> <span>{companyName}</span></p>}
           <p className="text-white opacity-75 text-sm md:flex sm:hidden items-baseline"><img className="inline mr-2 h-3" src="/images/map-pin.svg" alt="address" /> <span>{locationFull}</span></p>
           <p className="text-white opacity-75 text-sm md:hidden sm:flex items-baseline"><img className="inline mr-2 h-3" src="/images/map-pin.svg" alt="address" /> <span>{locationSort}</span></p>
         </div>}
@@ -24,7 +24,7 @@ const ProfileCard = (props: ProfileCardProps) => {
       <div className="bg-gray-400 p-5">
         <h5 className="text-white uppercase text-1-2">{name}</h5>
         <p className="capitalize text-white opacity-75 text-sm">{designation}</p>
-        <p className="text-white opacity-75 text-sm mt-2 flex items-baseline"><img className="inline mr-2 h-3" src="/images/office.svg" alt="office" /> <span>{companyName}</span></p>
+        {companyName && <p className="text-white opacity-75 text-sm mt-2 flex items-baseline"><img className="inline mr-2 h-3" src="/images/office.svg" alt="office" /> <span>{companyName}</span></p>}
         <p className="text-white opacity-75 text-sm md:flex sm:hidden items-baseline"><img className="inline mr-2 h-3" src="/images/map-pin.svg" alt="address" /> <span>{locationFull}</span></p>
         <p className="text-white opacity-75 text-sm md:hidden sm:flex items-baseline"><img className="inline mr-2 h-3" src="/images/map-pin.svg" alt="address" /> <span>{locationSort}</span></p>
       </div>
