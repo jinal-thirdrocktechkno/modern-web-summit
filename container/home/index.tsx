@@ -19,6 +19,7 @@ import Link from 'next/link'
 const Home = () => {
   const [showMenu, setShowMenu] = useState(false)
   const [displayMenu, setDisplayMenu] = useState(false)
+  const [selectedSpeaker, setSelectedSpeaker] = useState('')
 
   const menuOpen = () => {
     setShowMenu(!showMenu);
@@ -99,10 +100,10 @@ const Home = () => {
         <SectionWrapper Component={About} />
       </div>
       <div id="speakers" className='sm:m-0 md:m-10'>
-        <SectionWrapper Component={Speaker} />
+        <SectionWrapper Component={Speaker} selectedSpeaker={selectedSpeaker} onSelectSpeaker={() => setSelectedSpeaker('')}/>
       </div>
       <div id="curators" className="sm:m-0 md:m-10">
-        <SectionWrapper Component={Curators} />
+        <SectionWrapper Component={Curators} onSelectSpeaker={(type) => setSelectedSpeaker(type)}/>
       </div>
       <div id="sponsors" className='sm:m-0 md:m-10'>
         <SectionWrapper Component={Sponsor} />
