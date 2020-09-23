@@ -130,7 +130,7 @@ const Speaker = (props: any) => {
             )
           })}
         </div>
-        <div className="lg:mr-2 sm:mr-0 lg:w-1/5 sm:w-1/2 sm:-mt-16 lg:mt-32 sm:pl-5 lg:pl-0 sm:pr-2 lg:pr-0">
+        <div className="lg:mr-2 sm:mr-0 lg:w-1/5 sm:w-1/2 sm:mt-0 lg:mt-32 sm:pl-5 lg:pl-0 sm:pr-2 lg:pr-0">
           {finalSplitedArray[2].map((item, index) => {
             const { image, name, title, company, location } = item;
             return (
