@@ -16,19 +16,12 @@ import ReactVisibilitySensor from 'react-visibility-sensor'
 import StickyHeader from '../../components/stickyHeader'
 import Link from 'next/link'
 
-const ScrollToRef = (ref) => ref.current.scrollIntoView()
-
 const Home = () => {
   const [showMenu, setShowMenu] = useState(false)
   const [displayMenu, setDisplayMenu] = useState(false)
 
   const menuOpen = () => {
     setShowMenu(!showMenu);
-    // if (!showMenu) {
-    //   document.body.classList.add('overflow-hidden');
-    // } else {
-    //   document.body.classList.remove('overflow-hidden');
-    // }
   }
 
   useEffect(() => {
@@ -42,37 +35,8 @@ const Home = () => {
     })
     return () => {
       window.removeEventListener('scroll', () => { })
-      // document.body.classList.remove('overflow-hidden');
     }
   }, [])
-
-  let speakerRef = useRef(null)
-  let sponsorRef = useRef(null)
-  let curatorsRef = useRef(null)
-  let homeRef = useRef(null)
-
-  const handleButtonClick = (type) => {
-    switch (type) {
-      case 'speakers': {
-        ScrollToRef(speakerRef)
-      }
-        break;
-      case 'sponsors': {
-        ScrollToRef(sponsorRef)
-      }
-        break;
-      case 'curators': {
-        ScrollToRef(curatorsRef)
-      }
-        break;
-      default: {
-        ScrollToRef(homeRef)
-      }
-        break;
-    }
-    menuOpen()
-  }
-
 
   return (
     <div className='h-full'>
@@ -81,18 +45,15 @@ const Home = () => {
           <img className="sm:hidden md:inline p-2 ml-2 mt-1 cursor-pointer" src="/images/menu.svg" alt="logo" />
           <img className="md:hidden sm:inline p-2 ml-2 mt-1 cursor-pointer" src="/images/menu-white.svg" alt="logo" />
         </div>
-        {showMenu &&
-          <NavMenu
-            menuOpen={menuOpen}
-            handleButtonClick={handleButtonClick} />}
+        {showMenu && <NavMenu menuOpen={menuOpen} />}
         <div className="items-center mr-10 sm:hidden md:flex">
-          <a href="https://www.google.co.in/">
+          <a href="https://twitter.com/mwSummit">
             <img className="inline p-2" src="/images/Twitter.svg" alt="logo" />
           </a>
-          <a href="https://www.google.co.in/">
+          {/* <a href="https://www.google.co.in/">
             <img className="inline p-2" src="/images/LinkedIn.svg" alt="logo" />
-          </a>
-          <a href="https://www.google.co.in/">
+          </a> */}
+          <a href="https://github.com/event-loop/modern-web-summit">
             <img className="inline p-2" src="/images/github.svg" alt="logo" />
           </a>
         </div>
@@ -100,7 +61,7 @@ const Home = () => {
       {displayMenu &&
         <StickyHeader menuOpen={() => menuOpen()} />
       }
-      <div id='home' className='bg-white flex shadow-xs md:h-100-5 sm:h-auto sm:m-0 md:m-10 main-wrap' ref={homeRef}>
+      <div id='home' className='bg-white flex shadow-xs md:h-100-5 sm:h-auto sm:m-0 md:m-10 main-wrap'>
         <div className="sm:hidden md:flex -mt-10 left-bar">
           <img className="inline self-start ml-8 animated fadeInDownBig" src="/images/left-bar-1.svg" alt="logo" />
           <img className="inline self-start -ml-5 animated fadeInDownBig slow" src="/images/left-bar-2.svg" alt="logo" />
@@ -112,10 +73,11 @@ const Home = () => {
             {"Connecting the world’s top designers and developers to redefine the bounds of possibility through an exciting exploration of cutting-edge technologies, lessons, & patterns"}</p>
           <NotifyForm buttonClass="" textClass="text-black" />
           <div className="my-3 flex justify-center flex-grow items-end">
-            {/* <Link href="/term-service"><a className="text-gray-300 font-medium sm:text-sm lg:text-1-2 hover:text-blue-100">Terms of Service</a></Link>
-            <span className="px-1 sm:text-sm lg:text-1-2">•</span>
-            <Link href="/privacy-policy"><a className="text-gray-300 font-medium sm:text-sm lg:text-1-2 hover:text-blue-100">Privacy Policy</a></Link>
-            <span className="px-1 sm:text-sm lg:text-1-2">•</span> */}
+
+            {/* <Link href="/term-service"><a className="text-gray-300 font-medium sm:text-sm lg:text-base hover:text-blue-100">Terms of Service</a></Link>
+            <span className="px-1 sm:text-sm lg:text-base">•</span>
+            <Link href="/privacy-policy"><a className="text-gray-300 font-medium sm:text-sm lg:text-base hover:text-blue-100">Privacy Policy</a></Link>
+            <span className="px-1 sm:text-sm lg:text-base">•</span> */}
             <Link href="/code-of-conduct"><a className="text-gray-300 font-medium sm:text-sm lg:text-1-2 hover:text-blue-100" >Code of Conduct</a></Link>
           </div>
         </div>
@@ -133,22 +95,22 @@ const Home = () => {
           {({ isVisible }) => <Modern isVisible={isVisible} />}
         </ReactVisibilitySensor>
       </div>
-      <div className='sm:m-0 md:m-10'>
+      <div id='about' className='sm:m-0 md:m-10'>
         <SectionWrapper Component={About} />
       </div>
-      <div id="speakers" ref={speakerRef} className='sm:m-0 md:m-10'>
+      <div id="speakers" className='sm:m-0 md:m-10'>
         <SectionWrapper Component={Speaker} />
       </div>
-      <div id="curators" ref={curatorsRef} className="sm:m-0 md:m-10">
+      <div id="curators" className="sm:m-0 md:m-10">
         <SectionWrapper Component={Curators} />
       </div>
-      <div id="sponsors" ref={sponsorRef} className='sm:m-0 md:m-10'>
+      <div id="sponsors" className='sm:m-0 md:m-10'>
         <SectionWrapper Component={Sponsor} />
       </div>
-      <div className='sm:m-0 md:m-10'>
+      <div id='finances' className='sm:m-0 md:m-10'>
         <SectionWrapper Component={Finances} />
       </div>
-      <div className='sm:m-0 md:m-10'>
+      <div id='get-involved' className='sm:m-0 md:m-10'>
         <SectionWrapper Component={GetInvolved} />
       </div>
       <div className="sm:m-0 md:m-10 sm:p-2 md:p-0">

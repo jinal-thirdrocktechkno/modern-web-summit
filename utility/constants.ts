@@ -269,7 +269,7 @@ export const links = [
 export const buttonList = [
   {
     label: 'Home',
-    pageName: 'home'
+    pageName: ''
   },
   {
     label: 'speakers',
