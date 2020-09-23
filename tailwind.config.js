@@ -29,7 +29,7 @@ module.exports = {
         '110': '110px'
       },
       fontSize: {
-        'base': '1.2rem',
+        '1-2': '1.2rem',
         '2-8': '2.8rem'
       },
       boxShadow: {
