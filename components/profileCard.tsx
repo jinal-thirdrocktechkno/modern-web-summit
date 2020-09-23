@@ -2,7 +2,7 @@ import React from 'react'
 import AnimationWrapper from './animationWrapper'
 
 const ProfileCard = (props: ProfileCardProps) => {
-  const { imageUrl, name, designation, companyName, locationFull, locationSort, isLast, imageClass, isForDescription } = props
+  const { imageUrl, name, designation, companyName, locationFull, isLast, imageClass, isForDescription } = props
   const content = isLast ?
     <>
       <div className="bg-gray-500" >
@@ -13,9 +13,8 @@ const ProfileCard = (props: ProfileCardProps) => {
       </div> : <div className="bg-gray-400 p-5">
           <h5 className="text-white uppercase text-1-2">{name}</h5>
           <p className="capitalize text-white opacity-75 text-sm">{designation}</p>
-          {companyName && <p className="text-white opacity-75 text-sm mt-2 flex items-baseline"><img className="inline mr-2 h-3" src="/images/office.svg" alt="office" /> <span>{companyName}</span></p>}
-          <p className="text-white opacity-75 text-sm md:flex sm:hidden items-baseline"><img className="inline mr-2 h-3" src="/images/map-pin.svg" alt="address" /> <span>{locationFull}</span></p>
-          <p className="text-white opacity-75 text-sm md:hidden sm:flex items-baseline"><img className="inline mr-2 h-3" src="/images/map-pin.svg" alt="address" /> <span>{locationSort}</span></p>
+          {companyName !== '' && <p className="text-white opacity-75 text-sm mt-2 flex items-baseline"><img className="inline mr-2 h-3" src="/images/office.svg" alt="office" /> <span>{companyName}</span></p>}
+          <p className="text-white opacity-75 text-sm flex items-baseline"><img className="inline mr-2 h-3" src="/images/map-pin.svg" alt="address" /> <span>{locationFull}</span></p>
         </div>}
     </>
     :
@@ -24,9 +23,8 @@ const ProfileCard = (props: ProfileCardProps) => {
       <div className="bg-gray-400 p-5">
         <h5 className="text-white uppercase text-1-2">{name}</h5>
         <p className="capitalize text-white opacity-75 text-sm">{designation}</p>
-        {companyName && <p className="text-white opacity-75 text-sm mt-2 flex items-baseline"><img className="inline mr-2 h-3" src="/images/office.svg" alt="office" /> <span>{companyName}</span></p>}
-        <p className="text-white opacity-75 text-sm md:flex sm:hidden items-baseline"><img className="inline mr-2 h-3" src="/images/map-pin.svg" alt="address" /> <span>{locationFull}</span></p>
-        <p className="text-white opacity-75 text-sm md:hidden sm:flex items-baseline"><img className="inline mr-2 h-3" src="/images/map-pin.svg" alt="address" /> <span>{locationSort}</span></p>
+        {companyName !== '' && <p className="text-white opacity-75 text-sm mt-2 flex items-baseline"><img className="inline mr-2 h-3" src="/images/office.svg" alt="office" /> <span>{companyName}</span></p>}
+        <p className="text-white opacity-75 text-sm flex items-baseline"><img className="inline mr-2 h-3" src="/images/map-pin.svg" alt="address" /> <span>{locationFull}</span></p>
       </div>
     </>
   if (isForDescription) {
@@ -53,7 +51,6 @@ type ProfileCardProps = {
   designation: string,
   companyName: string,
   locationFull: string,
-  locationSort: string,
   isLast: boolean,
   imageClass: string,
   isForDescription: boolean
