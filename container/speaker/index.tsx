@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react'
 import {shuffle} from 'lodash'
 import ProfileCard from '../../components/profileCard'
 import SpeakerFilter from '../../components/speakerFilter'
-import { VisibleProps } from '../sponsor'
 import { SpeakerFilters } from '../../utility/constants'
 import speakerList from '../../utility/speakerList.json'
-const Speaker = (props: VisibleProps) => {
-  const { isVisible } = props
+const Speaker = (props: any) => {
+  const { isVisible, selectedSpeaker } = props
   const [className, setClass] = useState('')
   const [filters, setFilters] = useState(SpeakerFilters)
   useEffect(() => {
@@ -14,6 +13,15 @@ const Speaker = (props: VisibleProps) => {
       setClass('animated fadeInUp opacity-1')
     }
   })
+
+  useEffect(() => {
+    if(selectedSpeaker && selectedSpeaker !== ''){
+      let id = filters.filter(s => s.title === selectedSpeaker)[0].id
+      let finalFilter = formatFilters(filters, id, true)
+      setFilters(finalFilter.sort((a, b) => (a.id > b.id) ? 1 : -1))
+
+    }
+  },[selectedSpeaker])
 
   const selectedFilters = filters.filter(i => i.selected).map(i => i.title)
   let speakerFilteredList = speakerList.filter(({ track }) => {
@@ -35,7 +43,7 @@ const Speaker = (props: VisibleProps) => {
     finalSplitedArray[i % 4].push(speaker)
   });
 
-  const formatFilters = (filters: { id: number; title: string; image: string; selected: boolean }[], id: number) => {
+  const formatFilters = (filters: { id: number; title: string; image: string; selected: boolean }[], id: number, fromCurator : boolean = false) => {
     const newFilter = filters.slice(0)
     const allTrackId = filters.find(item => item.title === 'All Tracks').id
     let finalFilter = []
@@ -49,7 +57,12 @@ const Speaker = (props: VisibleProps) => {
     else {
       let selectedCount = 0
       finalFilter = newFilter.map(item => {
-        if (item.id === id) { item.selected = !item.selected }
+        if (item.id === id) { item.selected = !item.selected } 
+        else {
+          if(fromCurator) {
+            item.selected = false
+          }
+        }
         if (item.id === allTrackId) { item.selected = false }
         item.selected && selectedCount++
         return item
