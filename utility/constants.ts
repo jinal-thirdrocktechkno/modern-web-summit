@@ -193,16 +193,16 @@ export const links = [
 
   {
     link: [
-      {
-        title: 'Terms of Service',
-        url: '/term-service',
-        pageName: '',
-      },
-      {
-        title: 'Privacy Policy',
-        url: '/privacy-policy',
-        pageName: '',
-      },
+      // {
+      //   title: 'Terms of Service',
+      //   url: '/term-service',
+      //   pageName: '',
+      // },
+      // {
+      //   title: 'Privacy Policy',
+      //   url: '/privacy-policy',
+      //   pageName: '',
+      // },
       {
         title: 'Code of Conduct',
         url: '/code-of-conduct',

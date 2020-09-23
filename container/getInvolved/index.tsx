@@ -46,7 +46,7 @@ const GetInvolved = (props: VisibleProps) => {
         </div>
         <div className="flex flex-col p-6 sm:text-center lg:text-left lg:pt-24">
           <h5 className="text-2xl font-extrabold uppercase" >{"Want to get more involved?"}</h5>
-          <p className="text-gray-300 font-medium text-base lg:w-3/4 sm:w-full">
+          <p className="text-gray-300 font-medium text-1-2 lg:w-3/4 sm:w-full">
             {"We’re looking for committed people who are excited about community events, networking, and love geeking out on web dev and design!"}</p>
         </div>
       </div>

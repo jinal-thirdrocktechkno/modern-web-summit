@@ -3,7 +3,7 @@ import { links } from '../utility/constants'
 import Link from 'next/link'
 const FooterLink = (props) => {
 
-  const linkClass = "pr-2 capitalize text-white hover:text-blue-100 md:text-opacity-50 sm:text-opacity-1 text-base font-medium"
+  const linkClass = "cursor-pointer pr-2 capitalize text-white hover:text-blue-100 md:text-opacity-50 sm:text-opacity-1 text-1-2 font-medium"
 
   const onPageClick = (pageName) => {
     const pageRef = document.getElementById(pageName)

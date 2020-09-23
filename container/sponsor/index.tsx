@@ -21,13 +21,13 @@ const Sponsor = (props: VisibleProps) => {
           <h4 className="text-5xl text-white leading-7 uppercase">SPONSORS</h4>
         </div>
 
-        <div className="flex flex-col p-6 sm:text-center lg:text-left lg:pt-24">
+        <div className="flex flex-col px-6 sm:text-center lg:text-left lg:pt-24">
           <h5 className="text-2xl font-extrabold uppercase" >{"Innovation at its Finest"}</h5>
-          <p className="text-gray-300 font-medium text-base lg:w-3/4 sm:w-full">{"APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. Sponsors of the Modern Web Summit are building interesting, sustainable, and forward-thinking ideas and services. In addition to providing financial support of the event, Sponsors have their own track for Expo sessions that dive deep into these ideas. From presentations and panels to breakout discussions & workshops, you can get up close with the companies, products, and tools that most interest you."}</p>
+          <p className="text-gray-300 font-medium text-1-2 lg:w-3/4 sm:w-full">{"APIs & tools that improve the developer experience. Platforms for streamlined collaborative work. Technologies that empower every member of your organization, and make for a better user experience. Sponsors of the Modern Web Summit are building interesting, sustainable, and forward-thinking ideas and services. In addition to providing financial support of the event, Sponsors have their own track for Expo sessions that dive deep into these ideas. From presentations and panels to breakout discussions & workshops, you can get up close with the companies, products, and tools that most interest you."}</p>
         </div>
       </div>
 
-      <div className="p-10">
+      <div className="px-10 py-16">
         {/* <Title title="Presenting sponsor" parentClass="flex justify-center border-solid border border-gray-200" />
         <AnimationWrapper parentClass="">
           <SponsorDescription
@@ -81,10 +81,10 @@ const Sponsor = (props: VisibleProps) => {
             </div>
           )
         })} */}
-        <div className="text-center pb-10">
+        <div className="text-center pb-16">
           <AnimationWrapper parentClass="">
             <p
-              className="uppercase text-gray-300 mb-5 tracking-widest-43 font-extrabold">
+              className="uppercase text-gray-300 mb-12 tracking-widest-43 font-extrabold">
               sponsor the web event of the year</p>
           </AnimationWrapper>
           <AnimationWrapper parentClass="" effect={'fadeIn'}>
@@ -95,13 +95,13 @@ const Sponsor = (props: VisibleProps) => {
           <Title title="Event organizer" parentClass="flex justify-center border-solid border border-gray-200" />
           <AnimationWrapper parentClass="">
             <SponsorDescription
-              imageClass="sponsor-img h-40"
+              imageClass="sponsor-img"
               descriptionClass=""
-              innerClass="sm:w-full lg:w-1/2 py-10"
+              innerClass="sm:w-full lg:w-1/2 pt-10"
               description={
                 'EventLoop is a platform for online-first meetups and conferences. We provide event organizers, speakers, sponsors, and attendees with an unrivaled online event experience. We can’t wait to show you what we’re about at the Modern Web Summit!'}
               parentClass="flex justify-center text-center"
-              image="/images/eventloop.svg"
+              image="/images/eventloop-logo.svg"
             />
 
           </AnimationWrapper>

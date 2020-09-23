@@ -11,22 +11,22 @@ const ProfileCard = (props: ProfileCardProps) => {
       {!isForDescription ? <div className="h-32 flex items-center justify-center cursor-pointer bg-lightGreen-200 hover:bg-lightGreen-100">
         <p className="text-lg text-black font-bold tracking-wide uppercase">See all speakers {'>'}</p>
       </div> : <div className="bg-gray-400 p-5">
-          <h5 className="text-white uppercase text-base">{name}</h5>
-          <p className="capitalize text-white text-opacity-75 text-sm">{designation}</p>
-          <p className="text-white text-opacity-75 text-sm italic mt-2 flex items-center"><img className="inline mr-2" src="/images/office.svg" alt="office" /> <span>{companyName}</span></p>
-          <p className="text-white text-opacity-75 text-sm italic md:flex sm:hidden items-center"><img className="inline mr-2" src="/images/map-pin.svg" alt="address" /> <span>{locationFull}</span></p>
-          <p className="text-white text-opacity-75 text-sm italic md:hidden sm:flex items-center"><img className="inline mr-2" src="/images/map-pin.svg" alt="address" /> <span>{locationSort}</span></p>
+          <h5 className="text-white uppercase text-1-2">{name}</h5>
+          <p className="capitalize text-white opacity-75 text-sm">{designation}</p>
+          <p className="text-white opacity-75 text-sm mt-2 flex items-baseline"><img className="inline mr-2 h-3" src="/images/office.svg" alt="office" /> <span>{companyName}</span></p>
+          <p className="text-white opacity-75 text-sm md:flex sm:hidden items-baseline"><img className="inline mr-2 h-3" src="/images/map-pin.svg" alt="address" /> <span>{locationFull}</span></p>
+          <p className="text-white opacity-75 text-sm md:hidden sm:flex items-baseline"><img className="inline mr-2 h-3" src="/images/map-pin.svg" alt="address" /> <span>{locationSort}</span></p>
         </div>}
     </>
     :
     <>
       <img src={imageUrl} alt="image" className={`w-full ${imageClass}`} />
       <div className="bg-gray-400 p-5">
-        <h5 className="text-white uppercase text-base">{name}</h5>
-        <p className="capitalize text-white text-opacity-75 text-sm">{designation}</p>
-        <p className="text-white text-opacity-75 text-sm italic mt-2 flex items-center"><img className="inline mr-2" src="/images/office.svg" alt="office" /> <span>{companyName}</span></p>
-        <p className="text-white text-opacity-75 text-sm italic md:flex sm:hidden items-center"><img className="inline mr-2" src="/images/map-pin.svg" alt="address" /> <span>{locationFull}</span></p>
-        <p className="text-white text-opacity-75 text-sm italic md:hidden sm:flex items-center"><img className="inline mr-2" src="/images/map-pin.svg" alt="address" /> <span>{locationSort}</span></p>
+        <h5 className="text-white uppercase text-1-2">{name}</h5>
+        <p className="capitalize text-white opacity-75 text-sm">{designation}</p>
+        <p className="text-white opacity-75 text-sm mt-2 flex items-baseline"><img className="inline mr-2 h-3" src="/images/office.svg" alt="office" /> <span>{companyName}</span></p>
+        <p className="text-white opacity-75 text-sm md:flex sm:hidden items-baseline"><img className="inline mr-2 h-3" src="/images/map-pin.svg" alt="address" /> <span>{locationFull}</span></p>
+        <p className="text-white opacity-75 text-sm md:hidden sm:flex items-baseline"><img className="inline mr-2 h-3" src="/images/map-pin.svg" alt="address" /> <span>{locationSort}</span></p>
       </div>
     </>
   if (isForDescription) {

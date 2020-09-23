@@ -16,7 +16,7 @@ const PrivacyPolicy = () => <>
           <h5 className="text-2xl font-extrabold uppercase lg:w-3/4" >{"Privacy Policy PlaceHolder"}</h5>
           {privacyPolicyList.map((p, i) =>
             <React.Fragment key={i}>
-              <p className={'text-gray-300 font-medium text-base lg:w-3/4'}>{p}</p>
+              <p className={'text-gray-300 font-medium text-1-2 lg:w-3/4'}>{p}</p>
               <br />
             </React.Fragment>
           )}

@@ -97,8 +97,8 @@ const Home = () => {
           </a>
         </div>
       </div>
-      {displayMenu && 
-        <StickyHeader menuOpen={()=> menuOpen()}/>
+      {displayMenu &&
+        <StickyHeader menuOpen={() => menuOpen()} />
       }
       <div id='home' className='bg-white flex shadow-xs md:h-100-5 sm:h-auto sm:m-0 md:m-10 main-wrap' ref={homeRef}>
         <div className="sm:hidden md:flex -mt-10 left-bar">
@@ -108,15 +108,15 @@ const Home = () => {
         </div>
         <div className='md:w-2/4 sm:w-full mx-auto text-center md:-mt-10 sm:mt-0 flex flex-col'>
           <Logo />
-          <p className='text-gray-300 font-medium text-base md:mb-5 sm:p-5 md:p-0'>
+          <p className='text-gray-300 font-medium text-1-2 md:mb-5 sm:p-5 md:p-0'>
             {"Connecting the world’s top designers and developers to redefine the bounds of possibility through an exciting exploration of cutting-edge technologies, lessons, & patterns"}</p>
           <NotifyForm buttonClass="" textClass="text-black" />
           <div className="my-3 flex justify-center flex-grow items-end">
-          <Link href="/term-service"><a className="text-gray-300 font-medium sm:text-sm lg:text-base hover:text-blue-100">Terms of Service</a></Link>
-            <span className="px-1 sm:text-sm lg:text-base">•</span>
-            <Link href="/privacy-policy"><a className="text-gray-300 font-medium sm:text-sm lg:text-base hover:text-blue-100">Privacy Policy</a></Link>
-            <span className="px-1 sm:text-sm lg:text-base">•</span>
-            <Link href="/code-of-conduct"><a className="text-gray-300 font-medium sm:text-sm lg:text-base hover:text-blue-100" >Code of Conduct</a></Link>
+            {/* <Link href="/term-service"><a className="text-gray-300 font-medium sm:text-sm lg:text-1-2 hover:text-blue-100">Terms of Service</a></Link>
+            <span className="px-1 sm:text-sm lg:text-1-2">•</span>
+            <Link href="/privacy-policy"><a className="text-gray-300 font-medium sm:text-sm lg:text-1-2 hover:text-blue-100">Privacy Policy</a></Link>
+            <span className="px-1 sm:text-sm lg:text-1-2">•</span> */}
+            <Link href="/code-of-conduct"><a className="text-gray-300 font-medium sm:text-sm lg:text-1-2 hover:text-blue-100" >Code of Conduct</a></Link>
           </div>
         </div>
         <div className="sm:hidden md:flex mr-8 relative top-1/2 transform -translate-y-48 right-bar">
@@ -154,7 +154,7 @@ const Home = () => {
       <div className="sm:m-0 md:m-10 sm:p-2 md:p-0">
         <ShareSocial />
       </div>
-      <Footer isHomePage/>
+      <Footer isHomePage />
     </div>
   )
 }
