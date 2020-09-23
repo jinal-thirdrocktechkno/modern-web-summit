@@ -4,9 +4,10 @@ import ProfileCard from '../../components/profileCard'
 import AnimationWrapper from '../../components/animationWrapper'
 import { VisibleProps } from '../sponsor'
 import CuratorsList from '../../utility/curatorList.json'
+import Link from 'next/link'
 
-const Curators = (props: VisibleProps) => {
-  const { isVisible } = props
+const Curators = (props: any) => {
+  const { isVisible, onSelectSpeaker } = props
   const [className, setClass] = useState('')
 
   useEffect(() => {
@@ -55,10 +56,11 @@ const Curators = (props: VisibleProps) => {
                     {"Send us your best guesses on twitter!"}
                     </a>}
                   {allLink && 
-                  <a href="https://www.google.co.in/" 
+                  <Link href='/#speakers'>
+                  <a onClick={() => {onSelectSpeaker(track)}} 
                   className="md:self-start sm:self-center arrow-link">
                     {allLink}
-                    <span className="arrow">{' > '}</span> </a>}
+                    <span className="arrow">{' > '}</span> </a></Link>}
                 </div>
               </div>
             </AnimationWrapper>
