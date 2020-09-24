@@ -13,6 +13,7 @@ module.exports = {
     extend: {
       inset: {
         '1/2': '50%',
+        '100': '100px'
       },
       rotate: {
         '1': '1deg',
@@ -52,7 +53,8 @@ module.exports = {
         '23': '23.5rem'
       },
       flex: {
-        '23': '0 0 23.5rem'
+        '23': '0 0 23.5rem',
+        '70': '0 0 70%'
       },
       colors: {
         gray: {

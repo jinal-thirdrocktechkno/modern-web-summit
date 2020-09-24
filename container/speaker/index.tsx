@@ -91,7 +91,7 @@ const Speaker = (props: any) => {
           {speakerFilteredList.map((item, index) => {
             const { image, name, title, company, location } = item;
             return (
-              <div key={`0-${index}`} className="lg:w-1/4 sm:w-1/2 p-1">
+              <div key={`0-${index}`} className={`lg:w-1/4 sm:w-1/2 p-1`}>
                 <ProfileCard
                   isForDescription={false}
                   imageClass=""
@@ -107,9 +107,9 @@ const Speaker = (props: any) => {
             )
           })}
         </div>
-        <div className="flex flex-col mb-2 w-1/5 mt-32">
-          <div className="sticky top-0 pt-5">
-            <p className="uppercase text-1-2 text-center font-extrabold">refine by track</p>
+        <div className="flex flex-col mb-2 sm:w-full lg:w-1/5 lg:mt-32 sm:order-first lg:order-none">
+          <div className="sticky top-100">
+            <p className="uppercase text-1-2 text-center font-extrabold sm:hidden lg:block">refine by track</p>
             <SpeakerFilter
               onClick={handleFilterClick}
               filterList={filters}

@@ -160,7 +160,7 @@ body {
 
 .arrow-link {
     @apply mt-5 text-lg font-bold border-l-4 border-lightGreen-200 pl-2 uppercase leading-6 text-black transition-all duration-300;
-    background: linear-gradient(to right, #16FF11 50%, white 50%);
+    background: linear-gradient(to right, #16ff11 50%, white 50%);
     background-size: 200% 100%;
     background-position: right bottom;
 }
