@@ -97,7 +97,7 @@ const Speaker = (props: any) => {
           {speakerFilteredList.map((item, index) => {
             const { image, name, title, company, location } = item;
             return (
-              <div key={`0-${index}`} className={`lg:w-1/4 sm:w-1/2 p-1`}>
+              <div key={`0-${index}`} className={`lg:w-1/4 sm:w-1/2 p-1 card-${index}`}>
                 <ProfileCard
                   isForDescription={false}
                   imageClass=""
