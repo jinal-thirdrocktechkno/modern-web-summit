@@ -3,7 +3,7 @@ import React from 'react'
 const SpeakerFilter = (props: SpeakerFilterProps) => {
   const { filterList, onClick } = props
   return (
-    <div className="flex lg:flex-wrap overflow-auto">
+    <div className="flex lg:flex-wrap overflow-auto lg:ml-5">
       {filterList.map((item: FilterListProps, index) => {
         const { image, title, selected, id } = item
         return (
