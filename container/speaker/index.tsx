@@ -3,7 +3,7 @@ import ProfileCard from '../../components/profileCard'
 import SpeakerFilter from '../../components/speakerFilter'
 import { SpeakerFilters } from '../../utility/constants'
 import speakerList from '../../utility/speakerList.json'
-import {shuffle} from 'lodash'
+import { shuffle } from 'lodash'
 
 const Speaker = (props: any) => {
   const { isVisible, selectedSpeaker } = props
@@ -87,12 +87,11 @@ const Speaker = (props: any) => {
       </div>
 
       <div className="relative flex sm:flex-wrap lg:flex-no-wrap lg:pl-40 md:p-10 sm:p-0">
-        <p className="uppercase absolute bottom-0 mb-5 text-xl text-gray-400 font-semibold sm:hidden md:block">more speakers to be announced soon!</p>
-        <div className="lg:mr-2 sm:mr-0 lg:w-1/5 sm:w-1/2 sm:pl-5 lg:pl-0 sm:pr-2 lg:pr-0">
+        <div className="lg:w-4/5 flex flex-wrap">
           {speakerFilteredList.map((item, index) => {
             const { image, name, title, company, location } = item;
             return (
-              <React.Fragment key={`0-${index}`}>
+              <div key={`0-${index}`} className="lg:w-1/4 sm:w-1/2 p-1">
                 <ProfileCard
                   isForDescription={false}
                   imageClass=""
@@ -104,25 +103,27 @@ const Speaker = (props: any) => {
                   companyName={company}
                   locationFull={location}
                 />
-              </React.Fragment>
+              </div>
             )
           })}
         </div>
-        <div className="lg:flex sm:hidden flex-col mb-2 w-1/5 mt-32">
+        <div className="flex flex-col mb-2 w-1/5 mt-32">
           <div className="sticky top-0 pt-5">
             <p className="uppercase text-1-2 text-center font-extrabold">refine by track</p>
             <SpeakerFilter
               onClick={handleFilterClick}
               filterList={filters}
             />
-            <div className="text-center ">
+            <div className="text-center sm:hidden lg:block">
               <p className="ml-5 uppercase text-xs text-gray-400 font-extrabold">Interested in speaking?</p>
               <button type="button" className="animate-btn ml-5 mt-1">Submit your talk</button>
             </div>
           </div>
         </div>
+        <p className="uppercase lg:absolute lg:bottom-0 lg:mb-5 sm:mt-5 lg:mt-0 sm:mx-auto text-xl text-gray-400 font-semibold">more speakers to be announced soon!</p>
         <div className="sm:block lg:hidden p-4 mb-16 w-full">
           {/* <button type="button" className="w-full uppercase border-purple-100 rounded-md text-purple-100 font-black border-2 p-4 text-lg mt-1 focus:outline-none">see all speakers</button> */}
+          <p className="text-center uppercase text-xs text-gray-400 font-extrabold">Interested in speaking?</p>
           <button type="button" className="animate-btn w-full mt-5">Submit your talk</button>
         </div>
       </div>
