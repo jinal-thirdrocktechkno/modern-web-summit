@@ -87,11 +87,17 @@ const Speaker = (props: any) => {
       </div>
 
       <div className="relative flex sm:flex-wrap lg:flex-no-wrap lg:pl-40 md:p-10 sm:p-0">
-        <div className="lg:w-4/5 flex flex-wrap">
+        <div className="sticky top-56 sm:block lg:hidden w-full z-50 bg-white pl-4 py-1">
+          <SpeakerFilter
+            onClick={handleFilterClick}
+            filterList={filters}
+          />
+        </div>
+        <div className="lg:w-4/5 flex flex-wrap px-3">
           {speakerFilteredList.map((item, index) => {
             const { image, name, title, company, location } = item;
             return (
-              <div key={`0-${index}`} className="lg:w-1/4 sm:w-1/2 p-1">
+              <div key={`0-${index}`} className={`lg:w-1/4 sm:w-1/2 p-1 card-${index}`}>
                 <ProfileCard
                   isForDescription={false}
                   imageClass=""
@@ -107,14 +113,14 @@ const Speaker = (props: any) => {
             )
           })}
         </div>
-        <div className="flex flex-col mb-2 w-1/5 mt-32">
-          <div className="sticky top-0 pt-5">
-            <p className="uppercase text-1-2 text-center font-extrabold">refine by track</p>
+        <div className="flex-col mb-2 sm:w-full lg:w-1/5 lg:mt-32 sm:hidden lg:flex">
+          <div className="sticky top-100">
+            <p className="uppercase text-1-2 text-center font-extrabold sm:hidden lg:block">refine by track</p>
             <SpeakerFilter
               onClick={handleFilterClick}
               filterList={filters}
             />
-            <div className="text-center sm:hidden lg:block">
+            <div className="text-center">
               <p className="ml-5 uppercase text-xs text-gray-400 font-extrabold">Interested in speaking?</p>
               <button type="button" className="animate-btn ml-5 mt-1">Submit your talk</button>
             </div>
