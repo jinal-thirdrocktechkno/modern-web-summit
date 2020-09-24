@@ -29,14 +29,14 @@ const ProfileCard = (props: ProfileCardProps) => {
     </>
   if (isForDescription) {
     return (
-      <div className="profile-card">
+      <div className="profile-card mb-2">
         {content}
       </div>
     )
   }
   else {
     return (
-      <AnimationWrapper parentClass="profile-card">
+      <AnimationWrapper parentClass="profile-card mb-2">
         {content}
       </AnimationWrapper>
     )
