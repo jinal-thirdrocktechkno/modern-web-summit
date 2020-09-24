@@ -13,7 +13,8 @@ module.exports = {
     extend: {
       inset: {
         '1/2': '50%',
-        '100': '100px'
+        '100': '100px',
+        '56': '56px'
       },
       rotate: {
         '1': '1deg',
