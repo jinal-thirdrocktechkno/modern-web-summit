@@ -3,12 +3,19 @@ import ProfileCard from '../../components/profileCard'
 import SpeakerFilter from '../../components/speakerFilter'
 import { SpeakerFilters } from '../../utility/constants'
 import speakerList from '../../utility/speakerList.json'
+import { useMediaQuery } from 'react-responsive'
 import { shuffle } from 'lodash'
 
 const Speaker = (props: any) => {
   const { isVisible, selectedSpeaker } = props
   const [className, setClass] = useState('')
   const [filters, setFilters] = useState(SpeakerFilters)
+
+  let finalSplitedArraySmallScreen = [];
+  let finalSplitedArraySmallScreen1 = [];
+  const isSmallScreen = useMediaQuery({ query: '(max-width: 1024px)' });
+  console.log(isSmallScreen)
+
   useEffect(() => {
     if (isVisible) {
       setClass('animated fadeInUp opacity-1')
@@ -38,11 +45,11 @@ const Speaker = (props: any) => {
   if (selectedFilters.includes('All Tracks'))
     speakerFilteredList = shuffle(speakerList)
 
-    const finalSplitedArray = [[], [], [], []]
-    // shuffle(speakerFilteredList).forEach((speaker, i) => {
-    speakerFilteredList.forEach((speaker, i) => {
-      finalSplitedArray[i % 4].push(speaker)
-    });
+  const finalSplitedArray = [[], [], [], []]
+  // shuffle(speakerFilteredList).forEach((speaker, i) => {
+  speakerFilteredList.forEach((speaker, i) => {
+    finalSplitedArray[i % 4].push(speaker)
+  });
 
   const formatFilters = (filters: { id: number; title: string; image: string; selected: boolean }[], id: number, fromCurator: boolean = false) => {
     const newFilter = filters.slice(0)
@@ -71,6 +78,14 @@ const Speaker = (props: any) => {
       if (!selectedCount) { finalFilter[0].selected = true }
     }
     return finalFilter
+  }
+
+  if (isSmallScreen) {
+    finalSplitedArraySmallScreen = [...finalSplitedArray[0], ...finalSplitedArray[1]];
+    finalSplitedArraySmallScreen1 = [...finalSplitedArray[2], ...finalSplitedArray[3]];
+  } else {
+    finalSplitedArraySmallScreen = finalSplitedArray[0];
+    finalSplitedArraySmallScreen1 = finalSplitedArray[1];
   }
 
   const handleFilterClick = (id: number) => {
@@ -118,8 +133,9 @@ const Speaker = (props: any) => {
             )
           })}
         </div> */}
+
         <div className="lg:mr-2 sm:mr-0 lg:w-1/5 sm:w-1/2 sm:pl-5 lg:pl-0 sm:pr-2 lg:pr-0">
-          {finalSplitedArray[0].map((item, index) => {
+          {finalSplitedArraySmallScreen.map((item, index) => {
             const { image, name, title, company, location } = item;
             return (
               <React.Fragment key={`0-${index}`}>
@@ -139,59 +155,59 @@ const Speaker = (props: any) => {
           })}
         </div>
         <div className="lg:mr-2 sm:mr-0 lg:w-1/5 sm:w-1/2 mt-16 sm:pr-5 lg:pr-0 sm:pl-2 lg:pl-0">
-          {finalSplitedArray[1].map((item, index) => {
+          {finalSplitedArraySmallScreen1.map((item, index) => {
             const { image, name, title, company, location } = item;
             return (
               <React.Fragment key={`1-${index}`}>
-              <ProfileCard
-                isForDescription={false}
-                imageClass=""
-                isLast={false}
-                key={`1-${index}`}
-                imageUrl={image + '.jpg'}
-                name={name}
-                designation={title}
-                companyName={company}
-                locationFull={location}
-              /></React.Fragment>
+                <ProfileCard
+                  isForDescription={false}
+                  imageClass=""
+                  isLast={false}
+                  key={`1-${index}`}
+                  imageUrl={image + '.jpg'}
+                  name={name}
+                  designation={title}
+                  companyName={company}
+                  locationFull={location}
+                /></React.Fragment>
             )
           })}
         </div>
-        <div className="lg:mr-2 sm:mr-0 lg:w-1/5 sm:w-1/2 sm:mt-0 lg:mt-32 sm:pl-5 lg:pl-0 sm:pr-2 lg:pr-0">
+        <div className="sm:hidden lg:block lg:mr-2 sm:mr-0 lg:w-1/5 sm:w-1/2 sm:mt-0 lg:mt-32 sm:pl-5 lg:pl-0 sm:pr-2 lg:pr-0">
           {finalSplitedArray[2].map((item, index) => {
             const { image, name, title, company, location } = item;
             return (
               <React.Fragment key={`2-${index}`}>
-              <ProfileCard
-                isForDescription={false}
-                imageClass=""
-                isLast={false}
-                key={`2-${index}`}
-                imageUrl={image + '.jpg'}
-                name={name}
-                designation={title}
-                companyName={company}
-                locationFull={location}
-              /></React.Fragment>
+                <ProfileCard
+                  isForDescription={false}
+                  imageClass=""
+                  isLast={false}
+                  key={`2-${index}`}
+                  imageUrl={image + '.jpg'}
+                  name={name}
+                  designation={title}
+                  companyName={company}
+                  locationFull={location}
+                /></React.Fragment>
             )
           })}
         </div>
-        <div className="lg:mr-2 sm:mr-0 lg:w-1/5 sm:w-1/2 lg:mt-48 sm:pr-5 lg:pr-0 sm:pl-2 lg:pl-0">
+        <div className="sm:hidden lg:block lg:mr-2 sm:mr-0 lg:w-1/5 sm:w-1/2 lg:mt-48 sm:pr-5 lg:pr-0 sm:pl-2 lg:pl-0">
           {finalSplitedArray[3].map((item, index) => {
             const { image, name, title, company, location } = item;
             return (
               <React.Fragment key={`3-${index}`}>
-              <ProfileCard
-                isForDescription={false}
-                imageClass=""
-                isLast={false}
-                key={`3-${index}`}
-                imageUrl={image + '.jpg'}
-                name={name}
-                designation={title}
-                companyName={company}
-                locationFull={location}
-              /></React.Fragment>
+                <ProfileCard
+                  isForDescription={false}
+                  imageClass=""
+                  isLast={false}
+                  key={`3-${index}`}
+                  imageUrl={image + '.jpg'}
+                  name={name}
+                  designation={title}
+                  companyName={company}
+                  locationFull={location}
+                /></React.Fragment>
             )
           })}
         </div>
